@@ -566,7 +566,7 @@ spinner 1
 /*
 spinner 2
 
-<div class="spinner">
+<div class="spinner2">
   <div class="double-bounce1"></div>
   <div class="double-bounce2"></div>
 </div>
@@ -1388,6 +1388,7 @@ T A B L E
 .center-content-table th, .center-content-table td{text-align: center;}
 .full-width{width: 100% !important;}
 .line-height-initial{line-height:initial;}
+.disabled{pointer-events:none;}
 /* 
 
  T E X T  S T Y L E S

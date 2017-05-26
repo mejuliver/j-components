@@ -1,7 +1,7 @@
 
 // Automatically cancel unfinished ajax requests 
 // when the user navigates elsewhere.
-  var xhrPool=[],global_spinner_conf=true,refresh=false,dialog_open=false;
+  var xhrPool=[],global_spinner_conf=true,refresh=false,modal_open=false;
   $(document).ajaxSend(function(e, jqXHR, options){
     xhrPool.push(jqXHR);
   });
@@ -58,20 +58,45 @@ function j_shadow(el, shadow_color, shadow_length, shadow_position){
         directionShadow: shadow_position
     });
 }
-//add loading animation or a loading spinner. To use j_loading("[specify if show or hide e.g. on or off]", "[specify a theme to be used, e.g. white or dark]", "[specify if whos spinner or not e.g. yes or no]")
-function j_loading(status,loader_type){
+//add loading animation or a loading spinner. To use j_spinner("[specify if show or hide e.g. on or off]", "[specify a spinner type to be use e.g. spinner1]")
+function j_spinner(status,spinner_type){
    if(status==="on"){
-        switch(loader_type){
-            case '' :
-                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="loader"></div></div>')
-                $('#spinner').center().show();
-                $('body').addClass('disabled');
+        switch(spinner_type){
+            case 'spinner1' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner1"></div></div>');
+                break;
+            case 'spinner2' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner2"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>');
+                break;
+            case 'spinner3' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner4"><div class="cube1"></div><div class="cube2"></div></div></div>');
+                break;
+            case 'spinner4' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner5"></div></div>');
+                break;
+            case 'spinner5' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner6"> =<div class="dot1"></div><div class="dot2"></div></div></div>');
+                break;
+            case 'spinner6' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner7"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>');
+                break;
+            case 'spinner7' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner8"><div class="sk-circle1 sk-child"></div><div class="sk-circle2 sk-child"></div><div class="sk-circle3 sk-child"></div><div class="sk-circle4 sk-child"></div><div class="sk-circle5 sk-child"></div><div class="sk-circle6 sk-child"></div><div class="sk-circle7 sk-child"></div><div class="sk-circle8 sk-child"></div><div class="sk-circle9 sk-child"></div><div class="sk-circle10 sk-child"></div><div class="sk-circle11 sk-child"></div><div class="sk-circle12 sk-child"></div></div></div>');
+                break;
+            case 'spinner8' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner9"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div></div>');
+                break;
+            case 'spinner9' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner10"><div class="sk-circle1 sk-circle"></div><div class="sk-circle2 sk-circle"></div><div class="sk-circle3 sk-circle"></div><div class="sk-circle4 sk-circle"></div><div class="sk-circle5 sk-circle"></div><div class="sk-circle6 sk-circle"></div><div class="sk-circle7 sk-circle"></div><div class="sk-circle8 sk-circle"></div><div class="sk-circle9 sk-circle"></div><div class="sk-circle10 sk-circle"></div><div class="sk-circle11 sk-circle"></div><div class="sk-circle12 sk-circle"></div></div></div>');
+                break;
+            case 'spinner10' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner11"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div></div>');
                 break;
             default :
-                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="loader"></div></div>')
-                $('#spinner').center().show();
-                $('body').addClass('disabled');
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner3"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div></div>');
         }
+        $('#spinner').center().show();
+        $('body').addClass('disabled');
    }else{
         $('#spinner').fadeOut(400,function(){
             $('#spinner').center().remove();
@@ -79,18 +104,18 @@ function j_loading(status,loader_type){
         $('body').removeClass('disabled');
    }
 }
-//to use, notification([title of the modal box], [you can specify a string, a variable or a custom element html contents], "[specify the functions to be called. If multiple, it must be separated with a space]")
-function notification(title, content, dependencies){
-    dialog_open = true;
+//to use, modal([title of the modal box], [you can specify a string, a variable or a custom element html contents], "[specify the functions to be called. If multiple, it must be separated with a space]")
+function modal(title, content, dependencies){
+    modal_open = true;
     //required materialize
-    $("#notification-dialog .modal-title").html(title);
-    $("#notification-dialog .modal-body").html(content);
-    $("#notification-trigger-button").trigger("click");
+    $("#modal-dialog .modal-title").html(title);
+    $("#modal-dialog .modal-body").html(content);
+    $("#modal-trigger-button").trigger("click");
     get_dependencies(dependencies);
 }
 //extra modal
 function extra_modal(title, content, dependencies){
-    dialog_open = true;
+    modal_open = true;
     //required materialize
     $("#extra-modal .modal-title").html(title);
     $("#extra-modal .modal-body").html(content);
@@ -127,29 +152,29 @@ function get_page(this_tab_content_link, container, dependencies){
     });
 }
 //create a notification. To use, j_notification("[specift the content]", "[specify if autohide]", "[specify if yes or no]")
-function j_notification(data, auto_hide, hide){
-        if(auto-hide !== "yes"){
-            if($("#j-notification-dialog").length){
-                $("#j-notification-dialog").html(data);
-                $("#j-notification-dialog").show();
-            }else{
-                $("body").append('<div class="display-table thehide extend clear animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
-                $("#j-notification-dialog").show();
-            }
-            if(hide === "yes"){
-                $("#j-notification-dialog").delay(3000).fadeOut(500);
-            }
+function j_notification(contents, auto_hide, hide){
+    if(auto_hide !== "yes"){
+        if($("#j-notification-dialog").length){
+            $("#j-notification-dialog").html(contents);
+            $("#j-notification-dialog").show();
         }else{
-            if($("#j-notification-dialog").length){
-                $("#j-notification-dialog").html(data);
-                $("#j-notification-dialog").show();
-            }else{
-                $("body").append('<div class="display-table thehide extend clear animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
-                $("#j-notification-dialog").show();
-            }
-            $("#j-notification-dialog").delay(5000).fadeOut(500);
+            $("body").append('<div class="display-table thehide extend clear animated slideInRight shadow-z-1" id="j-notification-dialog">' + contents + '</div>'); 
+            $("#j-notification-dialog").show();
         }
-    }   
+        if(hide === "yes"){
+            $("#j-notification-dialog").delay(3000).fadeOut(500);
+        }
+    }else{
+        if($("#j-notification-dialog").length){
+            $("#j-notification-dialog").html(contents);
+            $("#j-notification-dialog").show();
+        }else{
+            $("body").append('<div class="display-table thehide extend clear animated slideInRight shadow-z-1" id="j-notification-dialog">' + contents + '</div>'); 
+            $("#j-notification-dialog").show();
+        }
+        $("#j-notification-dialog").delay(5000).fadeOut(500);
+    }
+}   
 // header set up
 function header_setup(e){
     $.ajaxSetup({
@@ -159,7 +184,6 @@ function header_setup(e){
 
 $(document).ready(function(){
         header_setup(e);
-        
         $(".thehide").hide();
         $(document).on("keypress keydown keyup",".dont-write",function(){return false;});
         //email validation
@@ -189,9 +213,9 @@ $(document).ready(function(){
                 e.preventDefault();
             }
         });
-        //add animation to the element that has a class of .line-animation
+        //add animation delay to the element that has a class of .ani-auto-delay
         var this_previous_delay;
-        $(".parent .line-animation").each(function(){
+        $(".parent .ani-auto-delay").each(function(){
             var this_delay;
 
             if(!$(this).is(":first-child")){
@@ -210,26 +234,26 @@ $(document).ready(function(){
                .css('-o-transition-delay', this_delay)
                .css('transition-delay', this_delay);
 
-        }); //end of looping unto the top_submenu li
-        //end of .line-animation
+        });
+        //end of .ani-auto-delay
     //j menu
     $(document).on("click", ".j-components .j-menu .j-menu-nav a", function(e){
         
-        var this_current = $(this);
+        var dis = $(this);
         //if ajax
-        if(this_current.attr("data-ajaxpage") === "yes"){get_page(this_current.attr("href").substring(1), this_current.attr("data-ajax-render"), this_current.attr("data-dependencies"));}
+        if(dis.attr("data-ajaxpage") === "yes"){get_page(dis.attr("href").substring(1), dis.attr("data-ajax-render"), dis.attr("data-dependencies"));}
         //if allowed to set an active state and active indentifier
-        if(this_current.attr("data-allow-active") === "yes"){
-            if(this_current.attr("data-has-submenu") === "no" || !this_current.attr("data-has-submenu") || this_current.attr("data-submenu-allowactive") === "yes"){
-                this_current.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
-                this_current.addClass("j-active j-active-state");
+        if(dis.attr("data-allow-active") === "yes"){
+            if(dis.attr("data-has-submenu") === "no" || !dis.attr("data-has-submenu") || dis.attr("data-submenu-allowactive") === "yes"){
+                dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
+                dis.addClass("j-active j-active-state");
             }
         }
         //if tabs
-        if(this_current.attr("data-tabs") === "yes"){
-            $("#"+this_current.closest(".j-menu-nav").attr("data-tabs-container")+" > .j_tabs").removeClass("active-tab").hide();
-            $("#"+this_current.closest('[data-tabs-container]').attr("data-tabs-container")+" "+this_current.attr("href")).addClass("active-tab").fadeIn(200);
-            var custom_function = this_current.attr("data-monkey-run");
+        if(dis.attr("data-tabs") === "yes"){
+            $("#"+dis.closest(".j-menu-nav").attr("data-tabs-container")+" > .j-tabs").removeClass("active-tab").hide();
+            $("#"+dis.closest('[data-tabs-container]').attr("data-tabs-container")+" "+dis.attr("href")).addClass("active-tab").fadeIn(200);
+            var custom_function = dis.attr("data-dependencies");
             if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
                 var classList = custom_function.split(/\s+/);
                 $.each(classList, function(index, item) {
@@ -240,12 +264,12 @@ $(document).ready(function(){
 
         }
         //if there's a submenu
-        if(this_current.attr("data-has-submenu") === "yes"){
-            if(this_current.next(".j-menu-dp-container").is(":visible")){
-                this_current.next(".j-menu-dp-container").fadeOut(200);
+        if(dis.attr("data-has-submenu") === "yes"){
+            if(dis.next(".j-menu-dp-container").is(":visible")){
+                dis.next(".j-menu-dp-container").fadeOut(200);
 
                 //run data-on-close function on close event of dropdown menu
-                var on_close = this_current.attr("data-on-close");
+                var on_close = dis.attr("data-on-close");
                 if(typeof on_close !== typeof undefined && on_close !== false && on_close !== "") {
                     var classList = on_close.split(/\s+/);
                     $.each(classList, function(index, item) {
@@ -254,16 +278,16 @@ $(document).ready(function(){
                 }
                 
             }else{
-                this_current.next(".j-menu-dp-container").css({ 'display': 'table','min-width' : this_current.closest("li").width() + 'px' }).fadeIn(200);
-                if(this_current.next(".j-menu-dp-container").offset().left+(this_current.next(".j-menu-dp-container").width()*1) > $(window).width()){
-                    this_current.next(".j-menu-dp-container").css({ 'margin-left' : "-110px" });
+                dis.next(".j-menu-dp-container").css({ 'display': 'table','min-width' : dis.closest("li").width() + 'px' }).fadeIn(200);
+                if(dis.next(".j-menu-dp-container").offset().left+(dis.next(".j-menu-dp-container").width()*1) > $(window).width()){
+                    dis.next(".j-menu-dp-container").css({ 'margin-left' : "-110px" });
                 }
-                //if(this_current.next(".j-menu-dp-container").offset().top+(this_current.next(".j-menu-dp-container").height()*1) > $(window).height()){
-                //    this_current.next(".j-menu-dp-container").css({ 'margin-top' : -(this_current.height()+this_current.next(".j-menu-dp-container").height()+40)+'px' });
+                //if(dis.next(".j-menu-dp-container").offset().top+(dis.next(".j-menu-dp-container").height()*1) > $(window).height()){
+                //    dis.next(".j-menu-dp-container").css({ 'margin-top' : -(dis.height()+dis.next(".j-menu-dp-container").height()+40)+'px' });
                 //}
 
                 //run data-on-close function on close event of dropdown menu
-                var on_open = this_current.attr("data-on-open");
+                var on_open = dis.attr("data-on-open");
                 if(typeof on_open !== typeof undefined && on_open !== false && on_open !== "") {
                     var classList = on_open.split(/\s+/);
                     $.each(classList, function(index, item) {
@@ -271,58 +295,58 @@ $(document).ready(function(){
                     });
                 }
             }
-            if(this_current.next(".j-menu-dp-container").height() >= 400){
-                this_current.next(".j-menu-dp-container").css({ 'height' : '300px' });
+            if(dis.next(".j-menu-dp-container").height() >= 400){
+                dis.next(".j-menu-dp-container").css({ 'height' : '300px' });
             }
         }else{
-            if(!this_current.hasClass("dont-hide")){
+            if(!dis.hasClass("dont-hide")){
                 $(".top-submenu").hide();
                 $($(this).attr("data-has-submenu")).show().find("li").show();
             }
         } // end of else if sub-menu is not equal to yes
-        if(this_current.attr("data-navigate") !== "yes"){
+        if(dis.attr("data-navigate") !== "yes"){
             e.preventDefault();
         }
     });
     //menu mouseover
     $(document).on("mouseover", ".j-components .j-menu .j-menu-nav a", function(e){
-        var this_current = $(this);
-        if(this_current.attr("data-allow-hover") === "yes"){
-        this_current.closest(".j-menu-nav").find(".j-parent").removeClass("j-active-state");
-        this_current.addClass("j-active-state");
+        var dis = $(this);
+        if(dis.attr("data-allow-hover") === "yes"){
+        dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active-state");
+        dis.addClass("j-active-state");
         }
     }).on("mouseleave", ".j-menu .j-menu-nav a", function(){
-        var this_current = $(this);
-        this_current.removeClass("j-active-state");
-        this_current.closest(".j-menu-nav").find(".j-active").addClass("j-active-state");
+        var dis = $(this);
+        dis.removeClass("j-active-state");
+        dis.closest(".j-menu-nav").find(".j-active").addClass("j-active-state");
     });
 
     //when click on the menu's dropdown
     $(document).on("click", ".j-menu-dp-container li a", function(e){
-            var this_current = $(this);
-            if(this_current.closest(".j-menu-dp-container").attr("data-allow-menureplace") === "yes"){
-              this_current.closest(".j-menu-dp-container").prev(".j-parent").find(".j-text").text(this_current.text());
+            var dis = $(this);
+            if(dis.closest(".j-menu-dp-container").attr("data-allow-menureplace") === "yes"){
+              dis.closest(".j-menu-dp-container").prev(".j-parent").find(".j-text").text(dis.text());
             }
-            if(this_current.closest(".j-menu-dp-container").attr("data-allow-menuhide") === "yes" ){
-                if(!this_current.next().hasClass("j-menu-dp-container")){
-                    this_current.closest(".j-menu-dp-container").fadeOut(200); 
+            if(dis.closest(".j-menu-dp-container").attr("data-allow-menuhide") === "yes" ){
+                if(!dis.next().hasClass("j-menu-dp-container")){
+                    dis.closest(".j-menu-dp-container").fadeOut(200); 
                 }
             }
-            if(this_current.closest(".j-menu-dp-container").attr("data-submenu-allowactive") === "yes" ){
-                 this_current.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
-                 this_current.closest(".j-menu-dp-container").prev(".j-parent").addClass("j-active j-active-state");
+            if(dis.closest(".j-menu-dp-container").attr("data-submenu-allowactive") === "yes" ){
+                 dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
+                 dis.closest(".j-menu-dp-container").prev(".j-parent").addClass("j-active j-active-state");
             }
     });
 
     //j accordion
     $(document).on("click", ".j-components .j-accordion .j-accordion-header", function(){
-        var this_current = $(this);
-        if(this_current.attr("data-toggle") === "yes"){
-            this_current.closest(".j-accordion").find(".j-accordion-content").slideUp(100, function(){
-                this_current.next(".j-accordion-content").slideDown();
+        var dis = $(this);
+        if(dis.attr("data-toggle") === "yes"){
+            dis.closest(".j-accordion").find(".j-accordion-content").slideUp(100, function(){
+                dis.next(".j-accordion-content").slideDown();
             });
         }else{
-            this_current.next(".j-accordion-content").slideDown();
+            dis.next(".j-accordion-content").slideDown();
         }
     });
     //event click j menu listener
@@ -376,10 +400,10 @@ $(document).ready(function(){
         //EXAMPLE
         $(document).on("submit", ".ejex-form", function(e){
             abort();
-            dialog_open = true;
+            modal_open = true;
             e.preventDefault();
             //declare the major variables
-            var this_current = $(this),datatype = $(this).attr("data-type"),method = $(this).attr("method"), custom_message = $(this).attr("data-custom-message"), msg = this_current.attr("data-message-place"), custom_on_success = $(this).attr("data-onsuccess"),before_send = $(this).attr("data-before-send");
+            var dis = $(this),datatype = $(this).attr("data-type"),method = $(this).attr("method"), custom_message = $(this).attr("data-custom-message"), msg = dis.attr("data-message-place"), custom_on_success = $(this).attr("data-onsuccess"),before_send = $(this).attr("data-before-send");
             //check if there is data-before-send, if there is then trigger that function first
             if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
                 var classList = before_send.split(/\s+/);
@@ -399,15 +423,15 @@ $(document).ready(function(){
             if(typeof datatype === typeof undefined && datatype === false && datatype === "") {
                 datatype = 'html';
             }
-            if(typeof this_current.attr('data-before-send') !== typeof undefined && this_current.attr('data-before-send') !== false && this_current.attr('data-before-send') !== "") {
-                var classList = this_current.attr('data-before-send').split(/\s+/);
+            if(typeof dis.attr('data-before-send') !== typeof undefined && dis.attr('data-before-send') !== false && dis.attr('data-before-send') !== "") {
+                var classList = dis.attr('data-before-send').split(/\s+/);
                 $.each(classList, function(index, item) {
                   window[item]();
                 });
             }
-            var formData = new FormData(this_current[0]);
+            var formData = new FormData(dis[0]);
             $.ajax({
-                url : this_current.attr("action"),
+                url : dis.attr("action"),
                 type : method,
                 data : formData,
                 dataType : datatype,
@@ -416,12 +440,12 @@ $(document).ready(function(){
                 contentType: false,
                 processData: false,
                 beforeSend: function(){
-                    if(global_spinner_conf===true&&this_current.attr("data-spinner")!=="off"){
+                    if(global_spinner_conf===true&&dis.attr("data-spinner")!=="off"){
                         j_loading("on");
                     }
                 },
                 complete: function(){
-                    if(global_spinner_conf===true&&this_current.attr("data-spinner")!=="off"){
+                    if(global_spinner_conf===true&&dis.attr("data-spinner")!=="off"){
                         j_loading("off");
                     }
                 },
@@ -435,7 +459,7 @@ $(document).ready(function(){
                                 if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                     $(msg).html('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
                                 }else{
-                                    this_current.prepend('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
+                                    dis.prepend('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
                                 }
                             }
                             success_transaction = true;
@@ -444,7 +468,7 @@ $(document).ready(function(){
                                 if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                     $(msg).html('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e.message+'</td></tr></table></div>');
                                 }else{
-                                    this_current.prepend('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e.message+'</td></tr></table></div>');
+                                    dis.prepend('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e.message+'</td></tr></table></div>');
                                 }
                             }
                             success_transaction = false;
@@ -457,7 +481,7 @@ $(document).ready(function(){
                                     if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                         $(msg).html('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
                                     }else{
-                                        this_current.prepend('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
+                                        dis.prepend('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
                                     }
                                 }
                                 success_transaction = true;
@@ -466,7 +490,7 @@ $(document).ready(function(){
                                     if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                         $(msg).html('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e.message+'</td></tr></table></div>');
                                     }else{
-                                        this_current.prepend('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e.message+'</td></tr></table></div>');
+                                        dis.prepend('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e.message+'</td></tr></table></div>');
                                     }
                                 }
                                 success_transaction = false;
@@ -477,7 +501,7 @@ $(document).ready(function(){
                                     if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                         $(msg).html('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
                                     }else{
-                                        this_current.prepend('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
+                                        dis.prepend('<div class="font-size13px alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+custom_message+'</td></tr></table></div>');
                                     }
                                 }
                                 success_transaction = true;
@@ -486,7 +510,7 @@ $(document).ready(function(){
                                     if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                         $(msg).html('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e+'</td></tr></table></div>');
                                     }else{
-                                        this_current.prepend('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e+'</td></tr></table></div>');
+                                        dis.prepend('<div class="font-size13px alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font-size13px text-align-left">'+e+'</td></tr></table></div>');
                                     }
                                 }
                                 success_transaction = false;
@@ -496,7 +520,7 @@ $(document).ready(function(){
                     //on success parameter
                     if(success_transaction === true){
                         //check if attr 'success-function' exist and not empty
-                        var custom_function = this_current.attr("data-success-function");
+                        var custom_function = dis.attr("data-success-function");
                         if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
                             var classList = custom_function.split(/\s+/);
                             $.each(classList, function(index, item) {
@@ -505,7 +529,7 @@ $(document).ready(function(){
                         }
                     }else{
                         //check if attr 'fail-function' exist and not empty
-                        var custom_function = this_current.attr("data-fail-function");
+                        var custom_function = dis.attr("data-fail-function");
                         if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
                             var classList = custom_function.split(/\s+/);
                             $.each(classList, function(index, item) {
@@ -519,15 +543,15 @@ $(document).ready(function(){
             });
             
             //check if attr 'constructor-function' exist and not empty
-            var custom_function = this_current.attr("data-constructor-function");
+            var custom_function = dis.attr("data-constructor-function");
             if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
                 var classList = custom_function.split(/\s+/);
                 $.each(classList, function(index, item) {
                   window[item]();
                 });
             }
-            if(!$("#notification-dialog,#extra-modal").is(":visible")){
-                dialog_open = false;    
+            if(!$("#modal-dialog,#extra-modal").is(":visible")){
+                modal_open = false;    
             }
             
         });
@@ -593,11 +617,11 @@ $(document).ready(function(){
                     $(this).closest(".j-datepicker").find('select[name="days"] option:first-child').prop("selected",true).closest("select").trigger("change");
                 }
                 // console.log(moment($(this).closest(".j-datepicker").find('select[name="months"]').val()).format("M"));
-                if($('#notification-dialog input[name="type"]').val()==="early ob"){
+                if($('#modal-dialog input[name="type"]').val()==="early ob"){
                     var month = moment().format("MMMM"),day = moment().format("DD");
                     if($(this).val().toLowerCase()===month.toLowerCase()){
-                         $('#notification-dialog input[name="date"]').closest(".parent").find('.j-menu-dp-container select[name="days"] option[value="'+day+'"]').prop("selected",true).closest("select").trigger("change");
-                        $('#notification-dialog input[name="date"]').closest(".parent").find('.j-menu-dp-container select[name="days"] option[value="'+day+'"]').prevAll().prop("disabled",true);
+                         $('#modal-dialog input[name="date"]').closest(".parent").find('.j-menu-dp-container select[name="days"] option[value="'+day+'"]').prop("selected",true).closest("select").trigger("change");
+                        $('#modal-dialog input[name="date"]').closest(".parent").find('.j-menu-dp-container select[name="days"] option[value="'+day+'"]').prevAll().prop("disabled",true);
                     }
                 }
             }
