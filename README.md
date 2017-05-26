@@ -27,7 +27,7 @@ This will add a long shadow to a given element. This will require [Long shadow p
 // "shadow_position", the direction of the shadow, currently the shadow has 8 directions 'top, right, bottom, left, top-right, top-left, bottom-right, bottom-left'
 
 j_shadow(el, shadow_color, shadow_length, shadow_position)
-
+```
 
 ### Spinner, spinner component
 Add spinner, spinner unto your app.
