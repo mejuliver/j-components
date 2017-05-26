@@ -50,20 +50,28 @@ function limitText(el, limit, crop){
     });
 }
 //apply shadow to the specified element. To use, j_shadow("[specify the target element, a class element or an element by ID]", '[specify the color of the shadow, you can use rgba, hex color or a string color e.g. red, blue, green etc..]', '[specify the length of the shadow e.g. 50, 100 or whatsoever]', '[specify the position of the shadow e.g. top, left, right, bottom, top-left, top-right, bottom-left, bottom-right]')
-function j_shadow(j_el, j_color, j_length, j_position){
+function j_shadow(el, shadow_color, shadow_length, shadow_position){
     //required longshadow js
-    $(j_el).longShadow({
-        colorShadow: j_color,
-        sizeShadow: j_length,
-        directionShadow: j_position
+    $(el).longShadow({
+        colorShadow: shadow_color,
+        sizeShadow: shadow_length,
+        directionShadow: shadow_position
     });
 }
 //add loading animation or a loading spinner. To use j_loading("[specify if show or hide e.g. on or off]", "[specify a theme to be used, e.g. white or dark]", "[specify if whos spinner or not e.g. yes or no]")
-function j_loading(status){
+function j_loading(status,loader_type){
    if(status==="on"){
-        $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="loader"></div></div>')
-        $('#spinner').center().show();
-        $('body').addClass('disabled');
+        switch(loader_type){
+            case '' :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="loader"></div></div>')
+                $('#spinner').center().show();
+                $('body').addClass('disabled');
+                break;
+            default :
+                $("body").append('<div class="thehide display_table bg-megamitch padding-10px radius-5px animated zoomIn" style="position:fixed;z-index:999999999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="loader"></div></div>')
+                $('#spinner').center().show();
+                $('body').addClass('disabled');
+        }
    }else{
         $('#spinner').fadeOut(400,function(){
             $('#spinner').center().remove();
@@ -657,7 +665,7 @@ var getDaysArray = function(year, month) {
   var date = new Date(year, month-1, 1);
   var result = [];
   while (date.getMonth() == month-1) {
-    // result.push(date.getDate()+"-"+names[date.getDay()]);
+    // result.push(date.getDate()+"-"+names[date.getDay()]);x
     result.push(date.getDate());
     date.setDate(date.getDate()+1);
   }
@@ -705,4 +713,6 @@ function j_datepicker(){
             '</ul>'+
         '</li>'+
         '</ul></div></div>');
-}
+}    
+}{ 
+d
