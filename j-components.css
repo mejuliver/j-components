@@ -1450,10 +1450,10 @@ T A B L E
 
 */
 .line-height-initial{line-height:initial;}
-.font-700{font-weight: 700;}
-.font-500{font-weight: 500;}
-.font-400{font-weight: 400;}
-.font-300{font-weight: 300;}
+.font700{font-weight: 700;}
+.font500{font-weight: 500;}
+.font400{font-weight: 400;}
+.font300{font-weight: 300;}
 .display-none{display: none;}
 .display-block{display: block;}
 .extend{max-width: 100%;max-height: 100%;}
