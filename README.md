@@ -111,6 +111,7 @@ j_notification(contents, auto_hide, hide)
 	</nav>
 </div>
 ```
+Above explanantions, the first li, its anchor tag has a attribute of 'data-ajaxpage="yes"' this means, this will all
 
 Example tabs:
 ```
