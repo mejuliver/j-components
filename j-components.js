@@ -235,21 +235,21 @@ $(document).ready(function(){
     //j menu
     $(document).on("click", ".j-components .j-menu .j-menu-nav a", function(e){
         
-        var this_current = $(this);
+        var dis = $(this);
         //if ajax
-        if(this_current.attr("data-ajaxpage") === "yes"){get_page(this_current.attr("href").substring(1), this_current.attr("data-ajax-render"), this_current.attr("data-dependencies"));}
+        if(dis.attr("data-ajaxpage") === "yes"){get_page(dis.attr("href").substring(1), dis.attr("data-ajax-render"), dis.attr("data-dependencies"));}
         //if allowed to set an active state and active indentifier
-        if(this_current.attr("data-allow-active") === "yes"){
-            if(this_current.attr("data-has-submenu") === "no" || !this_current.attr("data-has-submenu") || this_current.attr("data-submenu-allowactive") === "yes"){
-                this_current.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
-                this_current.addClass("j-active j-active-state");
+        if(dis.attr("data-allow-active") === "yes"){
+            if(dis.attr("data-has-submenu") === "no" || !dis.attr("data-has-submenu") || dis.attr("data-submenu-allowactive") === "yes"){
+                dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
+                dis.addClass("j-active j-active-state");
             }
         }
         //if tabs
-        if(this_current.attr("data-tabs") === "yes"){
-            $("#"+this_current.closest(".j-menu-nav").attr("data-tabs-container")+" > .j_tabs").removeClass("active-tab").hide();
-            $("#"+this_current.closest('[data-tabs-container]').attr("data-tabs-container")+" "+this_current.attr("href")).addClass("active-tab").fadeIn(200);
-            var custom_function = this_current.attr("data-monkey-run");
+        if(dis.attr("data-tabs") === "yes"){
+            $("#"+dis.closest(".j-menu-nav").attr("data-tabs-container")+" > .j_tabs").removeClass("active-tab").hide();
+            $("#"+dis.closest('[data-tabs-container]').attr("data-tabs-container")+" "+dis.attr("href")).addClass("active-tab").fadeIn(200);
+            var custom_function = dis.attr("data-monkey-run");
             if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
                 var classList = custom_function.split(/\s+/);
                 $.each(classList, function(index, item) {
@@ -260,12 +260,12 @@ $(document).ready(function(){
 
         }
         //if there's a submenu
-        if(this_current.attr("data-has-submenu") === "yes"){
-            if(this_current.next(".j-menu-dp-container").is(":visible")){
-                this_current.next(".j-menu-dp-container").fadeOut(200);
+        if(dis.attr("data-has-submenu") === "yes"){
+            if(dis.next(".j-menu-dp-container").is(":visible")){
+                dis.next(".j-menu-dp-container").fadeOut(200);
 
                 //run data-on-close function on close event of dropdown menu
-                var on_close = this_current.attr("data-on-close");
+                var on_close = dis.attr("data-on-close");
                 if(typeof on_close !== typeof undefined && on_close !== false && on_close !== "") {
                     var classList = on_close.split(/\s+/);
                     $.each(classList, function(index, item) {
@@ -274,16 +274,16 @@ $(document).ready(function(){
                 }
                 
             }else{
-                this_current.next(".j-menu-dp-container").css({ 'display': 'table','min-width' : this_current.closest("li").width() + 'px' }).fadeIn(200);
-                if(this_current.next(".j-menu-dp-container").offset().left+(this_current.next(".j-menu-dp-container").width()*1) > $(window).width()){
-                    this_current.next(".j-menu-dp-container").css({ 'margin-left' : "-110px" });
+                dis.next(".j-menu-dp-container").css({ 'display': 'table','min-width' : dis.closest("li").width() + 'px' }).fadeIn(200);
+                if(dis.next(".j-menu-dp-container").offset().left+(dis.next(".j-menu-dp-container").width()*1) > $(window).width()){
+                    dis.next(".j-menu-dp-container").css({ 'margin-left' : "-110px" });
                 }
-                //if(this_current.next(".j-menu-dp-container").offset().top+(this_current.next(".j-menu-dp-container").height()*1) > $(window).height()){
-                //    this_current.next(".j-menu-dp-container").css({ 'margin-top' : -(this_current.height()+this_current.next(".j-menu-dp-container").height()+40)+'px' });
+                //if(dis.next(".j-menu-dp-container").offset().top+(dis.next(".j-menu-dp-container").height()*1) > $(window).height()){
+                //    dis.next(".j-menu-dp-container").css({ 'margin-top' : -(dis.height()+dis.next(".j-menu-dp-container").height()+40)+'px' });
                 //}
 
                 //run data-on-close function on close event of dropdown menu
-                var on_open = this_current.attr("data-on-open");
+                var on_open = dis.attr("data-on-open");
                 if(typeof on_open !== typeof undefined && on_open !== false && on_open !== "") {
                     var classList = on_open.split(/\s+/);
                     $.each(classList, function(index, item) {
@@ -291,58 +291,58 @@ $(document).ready(function(){
                     });
                 }
             }
-            if(this_current.next(".j-menu-dp-container").height() >= 400){
-                this_current.next(".j-menu-dp-container").css({ 'height' : '300px' });
+            if(dis.next(".j-menu-dp-container").height() >= 400){
+                dis.next(".j-menu-dp-container").css({ 'height' : '300px' });
             }
         }else{
-            if(!this_current.hasClass("dont-hide")){
+            if(!dis.hasClass("dont-hide")){
                 $(".top-submenu").hide();
                 $($(this).attr("data-has-submenu")).show().find("li").show();
             }
         } // end of else if sub-menu is not equal to yes
-        if(this_current.attr("data-navigate") !== "yes"){
+        if(dis.attr("data-navigate") !== "yes"){
             e.preventDefault();
         }
     });
     //menu mouseover
     $(document).on("mouseover", ".j-components .j-menu .j-menu-nav a", function(e){
-        var this_current = $(this);
-        if(this_current.attr("data-allow-hover") === "yes"){
-        this_current.closest(".j-menu-nav").find(".j-parent").removeClass("j-active-state");
-        this_current.addClass("j-active-state");
+        var dis = $(this);
+        if(dis.attr("data-allow-hover") === "yes"){
+        dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active-state");
+        dis.addClass("j-active-state");
         }
     }).on("mouseleave", ".j-menu .j-menu-nav a", function(){
-        var this_current = $(this);
-        this_current.removeClass("j-active-state");
-        this_current.closest(".j-menu-nav").find(".j-active").addClass("j-active-state");
+        var dis = $(this);
+        dis.removeClass("j-active-state");
+        dis.closest(".j-menu-nav").find(".j-active").addClass("j-active-state");
     });
 
     //when click on the menu's dropdown
     $(document).on("click", ".j-menu-dp-container li a", function(e){
-            var this_current = $(this);
-            if(this_current.closest(".j-menu-dp-container").attr("data-allow-menureplace") === "yes"){
-              this_current.closest(".j-menu-dp-container").prev(".j-parent").find(".j-text").text(this_current.text());
+            var dis = $(this);
+            if(dis.closest(".j-menu-dp-container").attr("data-allow-menureplace") === "yes"){
+              dis.closest(".j-menu-dp-container").prev(".j-parent").find(".j-text").text(dis.text());
             }
-            if(this_current.closest(".j-menu-dp-container").attr("data-allow-menuhide") === "yes" ){
-                if(!this_current.next().hasClass("j-menu-dp-container")){
-                    this_current.closest(".j-menu-dp-container").fadeOut(200); 
+            if(dis.closest(".j-menu-dp-container").attr("data-allow-menuhide") === "yes" ){
+                if(!dis.next().hasClass("j-menu-dp-container")){
+                    dis.closest(".j-menu-dp-container").fadeOut(200); 
                 }
             }
-            if(this_current.closest(".j-menu-dp-container").attr("data-submenu-allowactive") === "yes" ){
-                 this_current.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
-                 this_current.closest(".j-menu-dp-container").prev(".j-parent").addClass("j-active j-active-state");
+            if(dis.closest(".j-menu-dp-container").attr("data-submenu-allowactive") === "yes" ){
+                 dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
+                 dis.closest(".j-menu-dp-container").prev(".j-parent").addClass("j-active j-active-state");
             }
     });
 
     //j accordion
     $(document).on("click", ".j-components .j-accordion .j-accordion-header", function(){
-        var this_current = $(this);
-        if(this_current.attr("data-toggle") === "yes"){
-            this_current.closest(".j-accordion").find(".j-accordion-content").slideUp(100, function(){
-                this_current.next(".j-accordion-content").slideDown();
+        var dis = $(this);
+        if(dis.attr("data-toggle") === "yes"){
+            dis.closest(".j-accordion").find(".j-accordion-content").slideUp(100, function(){
+                dis.next(".j-accordion-content").slideDown();
             });
         }else{
-            this_current.next(".j-accordion-content").slideDown();
+            dis.next(".j-accordion-content").slideDown();
         }
     });
     //event click j menu listener
@@ -392,14 +392,23 @@ $(document).ready(function(){
         //end of .line-animation
 
 // ##################################### AJAX FORM TOOLS #####################################
-//<form class="ejex-form" action="[url]" method="[post/get] default 'post' " data-onsuccess="[specified the function you want the success response to be pass on]" data-message-place="[if specified is 'this' then the message will be prepended unto the form else, the data-message-place e.g class or ID will be used a container for the message]" data-custom-message="[custom message e.g. successfully save to file]" data-success-function="[list all the functions you want to run when ajax response returns true, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]" data-fail-function="[list all the functions you want to run when ajax response returns false, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]" data-constructor-function="[list all the functions you want to run automatically when the event finish, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]">
+//<form class="ejex-form" action="[url]" method="[post/get] default 'post' " data-onsuccess="[specified the function you want the success response to be pass on]" data-message-place="[if specified is 'this' then the message will be prepended unto the form else, the data-message-place e.g class or ID will be used a container for the message]" data-custom-message="[custom message e.g. successfully save to file]" data-success-function="[list all the functions you want to run when ajax response returns true, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]" data-fail-function="[list all the functions you want to run when ajax response returns false, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]" data-constructor-function="[list all the functions you want to run automatically before event starts, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]">
         //EXAMPLE
         $(document).on("submit", ".j-components .ajax-form", function(e){
             abort();
             dialog_open = true;
             e.preventDefault();
+
             //declare the major variables
-            var this_current = $(this),datatype = $(this).attr("data-type"),method = $(this).attr("method"), custom_message = $(this).attr("data-custom-message"), msg = this_current.attr("data-message-place"), custom_on_success = $(this).attr("data-onsuccess"),before_send = $(this).attr("data-before-send");
+            var dis = $(this),datatype = $(this).attr("data-type"),method = $(this).attr("method"), custom_message = $(this).attr("data-custom-message"), msg = dis.attr("data-message-place"), custom_on_success = $(this).attr("data-onsuccess"),before_send = $(this).attr("data-before-send");
+            //check if attr 'constructor-function' exist and not empty
+            var custom_function = dis.attr("data-constructor-function");
+            if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
+                var classList = custom_function.split(/\s+/);
+                $.each(classList, function(index, item) {
+                  window[item]();
+                });
+            }
             //check if there is data-before-send, if there is then trigger that function first
             if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
                 var classList = before_send.split(/\s+/);
@@ -419,15 +428,16 @@ $(document).ready(function(){
             if(typeof datatype === typeof undefined && datatype === false && datatype === "") {
                 datatype = 'html';
             }
-            if(typeof this_current.attr('data-before-send') !== typeof undefined && this_current.attr('data-before-send') !== false && this_current.attr('data-before-send') !== "") {
-                var classList = this_current.attr('data-before-send').split(/\s+/);
+            if(typeof dis.attr('data-before-send') !== typeof undefined && dis.attr('data-before-send') !== false && dis.attr('data-before-send') !== "") {
+                var classList = dis.attr('data-before-send').split(/\s+/);
                 $.each(classList, function(index, item) {
                   window[item]();
                 });
             }
-            var formData = new FormData(this_current[0]);
+            var formData = new FormData(dis[0]);
+
             $.ajax({
-                url : this_current.attr("action"),
+                url : dis.attr("action"),
                 type : method,
                 data : formData,
                 dataType : datatype,
@@ -436,12 +446,12 @@ $(document).ready(function(){
                 contentType: false,
                 processData: false,
                 beforeSend: function(){
-                    if(global_spinner_conf===true&&this_current.attr("data-spinner")!=="off"){
+                    if(global_spinner_conf===true&&dis.attr("data-spinner")!=="off"){
                         j_spinner("on");
                     }
                 },
                 complete: function(){
-                    if(global_spinner_conf===true&&this_current.attr("data-spinner")!=="off"){
+                    if(global_spinner_conf===true&&dis.attr("data-spinner")!=="off"){
                         j_spinner("off");
                     }
                 },
@@ -455,21 +465,21 @@ $(document).ready(function(){
                                 if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                     $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
                                 }else{
-                                    this_current.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
+                                    dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
                                 }
                             }
                             success_transaction = true;
+                            window[custom_on_success](e);
                         }else{
                             if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
                                 if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                     $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
                                 }else{
-                                    this_current.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
+                                    dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
                                 }
                             }
                             success_transaction = false;
                         }
-                        window[custom_on_success](e);
                     }else{
                         if(datatype === 'json'){
                             if(e.success){
@@ -477,7 +487,7 @@ $(document).ready(function(){
                                     if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                         $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
                                     }else{
-                                        this_current.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
+                                        dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
                                     }
                                 }
                                 success_transaction = true;
@@ -486,7 +496,7 @@ $(document).ready(function(){
                                     if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                         $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
                                     }else{
-                                        this_current.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
+                                        dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
                                     }
                                 }
                                 success_transaction = false;
@@ -497,7 +507,7 @@ $(document).ready(function(){
                                     if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                         $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
                                     }else{
-                                        this_current.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
+                                        dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
                                     }
                                 }
                                 success_transaction = true;
@@ -506,7 +516,7 @@ $(document).ready(function(){
                                     if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
                                         $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
                                     }else{
-                                        this_current.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
+                                        dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
                                     }
                                 }
                                 success_transaction = false;
@@ -516,7 +526,7 @@ $(document).ready(function(){
                     //on success parameter
                     if(success_transaction === true){
                         //check if attr 'success-function' exist and not empty
-                        var custom_function = this_current.attr("data-success-function");
+                        var custom_function = dis.attr("data-success-function");
                         if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
                             var classList = custom_function.split(/\s+/);
                             $.each(classList, function(index, item) {
@@ -524,8 +534,9 @@ $(document).ready(function(){
                             });
                         }
                     }else{
+
                         //check if attr 'fail-function' exist and not empty
-                        var custom_function = this_current.attr("data-fail-function");
+                        var custom_function = dis.attr("data-fail-function");
                         if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
                             var classList = custom_function.split(/\s+/);
                             $.each(classList, function(index, item) {
@@ -538,14 +549,6 @@ $(document).ready(function(){
 
             });
             
-            //check if attr 'constructor-function' exist and not empty
-            var custom_function = this_current.attr("data-constructor-function");
-            if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
-                var classList = custom_function.split(/\s+/);
-                $.each(classList, function(index, item) {
-                  window[item]();
-                });
-            }
             if(!$("#modal-dialog,#extra-modal").is(":visible")){
                 dialog_open = false;    
             }
