@@ -471,13 +471,13 @@ $(document).ready(function(){
                             success_transaction = true;
                             window[custom_on_success](e);
                         }else{
-                            if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                                if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                    $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
-                                }else{
-                                    dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
-                                }
+                            //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
+                            if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
+                                $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
+                            }else{
+                                dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
                             }
+                            //}
                             success_transaction = false;
                         }
                     }else{
@@ -492,13 +492,13 @@ $(document).ready(function(){
                                 }
                                 success_transaction = true;
                             }else{
-                                if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                                    if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                        $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
-                                    }else{
-                                        dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
-                                    }
+                                //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
+                                if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
+                                    $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
+                                }else{
+                                    dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
                                 }
+                                //}
                                 success_transaction = false;
                             }
                         }else{
@@ -512,13 +512,13 @@ $(document).ready(function(){
                                 }
                                 success_transaction = true;
                             }else{
-                                if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                                    if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                        $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
-                                    }else{
-                                        dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
-                                    }
+                                //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
+                                if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
+                                    $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
+                                }else{
+                                    dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
                                 }
+                                //}
                                 success_transaction = false;
                             }
                         }
