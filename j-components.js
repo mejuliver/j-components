@@ -154,7 +154,7 @@ function get_page(this_tab_content_link, container, dependencies){
 }
 //create a notification. To use, j_notification("[specift the content]", "[specify if autohide]", "[specify if yes or no]")
 function j_notification(data, auto_hide, hide){
-        if(auto-hide !== "yes"){
+        if(auto_hide !== "yes"){
             if($("#j-notification-dialog").length){
                 $("#j-notification-dialog").html(data);
                 $("#j-notification-dialog").show();
