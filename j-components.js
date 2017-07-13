@@ -159,7 +159,7 @@ function j_notification(data, auto_hide, hide){
                 $("#j-notification-dialog").html(data);
                 $("#j-notification-dialog").show();
             }else{
-                $("body").append('<div class="display-table hide extend clear animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
+                $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
                 $("#j-notification-dialog").show();
             }
             if(hide === "yes"){
@@ -170,7 +170,7 @@ function j_notification(data, auto_hide, hide){
                 $("#j-notification-dialog").html(data);
                 $("#j-notification-dialog").show();
             }else{
-                $("body").append('<div class="display-table hide extend clear animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
+                $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
                 $("#j-notification-dialog").show();
             }
             $("#j-notification-dialog").delay(5000).fadeOut(500);

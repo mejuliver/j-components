@@ -1636,6 +1636,15 @@ T A B L E
   filter: FlipH;
   -ms-filter: "FlipH";
 }
+
+#j-notification-dialog{
+  position:fixed;
+  bottom:30px;
+  left:30px;
+  background:rgba(0,0,0,0.6);
+  z-index:999;
+  display:table;
+}
 @media (max-width: 770px){
     .responsive-770-resize{height:auto;}
     .responsive-770-hide{display:none;}
