@@ -169,6 +169,7 @@ function j_notification(data, auto_hide, hide){
             if($("#j-notification-dialog").length){
                 $("#j-notification-dialog").html(data);
                 $("#j-notification-dialog").show();
+                // $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog" style="display:table;top:'+$("#j-notification-dialog:first-child").offset().top+30+'px">' + data + '</div>'); 
             }else{
                 $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
                 $("#j-notification-dialog").show();

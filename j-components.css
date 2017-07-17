@@ -1594,26 +1594,26 @@ T A B L E
 .border-none{border:none;}
 .list-style-none{list-style:none;}
 .text-decoration-underline{text-decoration:underline;}
-.letter-spacing-1px{letter-spacing:1px;}
-.letter-spacing-2px{letter-spacing:2px;}
-.letter-spacing-3px{letter-spacing:3px;}
-.letter-spacing-4px{letter-spacing:4px;}
-.letter-spacing-5px{letter-spacing:5px;}
-.letter-spacing-6px{letter-spacing:6px;}
-.letter-spacing-7px{letter-spacing:7px;}
-.letter-spacing-8px{letter-spacing:8px;}
-.letter-spacing-9px{letter-spacing:9px;}
-.letter-spacing-10px{letter-spacing:10px;}
-.letter-spacing-11px{letter-spacing:11px;}
-.letter-spacing-12px{letter-spacing:12px;}
-.letter-spacing-13px{letter-spacing:13px;}
-.letter-spacing-14px{letter-spacing:14px;}
-.letter-spacing-15px{letter-spacing:15px;}
-.letter-spacing-16px{letter-spacing:16px;}
-.letter-spacing-17px{letter-spacing:17px;}
-.letter-spacing-18px{letter-spacing:18px;}
-.letter-spacing-19px{letter-spacing:19px;}
-.letter-spacing-20px{letter-spacing:20px;}
+.letter-spacing-1{letter-spacing:1px;}
+.letter-spacing-2{letter-spacing:2px;}
+.letter-spacing-3{letter-spacing:3px;}
+.letter-spacing-4{letter-spacing:4px;}
+.letter-spacing-5{letter-spacing:5px;}
+.letter-spacing-6{letter-spacing:6px;}
+.letter-spacing-7{letter-spacing:7px;}
+.letter-spacing-8{letter-spacing:8px;}
+.letter-spacing-9{letter-spacing:9px;}
+.letter-spacing-10{letter-spacing:10px;}
+.letter-spacing-11{letter-spacing:11px;}
+.letter-spacing-12{letter-spacing:12px;}
+.letter-spacing-13{letter-spacing:13px;}
+.letter-spacing-14{letter-spacing:14px;}
+.letter-spacing-15{letter-spacing:15px;}
+.letter-spacing-16{letter-spacing:16px;}
+.letter-spacing-17{letter-spacing:17px;}
+.letter-spacing-18{letter-spacing:18px;}
+.letter-spacing-19{letter-spacing:19px;}
+.letter-spacing-20{letter-spacing:20px;}
 /* 
 
  F L I P
@@ -1642,9 +1642,16 @@ T A B L E
   bottom:30px;
   left:30px;
   background:rgba(0,0,0,0.6);
-  z-index:999;
+  z-index:99999;
   display:table;
+  color:#FFFFFF;
+  font-weight:500;
+  font-size:15px;
+  padding:20px 25px;
+  -webkit-animation-duration:500ms;
+  animation-duration:500ms;
 }
+
 @media (max-width: 770px){
     .responsive-770-resize{height:auto;}
     .responsive-770-hide{display:none;}
