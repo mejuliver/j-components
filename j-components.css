@@ -522,6 +522,31 @@ table.v-align-bottom th,table.v-align-bottom td,.v-align-bottom{vertical-align:b
 .display-table{display:table;}
 .display-row{display:table-row;}
 .display-cell{display:table-cell;}
+/** 3. ZOOM IMAGES HOVER */
+.zoom-hover-img a {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+}
+
+.zoom-hover-img a:hover img {
+  transform: scale(1.15);
+}
+
+.zoom-hover-img figure {
+  margin: 0;
+}
+
+.zoom-hover-img img {
+  max-width: 100%;
+  display: block;
+  transition: transform 300ms ease-in-out;
+  width:100%;
+  margin:0px!important;
+} 
 /* 
  L O A D E R S
 
@@ -1450,7 +1475,10 @@ T A B L E
 
 */
 .line-height-initial{line-height:initial;}
+.font900{font-weight: 900;}
+.font800{font-weight: 800;}
 .font700{font-weight: 700;}
+.font600{font-weight: 600;}
 .font500{font-weight: 500;}
 .font400{font-weight: 400;}
 .font300{font-weight: 300;}
