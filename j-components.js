@@ -242,7 +242,7 @@ $(document).ready(function(){
         //if allowed to set an active state and active indentifier
         if(dis.attr("data-allow-active") === "yes"){
             if(dis.attr("data-has-submenu") === "no" || !dis.attr("data-has-submenu") || dis.attr("data-submenu-allowactive") === "yes"){
-                dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
+                dis.closest(".j-menu-nav").find(".parent").removeClass("j-active j-active-state");
                 dis.addClass("j-active j-active-state");
             }
         }
@@ -309,7 +309,7 @@ $(document).ready(function(){
     $(document).on("mouseover", ".j-components .j-menu .j-menu-nav a", function(e){
         var dis = $(this);
         if(dis.attr("data-allow-hover") === "yes"){
-        dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active-state");
+        dis.closest(".j-menu-nav").find(".parent").removeClass("j-active-state");
         dis.addClass("j-active-state");
         }
     }).on("mouseleave", ".j-menu .j-menu-nav a", function(){
@@ -322,7 +322,7 @@ $(document).ready(function(){
     $(document).on("click", ".j-menu-dp-container li a", function(e){
             var dis = $(this);
             if(dis.closest(".j-menu-dp-container").attr("data-allow-menureplace") === "yes"){
-              dis.closest(".j-menu-dp-container").prev(".j-parent").find(".j-text").text(dis.text());
+              dis.closest(".j-menu-dp-container").prev(".parent").find(".j-text").text(dis.text());
             }
             if(dis.closest(".j-menu-dp-container").attr("data-allow-menuhide") === "yes" ){
                 if(!dis.next().hasClass("j-menu-dp-container")){
@@ -330,8 +330,8 @@ $(document).ready(function(){
                 }
             }
             if(dis.closest(".j-menu-dp-container").attr("data-submenu-allowactive") === "yes" ){
-                 dis.closest(".j-menu-nav").find(".j-parent").removeClass("j-active j-active-state");
-                 dis.closest(".j-menu-dp-container").prev(".j-parent").addClass("j-active j-active-state");
+                 dis.closest(".j-menu-nav").find(".parent").removeClass("j-active j-active-state");
+                 dis.closest(".j-menu-dp-container").prev(".parent").addClass("j-active j-active-state");
             }
     });
 
@@ -471,6 +471,8 @@ $(document).ready(function(){
                             }
                             success_transaction = true;
                             window[custom_on_success](e);
+
+
                         }else{
                             //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
                             if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
@@ -557,34 +559,34 @@ $(document).ready(function(){
         });
         // ##################################### END AJAX FORM TOOLS #####################################
         //modify the textarea
-        $(document).on('keypress keyup keydown','.datepicker,.timepicker',function(){
+        $(document).on('keypress keyup keydown','.j-datepicker,.j-timepicker',function(){
             return false;
         });
         // *************************************************** J  T I M E P I C K E R ***************************************************
-       //init timepicker
+       //init j-timepicker
        j_timepicker();
-        $(document).on("click",".timepicker",function(){
+        $(document).on("click",".j-timepicker",function(){
             if($(this).val()!==""){
                 var time = $(this).val().replace(':',' ').split(' ');
                 $(this).closest(".parent").find('select[name="hours"]').val(time[0]).trigger("change");
                 $(this).closest(".parent").find('select[name="minutes"]').val(time[1]).trigger("change");
                 $(this).closest(".parent").find('select[name="am_pm"]').val(time[2].toLowerCase()).trigger("change");
             }
-            $(this).closest(".parent").find(".j-components .j-parent").trigger("click");
+            $(this).closest(".parent").find(".j-components .parent").trigger("click");
         });
         $(document).on("click",".j-timepicker-ok",function(e){
             e.preventDefault();
-            $(this).closest(".j-timepicker").closest(".parent").find(".timepicker").val($(this).closest(".j-timepicker").find('select[name="hours"]').val()+":"+$(this).closest(".j-timepicker").find('select[name="minutes"]').val()+" "+$(this).closest(".j-timepicker").find('select[name="am_pm"]').val().toUpperCase()).closest(".parent").find(".j-timepicker .j-menu-dp-container").fadeOut(200);
+            $(this).closest(".j-timepicker").closest(".parent").find(".j-timepicker").val($(this).closest(".j-timepicker").find('select[name="hours"]').val()+":"+$(this).closest(".j-timepicker").find('select[name="minutes"]').val()+" "+$(this).closest(".j-timepicker").find('select[name="am_pm"]').val().toUpperCase()).closest(".parent").find(".j-timepicker .j-menu-dp-container").fadeOut(200);
         });
         $(document).on("click",".j-timepicker-current",function(e){
             e.preventDefault();
-            $(this).closest(".j-timepicker").closest(".parent").find(".timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).closest(".parent").find(".j-timepicker .j-menu-dp-container").fadeOut(200);
+            $(this).closest(".j-timepicker").closest(".parent").find(".j-timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).closest(".parent").find(".j-timepicker .j-menu-dp-container").fadeOut(200);
         });
         // *************************************************** J  D A T E P I C K E R ***************************************************
-        //init datepicker
+        //init j-datepicker
         j_datepicker();
         var days_change=false;
-        $(document).on("click",".datepicker",function(){
+        $(document).on("click",".j-datepicker",function(){
             if($(this).val()!==""){
                 var dates = $(this).val().replace(',','').split(' ');
                 $(this).closest(".parent").find('.j-datepicker select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
@@ -593,15 +595,15 @@ $(document).ready(function(){
             }else{
                 days_change=false;
             }
-            $(this).closest(".parent").find(".j-components .j-parent").trigger("click");
+            $(this).closest(".parent").find(".j-components .parent").trigger("click");
         });
         $(document).on("click",".j-datepicker-ok",function(e){
             e.preventDefault();
-            $(this).closest(".j-datepicker").closest(".parent").find(".datepicker").val($(this).closest(".j-datepicker").find('select[name="months"]').val()+" "+$(this).closest(".j-datepicker").find('select[name="days"]').val()+", "+$(this).closest(".j-datepicker").find('select[name="years"]').val()).closest(".parent").find(".j-datepicker .j-menu-dp-container").fadeOut(200);
+            $(this).closest(".j-datepicker").closest(".parent").find(".j-datepicker").val($(this).closest(".j-datepicker").find('select[name="months"]').val()+" "+$(this).closest(".j-datepicker").find('select[name="days"]').val()+", "+$(this).closest(".j-datepicker").find('select[name="years"]').val()).closest(".parent").find(".j-datepicker .j-menu-dp-container").fadeOut(200);
         });
         $(document).on("click",".j-datepicker-current",function(e){
             e.preventDefault();
-            $(this).closest(".j-datepicker").closest(".parent").find(".datepicker").val(moment().format('MMMM')+" "+moment().format("D")+", "+moment().format('YYYY')).closest(".parent").find(".j-datepicker .j-menu-dp-container").fadeOut(200);
+            $(this).closest(".j-datepicker").closest(".parent").find(".j-datepicker").val(moment().format('MMMM')+" "+moment().format("D")+", "+moment().format('YYYY')).closest(".parent").find(".j-datepicker .j-menu-dp-container").fadeOut(200);
         });
         $(document).on("change",'.j-datepicker select[name="months"],.j-datepicker select[name="years"]',function(){
             if($(this).val()!==""){
@@ -655,7 +657,7 @@ function checkwidth(){
 }
 function j_timepicker(){
     $(".j-timepicker").remove();
-    $('.time,.timepicker,.time_input').attr({ 'readonly' : false, 'placeholder' : 'Click to select time...' }).removeClass("dont-write").addClass("timepicker").wrap('<div></div>').parent().addClass("parent").closest(".overflow-auto").removeClass("overflow-auto");
+    $('.time,.j-timepicker,.time_input').attr({ 'readonly' : false, 'placeholder' : 'Click to select time...' }).removeClass("dont-write").addClass("j-timepicker").wrap('<div></div>').parent().addClass("parent").closest(".overflow-auto").removeClass("overflow-auto");
     var hours = '<select class="form-control j-timepicker-hrs" style="width:70px;" name="hours">';
     for(i=1;i<13;i++){
         var hrs = "0"+i.toString();
@@ -672,8 +674,8 @@ function j_timepicker(){
     am_pm+='<option value="am">AM</option>';
     am_pm+='<option value="pm">PM</option>';
     am_pm+='</select>';
-    $(".timepicker").after('<div class="j-components j-timepicker"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
-        '<li class="list-style-none clear"><a href="#" class="j-parent" data-has-submenu="yes" style="display:none;">click</a>'+
+    $(".j-timepicker").after('<div class="j-components j-timepicker"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
+        '<li class="list-style-none clear"><a href="#" class="parent" data-has-submenu="yes" style="display:none;">click</a>'+
             '<ul class="j-menu-dp-container list-style-none hide bg-white p15 radius-3px shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
                 '<li class="list-style-none"><div class="display-table">'+
                     '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">HOURS:</span><br>'+hours+'</div><div class="display-cell pr7"><span class="font10 font500">MINUTES:</span><br>'+minutes+'</div><div class="display-cell"><span class="font10 font500">AM/PM:</span><br>'+am_pm+'</div></div></div>'+
@@ -697,7 +699,7 @@ var getDaysArray = function(year, month) {
 }
 function j_datepicker(){
     $(".j-datepicker").remove();
-    $('.datepicker,.materia-datepicker').attr({ 'readonly' : false, 'placeholder' : 'Click to select date...' }).removeClass("dont-write").addClass("datepicker").wrap('<div></div>').parent().addClass("parent").closest(".overflow-auto").removeClass("overflow-auto");
+    $('.j-datepicker,.materia-j-datepicker').attr({ 'readonly' : false, 'placeholder' : 'Click to select date...' }).removeClass("dont-write").addClass("j-datepicker").wrap('<div></div>').parent().addClass("parent").closest(".overflow-auto").removeClass("overflow-auto");
     
     //years
     var start_year = 1930,current_year = new Date().getFullYear(),years='<select class="form-control" style="width:90px;" name="years">';
@@ -727,8 +729,8 @@ function j_datepicker(){
             days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
     });
     days+='</select>';
-    $(".datepicker").after('<div class="j-components j-datepicker"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
-        '<li class="list-style-none clear"><a href="#" class="j-parent" style="display:none;" data-has-submenu="yes">click</a>'+
+    $(".j-datepicker").after('<div class="j-components j-datepicker"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
+        '<li class="list-style-none clear"><a href="#" class="parent" style="display:none;" data-has-submenu="yes">click</a>'+
             '<ul class="j-menu-dp-container list-style-none hide bg-white p15 radius-3px shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
                 '<li class="list-style-none"><div class="display-table">'+
                     '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTHS:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div>'+
