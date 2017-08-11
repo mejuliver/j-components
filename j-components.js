@@ -636,10 +636,10 @@ $(window).load(function(){
     //run the checkwidth function
     checkwidth();
     //on window resize
-    $(window).resize(function(){
-        //run the checkwidth function
-        checkwidth();
-    });
+});
+$(window).resize(function(){
+    //run the checkwidth function
+    checkwidth();
 });
 
 function checkwidth(){
@@ -653,7 +653,8 @@ function checkwidth(){
     //give height to the elements that has a class of ".fixed-parent" equals to its first child element height that has a class of ".fixed-child"
     $(".fixed-parent").each(function(){
          $(this).css({ 'height' : $(this).find(".fixed-child:first-child").innerHeight() + 'px' });
-    }); 
+    });
+    m_size();
 }
 function j_timepicker(){
     $(".j-timepicker").remove();
@@ -751,4 +752,45 @@ function random_str() {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
 
   return text;
+}
+
+
+function m_size(){
+    $('.j-equal').css( 'height' , 'auto' );
+    if($(window).width()>=992){
+        $('.j-equal-container').each(function(){
+            var dis = $(this);
+
+            // Get an array of all element heights
+            var elementHeights = dis.find('.j-equal').map(function() {
+                return $(this).outerHeight();
+            }).get();
+
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            var maxHeight = Math.max.apply(null, elementHeights);
+
+            // Set each height to the max height
+            dis.find('.j-equal').css('height',maxHeight);
+
+
+            $('.switched_contents').each(function(){
+                $(this).insertBefore($(this).prev('.col-sm-6'));
+                $(this).removeClass('switched_contents');
+            });
+        });
+    }else{
+        $('.j-equal-container').each(function(){
+
+            if($(this).find('.zoom-hover-img').closest('.col-sm-6').prev('.col-sm-6').find('.boxed').length){
+
+                var image_box = $(this).find('.zoom-hover-img').closest('.col-sm-6'),
+                contents = $(this).find('.boxed').closest('.col-sm-6');
+
+                contents.addClass('switched_contents');
+
+                contents.insertAfter(image_box);
+            }
+        });
+    }
 }
