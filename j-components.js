@@ -190,7 +190,7 @@ $(document).ready(function(){
         //email validation
         $(".validate-email").focusout(function(){
             if(!IsEmail($(this).val())){
-                alert("Wassup! wassup? it ain't no no valid email bruh! don't ya dare fool me!")
+                $('this').next('.error').fadeIn();
                 $(this).focus();
             }
         });
@@ -393,7 +393,16 @@ $(document).ready(function(){
         //end of .line-animation
 
 // ##################################### AJAX FORM TOOLS #####################################
-//<form class="ejex-form" action="[url]" method="[post/get] default 'post' " data-onsuccess="[specified the function you want the success response to be pass on]" data-message-place="[if specified is 'this' then the message will be prepended unto the form else, the data-message-place e.g class or ID will be used a container for the message]" data-custom-message="[custom message e.g. successfully save to file]" data-success-function="[list all the functions you want to run when ajax response returns true, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]" data-fail-function="[list all the functions you want to run when ajax response returns false, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]" data-constructor-function="[list all the functions you want to run automatically before event starts, e.g. myFunctionOne myFunctionTwo .. note: separate each function with space, if multiple functions]">
+//<form class="ajax-form" 
+// action="[url]" 
+// method="[post/get. Default is post]" 
+// data-onsuccess="[specify the function you want the success response to be pass on]" 
+// data-message-place="[specify an element tag(s)/class(s)/id(s) where the success message will be put on instead on its default container which is after the opening of the form tag]" 
+// data-custom-message="[custom message e.g. successfully saved, specify your custom success mesage]" 
+// data-success-function="[invoke function(s) when XMLHttpRequest request completed. Separate by comma if multiple]" 
+// data-fail-function="[invoke function(s) when XMLHttpRequest request fail. Separate by comma if multiple]" 
+// data-constructor-function="[invoke a function(s) before XMLHttpRequest request. Separate by comma if multiple]"
+// >
         //EXAMPLE
         $(document).on("submit", ".j-components .ajax-form", function(e){
             abort();

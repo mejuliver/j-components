@@ -1680,21 +1680,31 @@ T A B L E
   animation-duration:500ms;
 }
 
-@media (max-width: 770px){
-    .responsive-770-resize{height:auto;}
-    .responsive-770-hide{display:none;}
-    .res-text-center{text-align:center;}
-    .res-clear,.res-center{clear:both!important;float:none!important;}
-    .res-center{
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .res-pull-left{float:left;border:1px solid red;}
-    .res-display-table{display:table;}
-    .res-height-auto{
+@media (max-width: 767px){
+    .hide-xs{display:none;}
+    .text-center-xs{text-align:center;}
+    .clear-xs,.center-xs{clear:both!important;float:none!important;}
+    .display-table-xs{display:table;}
+    .height-auto-xs{
       height:auto;
     }
-    .res-hidden{
+    .hidden-xs{
       display:none;
+    }
+    .pull-left-xs{
+      float:left!important;
+    }
+    .pull-right-xs{
+      float:right!important;
+    }
+    .dataTables_info{
+      text-align:center;
+    }
+    .center-xs{
+      margin-left:auto!important;
+      margin-right:auto!important;
+      display:table!important;
+      float:none!important;
+      clear:both!important;
     }
 }
