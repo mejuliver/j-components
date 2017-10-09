@@ -154,91 +154,89 @@ function get_page(this_tab_content_link, container, dependencies){
 }
 //create a notification. To use, j_notification("[specift the content]", "[specify if autohide]", "[specify if yes or no]")
 function j_notification(data, auto_hide, hide){
-        if(auto_hide !== "yes"){
-            if($("#j-notification-dialog").length){
-                $("#j-notification-dialog").html(data);
-                $("#j-notification-dialog").show();
-            }else{
-                $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
-                $("#j-notification-dialog").show();
-            }
-            if(hide === "yes"){
-                $("#j-notification-dialog").delay(3000).fadeOut(500);
-            }
+    if(auto_hide !== "yes"){
+        if($("#j-notification-dialog").length){
+            $("#j-notification-dialog").html(data);
+            $("#j-notification-dialog").show();
         }else{
-            if($("#j-notification-dialog").length){
-                $("#j-notification-dialog").html(data);
-                $("#j-notification-dialog").show();
-                // $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog" style="display:table;top:'+$("#j-notification-dialog:first-child").offset().top+30+'px">' + data + '</div>'); 
-            }else{
-                $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
-                $("#j-notification-dialog").show();
-            }
-            $("#j-notification-dialog").delay(5000).fadeOut(500);
+            $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
+            $("#j-notification-dialog").show();
         }
-    }   
+        if(hide === "yes"){
+            $("#j-notification-dialog").delay(3000).fadeOut(500);
+        }
+    }else{
+        if($("#j-notification-dialog").length){
+            $("#j-notification-dialog").html(data);
+            $("#j-notification-dialog").show();
+            // $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog" style="display:table;top:'+$("#j-notification-dialog:first-child").offset().top+30+'px">' + data + '</div>'); 
+        }else{
+            $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
+            $("#j-notification-dialog").show();
+        }
+        $("#j-notification-dialog").delay(5000).fadeOut(500);
+    }
+}   
 $(document).ready(function(){
-        $('.thehide').hide();
-        //token set up
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': app_token
-            }
-        });
-        $(".hide").hide();
-        $(document).on("keypress keydown keyup",".dont-write",function(){return false;});
-        //email validation
-        $(".validate-email").focusout(function(){
-            if(!IsEmail($(this).val())){
-                $('this').next('.error').fadeIn();
-                $(this).focus();
-            }
-        });
-        //allow only numbers
-        $(document).on("keydown", ".numbersonly", function (e) {
-            // Allow: backspace, delete, tab, escape, enter and .
-            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
-                 // Allow: Ctrl+A
-                (e.keyCode == 65 && e.ctrlKey === true) || 
-                 // Allow: home, end, left, right, down, up
-                (e.keyCode >= 35 && e.keyCode <= 40)) {
-                     // let it happen, don't do anything
-                     return;
-            }
-            // Ensure that it is a number and stop the keypress
-            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-                e.preventDefault();
-            }
-        });
-        //add animation to the element that has a class of .line-animation
-        var this_previous_delay;
-        $(".parent .line-animation").each(function(){
-            var this_delay;
+    $('.thehide').hide();
+    //token set up
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': app_token
+        }
+    });
+    $(".hide").hide();
+    $(document).on("keypress keydown keyup",".dont-write",function(){return false;});
+    //email validation
+    $(".validate-email").focusout(function(){
+        if(!IsEmail($(this).val())){
+            $('this').next('.error').fadeIn();
+            $(this).focus();
+        }
+    });
+    //allow only numbers
+    $(document).on("keydown", ".numbersonly", function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+    //add animation to the element that has a class of .line-animation
+    var this_previous_delay;
+    $(".parent .line-animation").each(function(){
+        var this_delay;
 
-            if(!$(this).is(":first-child")){
-                    this_delay = this_previous_delay + 300;
-                    this_previous_delay = this_delay;
-                    this_delay = this_delay.toString() + "ms";
-            }else{
-                this_delay = $(this).index() + 300;
+        if(!$(this).is(":first-child")){
+                this_delay = this_previous_delay + 300;
                 this_previous_delay = this_delay;
                 this_delay = this_delay.toString() + "ms";
-            } //end of checking if not first-child
-            
-            $(this).css('-webkit-transition-delay', this_delay )
-               .css('-moz-transition-delay', this_delay)
-               .css('-ms-transition-delay', this_delay)
-               .css('-o-transition-delay', this_delay)
-               .css('transition-delay', this_delay);
-
-        }); //end of looping unto the top_submenu li
-        //end of .line-animation
-    //j menu
-    $(document).on("click", ".j-components .j-menu .j-menu-nav a", function(e){
+        }else{
+            this_delay = $(this).index() + 300;
+            this_previous_delay = this_delay;
+            this_delay = this_delay.toString() + "ms";
+        } //end of checking if not first-child
         
+        $(this).css('-webkit-transition-delay', this_delay )
+           .css('-moz-transition-delay', this_delay)
+           .css('-ms-transition-delay', this_delay)
+           .css('-o-transition-delay', this_delay)
+           .css('transition-delay', this_delay);
+
+    }); //end of looping unto the top_submenu li
+    //end of .line-animation
+    //j menu
+    
+    $(document).on("click", ".j-components .j-menu .j-menu-nav a", function(e){
         var dis = $(this);
-        //if ajax
-        if(dis.attr("data-ajaxpage") === "yes"){get_page(dis.attr("href").substring(1), dis.attr("data-ajax-render"), dis.attr("data-dependencies"));}
         //if allowed to set an active state and active indentifier
         if(dis.attr("data-allow-active") === "yes"){
             if(dis.attr("data-has-submenu") === "no" || !dis.attr("data-has-submenu") || dis.attr("data-submenu-allowactive") === "yes"){
@@ -279,9 +277,6 @@ $(document).ready(function(){
                 if(dis.next(".j-menu-dp-container").offset().left+(dis.next(".j-menu-dp-container").width()*1) > $(window).width()){
                     dis.next(".j-menu-dp-container").css({ 'margin-left' : "-110px" });
                 }
-                //if(dis.next(".j-menu-dp-container").offset().top+(dis.next(".j-menu-dp-container").height()*1) > $(window).height()){
-                //    dis.next(".j-menu-dp-container").css({ 'margin-top' : -(dis.height()+dis.next(".j-menu-dp-container").height()+40)+'px' });
-                //}
 
                 //run data-on-close function on close event of dropdown menu
                 var on_open = dis.attr("data-on-open");
@@ -334,18 +329,6 @@ $(document).ready(function(){
                  dis.closest(".j-menu-dp-container").prev(".parent").addClass("j-active j-active-state");
             }
     });
-
-    //j accordion
-    $(document).on("click", ".j-components .j-accordion .j-accordion-header", function(){
-        var dis = $(this);
-        if(dis.attr("data-toggle") === "yes"){
-            dis.closest(".j-accordion").find(".j-accordion-content").slideUp(100, function(){
-                dis.next(".j-accordion-content").slideDown();
-            });
-        }else{
-            dis.next(".j-accordion-content").slideDown();
-        }
-    });
     //event click j menu listener
     $(document).on("mousedown touchstart",function (e) {    
         var calendar = $(".dtp-content"),j_dp = $(".j-menu-dp-container");
@@ -361,36 +344,6 @@ $(document).ready(function(){
             }
         }
     });
-    $(window).resize(function(){
-        $("#white-spinner-theme").fadeOut(200);
-        $(".windows8").center();
-        $(".sk-fading-circle").center();
-        $("#dark-spinner-theme").center(200);
-        $(".j-menu-dp-container").hide();
-    });
-   //add animation to the element that has a class of .line-animation
-        var this_previous_delay;
-        $(".parent .line-animation").each(function(){
-            var this_delay;
-
-            if(!$(this).is(":first-child")){
-                    this_delay = this_previous_delay + 300;
-                    this_previous_delay = this_delay;
-                    this_delay = this_delay.toString() + "ms";
-            }else{
-                this_delay = $(this).index() + 300;
-                this_previous_delay = this_delay;
-                this_delay = this_delay.toString() + "ms";
-            } //end of checking if not first-child
-            
-            $(this).css('-webkit-transition-delay', this_delay )
-               .css('-moz-transition-delay', this_delay)
-               .css('-ms-transition-delay', this_delay)
-               .css('-o-transition-delay', this_delay)
-               .css('transition-delay', this_delay);
-
-        }); //end of looping unto the top_submenu li
-        //end of .line-animation
 
 // ##################################### AJAX FORM TOOLS #####################################
 //<form class="ajax-form" 
@@ -403,73 +356,91 @@ $(document).ready(function(){
 // data-fail-function="[invoke function(s) when XMLHttpRequest request fail. Separate by comma if multiple]" 
 // data-constructor-function="[invoke a function(s) before XMLHttpRequest request. Separate by comma if multiple]"
 // >
-        //EXAMPLE
-        $(document).on("submit", ".j-components .ajax-form", function(e){
-            abort();
-            dialog_open = true;
-            e.preventDefault();
+    //EXAMPLE
+    $(document).on("submit", ".j-components .ajax-form", function(e){
+        abort();
+        dialog_open = true;
+        e.preventDefault();
 
-            //declare the major variables
-            var dis = $(this),datatype = $(this).attr("data-type"),method = $(this).attr("method"), custom_message = $(this).attr("data-custom-message"), msg = dis.attr("data-message-place"), custom_on_success = $(this).attr("data-onsuccess"),before_send = $(this).attr("data-before-send");
-            //check if attr 'constructor-function' exist and not empty
-            var custom_function = dis.attr("data-constructor-function");
-            if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
-                var classList = custom_function.split(/\s+/);
-                $.each(classList, function(index, item) {
-                  window[item]();
-                });
-            }
-            //check if there is data-before-send, if there is then trigger that function first
-            if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
-                var classList = before_send.split(/\s+/);
-                $.each(classList, function(index, item) {
-                  window[item]();
-                });
-            }
-            //check if attr 'method' exist and not empty
-            if(typeof method === typeof undefined && method === false && method === "") {
-                method = "post";
-            }
-            //check if attr 'custom-message' exist and not empty
-            if(typeof custom_message === typeof undefined && custom_message === false && custom_message === "") {
-                custom_message = "Successfully saved!";
-            }
-            //check if attr 'custom-message' exist and not empty
-            if(typeof datatype === typeof undefined && datatype === false && datatype === "") {
-                datatype = 'html';
-            }
-            if(typeof dis.attr('data-before-send') !== typeof undefined && dis.attr('data-before-send') !== false && dis.attr('data-before-send') !== "") {
-                var classList = dis.attr('data-before-send').split(/\s+/);
-                $.each(classList, function(index, item) {
-                  window[item]();
-                });
-            }
-            var formData = new FormData(dis[0]);
+        //declare the major variables
+        var dis = $(this),datatype = $(this).attr("data-type"),method = $(this).attr("method"), custom_message = $(this).attr("data-custom-message"), msg = dis.attr("data-message-place"), custom_on_success = $(this).attr("data-onsuccess"),before_send = $(this).attr("data-before-send");
+        //check if attr 'constructor-function' exist and not empty
+        //check if there is data-before-send, if there is then trigger that function first
+        if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
+            var classList = before_send.split(/\s+/);
+            $.each(classList, function(index, item) {
+              window[item]();
+            });
+        }
+        //check if attr 'method' exist and not empty
+        if(typeof method === typeof undefined && method === false && method === "") {
+            method = "post";
+        }
+        //check if attr 'custom-message' exist and not empty
+        if(typeof custom_message === typeof undefined && custom_message === false && custom_message === "") {
+            custom_message = "Successfully saved!";
+        }
+         //check if attr 'custom-message' exist and not empty
+        if(typeof datatype === typeof undefined && datatype === false && datatype === "") {
+            datatype = 'html';
+        }
+        
+        if(typeof dis.attr('data-before-send') !== typeof undefined && dis.attr('data-before-send') !== false && dis.attr('data-before-send') !== "") {
+            var classList = dis.attr('data-before-send').split(/\s+/);
+            $.each(classList, function(index, item) {
+              window[item]();
+            });
+        }
+        var formData = new FormData(dis[0]);
 
-            $.ajax({
-                url : dis.attr("action"),
-                type : method,
-                data : formData,
-                dataType : datatype,
-                cache: false,
-                async: true,
-                contentType: false,
-                processData: false,
-                beforeSend: function(){
-                    if(global_spinner_conf===true&&dis.attr("data-spinner")!=="off"){
-                        j_spinner("on");
+        $.ajax({
+            url : dis.attr("action"),
+            type : method,
+            data : formData,
+            dataType : datatype,
+            cache: false,
+            async: true,
+            contentType: false,
+            processData: false,
+            beforeSend: function(){
+                if(global_spinner_conf===true&&dis.attr("data-spinner")!=="off"){
+                    j_spinner("on");
+                }
+            },
+            complete: function(){
+                if(global_spinner_conf===true&&dis.attr("data-spinner")!=="off"){
+                    j_spinner("off");
+                }
+            },
+            success: function(e){
+                var success_transaction = false;
+                $(".alert").remove();
+                //check if attr 'datatype' exist and not empty
+                if(typeof custom_on_success !== typeof undefined && custom_on_success !== false && custom_on_success !== "") {
+                    if(e.success){
+                        if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
+                            if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
+                                $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
+                            }else{
+                                dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
+                            }
+                        }
+                        success_transaction = true;
+                        window[custom_on_success](e);
+
+
+                    }else{
+                        //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
+                        if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
+                            $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
+                        }else{
+                            dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
+                        }
+                        //}
+                        success_transaction = false;
                     }
-                },
-                complete: function(){
-                    if(global_spinner_conf===true&&dis.attr("data-spinner")!=="off"){
-                        j_spinner("off");
-                    }
-                },
-                success: function(e){
-                    var success_transaction = false;
-                    $(".alert").remove();
-                    //check if attr 'datatype' exist and not empty
-                    if(typeof custom_on_success !== typeof undefined && custom_on_success !== false && custom_on_success !== "") {
+                }else{
+                    if(datatype === 'json'){
                         if(e.success){
                             if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
                                 if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
@@ -479,9 +450,6 @@ $(document).ready(function(){
                                 }
                             }
                             success_transaction = true;
-                            window[custom_on_success](e);
-
-
                         }else{
                             //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
                             if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
@@ -493,152 +461,277 @@ $(document).ready(function(){
                             success_transaction = false;
                         }
                     }else{
-                        if(datatype === 'json'){
-                            if(e.success){
-                                if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                                    if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                        $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                                    }else{
-                                        dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                                    }
-                                }
-                                success_transaction = true;
-                            }else{
-                                //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
+                        if($.trim(e) === "success"){
+                            if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
                                 if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                    $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
+                                    $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
                                 }else{
-                                    dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
+                                    dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
                                 }
-                                //}
-                                success_transaction = false;
                             }
+                            success_transaction = true;
                         }else{
-                            if($.trim(e) === "success"){
-                                if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                                    if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                        $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                                    }else{
-                                        dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                                    }
-                                }
-                                success_transaction = true;
+                            //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
+                            if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
+                                $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
                             }else{
-                                //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                                if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                    $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
-                                }else{
-                                    dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
-                                }
-                                //}
-                                success_transaction = false;
+                                dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
                             }
+                            //}
+                            success_transaction = false;
                         }
                     }
-                    //on success parameter
-                    if(success_transaction === true){
-                        //check if attr 'success-function' exist and not empty
-                        var custom_function = dis.attr("data-success-function");
-                        if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
-                            var classList = custom_function.split(/\s+/);
-                            $.each(classList, function(index, item) {
-                              window[item]();
-                            });
-                        }
-                    }else{
-
-                        //check if attr 'fail-function' exist and not empty
-                        var custom_function = dis.attr("data-fail-function");
-                        if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
-                            var classList = custom_function.split(/\s+/);
-                            $.each(classList, function(index, item) {
-                              window[item]();
-                            });
-                        }
-                    }
-
                 }
-
-            });
-            
-            if(!$("#modal-dialog,#extra-modal").is(":visible")){
-                dialog_open = false;    
-            }
-            
-        });
-        // ##################################### END AJAX FORM TOOLS #####################################
-        //modify the textarea
-        $(document).on('keypress keyup keydown','.j-datepicker,.j-timepicker',function(){
-            return false;
-        });
-        // *************************************************** J  T I M E P I C K E R ***************************************************
-       //init j-timepicker
-       j_timepicker();
-        $(document).on("click",".j-timepicker",function(){
-            if($(this).val()!==""){
-                var time = $(this).val().replace(':',' ').split(' ');
-                $(this).closest(".parent").find('select[name="hours"]').val(time[0]).trigger("change");
-                $(this).closest(".parent").find('select[name="minutes"]').val(time[1]).trigger("change");
-                $(this).closest(".parent").find('select[name="am_pm"]').val(time[2].toLowerCase()).trigger("change");
-            }
-            $(this).closest(".parent").find(".j-components .parent").trigger("click");
-        });
-        $(document).on("click",".j-timepicker-ok",function(e){
-            e.preventDefault();
-            $(this).closest(".j-timepicker").closest(".parent").find(".j-timepicker").val($(this).closest(".j-timepicker").find('select[name="hours"]').val()+":"+$(this).closest(".j-timepicker").find('select[name="minutes"]').val()+" "+$(this).closest(".j-timepicker").find('select[name="am_pm"]').val().toUpperCase()).closest(".parent").find(".j-timepicker .j-menu-dp-container").fadeOut(200);
-        });
-        $(document).on("click",".j-timepicker-current",function(e){
-            e.preventDefault();
-            $(this).closest(".j-timepicker").closest(".parent").find(".j-timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).closest(".parent").find(".j-timepicker .j-menu-dp-container").fadeOut(200);
-        });
-        // *************************************************** J  D A T E P I C K E R ***************************************************
-        //init j-datepicker
-        j_datepicker();
-        var days_change=false;
-        $(document).on("click",".j-datepicker",function(){
-            if($(this).val()!==""){
-                var dates = $(this).val().replace(',','').split(' ');
-                $(this).closest(".parent").find('.j-datepicker select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
-                days_change=dates[1];
-                $(this).closest(".parent").find('.j-datepicker select[name="years"] option[value="'+dates[2]+'"]').prop("selected",true).closest("select").trigger("change");
-            }else{
-                days_change=false;
-            }
-            $(this).closest(".parent").find(".j-components .parent").trigger("click");
-        });
-        $(document).on("click",".j-datepicker-ok",function(e){
-            e.preventDefault();
-            $(this).closest(".j-datepicker").closest(".parent").find(".j-datepicker").val($(this).closest(".j-datepicker").find('select[name="months"]').val()+" "+$(this).closest(".j-datepicker").find('select[name="days"]').val()+", "+$(this).closest(".j-datepicker").find('select[name="years"]').val()).closest(".parent").find(".j-datepicker .j-menu-dp-container").fadeOut(200);
-        });
-        $(document).on("click",".j-datepicker-current",function(e){
-            e.preventDefault();
-            $(this).closest(".j-datepicker").closest(".parent").find(".j-datepicker").val(moment().format('MMMM')+" "+moment().format("D")+", "+moment().format('YYYY')).closest(".parent").find(".j-datepicker .j-menu-dp-container").fadeOut(200);
-        });
-        $(document).on("change",'.j-datepicker select[name="months"],.j-datepicker select[name="years"]',function(){
-            if($(this).val()!==""){
-                var days='';
-                $.each(getDaysArray($(this).closest(".j-datepicker").find('select[name="years"]').val(),$(this).closest(".j-datepicker").find('select[name="months"] option:selected').attr("data-month")),function(index,value){
-                    var dd = "0"+value.toString();
-                    days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
-                });
-                $(this).closest(".j-datepicker").find('select[name="days"]').html(days);
-                if(days_change!==false){
-                    $(this).closest(".j-datepicker").find('select[name="days"] option[value="'+days_change+'"]').prop("selected",true).closest("select").trigger("change");
+                //on success parameter
+                if(success_transaction === true){
+                    //check if attr 'success-function' exist and not empty
+                    var custom_function = dis.attr("data-success-function");
+                    if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
+                        var classList = custom_function.split(/\s+/);
+                        $.each(classList, function(index, item) {
+                          window[item]();
+                        });
+                    }
                 }else{
-                    $(this).closest(".j-datepicker").find('select[name="days"] option:first-child').prop("selected",true).closest("select").trigger("change");
-                }
-                // console.log(moment($(this).closest(".j-datepicker").find('select[name="months"]').val()).format("M"));
-                if($('#modal-dialog input[name="type"]').val()==="early ob"){
-                    var month = moment().format("MMMM"),day = moment().format("DD");
-                    if($(this).val().toLowerCase()===month.toLowerCase()){
-                         $('#modal-dialog input[name="date"]').closest(".parent").find('.j-menu-dp-container select[name="days"] option[value="'+day+'"]').prop("selected",true).closest("select").trigger("change");
-                        $('#modal-dialog input[name="date"]').closest(".parent").find('.j-menu-dp-container select[name="days"] option[value="'+day+'"]').prevAll().prop("disabled",true);
+
+                    //check if attr 'fail-function' exist and not empty
+                    var custom_function = dis.attr("data-fail-function");
+                    if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
+                        var classList = custom_function.split(/\s+/);
+                        $.each(classList, function(index, item) {
+                          window[item]();
+                        });
                     }
                 }
+
             }
+
         });
-        // *************************************************** E N D  J  D A T E P I C K E R ***************************************************
+        
+        if(!$(".reveal-modal").length){
+            dialog_open = false;    
+        }
+        
+    });
+    // ##################################### END AJAX FORM TOOLS #####################################
 });
+
+$(window).resize(function(){
+    $("#white-spinner-theme").fadeOut(200);
+    $(".windows8").center();
+    $(".sk-fading-circle").center();
+    $("#dark-spinner-theme").center(200);
+    $(".j-menu-dp-container").hide();
+});
+
+$(function(){
+     $(document).on('keypress keyup keydown','.j-datepicker,.j-timepicker',function(){
+        return false;
+    });
+    // *************************************************** J  T I M E P I C K E R ***************************************************
+    //init j-timepicker
+    j_timepicker();
+    $(document).on("click",".j-timepicker",function(){
+        if($(this).val()!==""){
+            var time = $(this).val().replace(':',' ').split(' ');
+            $(this).closest(".component-factory").find('.j-timepicker-factory select[name="hours"]').val(time[0]).trigger("change");
+            $(this).closest(".component-factory").find('.j-timepicker-factory select[name="minutes"]').val(time[1]).trigger("change");
+            $(this).closest(".component-factory").find('.j-timepicker-factory select[name="am_pm"]').val(time[2].toLowerCase()).trigger("change");
+        }
+        $(this).closest(".component-factory").find(".j-components .parent").trigger("click");
+    });
+    $(document).on("click",".j-timepicker-ok",function(e){
+        e.preventDefault();
+        $(this).closest(".component-factory").find(".j-timepicker").val($(this).closest(".j-timepicker-factory").find('select[name="hours"]').val()+":"+$(this).closest(".j-timepicker-factory").find('select[name="minutes"]').val()+" "+$(this).closest(".j-timepicker-factory").find('select[name="am_pm"]').val().toUpperCase()).closest(".component-factory").find(".j-menu-dp-container").fadeOut(200);
+    });
+    $(document).on("click",".j-timepicker-current",function(e){
+        e.preventDefault();
+        $(this).closest(".component-factory").find(".j-timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).closest(".component-factory").find(".j-menu-dp-container").fadeOut(200);
+    });
+    // *************************************************** J  D A T E P I C K E R ***************************************************
+    //init j-datepicker
+    j_datepicker();
+    var days_change=false;
+    $(document).on("click",".j-datepicker",function(){
+        if($(this).val()!==""){
+            var dates = $(this).val().replace(',','').split(' ');
+            $(this).closest(".component-factory").find('.j-datepicker-factory select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
+            days_change=dates[1];
+            $(this).closest(".component-factory").find('.j-datepicker-factory select[name="years"] option[value="'+dates[2]+'"]').prop("selected",true).closest("select").trigger("change");
+        }else{
+            days_change=false;
+        }
+        $(this).closest(".component-factory").find(".j-components .parent").trigger("click");
+    });
+    $(document).on("click",".j-datepicker-ok",function(e){
+        e.preventDefault();
+        var ff = typeof $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== typeof undefined && $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== false && $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== "" ? $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') : 'MMMM DD, YYYY',
+            dd = $(this).closest(".j-datepicker-factory").find('select[name="months"]').val()+" "+$(this).closest(".j-datepicker-factory").find('select[name="days"]').val()+", "+$(this).closest(".j-datepicker-factory").find('select[name="years"]').val();
+
+        $(this).closest(".component-factory")
+            .find(".j-datepicker")
+            .val(moment(dd).format(ff)).closest(".component-factory").find(".j-menu-dp-container").fadeOut(200);
+    });
+    $(document).on("click",".j-datepicker-current",function(e){
+        e.preventDefault();
+        var ff = typeof $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== typeof undefined && $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== false && $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== "" ? $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') : 'MMMM DD, YYYY',
+            current_date = moment().format('MMMM')+" "+moment().format("D")+", "+moment().format('YYYY');
+        
+        $(this).closest(".component-factory")
+            .find(".j-datepicker")
+            .val(moment(current_date).format(ff))
+            .closest(".component-factory").find(".j-menu-dp-container").fadeOut(200);
+    });
+    $(document).on("change",'.j-datepicker-factory select[name="months"],.j-datepicker-factory select[name="years"]',function(){
+        if($(this).val()!==""){
+            var days='';
+            $.each(getDaysArray($(this).closest(".j-datepicker-factory").find('select[name="years"]').val(),$(this).closest(".j-datepicker-factory").find('select[name="months"] option:selected').attr("data-month")),function(index,value){
+                var dd = "0"+value.toString();
+                days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
+            });
+            $(this).closest(".j-datepicker-factory").find('select[name="days"]').html(days);
+            if(days_change!==false){
+                $(this).closest(".j-datepicker-factory").find('select[name="days"] option[value="'+days_change+'"]').prop("selected",true).closest("select").trigger("change");
+            }else{
+                $(this).closest(".j-datepicker-factory").find('select[name="days"] option:first-child').prop("selected",true).closest("select").trigger("change");
+            }
+        }
+    });
+    // *************************************************** E N D  J  D A T E P I C K E R ***************************************************
+})
+
+
+function j_timepicker(){
+    if (!window.moment) { 
+        return;
+    }
+    $(".j-timepicker-factory").remove();
+    var hours = '<select class="form-control j-timepicker-hrs" style="width:70px;" name="hours">';
+    for(i=1;i<13;i++){
+        var hrs = "0"+i.toString();
+        hours+='<option value="'+hrs.slice(-2)+'">'+hrs.slice(-2)+'</option>';
+    }
+    hours+='</select>';
+    var minutes = '<select class="form-control" style="width:70px;" name="minutes"><option value="00">00</option>';
+    for(i=1;i<60;i++){
+        var mins = "0"+i.toString();
+        minutes+='<option value="'+mins.slice(-2)+'">'+mins.slice(-2)+'</option>';
+    }
+    minutes+='</select>';
+    var am_pm = '<select class="form-control" style="width:70px;" name="am_pm">';
+    am_pm+='<option value="am">AM</option>';
+    am_pm+='<option value="pm">PM</option>';
+    am_pm+='</select>';
+
+    var cp = $(this).attr('data-placeholder');
+        if(typeof cp !== typeof undefined && cp !== false && cp !== "") {
+            $(this).attr('placeholder','Click to select date');
+        }else{
+            $(this).attr('placeholder',cp);
+        }
+
+    $('.j-timepicker').each(function(){
+        //unwrap
+        if($(this).parent().hasClass('component-factory time-factory')){
+            $(this).unwrap();
+        }
+        //init
+        $(this).attr( 'readonly' , false).wrap('<div></div>').parent().addClass("parent component-factory");
+
+        var cp = $(this).attr('data-placeholder');
+        if(typeof cp !== typeof undefined && cp !== false && cp !== "") {
+            $(this).attr('placeholder','Click to select time');
+        }else{
+            $(this).attr('placeholder',cp);
+        }
+        $(this).after('<div class="j-components j-timepicker-factory"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
+        '<li class="list-style-none clear"><a href="#" class="parent" data-has-submenu="yes" style="display:none;">click</a>'+
+            '<ul class="j-menu-dp-container list-style-none display-none bg-white p15 radius-3px shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
+                '<li class="list-style-none"><div class="display-table">'+
+                    '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">HOURS:</span><br>'+hours+'</div><div class="display-cell pr7"><span class="font10 font500">MINUTES:</span><br>'+minutes+'</div><div class="display-cell"><span class="font10 font500">AM/PM:</span><br>'+am_pm+'</div></div></div>'+
+                    '<div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="btn mb0 j-timepicker-current">CURRENT TIME</a></div><div class="display-cell"><a href="#" class="btn mb0 j-timepicker-ok">OK</a></div></div></div>'+
+                '</li>'+
+            '</ul>'+
+        '</li>'+
+        '</ul></div></div>');
+    });
+}
+//days function
+var getDaysArray = function(year, month) {
+  // var names = [ 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat' ];
+  var date = new Date(year, month-1, 1);
+  var result = [];
+  while (date.getMonth() == month-1) {
+    // result.push(date.getDate()+"-"+names[date.getDay()]);
+    result.push(date.getDate());
+    date.setDate(date.getDate()+1);
+  }
+  return result;
+}
+function j_datepicker(){
+    //j datepicker
+    if (!window.moment) { 
+        return;
+    }
+        
+    $(".j-datepicker-factory").remove();
+            
+    //years
+    var start_year = 1930,current_year = new Date().getFullYear(),years='<select class="form-control" style="width:90px;" name="years">';
+    for (var i = start_year; i <= current_year; i++) {
+        if(i===parseInt(moment().format('YYYY')))
+            years+='<option value="'+i+'" selected>'+i+'</option>';
+        else
+            years+='<option value="'+i+'">'+i+'</option>';
+    }
+    years+='</select>';
+    //months
+    var list_months = [[1,'Jan'],[2,'Feb'],[3,'Mar'],[4,'Apr'],[5,'May'],[6,'Jun'],[7,'Jul'],[8,'Aug'],[9,'Sep'],[10,'Oct'],[11,'Nov'],[12,'Dec']],months='<select class="form-control" style="width:95px;" name="months">';
+    $.each(list_months,function(index,value){
+        if(value[1].toUpperCase()===moment().format('MMM').toUpperCase())
+            months+='<option value="'+value[1]+'" data-month="'+value[0]+'" selected>'+value[1]+'</option>';
+        else
+            months+='<option value="'+value[1]+'" data-month="'+value[0]+'">'+value[1]+'</option>';
+    });
+    months+='</select>';
+    //days
+    var days = '<select class="form-control" style="width:70px;" name="days">';
+    $.each(getDaysArray(moment().format("YYYY"),moment().format('M')),function(index,value){
+        var dd = "0"+value.toString();
+        if(value===parseInt(moment().format('D')))
+            days+='<option value="'+dd.slice(-2)+'" selected>'+dd.slice(-2)+'</option>';
+        else
+            days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
+    });
+    days+='</select>';
+    $(".j-datepicker").each(function(){
+         //unwrap
+        if($(this).parent().hasClass('component-factory')){
+            $(this).unwrap();
+        }
+        //init
+        $(this).attr( 'readonly' , false).wrap('<div></div>').parent().addClass("parent component-factory date-factory");
+
+        var cp = $(this).attr('data-placeholder');
+        if(typeof cp !== typeof undefined && cp !== false && cp !== "") {
+            $(this).attr('placeholder',cp);            
+        }else{
+            $(this).attr('placeholder','Click to select date');
+        }
+        $(this).after('<div class="j-components j-datepicker-factory"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
+        '<li class="list-style-none clear"><a href="#" class="parent" style="display:none;" data-has-submenu="yes">click</a>'+
+            '<ul class="j-menu-dp-container list-style-none display-none bg-white p15 radius-3 shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
+                '<li class="list-style-none"><div class="display-table">'+
+                    '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTHS:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div>'+
+                    '<div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="btn mb0 j-datepicker-current">CURRENT DATE</a></div><div class="display-cell"><a href="#" class="btn mb0 j-datepicker-ok">OK</a></div></div></div>'+
+                '</li>'+
+            '</ul>'+
+        '</li>'+
+        '</ul></div></div>');
+
+    });
+}
+
 
 $(window).load(function(){
     $("body").fadeIn(200);
@@ -665,91 +758,7 @@ function checkwidth(){
     });
     m_size();
 }
-function j_timepicker(){
-    $(".j-timepicker").remove();
-    $('.time,.j-timepicker,.time_input').attr({ 'readonly' : false, 'placeholder' : 'Click to select time...' }).removeClass("dont-write").addClass("j-timepicker").wrap('<div></div>').parent().addClass("parent").closest(".overflow-auto").removeClass("overflow-auto");
-    var hours = '<select class="form-control j-timepicker-hrs" style="width:70px;" name="hours">';
-    for(i=1;i<13;i++){
-        var hrs = "0"+i.toString();
-        hours+='<option value="'+hrs.slice(-2)+'">'+hrs.slice(-2)+'</option>';
-    }
-    hours+='</select>';
-    var minutes = '<select class="form-control" style="width:70px;" name="minutes"><option value="00">00</option>';
-    for(i=1;i<60;i++){
-        var mins = "0"+i.toString();
-        minutes+='<option value="'+mins.slice(-2)+'">'+mins.slice(-2)+'</option>';
-    }
-    minutes+='</select>';
-    var am_pm = '<select class="form-control" style="width:70px;" name="am_pm">';
-    am_pm+='<option value="am">AM</option>';
-    am_pm+='<option value="pm">PM</option>';
-    am_pm+='</select>';
-    $(".j-timepicker").after('<div class="j-components j-timepicker"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
-        '<li class="list-style-none clear"><a href="#" class="parent" data-has-submenu="yes" style="display:none;">click</a>'+
-            '<ul class="j-menu-dp-container list-style-none hide bg-white p15 radius-3px shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
-                '<li class="list-style-none"><div class="display-table">'+
-                    '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">HOURS:</span><br>'+hours+'</div><div class="display-cell pr7"><span class="font10 font500">MINUTES:</span><br>'+minutes+'</div><div class="display-cell"><span class="font10 font500">AM/PM:</span><br>'+am_pm+'</div></div></div>'+
-                    '<div class="display-table mt10"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="btn btn-default m00 j-timepicker-current" style="padding:5px 8px;font-size:13px;">CURRENT TIME</a></div><div class="display-cell"><a href="#" class="btn btn-success m00 j-timepicker-ok" style="padding:5px 8px;font-size:13px;">OK</a></div></div></div>'+
-                '</li>'+
-            '</ul>'+
-        '</li>'+
-        '</ul></div></div>');
-}
-//days function
-var getDaysArray = function(year, month) {
-  // var names = [ 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat' ];
-  var date = new Date(year, month-1, 1);
-  var result = [];
-  while (date.getMonth() == month-1) {
-    // result.push(date.getDate()+"-"+names[date.getDay()]);
-    result.push(date.getDate());
-    date.setDate(date.getDate()+1);
-  }
-  return result;
-}
-function j_datepicker(){
-    $(".j-datepicker").remove();
-    $('.j-datepicker,.materia-j-datepicker').attr({ 'readonly' : false, 'placeholder' : 'Click to select date...' }).removeClass("dont-write").addClass("j-datepicker").wrap('<div></div>').parent().addClass("parent").closest(".overflow-auto").removeClass("overflow-auto");
-    
-    //years
-    var start_year = 1930,current_year = new Date().getFullYear(),years='<select class="form-control" style="width:90px;" name="years">';
-    for (var i = start_year; i <= current_year; i++) {
-        if(i===parseInt(moment().format('YYYY')))
-            years+='<option value="'+i+'" selected>'+i+'</option>';
-        else
-            years+='<option value="'+i+'">'+i+'</option>';
-    }
-    years+='</select>';
-    //months
-    var list_months = [[1,'January'],[2,'February'],[3,'March'],[4,'April'],[5,'May'],[6,'June'],[7,'July'],[8,'August'],[9,'September'],[10,'October'],[11,'November'],[12,'December']],months='<select class="form-control" style="width:95px;" name="months">';
-    $.each(list_months,function(index,value){
-        if(value[1].toUpperCase()===moment().format('MMMM').toUpperCase())
-            months+='<option value="'+value[1]+'" data-month="'+value[0]+'" selected>'+value[1]+'</option>';
-        else
-            months+='<option value="'+value[1]+'" data-month="'+value[0]+'">'+value[1]+'</option>';
-    });
-    months+='</select>';
-    //days
-    var days = '<select class="form-control" style="width:70px;" name="days">';
-    $.each(getDaysArray(moment().format("YYYY"),moment().format('M')),function(index,value){
-        var dd = "0"+value.toString();
-        if(value===parseInt(moment().format('D')))
-            days+='<option value="'+dd.slice(-2)+'" selected>'+dd.slice(-2)+'</option>';
-        else
-            days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
-    });
-    days+='</select>';
-    $(".j-datepicker").after('<div class="j-components j-datepicker"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
-        '<li class="list-style-none clear"><a href="#" class="parent" style="display:none;" data-has-submenu="yes">click</a>'+
-            '<ul class="j-menu-dp-container list-style-none hide bg-white p15 radius-3px shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
-                '<li class="list-style-none"><div class="display-table">'+
-                    '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTHS:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div>'+
-                    '<div class="display-table mt10"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="btn btn-default m00 j-datepicker-current" style="padding:5px 8px;font-size:13px;">CURRENT DATE</a></div><div class="display-cell"><a href="#" class="btn btn-success m00 j-datepicker-ok" style="padding:5px 8px;font-size:13px;">OK</a></div></div></div>'+
-                '</li>'+
-            '</ul>'+
-        '</li>'+
-        '</ul></div></div>');
-}
+
 
 
 // make random string
