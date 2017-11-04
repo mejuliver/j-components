@@ -1,0 +1,118 @@
+// M A R G I N S
+
+@for $i from 0 through 100{
+	.m-#{$i} { margin: $i; }
+}
+//margins
+@for $i from 0 through 100{
+	.mt-#{$i} { margin-top: $i; }
+}
+@for $i from 0 through 100{
+	.ml-#{$i} { margin-left: $i; }
+}
+@for $i from 0 through 100{
+	.mr-#{$i} { margin-right: $i; }
+}
+@for $i from 0 through 100{
+	.mb-#{$i} { margin-bottom: $i; }
+}
+
+// P A D D I N G S
+
+@for $i from 0 through 100{
+	.p-#{$i} { padding: $i; }
+}
+@for $i from 0 through 100{
+	.pt-#{$i} { padding-top: $i; }
+}
+@for $i from 0 through 100{
+	.pl-#{$i} { padding-left: $i; }
+}
+@for $i from 0 through 100{
+	.pr-#{$i} { padding-right: $i; }
+}
+@for $i from 0 through 100{
+	.pb-#{$i} { padding-bottom: $i; }
+}
+
+// V - A L I G N
+
+.v-align-top{
+	vertical-align: top;
+	th,td{
+		vertical-align: top;
+	}
+}
+.v-align-middle{
+	vertical-align: middle;
+	th,td{
+		vertical-align: middle;
+	}
+}
+.v-align-bottom{
+	vertical-align: bottom;
+	th,td{
+		vertical-align: bottom;
+	}
+}
+
+// S H A D O W
+
+.shadow-z-1{box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);}
+.shadow-z-1-hover{box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);}
+.shadow-z-2{box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.shadow-z-3{box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);}
+.shadow-z-4{box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);}
+.shadow-z-5{box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);}
+
+// T A B L E  T Y P E
+
+.display-table{display:table;}
+.display-row{display:table-row;}
+.display-cell{display:table-cell;}
+
+// F L E X
+.flex{
+	display:flex;
+}
+.flex-center{
+	@extend .flex;
+	align-items:center;
+	justify-content:center;	
+}
+.flex-v-center{
+	align-items:center;
+}
+.flex-h-center{
+	@extend .flex;
+	justify-content:center;
+}
+
+// Z O O M  H O V E R
+
+.zoom-hover-img{
+	a{
+		overflow: hidden;
+	    display: block;
+	    width: 100%;
+	    box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	    &:hover img{
+	    	transform: scale(1.15);
+	    }
+	    figure{
+	    	margin: 0;
+	    	@extend .flex-center;
+	    	img {
+				max-width: 100%;
+				display: block;
+				transition: transform 300ms ease-in-out;
+				width:100%;
+				margin:0px!important;
+			} 
+	    }
+	}
+}
+
+@import 'spinners';
