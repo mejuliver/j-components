@@ -1,0 +1,10 @@
+$d : 10;
+
+@for $i from 1 through 10{
+	.divider#{$d+10} {
+		height: #{$d+10}px;
+		clear: both; float: none; width: 100%;
+	}
+
+	$d : $d + 10;
+}

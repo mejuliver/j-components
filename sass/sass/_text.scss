@@ -1,0 +1,14 @@
+.text-italic{font-style: italic;}
+.text-normal{text-transform: normal;}
+.text-uppercase{text-transform: uppercase;}
+.text-lowercase{text-transform: lowercase;}
+.text-capitalize{text-transform: capitalize;}
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.text-shadow-1{text-shadow: 1px 1px 1px rgba(0,0,0,0.7);}
+.text-decoration-underline{text-decoration:underline;}
+.letter-spacing-initial{letter-spacing:initial;}
+@for $i from 1 through 20{
+	.letter-spacing-#{$i}{letter-spacing:#{$i}px;}
+}

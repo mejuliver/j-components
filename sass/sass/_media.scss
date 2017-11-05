@@ -1,0 +1,43 @@
+@mixin reponsive($media) {
+  @if $media == xs {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $media == sm {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $media == md {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+   @else if $media == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+}
+
+@media (max-width: 767px){
+    .hide-xs{display:none;}
+    .text-center-xs{text-align:center;}
+    .clear-xs,.center-xs{clear:both!important;float:none!important;}
+    .display-table-xs{display:table;}
+    .height-auto-xs{
+      height:auto;
+    }
+    .hidden-xs{
+      display:none;
+    }
+    .pull-left-xs{
+      float:left!important;
+    }
+    .pull-right-xs{
+      float:right!important;
+    }
+    .dataTables_info{
+      text-align:center;
+    }
+    .center-xs{
+      margin-left:auto!important;
+      margin-right:auto!important;
+      display:table!important;
+      float:none!important;
+      clear:both!important;
+    }
+}

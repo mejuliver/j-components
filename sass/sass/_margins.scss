@@ -1,0 +1,21 @@
+.m00{margin:0px!important;}
+@for $i from 0 through 100{
+	.m#{$i} { margin: #{$i}px;; }
+}
+.mt00{margin-top:0px!important;}
+@for $i from 0 through 100{
+	.mt#{$i} { margin-top: #{$i}px;; }
+}
+.ml00{margin-left:0px!important;}
+@for $i from 0 through 100{
+	.ml#{$i} { margin-left: #{$i}px;; }
+}
+.mr00{margin-right:0px!important;}
+@for $i from 0 through 100{
+	.mr#{$i} { margin-right: #{$i}px;; }
+}
+.mb00{margin-bottom:0px!important;}
+@for $i from 0 through 100{
+	.mb#{$i} { margin-bottom: #{$i}px;; }
+}
+// E N D

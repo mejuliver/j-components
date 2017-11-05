@@ -1,0 +1,73 @@
+// Z O O M  H O V E R
+@import 'spinners';
+.zoom-hover-img{
+	a{
+		@extend .overflow-hidden;
+	    @extend .display-block;
+	    @extend .full-width;
+	    box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	    &:hover img{
+	    	transform: scale(1.15);
+	    }
+	    figure{
+	    	@extend .m00;
+	    	@extend .flex-center;
+	    	img {
+				max-width: 100%;
+				@extend .display-block;
+				transition: transform 300ms ease-in-out;
+				@extend .full-width;
+				@extend .m00;
+			} 
+	    }
+	}
+}
+
+
+// C E N T E R  E L E M E N T
+.center{margin-left: auto; margin-right: auto;}
+.center-content-parent{-webkit-transform-style: preserve-3d;-moz-transform-style: preserve-3d;transform-style: preserve-3d;}
+.center-content-child{
+	@extend .relative;
+	top: 50%;
+	transform: translateY(-50%);}
+
+// F L I P
+.flipV{
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+
+.flipH{
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+
+#j-notification-dialog{
+  @extend .fixed;
+  bottom:30px;
+  left:30px;
+  background:rgba(0,0,0,0.6);
+  z-index:99;
+  @extend .display-table;
+  @extend .c-white;
+  @extend .font500;
+  @extend .font15;
+  @extend .pt20;
+  @extend .pb20;
+  @extend .pl25;
+  @extend .pr25;
+  -webkit-animation-duration:500ms;
+  animation-duration:500ms;
+}

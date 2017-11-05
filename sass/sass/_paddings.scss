@@ -1,0 +1,20 @@
+.p00{padding:0px!important;}
+@for $i from 0 through 100{
+	.p#{$i} { padding: #{$i}px;; }
+}
+.pt00{padding-top:0px!important;}
+@for $i from 0 through 100{
+	.pt#{$i} { padding-top: #{$i}px;; }
+}
+.pl00{padding-left:0px!important;}
+@for $i from 0 through 100{
+	.pl#{$i} { padding-left: #{$i}px;; }
+}
+.pr00{padding-right:0px!important;}
+@for $i from 0 through 100{
+	.pr#{$i} { padding-right: #{$i}px;; }
+}
+.pb00{padding-bottom:0px!important;}
+@for $i from 0 through 100{
+	.pb#{$i} { padding-bottom: #{$i}px;; }
+}

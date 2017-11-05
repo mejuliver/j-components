@@ -1,0 +1,7 @@
+@for $i from 1 through 150{
+	.font#{$i} { font-size: #{$i}px;}
+}
+$font_weight : (300,400,500,600,700,800,900);
+@each $fw in $font-weight{
+	.font#{$fw} { font-weight: $fw; }
+} 
