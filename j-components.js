@@ -723,7 +723,7 @@ function j_datepicker(){
         '<li class="list-style-none clear"><a href="#" class="parent" style="display:none;" data-has-submenu="yes">click</a>'+
             '<ul class="j-menu-dp-container list-style-none display-none bg-white p15 radius-3 shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
                 '<li class="list-style-none"><div class="display-table">'+
-                    '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTHS:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div>'+
+                    '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTH:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div>'+
                     '<div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="btn mb0 j-datepicker-current">CURRENT DATE</a></div><div class="display-cell"><a href="#" class="btn mb0 j-datepicker-ok">OK</a></div></div></div>'+
                 '</li>'+
             '</ul>'+
