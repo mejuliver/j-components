@@ -1,0 +1,217 @@
+.j-checkbox{
+  input[type="checkbox"]{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    &:focus,&:hover{
+      + label{
+        &:before{
+          border-color: #555555;
+          background-color: #f2f2f2;
+        }
+      }
+    }
+    &:active{
+      + label{
+        &:before{
+          transition-duration: 0s;
+        }
+      }
+    }
+    + label{
+      position: relative;
+      padding-left: 2em;
+      vertical-align: middle;
+      user-select: none;
+      cursor: pointer;
+      &:before{
+        box-sizing: content-box;
+        content: '';
+        color: #555555;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        margin-top: -9px;
+        border: 2px solid #555555;
+        text-align: center;
+        transition: all 0.4s ease;
+      }
+      &:after{
+        box-sizing: content-box;
+        content: '';
+        background-color: #555555;
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        margin-top: -5px;
+        transform: scale(0);
+        transform-origin: 50%;
+        transition: transform 200ms ease-out;
+        background-color: transparent;
+        top: 50%;
+        left: 4px;
+        width: 8px;
+        height: 3px;
+        margin-top: -4px;
+        border-style: solid;
+        //border-color: #ffffff;*/
+        border-color: #555555;
+        //border-width: 0 0 3px 3px;*/
+        border-width: 0 0 2px 2px;
+        border-image: none;
+        transform: rotate(-45deg) scale(0);
+      }
+    }
+    &:disabled{
+      + label{
+        &:before{
+          border-color: #cccccc;
+        }
+      }
+      &:focus{
+        + label{
+          &:before{
+            background-color: inherit;
+          }
+        }
+      }
+      &:checked{
+        + label{
+          &:before{
+            background-color: #cccccc;
+          }
+          &:after{
+            content: '';
+            transform: rotate(-45deg) scale(1);
+            transition: transform 200ms ease-out;
+          }
+        }
+      }
+    }
+    &:checked{
+      + label{
+        &:before{
+          animation: borderscale 200ms ease-in;
+          //background: #555555;
+        }
+        &:after{
+          transform: rotate(-45deg) scale(1);
+        }
+      }
+    }
+  }
+}
+
+.j-radio{
+  input[type="radio"]{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    &:focus,&:hover{
+      + label{
+        &:before{
+          border-color: #555555;
+          background-color: #f2f2f2;
+        }
+      }
+    }
+    &:active{
+      + label{
+        &:before{
+          transition-duration: 0s;
+        }
+      }
+    }
+
+    + label{
+      position: relative;
+      padding-left: 2em;
+      vertical-align: middle;
+      user-select: none;
+      cursor: pointer;
+      &:before{
+        box-sizing: content-box;
+        content: '';
+        color: #555555;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        margin-top: -9px;
+        border: 2px solid #555555;
+        text-align: center;
+        transition: all 0.4s ease;
+        border-radius: 50%;
+      }
+      &:after{
+        box-sizing: content-box;
+        content: '';
+        background-color: #555555;
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        margin-top: -5px;
+        transform: scale(0);
+        transform-origin: 50%;
+        transition: transform 200ms ease-out;
+        border-radius: 50%;
+      }
+    }
+    &:disabled{
+      + label{
+        &:before{
+          border-color: #cccccc;
+        }
+      }
+      &:focus{
+        + label{
+          &:before{
+            background-color: inherit;
+          }
+        }
+      }
+      &:checked{
+        + label{
+          &:before{
+            background-color: #cccccc;
+          }
+        }
+      }
+    }
+    &:checked{
+      + label{
+        &:before{
+          animation: borderscale 300ms ease-in;
+          background-color: white;
+        }
+        &:after{
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes 
+  borderscale {  50% {
+   box-shadow: 0 0 0 2px #555555;
+  }
+}

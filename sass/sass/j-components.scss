@@ -1,32 +1,41 @@
 // M A R G I N S
-@import 'margins';
+@import 'components/margins';
 
 // P A D D I N G S
-@import 'paddings';
+@import 'components/paddings';
 
 // F O N T  S I Z E
-@import 'fontSize';
+@import 'components/fontSize';
 
 // A L I G N M E N T
-@import 'alignment';
+@import 'components/alignment';
 
 // T E X T
-@import 'text';
+@import 'components/text';
 
 // O T H E R S
-@import 'others';
+@import 'components/others';
+
+// F L E X
+@import 'components/flex';
 
 // D I V I D E R S
-@import 'dividers';
+@import 'components/dividers';
 
 // R A D I U S
-@import 'radius';
+@import 'components/radius';
+
+// T A B L E S
+@import 'components/table';
 
 // B A C K G R O U N D S
-@import 'backgrounds';
+@import 'components/backgrounds';
 
 // C O L O R S
-@import 'colors';
+@import 'components/colors';
+
+// P L U G I N S
+@import 'components/plugins';
 
 // M E D I A
-@import 'media';
+@import 'components/media';

@@ -1,4 +1,5 @@
 
+
 // Automatically cancel unfinished ajax requests 
 // when the user navigates elsewhere.
   var xhrPool=[],global_spinner_conf=true,refresh=false,modal_open=false;
@@ -646,10 +647,10 @@ function j_timepicker(){
         }
         $(this).after('<div class="j-components j-timepicker-factory"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
         '<li class="list-style-none clear"><a href="#" class="parent" data-has-submenu="yes" style="display:none;">click</a>'+
-            '<ul class="j-menu-dp-container list-style-none display-none bg-white p15 radius-3px shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
+            '<ul class="j-menu-dp-container list-style-none display-none bg-white p15 radius-3 shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
                 '<li class="list-style-none"><div class="display-table">'+
                     '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">HOURS:</span><br>'+hours+'</div><div class="display-cell pr7"><span class="font10 font500">MINUTES:</span><br>'+minutes+'</div><div class="display-cell"><span class="font10 font500">AM/PM:</span><br>'+am_pm+'</div></div></div>'+
-                    '<div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="btn mb0 j-timepicker-current">CURRENT TIME</a></div><div class="display-cell"><a href="#" class="btn mb0 j-timepicker-ok">OK</a></div></div></div>'+
+                    '<div class="display-table mt8"><div class="display-row"><div class="display-cell pr10"><a href="#" class="btn mb0 j-timepicker-current">CURRENT TIME</a></div><div class="display-cell"><a href="#" class="btn mb0 j-timepicker-ok">OK</a></div></div></div>'+
                 '</li>'+
             '</ul>'+
         '</li>'+
@@ -773,42 +774,81 @@ function random_str() {
 }
 
 
+
 function m_size(){
+
     $('.j-equal').css( 'height' , 'auto' );
+    
     if($(window).width()>=992){
         $('.j-equal-container').each(function(){
             var dis = $(this);
-
             // Get an array of all element heights
             var elementHeights = dis.find('.j-equal').map(function() {
                 return $(this).outerHeight();
             }).get();
-
             // Math.max takes a variable number of arguments
             // `apply` is equivalent to passing each height as an argument
             var maxHeight = Math.max.apply(null, elementHeights);
-
             // Set each height to the max height
             dis.find('.j-equal').css('height',maxHeight);
-
-
-            $('.switched_contents').each(function(){
-                $(this).insertBefore($(this).prev('.col-sm-6'));
-                $(this).removeClass('switched_contents');
-            });
         });
-    }else{
-        $('.j-equal-container').each(function(){
+     }
 
-            if($(this).find('.zoom-hover-img').closest('.col-sm-6').prev('.col-sm-6').find('.boxed').length){
+    
+    if($(window).width() >= 768 && $(window).width() <= 991){
+        $('.j-equal-container.sm').each(function(){
+            var dis = $(this);
+            // Get an array of all element heights
+            var elementHeights = dis.find('.j-equal').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            var maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal').css('height',maxHeight);
+        });
+     }
 
-                var image_box = $(this).find('.zoom-hover-img').closest('.col-sm-6'),
-                contents = $(this).find('.boxed').closest('.col-sm-6');
+        if($(window).width() <= 767){
+            $('.j-equal-container.xs').each(function(){
+                var dis = $(this);
+                // Get an array of all element heights
+                var elementHeights = dis.find('.j-equal').map(function() {
+                    return $(this).outerHeight();
+                }).get();
+                // Math.max takes a variable number of arguments
+                // `apply` is equivalent to passing each height as an argument
+                var maxHeight = Math.max.apply(null, elementHeights);
+                // Set each height to the max height
+                dis.find('.j-equal').css('height',maxHeight);
+            });
+         }
 
-                contents.addClass('switched_contents');
+    switch_contents();
+}
 
-                contents.insertAfter(image_box);
-            }
+function switch_contents(){
+    if($(window).width() >= 768 && $(window).width() <= 991){
+        $('.switch-contents-xs').each(function(){
+            $(this).find('.switch[data-order="first"]').insertBefore($(this).find('.switch[data-order="second"]'));
+        });
+        $('.switch-contents-sm').each(function(){
+            $(this).find('.switch[data-order="first"]').insertAfter($(this).find('.switch[data-order="second"]'));
         });
     }
+    if($(window).width() <= 767){
+        $('.switch-contents-sm').each(function(){
+            $(this).find('.switch[data-order="first"]').insertBefore($(this).find('.switch[data-order="second"]'));
+        });
+        $('.switch-contents-xs').each(function(){
+            $(this).find('.switch[data-order="first"]').insertAfter($(this).find('.switch[data-order="second"]'));
+        });
+    }
+    if($(window).width() >= 992){
+        $('.switch-contents-sm,.switch-contents-xs').each(function(){
+            $(this).find('.switch[data-order="first"]').insertBefore($(this).find('.switch[data-order="second"]'));
+        });
+    }
+    
 }
