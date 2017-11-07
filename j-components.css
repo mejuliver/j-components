@@ -7665,6 +7665,238 @@ spinner 11
   animation-duration: 500ms;
 }
 
+/* line 75, sass/sass/components/_plugins.scss */
+.box-slider {
+  position: relative;
+  height: 300px;
+  z-index: 11;
+}
+/* line 79, sass/sass/components/_plugins.scss */
+.box-slider .slide .item {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+/* line 80, sass/sass/components/_plugins.scss */
+.box-slider .slide .item img {
+  display: none !important;
+}
+/* line 86, sass/sass/components/_plugins.scss */
+.box-slider .image-box-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  z-index: 10;
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+}
+/* line 93, sass/sass/components/_plugins.scss */
+.box-slider .image-box-caption * {
+  color: #FFF;
+}
+/* line 97, sass/sass/components/_plugins.scss */
+.box-slider .wide {
+  position: absolute;
+  top: 0px;
+  height: 300px;
+  z-index: 9;
+  width: 100%;
+}
+/* line 103, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-aqua {
+  background: rgba(12, 163, 186, 0.7) !important;
+}
+/* line 105, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-aqua:hover {
+  background: rgba(12, 163, 186, 0.9) !important;
+}
+/* line 109, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-violet {
+  background: rgba(80, 54, 185, 0.7) !important;
+}
+/* line 111, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-violet:hover {
+  background: rgba(80, 54, 185, 0.9) !important;
+}
+/* line 115, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-orange {
+  background: rgba(227, 84, 33, 0.7) !important;
+}
+/* line 117, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-orange:hover {
+  background: rgba(227, 84, 33, 0.9) !important;
+}
+/* line 121, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-pink {
+  background: rgba(231, 52, 142, 0.7) !important;
+}
+/* line 123, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-pink:hover {
+  background: rgba(231, 52, 142, 0.9) !important;
+}
+/* line 127, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-blue {
+  background: rgba(17, 89, 179, 0.7) !important;
+}
+/* line 129, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-blue:hover {
+  background: rgba(17, 89, 179, 0.9) !important;
+}
+/* line 133, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-yellow {
+  background: rgba(213, 166, 42, 0.7) !important;
+}
+/* line 135, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-yellow:hover {
+  background: rgba(213, 166, 42, 0.9) !important;
+}
+/* line 139, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-green {
+  background: rgba(32, 210, 94, 0.7) !important;
+}
+/* line 141, sass/sass/components/_plugins.scss */
+.box-slider .wide.with-bg.bg-green:hover {
+  background: rgba(32, 210, 94, 0.9) !important;
+}
+
+/* line 148, sass/sass/components/_plugins.scss */
+.box.image-box {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-position: center center !important;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+/* line 160, sass/sass/components/_plugins.scss */
+.box.image-box * {
+  color: #FFF;
+}
+/* line 163, sass/sass/components/_plugins.scss */
+.box.image-box img.background-image {
+  display: none;
+}
+
+/* line 166, sass/sass/components/_plugins.scss */
+.box-slider:hover .image-box-caption {
+  background: #f1811d;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+/* line 175, sass/sass/components/_plugins.scss */
+.hr {
+  height: 5px;
+}
+
+/* line 178, sass/sass/components/_plugins.scss */
+.hr-half {
+  width: 70px;
+}
+
+/* line 181, sass/sass/components/_plugins.scss */
+.opacity-half {
+  opacity: .5;
+}
+
+/* line 184, sass/sass/components/_plugins.scss */
+.opacity-full {
+  opacity: 1;
+}
+
+/* line 187, sass/sass/components/_plugins.scss */
+.bg-pattern-1 {
+  background-color: #FFF;
+  background-image: url("pattern/pattern-1.png");
+}
+/* line 190, sass/sass/components/_plugins.scss */
+.bg-pattern-1 .boxed.feature {
+  background: #FFF;
+}
+
+/* line 194, sass/sass/components/_plugins.scss */
+.bg-pattern-2 {
+  background-color: #FFF;
+  background-image: url("pattern/pattern-2.png");
+}
+/* line 197, sass/sass/components/_plugins.scss */
+.bg-pattern-2 .boxed.feature {
+  background: #FFF;
+}
+
+/* line 201, sass/sass/components/_plugins.scss */
+.bg-pattern-3 {
+  background-color: #FFF;
+  background-image: url("pattern/pattern-3.png");
+}
+/* line 204, sass/sass/components/_plugins.scss */
+.bg-pattern-3 .boxed.feature {
+  background: #FFF;
+}
+
+/* line 208, sass/sass/components/_plugins.scss */
+.bg-pattern-4 {
+  background-color: #FFF;
+  background-image: url("pattern/pattern-4.png");
+}
+/* line 211, sass/sass/components/_plugins.scss */
+.bg-pattern-4 .boxed.feature {
+  background: #FFF;
+}
+
+/* line 215, sass/sass/components/_plugins.scss */
+.bg-pattern-5 {
+  background-color: #FFF;
+  background-image: url("pattern/pattern-5.png");
+}
+/* line 218, sass/sass/components/_plugins.scss */
+.bg-pattern-5 .boxed.feature {
+  background: #FFF;
+}
+
+/* line 222, sass/sass/components/_plugins.scss */
+.bg-pattern-6 {
+  background-color: #FFF;
+  background-image: url("pattern/pattern-6.png");
+}
+/* line 225, sass/sass/components/_plugins.scss */
+.bg-pattern-6 .boxed.feature {
+  background: #FFF;
+}
+
+/* line 229, sass/sass/components/_plugins.scss */
+.bg-pattern-7 {
+  background-color: #FFF;
+  background-image: url("pattern/pattern-7.png");
+}
+/* line 232, sass/sass/components/_plugins.scss */
+.bg-pattern-7 .boxed.feature {
+  background: #FFF;
+}
+
+/* line 236, sass/sass/components/_plugins.scss */
+.bg-pattern-8 {
+  background-color: #FFF;
+  background-image: url("pattern/pattern-8.png");
+}
+/* line 239, sass/sass/components/_plugins.scss */
+.bg-pattern-8 .boxed.feature {
+  background: #FFF;
+}
+/* line 242, sass/sass/components/_plugins.scss */
+.bg-pattern-8 * {
+  color: #fff;
+}
+
 /* line 2, sass/sass/components/_checkRadio.scss */
 .j-checkbox input[type="checkbox"] {
   border: 0;
