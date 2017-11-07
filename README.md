@@ -246,7 +246,43 @@ You can switch elements on window size change event by adding a class 'switch-co
 	<div class="switch" data-order="second">
 		second element
 	</div>
-</div> 
+</div>
+```
+
+#### Box Slider and Image Box Components
+Refer below
+
+Box slider. If you want to add a color background, you can add this '<div class="wide with-bg bg-orange">' before '.image-box-caption'
+```
+<div class="box-slider">
+	<a href="#">
+		<div class="carousel slide" data-ride="carousel">
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		      <img src="">
+		    </div>
+		    <div class="item">
+		      <img src="">
+		    </div>
+		  </div>
+		</div>
+		<div class="wide with-bg bg-orange">
+		</div>
+		<div class="image-box-caption">
+			content here
+		</div>
+	</a>
+</div>
+```
+For Image box
+```
+<div class="box image-box">
+    <img src="" class="background-image">
+    <div class="content">
+        content here
+    </div>
+</div>
+```
 
 
 

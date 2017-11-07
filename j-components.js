@@ -758,7 +758,7 @@ function checkwidth(){
 
 
 
-// make random string
+// R A N D O M  S T R I N G
 function random_str() {
   var text = "";
   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -770,7 +770,7 @@ function random_str() {
 }
 
 
-
+// J - E Q U A L  C O M P O N E N T
 function m_size(){
 
     $('.j-equal').css( 'height' , 'auto' );
@@ -823,6 +823,7 @@ function m_size(){
 
     switch_contents();
 }
+// S W I T C H E D  C O N T E N T S  C O M P O N E N T
 
 function switch_contents(){
     if($(window).width() >= 768 && $(window).width() <= 991){
@@ -848,3 +849,19 @@ function switch_contents(){
     }
     
 }
+
+// B O X  S L I D E R
+$(function(){
+    $('.box-slider .slide .item').each(function(){
+        $(this).css('background-image','url('+$(this).find('img').attr('src')+')');
+    });
+    $('.box.image-box').each(function(){
+        $(this).css( 'background', ' linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
+    });
+
+    $('.box.image-box').hover(function(){
+        $(this).css( 'background', ' linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),url('+$(this).find('img.background-image').attr('src')+')'); 
+    },function(){
+        $(this).css( 'background', ' linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
+    });
+});
