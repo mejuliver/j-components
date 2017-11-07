@@ -518,10 +518,6 @@ $(document).ready(function(){
 });
 
 $(window).resize(function(){
-    $("#white-spinner-theme").fadeOut(200);
-    $(".windows8").center();
-    $(".sk-fading-circle").center();
-    $("#dark-spinner-theme").center(200);
     $(".j-menu-dp-container").hide();
 });
 

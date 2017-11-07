@@ -37,6 +37,8 @@ Add spinner, spinner unto your app.
 // "spinner_type", type can be 'spinner1,spinner2,spinner3,spinner4,spinner5,spinner6,spinner7,spinner8,spinner9,spinner10'
 
 j_spinner(status,spinner_type)
+
+
 ```
 
 ### Pop-up modal dialog component
@@ -178,6 +180,73 @@ This will add animation delay to each element that has a class of "ani-auto-dela
 #### ".ani-auto-delay" class
 This will add animation delay to each element that has a class of "ani-auto-delay"
 
+#### Datepicker and Timepicker Components
+This requires moment.js. To use, just bind an input with the class 'j-datepicker' or 'j-timepicker'
+
+Example
+```
+<input type="text" class="j-datepicker" data-format="MMM-DD-YYYY">
+<input type="text" class="j-timepicker">
+```
+
+You can specify your own date format to by binding the target input with the attribute 'data-format'. By default, date is set in format 'MM DD, YYYY' e.g. 'November 05, 2017'
+
+#### Equal Height Elements
+Just add class 'j-equal-container' to the parent wrapper element and add class 'j-equal' to child/target element(s) that you want to bind with this component.
+
+Example
+
+```
+<div class="j-equal-container">
+	<div class="j-equal">
+		1
+	</div>
+	<div class="j-equal">
+		2
+	</div>
+	<div class="j-equal">
+		3
+	</div>
+</div>
+```
+
+for responsive breakpoints, you may add 'sm' when device width size is 768px and up to 991px, add 'xs' when device width size is 767px and down along with 'j-equal-container'class. Refer below.
+
+e.g.
+```
+<div class="j-equal-container sm">
+//or
+<div class="j-equal-container xs">
+
+```
+
+#### Responsive Switch Element
+You can switch elements on window size change event by adding a class 'switch-contents-sm', 'switch-contents-xs' and then to the element that you want to be switch on change window size event. Refer below.
+
+```
+// when device is 768px and up to 991px
+//switch-contents-sm
+
+<div class="switch-contents-sm">
+	<div class="switch" data-order="first">
+		first element
+	</div>
+	<div class="switch" data-order="second">
+		second element
+	</div>
+</div> 
+
+// when device is 767px and down
+//switch-contents-sm
+
+<div class="switch-contents-xs">
+	<div class="switch" data-order="first">
+		first element
+	</div>
+	<div class="switch" data-order="second">
+		second element
+	</div>
+</div> 
 
 
 
