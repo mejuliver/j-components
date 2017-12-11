@@ -1,0 +1,60 @@
+@mixin bg($c,$imp: false){
+	$bg : 'none';
+	@if $c=='light' {
+		// $bg : #f5f5f5;
+	}@else if $c=='light2' {
+		$bg : #eeeeee;
+	}@else if $c=='white' {
+		$bg : #ffffff;
+	}@else if $c=='white' {
+		$bg : #ffffff;
+	}@else if $c=='lime' {
+		$bg : #76b729;
+	}@else if $c=='green' {
+		$bg : #40b649;
+	}@else if $c=='green2' {
+		$bg : #8ed493;
+	}@else if $c=='yellow' {
+		$bg : #c0c753;
+	}@else if $c=='yellow2' {
+		$bg : #adb447;
+	}@else if $c=='orange' {
+		$bg : #FFA500;
+	}@else if $c=='dark' {
+		$bg : #555555;
+	}@else if $c=='blue' {
+		$bg : #0099ff;
+	}@else if $c=='blue2' {
+		$bg : #0384da;
+	}@else if $c=='blue3' {
+		$bg : #00c0ef;
+	}@else if $c=='gray' {
+		$bg : #ebebeb;
+	}@else if $c=='gray2' {
+		$bg : #d6d6d6;
+	}@else if $c=='red' {
+		$bg : #f56954;
+	}@else if $c=='red2' {
+		$bg : #ff7d7d;
+	}@else if $c=='black' {
+		$bg : #000000;
+	}@else if $c=='black2' {
+		$bg : rgba(0,0,0,0.1);
+	}@else if $c=='torquise' {
+		$bg : #0bd3c5;
+	}@else if $c=='taint' {
+		$bg : #f9f1e8;
+	}@else if $c=='none' {
+		$bg : 'none';
+	}@else{
+		$bg : 'none';
+	}
+	
+	@if $imp {
+		backgound-color: $bg !important;
+	} @else {
+		background-color: $bg;
+	}
+
+}
+
