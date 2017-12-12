@@ -1,0 +1,55 @@
+@mixin color( $color,$imp:false ){
+	$c : 'none';
+
+	@if $color == 'torquise' {
+		$c  : #0bd3c5;
+	}@else if $color == 'torquise2' {
+		$c : #08867d;
+	}@else if $color == 'torquise2' {
+		$c : #08867d;
+	}@else if $color == 'gray' {
+		$c : #d6d6d6;
+	}@else if $color == 'gray2' {
+		$c : #ebebeb;
+	}@else if $color == 'white' {
+		$c : #ffffff;
+	}@else if $color == 'green' {	
+		$c : #40b649;
+	}@else if $color == 'lime' {	
+		$c : #76b729;
+	}@else if $color == 'yellow' {	
+		$c : #c0c753;
+	}@else if $color == 'yellow2' {	
+		$c : #adb447;
+	}@else if $color == 'orange' {	
+		$c : #FFA500;
+	}@else if $color == 'blue' {	
+		$c : #0099ff;
+	}@else if $color == 'blue2' {	
+		$c : #0384da;
+	}@else if $color == 'blue3' {	
+		$c : #00c0ef;
+	}@else if $color == 'black' {	
+		$c : #000000;
+	}@else if $color == 'black2' {
+		$c : rgba(#000,.1);
+	}@else if $color == 'dark' {
+		$c : #555555;
+	}@else if $color == 'red' {
+		$c : #f56954;
+	}@else if $color == 'red2' {
+		$c : #ff7d7d;
+	}@else if $color == 'red3' {
+		$c : #ff0000;
+	}@else if $color == 'taint' {
+		$c : #f6e8d9;
+	}
+
+	@if $imp {
+		color: $c !important; 
+	}@else{
+		color: $c; 
+	}
+
+
+}

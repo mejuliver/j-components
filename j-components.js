@@ -60,9 +60,9 @@ function j_shadow(el, shadow_color, shadow_length, shadow_position){
     });
 }
 //add loading animation or a loading spinner. To use j_spinner("[specify if show or hide e.g. on or off]", "[specify a spinner type to be use e.g. spinner1]")
-function j_spinner(status,spinner_type){
+function j_spinner(status,spinner){
    if(status==="on"){
-        switch(spinner_type){
+        switch(spinner){
             case 'spinner1' :
                 $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner1"></div></div>');
                 break;
