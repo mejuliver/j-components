@@ -100,47 +100,47 @@
     height:300px;
     z-index:9;
     width:100%;
-    &.with-bg.bg-aqua{
-      background: rgba(#0CA3BA,0.7)!important;
-      &:hover{
-        background: rgba(#0CA3BA,0.9)!important;
-      }
+  }
+  .with-bg.bg-aqua{
+    background: rgba(#0CA3BA,0.7)!important;
+    &:hover{
+      background: rgba(#0CA3BA,0.9)!important;
     }
-    &.with-bg.bg-violet{
-      background: rgba(#5036B9,0.7)!important;
-      &:hover{
-        background: rgba(#5036B9,0.9)!important;
-      }
+  }
+  .with-bg.bg-violet{
+    background: rgba(#5036B9,0.7)!important;
+    &:hover{
+      background: rgba(#5036B9,0.9)!important;
     }
-    &.with-bg.bg-orange{
-      background: rgba(#E35421,0.7)!important;
-      &:hover{
-        background: rgba(#E35421,0.9)!important;
-      }
+  }
+  .with-bg.bg-orange{
+    background: rgba(#E35421,0.7)!important;
+    &:hover{
+      background: rgba(#E35421,0.9)!important;
     }
-    &.with-bg.bg-pink{
-      background: rgba(#E7348E,0.7)!important;
-      &:hover{
-        background: rgba(#E7348E,0.9)!important;
-      }
+  }
+  .with-bg.bg-pink{
+    background: rgba(#E7348E,0.7)!important;
+    &:hover{
+      background: rgba(#E7348E,0.9)!important;
     }
-    &.with-bg.bg-blue{
-      background: rgba(#1159B3,0.7)!important;
-      &:hover{
-        background: rgba(#1159B3,0.9)!important;
-      }
+  }
+  .with-bg.bg-blue{
+    background: rgba(#1159B3,0.7)!important;
+    &:hover{
+      background: rgba(#1159B3,0.9)!important;
     }
-    &.with-bg.bg-yellow{
-      background: rgba(#D5A62A,0.7)!important;
-      &:hover{
-        background: rgba(#D5A62A,0.9)!important;
-      }
+  }
+  .with-bg.bg-yellow{
+    background: rgba(#D5A62A,0.7)!important;
+    &:hover{
+      background: rgba(#D5A62A,0.9)!important;
     }
-    &.with-bg.bg-green{
-      background: rgba(#20D25E,0.7)!important;
-      &:hover{
-        background: rgba(#20D25E,0.9)!important;
-      }
+  }
+  .with-bg.bg-green{
+    background: rgba(#20D25E,0.7)!important;
+    &:hover{
+      background: rgba(#20D25E,0.9)!important;
     }
   }
 }

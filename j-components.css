@@ -7703,60 +7703,60 @@ spinner 11
   z-index: 9;
   width: 100%;
 }
-/* line 103, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-aqua {
+/* line 104, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-aqua {
   background: rgba(12, 163, 186, 0.7) !important;
 }
-/* line 105, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-aqua:hover {
+/* line 106, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-aqua:hover {
   background: rgba(12, 163, 186, 0.9) !important;
 }
-/* line 109, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-violet {
+/* line 110, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-violet {
   background: rgba(80, 54, 185, 0.7) !important;
 }
-/* line 111, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-violet:hover {
+/* line 112, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-violet:hover {
   background: rgba(80, 54, 185, 0.9) !important;
 }
-/* line 115, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-orange {
+/* line 116, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-orange {
   background: rgba(227, 84, 33, 0.7) !important;
 }
-/* line 117, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-orange:hover {
+/* line 118, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-orange:hover {
   background: rgba(227, 84, 33, 0.9) !important;
 }
-/* line 121, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-pink {
+/* line 122, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-pink {
   background: rgba(231, 52, 142, 0.7) !important;
 }
-/* line 123, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-pink:hover {
+/* line 124, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-pink:hover {
   background: rgba(231, 52, 142, 0.9) !important;
 }
-/* line 127, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-blue {
+/* line 128, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-blue {
   background: rgba(17, 89, 179, 0.7) !important;
 }
-/* line 129, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-blue:hover {
+/* line 130, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-blue:hover {
   background: rgba(17, 89, 179, 0.9) !important;
 }
-/* line 133, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-yellow {
+/* line 134, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-yellow {
   background: rgba(213, 166, 42, 0.7) !important;
 }
-/* line 135, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-yellow:hover {
+/* line 136, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-yellow:hover {
   background: rgba(213, 166, 42, 0.9) !important;
 }
-/* line 139, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-green {
+/* line 140, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-green {
   background: rgba(32, 210, 94, 0.7) !important;
 }
-/* line 141, sass/sass/components/_plugins.scss */
-.box-slider .wide.with-bg.bg-green:hover {
+/* line 142, sass/sass/components/_plugins.scss */
+.box-slider .with-bg.bg-green:hover {
   background: rgba(32, 210, 94, 0.9) !important;
 }
 
