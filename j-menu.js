@@ -5,13 +5,12 @@
     O P T I O N S
     
     
-    S T R U C T U R E
+    S T R U C T U R E ( ':' => data-type )
 
-        j-components
-            .j-menu
-                .j-menu-nav
+        .j-component:menu
+                .menu-holder
                     anchor tag <a>
-                        -> data-allow-active:       
+                        -       
 
 
 */
@@ -20,29 +19,70 @@
 $(function(){
 	//j menu
     
-    $(document).on("click", ".j-components .j-menu .j-menu-nav a", function(e){
-        var dis = $(this);
-        //if allowed to set an active state and active indentifier
-        if(typeof dis.attr("data-allow-active") !== typeof undefined && dis.attr("data-allow-active") === "yes"){
-            if(typeof dis.attr("data-has-submenu") !==  "no" || !dis.attr("data-has-submenu") || dis.attr("data-submenu-allowactive") === "yes"){
-                dis.closest(".j-menu-nav").find(".parent").removeClass("j-active j-active-state");
-                dis.addClass("j-active j-active-state");
-            }
-        }
+    $(document).on("click", '.j-component[data-type="menu"] .menu-holder > a', function(e){
+        e.preventDefault();
+
+        var dis = $(this),
+            parent =  dis.closest('.j-component'),
+            class_hide = false,
+            class_show = false;
+        //remove class and add class active
+        dis.closest('.menu-holder').find('.active').removeclass('active');
+        dis.closest('li').addClass('active');
         //if tabs
-        if(dis.attr("data-tabs") === "yes"){
-            $("#"+dis.closest(".j-menu-nav").attr("data-tabs-container")+" > .j_tabs").removeClass("active-tab").hide();
-            $("#"+dis.closest('[data-tabs-container]').attr("data-tabs-container")+" "+dis.attr("href")).addClass("active-tab").fadeIn(200);
-            var custom_function = dis.attr("data-monkey-run");
-            if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
-                var classList = custom_function.split(/\s+/);
+        if(dis.hasClass('tabs')){
+            if( !class_hide && typeof $( dis.attr("href") ).attr('data-hide') !== typeof undefined && $( dis.attr("href") ).attr('data-hide') !== '' ){
+                window[$.trim( $( dis.attr("href") ).attr('data-hide') ).replace(' ','')](e);
+                class_hide = true;
+            }
+
+            if( !class_show && typeof $( dis.attr("href") ).attr('data-show') !== typeof undefined && $( dis.attr("href") ).attr('data-hide') !== '' ){
+                window[$.trim( $( dis.attr("href") ).attr('data-show') ).replace(' ','')]();
+                class_show = true;
+            }
+            
+            dis.closest('.j-component').find('.tab-contents').hide();
+            $(dis.attr("href")).addClass("active").fadeIn(200);
+
+            var run_before = dis.attr("data-run-before");
+            if(typeof run_before !== typeof undefined && run_before !== false && run_before !== "") {
+                var classList = run_before.split(/\s+/);
+                $.each(classList, function(index, item) {
+                  window[item]();
+                });
+            }
+
+            var run_after = parent.attr("data-run-after");
+            if(typeof run_after !== typeof undefined && run_after !== false && run_after !== "") {
+                var classList = run_before.split(/\s+/);
                 $.each(classList, function(index, item) {
                   window[item]();
                 });
             }
             checkwidth();
 
+        
+            return;
         }
+
+        if( typeof $( dis.attr("href") ).attr('data-hide') !== typeof undefined && $( dis.attr("href") ).attr('data-hide') !== '' ){
+            window[$.trim( $( dis.attr("href") ).attr('data-hide') ).replace(' ','')]();
+        }else{
+
+            if(parent.hasClass('fadeOut')){
+                parent.find('.submenu').fadeOut(500);
+            }
+            if(parent.hasClass('fadeOutQuick')){
+                parent.find('.submenu').fadeOut(200);
+            }
+            if(parent.hasClass('s')){
+                parent.find('.submenu').fadeOut(500);
+            }
+
+            
+        }
+
+
         //if there's a submenu
         if(dis.attr("data-has-submenu") === "yes"){
             if(dis.next(".j-menu-dp-container").is(":visible")){
