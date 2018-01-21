@@ -50,6 +50,8 @@ function j_timepicker(){
         }
 
     $('.j-timepicker').each(function(){
+        //convert the value to a valid time 
+        $(this).val(moment($(this).val(),'hh:mm').format('hh:mm A'));
         //unwrap
         if($(this).parent().hasClass('component-factory time-factory')){
             $(this).unwrap();

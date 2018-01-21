@@ -71,15 +71,6 @@ function j_datepicker(){
         
     $(".j-datepicker-factory").remove();
             
-    //years
-    var start_year = 1930,current_year = new Date().getFullYear(),years='<select class="form-control" style="width:90px;" name="years">';
-    for (var i = start_year; i <= current_year; i++) {
-        if(i===parseInt(moment().format('YYYY')))
-            years+='<option value="'+i+'" selected>'+i+'</option>';
-        else
-            years+='<option value="'+i+'">'+i+'</option>';
-    }
-    years+='</select>';
     //months
     var list_months = [[1,'Jan'],[2,'Feb'],[3,'Mar'],[4,'Apr'],[5,'May'],[6,'Jun'],[7,'Jul'],[8,'Aug'],[9,'Sep'],[10,'Oct'],[11,'Nov'],[12,'Dec']],months='<select class="form-control" style="width:95px;" name="months">';
     $.each(list_months,function(index,value){
@@ -113,6 +104,32 @@ function j_datepicker(){
         }else{
             $(this).attr('placeholder','Click to select date');
         }
+
+        if($(this).hasClass('future') && typeof $(this).attr('data-future') typeof !== undefined && $(this).attr('data-future') !== '' ){
+
+            var start_year = new Date().getFullYear(),end_year = new moment().add(parseInt($(this).attr('data-future')), 'year').format('YYYY'),years='<select class="form-control mb2" style="width:90px;" name="years">';
+            for (var i = start_year; i <= parseInt(end_year); i++) {
+                if(i===parseInt(moment().format('YYYY')))
+                    years+='<option value="'+i+'" selected>'+i+'</option>';
+                else
+                    years+='<option value="'+i+'">'+i+'</option>';
+            }
+
+            years+='</select>';
+        }else{
+
+            //years
+            var start_year = 1930,current_year = new Date().getFullYear(),years='<select class="form-control" style="width:90px;" name="years">';
+            for (var i = start_year; i <= current_year; i++) {
+                if(i===parseInt(moment().format('YYYY')))
+                    years+='<option value="'+i+'" selected>'+i+'</option>';
+                else
+                    years+='<option value="'+i+'">'+i+'</option>';
+            }
+            years+='</select>';
+
+        }
+
         $(this).after('<div class="j-components j-datepicker-factory"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
         '<li class="list-style-none clear"><a href="#" class="parent" style="display:none;" data-has-submenu="yes">click</a>'+
             '<ul class="j-menu-dp-container list-style-none display-none bg-white p15 radius-3 shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
