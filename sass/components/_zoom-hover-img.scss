@@ -1,0 +1,24 @@
+.zoom-hover-img{
+	a{
+		@extend .overflow-hidden;
+	    @extend .display-block;
+	    @extend .full-width;
+	    box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	    &:hover img{
+	    	transform: scale(1.15);
+	    }
+	    figure{
+	    	@extend .m00;
+	    	@extend .flex-center;
+	    	img {
+				max-width: 100%;
+				@extend .display-block;
+				transition: transform 300ms ease-in-out;
+				@extend .full-width;
+				@extend .m00;
+			} 
+	    }
+	}
+}

@@ -1,0 +1,17 @@
+#j-notification-dialog{
+  @extend .fixed;
+  bottom:30px;
+  left:30px;
+  background:rgba(0,0,0,0.6);
+  z-index:99;
+  @extend .display-table;
+  @extend .c-white;
+  @extend .font500;
+  @extend .font15;
+  @extend .pt20;
+  @extend .pb20;
+  @extend .pl25;
+  @extend .pr25;
+  -webkit-animation-duration:500ms;
+  animation-duration:500ms;
+}

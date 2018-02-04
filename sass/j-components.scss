@@ -1,11 +1,11 @@
 // M A R G I N S
-@import 'components/margins';
+@import 'components/margin';
 
 // P A D D I N G S
-@import 'components/paddings';
+@import 'components/padding';
 
 // F O N T  S I Z E
-@import 'components/fontSize';
+@import 'components/font-size';
 
 // A L I G N M E N T
 @import 'components/alignment';
@@ -20,7 +20,7 @@
 @import 'components/flex';
 
 // D I V I D E R S
-@import 'components/dividers';
+@import 'components/divider';
 
 // R A D I U S
 @import 'components/radius';
@@ -29,16 +29,40 @@
 @import 'components/table';
 
 // B A C K G R O U N D S
-@import 'components/backgrounds';
+@import 'components/background';
 
 // C O L O R S
-@import 'components/colors';
-
-// P L U G I N S
-@import 'components/plugins';
+@import 'components/color';
 
 // M E D I A
 @import 'components/media';
 
 // S H A D O W
-@import 'components/shadows';
+@import 'components/box-shadow';
+
+// S P I N N E R S 
+@import 'components/spinner';
+
+// Z O O M  H O V E R  I M A G E
+@import 'components/zoom-hover-img';
+
+// B O X  S L I D E R
+@import 'components/box-slider';
+
+// J - N O T I F I C A T I O N
+@import 'components/j-notification';
+
+// F L I P
+@import 'components/flip';
+
+// B O X  I M A G E
+@import 'components/box-img';
+
+// P A T T E R N
+@import 'components/pattern';
+
+// R A D I O  O P T I O N S
+@import 'components/checkRadio';
+
+// J - M E N U
+@import 'components/j-menu';
