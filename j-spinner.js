@@ -8,6 +8,9 @@
     spinner: spinner1 - spinner10
 
 */
+if ('undefined' == typeof window.jQuery) {
+    return;
+}
 
 function j_spinner(status,spinner){
    if(status==="on"){

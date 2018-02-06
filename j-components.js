@@ -1,4 +1,6 @@
-
+if ('undefined' == typeof window.jQuery) {
+    return;
+}
 
 // Automatically cancel unfinished ajax requests 
 // when the user navigates elsewhere.
@@ -777,54 +779,222 @@ function m_size(){
     
     if($(window).width()>=992){
         $('.j-equal-container').each(function(){
-            var dis = $(this);
+            var dis = $(this),
+                elementHeights = false,
+                maxHeight = false;
             // Get an array of all element heights
-            var elementHeights = dis.find('.j-equal').map(function() {
+            elementHeights = dis.find('.j-equal').map(function() {
                 return $(this).outerHeight();
             }).get();
             // Math.max takes a variable number of arguments
             // `apply` is equivalent to passing each height as an argument
-            var maxHeight = Math.max.apply(null, elementHeights);
+            maxHeight = Math.max.apply(null, elementHeights);
             // Set each height to the max height
             dis.find('.j-equal').css('height',maxHeight);
+
+
+            // j equal 2
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal2').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal2').css('height',maxHeight);
+
+            // j equal 3
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal3').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal3').css('height',maxHeight);
+
+            // j equal 4
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal4').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal4').css('height',maxHeight);
+
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal5').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal5').css('height',maxHeight);
+
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal6').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal6').css('height',maxHeight);
         });
      }
 
     
     if($(window).width() >= 768 && $(window).width() <= 991){
         $('.j-equal-container.sm').each(function(){
-            var dis = $(this);
+            var dis = $(this),
+                elementHeights = false,
+                maxHeight = false;
             // Get an array of all element heights
-            var elementHeights = dis.find('.j-equal').map(function() {
+            elementHeights = dis.find('.j-equal').map(function() {
                 return $(this).outerHeight();
             }).get();
             // Math.max takes a variable number of arguments
             // `apply` is equivalent to passing each height as an argument
-            var maxHeight = Math.max.apply(null, elementHeights);
+            maxHeight = Math.max.apply(null, elementHeights);
             // Set each height to the max height
             dis.find('.j-equal').css('height',maxHeight);
+
+
+            // j equal 2
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal2').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal2').css('height',maxHeight);
+
+            // j equal 3
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal3').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal3').css('height',maxHeight);
+
+            // j equal 4
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal4').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal4').css('height',maxHeight);
+
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal5').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal5').css('height',maxHeight);
+
+            // Get an array of all element heights
+            elementHeights = dis.find('.j-equal6').map(function() {
+                return $(this).outerHeight();
+            }).get();
+            // Math.max takes a variable number of arguments
+            // `apply` is equivalent to passing each height as an argument
+            maxHeight = Math.max.apply(null, elementHeights);
+            // Set each height to the max height
+            dis.find('.j-equal6').css('height',maxHeight);
         });
      }
 
         if($(window).width() <= 767){
             $('.j-equal-container.xs').each(function(){
-                var dis = $(this);
+                var dis = $(this),
+                elementHeights = false,
+                maxHeight = false;
                 // Get an array of all element heights
-                var elementHeights = dis.find('.j-equal').map(function() {
+                elementHeights = dis.find('.j-equal').map(function() {
                     return $(this).outerHeight();
                 }).get();
                 // Math.max takes a variable number of arguments
                 // `apply` is equivalent to passing each height as an argument
-                var maxHeight = Math.max.apply(null, elementHeights);
+                maxHeight = Math.max.apply(null, elementHeights);
                 // Set each height to the max height
                 dis.find('.j-equal').css('height',maxHeight);
+
+
+                // j equal 2
+                // Get an array of all element heights
+                elementHeights = dis.find('.j-equal2').map(function() {
+                    return $(this).outerHeight();
+                }).get();
+                // Math.max takes a variable number of arguments
+                // `apply` is equivalent to passing each height as an argument
+                maxHeight = Math.max.apply(null, elementHeights);
+                // Set each height to the max height
+                dis.find('.j-equal2').css('height',maxHeight);
+
+                // j equal 3
+                // Get an array of all element heights
+                elementHeights = dis.find('.j-equal3').map(function() {
+                    return $(this).outerHeight();
+                }).get();
+                // Math.max takes a variable number of arguments
+                // `apply` is equivalent to passing each height as an argument
+                maxHeight = Math.max.apply(null, elementHeights);
+                // Set each height to the max height
+                dis.find('.j-equal3').css('height',maxHeight);
+
+                // j equal 4
+                // Get an array of all element heights
+                elementHeights = dis.find('.j-equal4').map(function() {
+                    return $(this).outerHeight();
+                }).get();
+                // Math.max takes a variable number of arguments
+                // `apply` is equivalent to passing each height as an argument
+                maxHeight = Math.max.apply(null, elementHeights);
+                // Set each height to the max height
+                dis.find('.j-equal4').css('height',maxHeight);
+
+                // Get an array of all element heights
+                elementHeights = dis.find('.j-equal5').map(function() {
+                    return $(this).outerHeight();
+                }).get();
+                // Math.max takes a variable number of arguments
+                // `apply` is equivalent to passing each height as an argument
+                maxHeight = Math.max.apply(null, elementHeights);
+                // Set each height to the max height
+                dis.find('.j-equal5').css('height',maxHeight);
+
+                // Get an array of all element heights
+                elementHeights = dis.find('.j-equal6').map(function() {
+                    return $(this).outerHeight();
+                }).get();
+                // Math.max takes a variable number of arguments
+                // `apply` is equivalent to passing each height as an argument
+                maxHeight = Math.max.apply(null, elementHeights);
+                // Set each height to the max height
+                dis.find('.j-equal6').css('height',maxHeight);
             });
          }
 
     switch_contents();
 }
-// S W I T C H E D  C O N T E N T S  C O M P O N E N T
 
+// S W I T C H E D  C O N T E N T S  C O M P O N E N T
 function switch_contents(){
     if($(window).width() >= 768 && $(window).width() <= 991){
         $('.switch-contents-xs').each(function(){
@@ -847,7 +1017,6 @@ function switch_contents(){
             $(this).find('.switch[data-order="first"]').insertBefore($(this).find('.switch[data-order="second"]'));
         });
     }
-    
 }
 
 // B O X  S L I D E R
@@ -864,4 +1033,15 @@ $(function(){
     },function(){
         $(this).css( 'background', ' linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
     });
+});
+
+/* ------------------------------------------------------------ */
+/*                 C O N T E N T  L O A D E R                   */
+/* ------------------------------------------------------------ */
+$(function(){
+    $('.content-loader').each(function(){
+        $(this).css('height',$(this).attr('data-height')+'px');
+        $(this).html('<div class="spinner3"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
+    });
+
 });

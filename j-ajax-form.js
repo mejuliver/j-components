@@ -1,4 +1,6 @@
-
+if ('undefined' == typeof window.jQuery) {
+    return;
+}
 /* 
     A J A X  F O R M
 --------------------------------------------------------------------    

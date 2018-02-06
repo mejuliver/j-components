@@ -1,3 +1,8 @@
+
+if ('undefined' == typeof window.jQuery) {
+    return;
+}
+
 $(function(){
 	// *************************************************** J  D A T E P I C K E R ***************************************************
     //init j-datepicker
@@ -6,45 +11,45 @@ $(function(){
     $(document).on("click",".j-datepicker",function(){
         if($(this).val()!==""){
             var dates = $(this).val().replace(',','').split(' ');
-            $(this).closest(".component-factory").find('.j-datepicker-factory select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
+            $(this).next('.j-component[data-type*="datepicker"]').find('select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
             days_change=dates[1];
-            $(this).closest(".component-factory").find('.j-datepicker-factory select[name="years"] option[value="'+dates[2]+'"]').prop("selected",true).closest("select").trigger("change");
+            $(this).next('.j-component[data-type*="datepicker"]').find('select[name="years"] option[value="'+dates[2]+'"]').prop("selected",true).closest("select").trigger("change");
         }else{
             days_change=false;
         }
-        $(this).closest(".component-factory").find(".j-components .parent").trigger("click");
+        $(this).next('.j-component[data-type*="datepicker"]').find("ul.menu-holder > li > a").trigger("click");
     });
     $(document).on("click",".j-datepicker-ok",function(e){
         e.preventDefault();
-        var ff = typeof $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== typeof undefined && $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== false && $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== "" ? $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') : 'MMMM DD, YYYY',
-            dd = $(this).closest(".j-datepicker-factory").find('select[name="months"]').val()+" "+$(this).closest(".j-datepicker-factory").find('select[name="days"]').val()+", "+$(this).closest(".j-datepicker-factory").find('select[name="years"]').val();
+        var ff = typeof $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== typeof undefined && $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== false && $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== "" ? $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') : 'MMMM DD, YYYY',
+            dd = $(this).closest('.j-component[data-type*="datepicker"]').find('select[name="months"]').val()+" "+$(this).closest('.j-component[data-type*="datepicker"]').find('select[name="days"]').val()+", "+$(this).closest('.j-component[data-type*="datepicker"]').find('select[name="years"]').val();
 
-        $(this).closest(".component-factory")
-            .find(".j-datepicker")
-            .val(moment(dd).format(ff)).closest(".component-factory").find(".j-menu-dp-container").fadeOut(200);
+        $(this).closest('.j-component[data-type*="datepicker"]')
+            .prev(".j-datepicker")
+            .val(moment(dd).format(ff)).next('.j-component[data-type*="datepicker"]').find(".menu-holder > li > a").trigger('click');
     });
     $(document).on("click",".j-datepicker-current",function(e){
         e.preventDefault();
-        var ff = typeof $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== typeof undefined && $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== false && $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') !== "" ? $(this).closest('.component-factory').find('.j-datepicker').attr('data-format') : 'MMMM DD, YYYY',
+        var ff = typeof $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== typeof undefined && $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== false && $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== "" ? $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') : 'MMMM DD, YYYY',
             current_date = moment().format('MMMM')+" "+moment().format("D")+", "+moment().format('YYYY');
         
-        $(this).closest(".component-factory")
+        $(this).next('.j-component[data-type*="datepicker"]')
             .find(".j-datepicker")
             .val(moment(current_date).format(ff))
-            .closest(".component-factory").find(".j-menu-dp-container").fadeOut(200);
+            .next('.j-component[data-type*="datepicker"]').find(".j-menu-dp-container").fadeOut(200);
     });
-    $(document).on("change",'.j-datepicker-factory select[name="months"],.j-datepicker-factory select[name="years"]',function(){
+    $(document).on("change",'select[name="months"],select[name="years"]',function(){
         if($(this).val()!==""){
             var days='';
-            $.each(getDaysArray($(this).closest(".j-datepicker-factory").find('select[name="years"]').val(),$(this).closest(".j-datepicker-factory").find('select[name="months"] option:selected').attr("data-month")),function(index,value){
+            $.each(getDaysArray($(this).closest('.j-component[data-type*="datepicker"]').find('select[name="years"]').val(),$(this).closest('.j-component[data-type*="datepicker"]').find('select[name="months"] option:selected').attr("data-month")),function(index,value){
                 var dd = "0"+value.toString();
                 days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
             });
-            $(this).closest(".j-datepicker-factory").find('select[name="days"]').html(days);
+            $(this).closest('.j-component[data-type*="datepicker"]').find('select[name="days"]').html(days);
             if(days_change!==false){
-                $(this).closest(".j-datepicker-factory").find('select[name="days"] option[value="'+days_change+'"]').prop("selected",true).closest("select").trigger("change");
+                $(this).closest('.j-component[data-type*="datepicker"]').find('select[name="days"] option[value="'+days_change+'"]').prop("selected",true).closest("select").trigger("change");
             }else{
-                $(this).closest(".j-datepicker-factory").find('select[name="days"] option:first-child').prop("selected",true).closest("select").trigger("change");
+                $(this).closest('.j-component[data-type*="datepicker"]').find('select[name="days"] option:first-child').prop("selected",true).closest("select").trigger("change");
             }
         }
     });
@@ -130,16 +135,18 @@ function j_datepicker(){
 
         }
 
-        $(this).after('<div class="j-components j-datepicker-factory"><div class="j-menu"><ul class="j-menu-nav list-style-none clear p00 m00">'+
-        '<li class="list-style-none clear"><a href="#" class="parent" style="display:none;" data-has-submenu="yes">click</a>'+
-            '<ul class="j-menu-dp-container list-style-none display-none bg-white p15 radius-3 shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
-                '<li class="list-style-none"><div class="display-table">'+
+        $(this).after('<div class="j-component" data-type="menu datepicker"><ul class="menu-holder">'+
+        '<li class="list-style-none clear"><a href="#" style="display:none;">click</a>'+
+            '<ul>'+
+                '<li"><div class="display-table">'+
                     '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTH:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div>'+
-                    '<div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="btn mb0 j-datepicker-current">CURRENT DATE</a></div><div class="display-cell"><a href="#" class="btn mb0 j-datepicker-ok">OK</a></div></div></div>'+
+                    '<div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="j-datepicker-current">CURRENT DATE</a></div><div class="display-cell"><a href="#" class="j-datepicker-ok">OK</a></div></div></div>'+
                 '</li>'+
             '</ul>'+
         '</li>'+
-        '</ul></div></div>');
+        '</ul></div>');
 
     });
 }
+
+

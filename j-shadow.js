@@ -24,6 +24,9 @@
 
 
 */
+if ('undefined' == typeof window.jQuery) {
+    return;
+}
 
 (function ($) {
   'use strict'

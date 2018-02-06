@@ -15,11 +15,13 @@
 
 */
 
-
+if ('undefined' == typeof window.jQuery) {
+    return;
+}
 $(function(){
 	//j menu
     
-        $(document).on("click", '.j-component[data-type="menu"] .menu-holder > a', function(e){
+        $(document).on("click", '.j-component[data-type*="menu"] .menu-holder > a', function(e){
             // variables
             var dis = $(this),
                 parent_el =  dis.closest('.j-component'),
@@ -89,13 +91,13 @@ $(function(){
         
         //event click j menu listener
         $(document).on("mousedown touchstart",function (e) {    
-            var dp = $('.j-component[data-type="menu"] .menu-holder li > ul:visible');
+            var dp = $('.j-component[data-type*="menu"] .menu-holder li > ul:visible');
             if (!dp.is(e.target) && dp.has(e.target).length === 0) {
-                if( !$('.j-component[data-type="menu"] .menu-holder li > ul:visible').hasClass('custom') ){
-                    $('.j-component[data-type="menu"] .menu-holder li > ul:visible').fadeOut(400);
+                if( !$('.j-component[data-type*="menu"] .menu-holder li > ul:visible').hasClass('custom') ){
+                    $('.j-component[data-type*="menu"] .menu-holder li > ul:visible').fadeOut(400);
                 }
 
-                var run_before = $('.j-component[data-type="menu"] .menu-holder li.active a').attr('data-run-before')
+                var run_before = $('.j-component[data-type*="menu"] .menu-holder li.active a').attr('data-run-before')
 
                 // run this function before component invoke the hide tab event
                 if(typeof run_before !== typeof undefined && run_before !== false && run_before !== "") {
@@ -105,7 +107,7 @@ $(function(){
                     });
                 }
 
-                $('.j-component[data-type="menu"] .menu-holder li.active').removeClass('active');
+                $('.j-component[data-type*="menu"] .menu-holder li.active').removeClass('active');
             }
         });
 });

@@ -1,3 +1,6 @@
+if ('undefined' == typeof window.jQuery) {
+    return;
+}
 $(function(){
     //init j-timepicker
     j_timepicker();
