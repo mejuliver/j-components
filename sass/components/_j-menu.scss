@@ -1,0 +1,35 @@
+.j-component{
+  display:table;
+  width:100%;
+  clear:both;
+  float:none;
+  ul{
+    padding:0px;
+  }
+  ul,li{
+    list-style:none;
+  }
+  a{
+    display:block;
+  }
+  .menu-holder > li{
+    float:left
+  }
+  .menu-holder li > ul{
+    position:absolute;
+    z-index:2;
+    display:none;
+    padding:32px;
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+  }
+  .tab-container{
+    clear:both;
+    float:none;
+    .tab{
+      display:none;
+    }
+    .tab.active{
+      display:block;
+    }
+  }
+}

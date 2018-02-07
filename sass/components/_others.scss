@@ -36,3 +36,24 @@ a,.transation{-webkit-transition: all 200ms ease-in-out;-moz-transition: all 200
 .absolute{position:absolute;}
 .fixed{position:fixed;}
 .static{position:static;}
+
+// C E N T E R  E L E M E N T
+.center{margin-left: auto; margin-right: auto;}
+.center-content-parent{-webkit-transform-style: preserve-3d;-moz-transform-style: preserve-3d;transform-style: preserve-3d;}
+.center-content-child{
+	@extend .relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.hr{
+  height:5px;
+}
+.hr-half{
+  width:70px;
+}
+.opacity-half{
+  opacity:.5;
+}
+.opacity-full{
+  opacity:1;
+}

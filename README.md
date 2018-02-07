@@ -1,4 +1,4 @@
-# j-components
+	# j-components
 A jquery set of custom components and CSS helper classes.
 
 ## j-components.css
