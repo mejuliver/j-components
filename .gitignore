@@ -1,4 +1,4 @@
 *.sass-cache
 .sass-cache
-/sass/config.rb
-/sass/.sass-cache
+/css/sass/config.rb
+/css/sass/.sass-cache

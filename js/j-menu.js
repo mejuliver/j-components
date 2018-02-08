@@ -24,15 +24,17 @@ $(function(){
     //j menu
     $(document).on("click", '.j-component[data-type*="menu"] .menu-holder > li > a', function(e) {
         // variables
-        var dis = $(this),
-            parent_el = dis.closest('.j-component'),
-            parent_tab = dis.closest('.j-component[data-type*="tab"]'),
-            run_before = dis.attr("data-run-before"),
+        var $this = $(this),
+            parent_el = $this.closest('.j-component'),
+            parent_tab = $this.closest('.j-component[data-type*="tab"]'),
+            run_before = $this.attr("data-run-before"),
             run_after = parent_el.attr("data-run-after");
             
-        dis.closest('.menu-holder').find('.active').removeClass('active');
+        $this.closest('.menu-holder').find('.active').removeClass('active');
+        
+        $this.closest('li').addClass('active');
 
-        if (typeof dis.attr('href') === typeof undefined || dis.attr('href') !== '#' || dis.attr('href') === ''){
+        if (typeof $this.attr('href') === typeof undefined || $this.attr('href') !== '#' || $this.attr('href') === ''){
             e.preventDefault();
         }
         
@@ -44,26 +46,25 @@ $(function(){
                 window[item]();
             });
         }
-        if ( dis.next('ul').length !== 0 && !dis.next('ul').hasClass('hover') ) {
-            var dp = dis.next();
+        if ( $this.next('ul').length !== 0 && !$this.next('ul').hasClass('hover') ) {
+            var dp = $this.next();
                     
             if (!parent_el.find('li > ul').is(':visible') && !parent_el.find('li > ul:visible').hasClass('custom')) {
             
                 if (!dp.hasClass('custom')) {
                   dp.fadeIn(400);
-              }
+                }
             }else{
-                        parent_el.find('li > ul:visible').fadeOut(400);
+                parent_el.find('li > ul:visible').fadeOut(400);
             }        
         } 
 
-        alert(parent_tab.length);
 
         //if tabs
-        if (parent_el.hasClass('tab') && !dis.next('ul').length) {
+        if (parent_tab.length !== 0 && typeof $this.attr('data-tab') !== typeof undefined && $this.attr('data-tab') !== '' && $this.attr('data-tab') !== 'false' ) {
             // ------- hide tab
             // component does not consist of class custom then invoke the default tab event
-            if (!parent_el.find('.tab-container .tab.active').hasClass('custom')) {
+            if ( parent_el.find('.tab-container .tab.active').attr('data-tab') !== $this.attr('data-tab') && !parent_el.find('.tab-container .tab.active').hasClass('custom')) {
                parent_el.find('.tab-container .tab.active').hide();
 
             }
@@ -72,16 +73,15 @@ $(function(){
 
             // ------- show tab
             // component does not consist of class custom then invoke the default tab event
-            if (!parent_el.find('.tab-container .tab[data-tab="'+dis.attr('data-tab')+'"]').hasClass('custom')) {
-                parent_el.find('.tab-container .tab[data-tab="'+dis.attr('data-tab')+'"]').fadeIn(400);
+            if ( parent_el.find('.tab-container .tab.active').attr('data-tab') !== $this.attr('data-tab') && !parent_el.find('.tab-container .tab[data-tab="'+$this.attr('data-tab')+'"]').hasClass('custom')) {
+                parent_el.find('.tab-container .tab[data-tab="'+$this.attr('data-tab')+'"]').fadeIn(400);
             }
             
-            parent_el.find('.tab-container .tab[data-tab="'+dis.attr('data-tab')+'"]').addClass('active');
+            parent_el.find('.tab-container .tab[data-tab="'+$this.attr('data-tab')+'"]').addClass('active');
 
 
         }
         
-        dis.closest('li').addClass('active');
 
         if (typeof run_after !== typeof undefined && run_after !== false && run_after !== "") {
             var classList = run_before.split(/\s+/);
@@ -90,6 +90,22 @@ $(function(){
             });
         }
 
+    });
+
+    // on click on submenu
+    $(document).on("click", '.j-component[data-type*="menu"] .menu-holder > li > ul li a', function(e) {
+        if( !$(this).hasClass('.reject') ){
+            $(this).closest('ul').prev('a').trigger('click');
+        }
+    });
+
+    // on click on submenu
+    $(document).on("mouseOver", '.j-component[data-type*="menu"] .menu-holder > li > ul li a', function(e) {
+        if( !$(this).hasClass('.reject') ){
+            $(this).closest('ul').prev('a').trigger('click');
+        }
+    },function(){
+        
     });
 
     //event click j menu listener

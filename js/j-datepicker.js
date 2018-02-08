@@ -134,16 +134,7 @@ function j_datepicker(){
             years+='</select>';
 
         }
-        $(this).after('<div class="j-component" data-type="menu datepicker"><ul class="menu-holder">'+
-        '<li class="list-style-none clear"><a href="#" style="display:none;">click</a>'+
-            '<ul>'+
-                '<li"><div class="display-table">'+
-                    '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTH:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div>'+
-                    '<div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="j-datepicker-current">CURRENT DATE</a></div><div class="display-cell"><a href="#" class="j-datepicker-ok">OK</a></div></div></div>'+
-                '</li>'+
-            '</ul>'+
-        '</li>'+
-        '</ul></div>');
+        $(this).after('<div class="j-component" data-type="menu datepicker"><ul class="menu-holder"> <li> <a href="#" class="hide">Date</a> <ul><li><div class="display-table"><div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTH:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div><div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="j-datepicker-current">CURRENT DATE</a></div><div class="display-cell"><a href="#" class="j-datepicker-ok">OK</a></div></div></div></li></ul></li></ul></div>');
 
     });
 }
@@ -154,16 +145,4 @@ function j_datepicker(){
 
 
 
-<div class="j-component" data-type="datepicker">
-    <ul class="menu-holder">
-        <li>
-            <a href="#" class="datepicker">Date</a>
-            <ul class="j-menu-dp-container list-style-none display-none bg-white p15 radius-3 shadow-z-1" style="border:1px solid #ededed;margin-top:0px;">'+
-                '<li class="list-style-none"><div class="display-table">'+
-                    '<div class="display-row"><div class="display-cell pr7"><span class="font10 font500">MONTH:</span><br>'+months+'</div><div class="display-cell pr7"><span class="font10 font500">DAYS:</span><br>'+days+'</div><div class="display-cell"><span class="font10 font500">YEARS:</span><br>'+years+'</div></div></div>'+
-                    '<div class="display-table mt8"><div class="display-row"><div class="display-cell padding-right10px"><a href="#" class="btn mb0 j-datepicker-current">CURRENT DATE</a></div><div class="display-cell"><a href="#" class="btn mb0 j-datepicker-ok">OK</a></div></div></div>'+
-                </li>'+
-            </ul>
-        </li>
-    </ul>
-</div>
+    
