@@ -14,10 +14,10 @@ $.fn.center = function ( options ) {
 	
 	return this.each(function() {
 		var $this = $(this);
-   $(this).css({
-   	'position' : settings.position !== false ? settings.position : 'absolute',
-    'index' : settings.index !== false ? settings.index : 'initial'
-   });
+   	$(this).css({
+   		'position' : settings.position !== false ? settings.position : 'absolute',
+    	'index' : settings.index !== false ? settings.index : 'initial'
+   	});
 		if( settings.direction === 'all' ){
 			$this.css("top", ( $(window).height() - $this.height() ) / 2  + "px");
 			$this.css("left", ( $(window).width() - $this.width() ) / 2 + "px");
