@@ -1,8 +1,8 @@
-.j-component[data-type*="datepicker"]{
+.j-component[data-type*="timepicker"]{
     .menu-holder > li a > ul{
       background: #FFF;
     }
-    .j-datepicker-ok,.j-datepicker-current{
+    .j-timepicker-ok,.j-timepicker-current{
       padding: 5px 8px;
       color:#000;
       font-size: 13px;
@@ -13,7 +13,7 @@
         background:#ddd;
       }
     }
-    .j-datepicker-ok{
+    .j-timepicker-ok{
        border:1px solid #ddd;
        text-decoration:none;
     }

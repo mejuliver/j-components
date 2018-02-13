@@ -1,6 +1,35 @@
 if ('undefined' == typeof window.jQuery) {
     return;
 }
+
+/* 
+    A J A X  Q U E S 
+    ----------------------------------------------------
+    All ajax request will be store here, if you wish to abort the currently running ajax request, jusst call ajaxAbort();
+*/
+var xhrPool=[],global_spinner_conf=true,refresh=false,modal_open=false;
+$(document).ajaxSend(function(e, jqXHR, options){
+    xhrPool.push(jqXHR);
+});
+$(document).ajaxComplete(function(e, jqXHR, options) {
+    xhrPool = $.grep(xhrPool, function(x){return x!=jqXHR});
+});
+var abort = function() {
+    $.each(xhrPool, function(idx, jqXHR) {
+      jqXHR.abort();
+    });
+};
+
+var oldbeforeunload = window.onbeforeunload;
+window.onbeforeunload = function() {
+    var r = oldbeforeunload ? oldbeforeunload() : undefined;
+    if (r == undefined) {
+      // only cancel requests if there is no prompt to stay on the page
+      // if there is a prompt, it will likely give the requests enough time to finish
+      abort();
+    }
+    return r;
+}
 /* 
     A J A X  F O R M
 --------------------------------------------------------------------    
@@ -18,37 +47,10 @@ if ('undefined' == typeof window.jQuery) {
 */
 
 
-// Automatically cancel unfinished ajax requests 
-// when the user navigates elsewhere.
-var xhrPool=[],global_spinner_conf=true,refresh=false,modal_open=false;
-$(document).ajaxSend(function(e, jqXHR, options){
-    xhrPool.push(jqXHR);
-    });
-    $(document).ajaxComplete(function(e, jqXHR, options) {
-    xhrPool = $.grep(xhrPool, function(x){return x!=jqXHR});
-    });
-    var abort = function() {
-    $.each(xhrPool, function(idx, jqXHR) {
-      jqXHR.abort();
-    });
-    };
-
-    var oldbeforeunload = window.onbeforeunload;
-    window.onbeforeunload = function() {
-    var r = oldbeforeunload ? oldbeforeunload() : undefined;
-    if (r == undefined) {
-      // only cancel requests if there is no prompt to stay on the page
-      // if there is a prompt, it will likely give the requests enough time to finish
-      abort();
-    }
-    return r;
-}
-
 $(function(){
 
-    if(typeof app_token === 'undefined'){
-        var app_token = '';
-    }else{
+    //token set up
+    if( typeof app_token !== typeof undefined && app_token !== '' ){
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': app_token
@@ -56,6 +58,7 @@ $(function(){
         });
     }
 
+    
     $(document).on("submit", ".j-components .ajax-form", function(e){
         abort();
         dialog_open = true;

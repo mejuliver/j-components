@@ -4,7 +4,7 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
 }
 (function($){
 
-    $.fn.j_datepicker = function ( options ) {
+    $.fn.j_timepicker = function ( options ) {
 
         var hours = '<select class="form-control j-timepicker-hrs" style="width:70px;" name="hours">';
         for(i=1;i<13;i++){
@@ -32,7 +32,9 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
 
         $('.j-timepicker').each(function(){
             //convert the value to a valid time 
-            $(this).val(moment($(this).val(),'hh:mm').format('hh:mm A'));
+            if($(this).val() != ''){
+                $(this).val(moment($(this).val(),'hh:mm').format('hh:mm A'));
+            }
             //init
             $(this).attr( 'readonly' , false);
 
@@ -42,25 +44,28 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
             }else{
                 $(this).attr('placeholder',cp);
             }
-            $(this).after('<div class="j-component" data-type="menu timepicker"> <ul class="menu-holder"> <li> <a href="#" style="display:none;">Time</a> <ul style="width:300px;;"> <li> <div class="display-table"> <div class="display-row"> <div class="display-cell pr7"> <span class="font10 font500">MONTH:</span> <br>'+hours+'</div><div class="display-cell pr7"> <span class="font10 font500">DAYS:</span> <br>'+minutes+'</div><div class="display-cell"> <span class="font10 font500">YEARS:</span> <br>'+am_pm+'</div></div></div><div class="display-table mt8"> <div class="display-row"> <div class="display-cell padding-right10px"> <a href="#" class="j-timepicker-current">CURRENT</a> </div><div class="display-cell"> <a href="#" class="j-timepicker-ok">OK</a> </div></div></div></li></ul> </li></ul></div>');
+            $(this).after('<div class="j-component" data-type="menu timepicker"> <ul class="menu-holder"> <li> <a href="#" style="display:none;">Time</a> <ul style="width:300px;;"> <li> <div class="display-table"> <div class="display-row"> <div class="display-cell pr7"> <span class="font10 font500">HOURS:</span> <br>'+hours+'</div><div class="display-cell pr7"> <span class="font10 font500">MINUTES:</span> <br>'+minutes+'</div><div class="display-cell"> <span class="font10 font500">AM/PM:</span> <br>'+am_pm+'</div></div></div><div class="display-table mt8"> <div class="display-row"> <div class="display-cell padding-right10px"> <a href="#" class="j-timepicker-current">CURRENT</a> </div><div class="display-cell"> <a href="#" class="j-timepicker-ok">OK</a> </div></div></div></li></ul> </li></ul></div>');
         });
 
         $(document).on("click",".j-timepicker",function(){
             if($(this).val()!==""){
                 var time = $(this).val().replace(':',' ').split(' ');
-                $(this).closest(".component-factory").find('.j-timepicker-factory select[name="hours"]').val(time[0]).trigger("change");
-                $(this).closest(".component-factory").find('.j-timepicker-factory select[name="minutes"]').val(time[1]).trigger("change");
-                $(this).closest(".component-factory").find('.j-timepicker-factory select[name="am_pm"]').val(time[2].toLowerCase()).trigger("change");
+                $(this).next('.j-component[data-type*="timepicker"]').find('select[name="hours"]').val(time[0]).trigger("change");
+                $(this).next('.j-component[data-type*="timepicker"]').find('select[name="minutes"]').val(time[1]).trigger("change");
+                $(this).next('.j-component[data-type*="timepicker"]').find('select[name="am_pm"]').val(time[2].toLowerCase()).trigger("change");
             }
-            $(this).closest(".component-factory").find(".j-components .parent").trigger("click");
+            $(this).next('.j-component[data-type*="timepicker"]').find(".menu-holder > li > a").trigger('click');
         });
         $(document).on("click",".j-timepicker-ok",function(e){
             e.preventDefault();
-            $(this).closest(".component-factory").find(".j-timepicker").val($(this).closest(".j-timepicker-factory").find('select[name="hours"]').val()+":"+$(this).closest(".j-timepicker-factory").find('select[name="minutes"]').val()+" "+$(this).closest(".j-timepicker-factory").find('select[name="am_pm"]').val().toUpperCase()).closest(".component-factory").find(".j-menu-dp-container").fadeOut(200);
+            $(this)
+                .closest('.j-component[data-type*="timepicker"]')
+                .prev(".j-timepicker")
+                .val($(this).closest('.j-component[data-type*="timepicker"]').find('select[name="hours"]').val()+":"+$(this).closest('.j-component[data-type*="timepicker"]').find('select[name="minutes"]').val()+" "+$(this).closest('.j-component[data-type*="timepicker"]').find('select[name="am_pm"]').val().toUpperCase()).next('.j-component[data-type*="timepicker"]').find(".menu-holder > li > a").trigger('click');
         });
         $(document).on("click",".j-timepicker-current",function(e){
             e.preventDefault();
-            $(this).closest(".component-factory").find(".j-timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).closest(".component-factory").find(".j-menu-dp-container").fadeOut(200);
+            $(this).closest('.j-component[data-type*="timepicker"]').prev(".j-timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).next('.j-component[data-type*="timepicker"]').find(".menu-holder > li > a").trigger('click');
         });
 
     }

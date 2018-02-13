@@ -115,7 +115,7 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
             $(this).closest('.j-component[data-type*="datepicker"]')
                 .prev(".j-datepicker")
                 .val(moment(current_date).format(ff))
-                .next('.j-component[data-type*="datepicker"]').find(".j-menu-dp-container").fadeOut(200);
+                .next('.j-component[data-type*="datepicker"]').find(".menu-holder > li > a").trigger('click');
         });
         
         $(document).on("change",'select[name="months"],select[name="years"]',function(){
