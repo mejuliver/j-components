@@ -7,8 +7,8 @@ $.fn.center = function ( options ) {
 
 	var settings = $.extend({
 		direction : 'all',
-    index : false,
-    position : false
+	    index : false,
+	    position : false
 	}, options );
 
 	
