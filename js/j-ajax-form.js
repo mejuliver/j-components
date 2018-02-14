@@ -16,7 +16,7 @@ $(document).ajaxComplete(function(e, jqXHR, options) {
 });
 var abort = function() {
     $.each(xhrPool, function(idx, jqXHR) {
-      jqXHR.abort();
+      jqXHR.abort()rt();
     });
 };
 
@@ -214,3 +214,47 @@ $(function(){
         
     });
 });
+
+
+    <div class="row pt32">
+    <div class="col-md-offset-1 col-xs-12 col-md-7 col-sm-8 col-sm-offset-2">
+        <form action="" method="get" style="">
+            <div class="col-sm-4 col-xs-12 p0">
+                <input type="text" id="s" name="s" placeholder="Search" value="" class="full-width mb0">
+            </div>
+            <div class="col-sm-4 col-xs-12 p00">
+                <select id="category" name="category" class="mb0">
+                    <option value="all"> --- All Category --- </option>
+                    <option value="8">Agriculture Industry</option>
+                    <option value="10">Arts and entertainment</option>
+                    <option value="5">Beauty care</option>
+                    <option value="4">Cleaning and Laundry services</option>
+                    <option value="14">Education</option>
+                    <option value="17">Environment and safety</option>
+                    <option value="16">Event planning and support</option>
+                    <option value="1">Fashion and style</option>
+                    <option value="12">Fintech (financial inclusion)</option>
+                    <option value="9">Health and Medicare</option>
+                    <option value="11">Indigenous Brand of the year </option>
+                    <option value="7">Info tech</option>
+                    <option value="13">Logistics and delivery</option>
+                    <option value="18">Manufacturers</option>
+                    <option value="6">New media brand</option>
+                    <option value="3">Processed food</option>
+                    <option value="2">Restaurant and food services</option>
+                    <option value="19">Retail</option>
+                    <option value="15">Telco VAS provider</option>
+                    <option value="20">Transportation</option>
+                </select>
+            </div>
+            <div class="col-sm-4 col-xs-12 p00">
+                <button type="submit" class="full-width btn btn-orange btn-filled" style="height: 50px;min-width: 50px;">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-3">
+        <a href="https://connectnigeria.com/top100/business/register" class="btn btn-lg btn-filled center-block">Nominate Now</a>
+    </div>
+</div>
