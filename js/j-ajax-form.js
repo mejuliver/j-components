@@ -7,10 +7,6 @@ if ('undefined' == typeof window.jQuery) {
     ----------------------------------------------------
     All ajax request will be store here, if you wish to abort the currently running ajax request, jusst call ajaxAbort();
 */
-var xhrPool=[],global_spinner_conf=true,refresh=false,modal_open=false;
-$(document).ajaxSend(function(e, jqXHR, options){
-    xhrPool.push(jqXHR);
-});
 $(document).ajaxComplete(function(e, jqXHR, options) {
     xhrPool = $.grep(xhrPool, function(x){return x!=jqXHR});
 });
@@ -49,7 +45,7 @@ window.onbeforeunload = function() {
 
 $(function(){
 
-    //token set up
+    // token set up
     if( typeof app_token !== typeof undefined && app_token !== '' ){
         $.ajaxSetup({
             headers: {
@@ -59,44 +55,36 @@ $(function(){
     }
 
     
-    $(document).on("submit", ".j-components .ajax-form", function(e){
+    $(document).on("submit", 'j-component[data-type*="ajax"]', function(e){
         abort();
-        dialog_open = true;
         e.preventDefault();
 
-        //declare the major variables
-        var dis = $(this),datatype = $(this).attr("data-type"),method = $(this).attr("method"), custom_message = $(this).attr("data-custom-message"), msg = dis.attr("data-message-place"), custom_on_success = $(this).attr("data-onsuccess"),before_send = $(this).attr("data-before-send");
-        //check if attr 'constructor-function' exist and not empty
-        //check if there is data-before-send, if there is then trigger that function first
-        if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
-            var classList = before_send.split(/\s+/);
-            $.each(classList, function(index, item) {
-              window[item]();
-            });
-        }
-        //check if attr 'method' exist and not empty
-        if(typeof method === typeof undefined && method === false && method === "") {
+        // declare the major variables
+        var $this = $(this),
+            datatype = $this.attr("data-type"),
+            method = $this.attr("method"),
+            custom_on_success = $this.attr("data-onsuccess"),
+            before_send = $this.attr("data-before-send"),
+            after_send = $this.attr("data-after-send"),
+            spinner = $this.attr('data-spinner');
+
+        // check if attr 'method' exist and not empty
+        if(typeof method === typeof undefined || typeof method !== typeof undefined && method === 'false' || typeof method !== typeof undefined && method === "") {
             method = "post";
         }
-        //check if attr 'custom-message' exist and not empty
-        if(typeof custom_message === typeof undefined && custom_message === false && custom_message === "") {
+        // check if attr 'custom-message' exist and not empty
+        if(typeof custom_message === typeof undefined || typeof custom_message !== typeof undefined && custom_message === 'false' || typeof custom_message !== typeof undefined && custom_message === "") {
             custom_message = "Successfully saved!";
         }
-         //check if attr 'custom-message' exist and not empty
-        if(typeof datatype === typeof undefined && datatype === false && datatype === "") {
+         // check if attr 'custom-message' exist and not empty
+        if(typeof datatype === typeof undefined || typeof datatype !== typeof undefined && datatype === 'false' || typeof datatype !== typeof undefined && datatype === "" || typeof datatype !== typeof undefined && typeof datatype !== typeof undefined && datatype.toLowerCase() !== 'post' || typeof datatype !== typeof undefined && datatype.toLowerCase() !== 'get') {
             datatype = 'html';
         }
-        
-        if(typeof dis.attr('data-before-send') !== typeof undefined && dis.attr('data-before-send') !== false && dis.attr('data-before-send') !== "") {
-            var classList = dis.attr('data-before-send').split(/\s+/);
-            $.each(classList, function(index, item) {
-              window[item]();
-            });
-        }
-        var formData = new FormData(dis[0]);
+
+        var formData = new FormData($this[0]);
 
         $.ajax({
-            url : dis.attr("action"),
+            url : $this.attr("action"),
             type : method,
             data : formData,
             dataType : datatype,
@@ -105,106 +93,39 @@ $(function(){
             contentType: false,
             processData: false,
             beforeSend: function(){
-                if( dis.hasClass('with-spinner') && typeof j_spinner !== 'undefined' && typeof j_spinner === 'function' ){
+                // check if attr 'constructor-function' exist and not empty
+                // check if there is data-before-send, if there is then trigger that function first
+                if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
+                    var classList = before_send.split(/\s+/);
+                    $.each(classList, function(index, item) {
+                      window[item]();
+                    });
+                }
+
+                if( typeof spinner === typeof undefined || typeof spinner !== typeof undefined && spinner === '' || typeof spinner !== typeof undefined && spinner === 'false' ){
 
                     j_spinner("on");
+                }else{
+                    j_spinner("on",spinner);
                 }
             },
             complete: function(){
-                if( dis.hasClass('with-spinner') && typeof j_spinner !== 'undefined' && typeof j_spinner === 'function' ){
+                if( typeof spinner === typeof undefined || typeof spinner !== typeof undefined && spinner === '' || typeof spinner !== typeof undefined && spinner === 'false' ){
+
                     j_spinner("off");
                 }
             },
             success: function(e){
-                var success_transaction = false;
-                $(".alert").remove();
-                //check if attr 'datatype' exist and not empty
-                if(typeof custom_on_success !== typeof undefined && custom_on_success !== false && custom_on_success !== "") {
-                    if(e.success){
-                        if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                            if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                            }else{
-                                dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                            }
-                        }
-                        success_transaction = true;
-                        window[custom_on_success](e);
-
-
-                    }else{
-                        //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                        if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                            $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
-                        }else{
-                            dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
-                        }
-                        //}
-                        success_transaction = false;
-                    }
-                }else{
-                    if(datatype === 'json'){
-                        if(e.success){
-                            if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                                if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                    $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                                }else{
-                                    dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                                }
-                            }
-                            success_transaction = true;
-                        }else{
-                            //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                            if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
-                            }else{
-                                dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e.message+'</td></tr></table></div>');
-                            }
-                            //}
-                            success_transaction = false;
-                        }
-                    }else{
-                        if($.trim(e) === "success"){
-                            if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                                if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                    $(msg).html('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                                }else{
-                                    dis.prepend('<div class="font13 alert alert-success" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-check-circle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+custom_message+'</td></tr></table></div>');
-                                }
-                            }
-                            success_transaction = true;
-                        }else{
-                            //if(typeof custom_message !== typeof undefined && custom_message !== false && custom_message !== "" || custom_message === "none") {
-                            if(typeof msg !== typeof undefined && msg !== false && msg !== "") {
-                                $(msg).html('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
-                            }else{
-                                dis.prepend('<div class="font13 alert alert-danger" role="alert"><a href="#" data-dismiss="alert" style="color:rgba(0,0,0,0.3);display:block;float:right;"><i class="fa fa-times" aria-hidden="true"></i></a><table cellpadding="0" cellspacing="0" style="padding:0px;margin:0px"><tr><td class="padding-right10px" style="width:25px;vertical-align:top;" valign="top"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></td><td class="font13 text-align-left">'+e+'</td></tr></table></div>');
-                            }
-                            //}
-                            success_transaction = false;
-                        }
-                    }
+            
+                if ( typeof custom_on_success !== typeof undefined || typeof custom_on_success !== typeof undefined && custom_on_success !== '' || typeof custom_on_success !== typeof undefined && custom_on_success !== 'false' ){
+                    window[custom_on_success](e);
                 }
-                //on success parameter
-                if(success_transaction === true){
-                    //check if attr 'success-function' exist and not empty
-                    var custom_function = dis.attr("data-success-function");
-                    if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
-                        var classList = custom_function.split(/\s+/);
-                        $.each(classList, function(index, item) {
-                          window[item]();
-                        });
-                    }
-                }else{
 
-                    //check if attr 'fail-function' exist and not empty
-                    var custom_function = dis.attr("data-fail-function");
-                    if(typeof custom_function !== typeof undefined && custom_function !== false && custom_function !== "") {
-                        var classList = custom_function.split(/\s+/);
-                        $.each(classList, function(index, item) {
-                          window[item]();
-                        });
-                    }
+                if ( typeof after_send !== typeof undefined || typeof after_send !== typeof undefined && after_send !== '' || typeof after_send !== typeof undefined && after_send !== 'false' ){
+                    var classList = after_send.split(/\s+/);
+                    $.each( classList, function(index, item) {
+                      window[item]();
+                    });
                 }
 
             }
@@ -214,47 +135,3 @@ $(function(){
         
     });
 });
-
-
-    <div class="row pt32">
-    <div class="col-md-offset-1 col-xs-12 col-md-7 col-sm-8 col-sm-offset-2">
-        <form action="" method="get" style="">
-            <div class="col-sm-4 col-xs-12 p0">
-                <input type="text" id="s" name="s" placeholder="Search" value="" class="full-width mb0">
-            </div>
-            <div class="col-sm-4 col-xs-12 p00">
-                <select id="category" name="category" class="mb0">
-                    <option value="all"> --- All Category --- </option>
-                    <option value="8">Agriculture Industry</option>
-                    <option value="10">Arts and entertainment</option>
-                    <option value="5">Beauty care</option>
-                    <option value="4">Cleaning and Laundry services</option>
-                    <option value="14">Education</option>
-                    <option value="17">Environment and safety</option>
-                    <option value="16">Event planning and support</option>
-                    <option value="1">Fashion and style</option>
-                    <option value="12">Fintech (financial inclusion)</option>
-                    <option value="9">Health and Medicare</option>
-                    <option value="11">Indigenous Brand of the year </option>
-                    <option value="7">Info tech</option>
-                    <option value="13">Logistics and delivery</option>
-                    <option value="18">Manufacturers</option>
-                    <option value="6">New media brand</option>
-                    <option value="3">Processed food</option>
-                    <option value="2">Restaurant and food services</option>
-                    <option value="19">Retail</option>
-                    <option value="15">Telco VAS provider</option>
-                    <option value="20">Transportation</option>
-                </select>
-            </div>
-            <div class="col-sm-4 col-xs-12 p00">
-                <button type="submit" class="full-width btn btn-orange btn-filled" style="height: 50px;min-width: 50px;">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-        </form>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-3">
-        <a href="https://connectnigeria.com/top100/business/register" class="btn btn-lg btn-filled center-block">Nominate Now</a>
-    </div>
-</div>
