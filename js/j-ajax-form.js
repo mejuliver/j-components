@@ -1,4 +1,4 @@
-if ('undefined' == typeof window.jQuery) {
+if ('undefined' == typeof window.jQuery ) {
     return;
 }
 
@@ -42,96 +42,100 @@ window.onbeforeunload = function() {
     data-constructor-function: invoke a function(s) before XMLHttpRequest request. Separate by comma if multiple
 */
 
+(function($){
 
-$(function(){
+    $.fn.j_ajax_form = function ( options ) {
 
-    // token set up
-    if( typeof app_token !== typeof undefined && app_token !== '' ){
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': app_token
+
+
+        // token set up
+        if( typeof app_token !== typeof undefined && app_token !== '' ){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': app_token
+                }
+            });
+        }
+
+        
+        $(document).on("submit", 'j-component[data-type*="ajax"]', function(e){
+            abort();
+            e.preventDefault();
+
+            // declare the major variables
+            var $this = $(this),
+                datatype = $this.attr("data-type"),
+                method = $this.attr("method"),
+                custom_on_success = $this.attr("data-onsuccess"),
+                before_send = $this.attr("data-before-send"),
+                after_send = $this.attr("data-after-send"),
+                spinner = $this.attr('data-spinner');
+
+            // check if attr 'method' exist and not empty
+            if(typeof method === typeof undefined || typeof method !== typeof undefined && method === 'false' || typeof method !== typeof undefined && method === "") {
+                method = "post";
             }
-        });
-    }
+            // check if attr 'custom-message' exist and not empty
+            if(typeof custom_message === typeof undefined || typeof custom_message !== typeof undefined && custom_message === 'false' || typeof custom_message !== typeof undefined && custom_message === "") {
+                custom_message = "Successfully saved!";
+            }
+             // check if attr 'custom-message' exist and not empty
+            if(typeof datatype === typeof undefined || typeof datatype !== typeof undefined && datatype === 'false' || typeof datatype !== typeof undefined && datatype === "" || typeof datatype !== typeof undefined && typeof datatype !== typeof undefined && datatype.toLowerCase() !== 'post' || typeof datatype !== typeof undefined && datatype.toLowerCase() !== 'get') {
+                datatype = 'html';
+            }
 
-    
-    $(document).on("submit", 'j-component[data-type*="ajax"]', function(e){
-        abort();
-        e.preventDefault();
+            var formData = new FormData($this[0]);
 
-        // declare the major variables
-        var $this = $(this),
-            datatype = $this.attr("data-type"),
-            method = $this.attr("method"),
-            custom_on_success = $this.attr("data-onsuccess"),
-            before_send = $this.attr("data-before-send"),
-            after_send = $this.attr("data-after-send"),
-            spinner = $this.attr('data-spinner');
+            $.ajax({
+                url : $this.attr("action"),
+                type : method,
+                data : formData,
+                dataType : datatype,
+                cache: false,
+                async: true,
+                contentType: false,
+                processData: false,
+                beforeSend: function(){
+                    // check if attr 'constructor-function' exist and not empty
+                    // check if there is data-before-send, if there is then trigger that function first
+                    if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
+                        var classList = before_send.split(/\s+/);
+                        $.each(classList, function(index, item) {
+                          window[item]();
+                        });
+                    }
 
-        // check if attr 'method' exist and not empty
-        if(typeof method === typeof undefined || typeof method !== typeof undefined && method === 'false' || typeof method !== typeof undefined && method === "") {
-            method = "post";
-        }
-        // check if attr 'custom-message' exist and not empty
-        if(typeof custom_message === typeof undefined || typeof custom_message !== typeof undefined && custom_message === 'false' || typeof custom_message !== typeof undefined && custom_message === "") {
-            custom_message = "Successfully saved!";
-        }
-         // check if attr 'custom-message' exist and not empty
-        if(typeof datatype === typeof undefined || typeof datatype !== typeof undefined && datatype === 'false' || typeof datatype !== typeof undefined && datatype === "" || typeof datatype !== typeof undefined && typeof datatype !== typeof undefined && datatype.toLowerCase() !== 'post' || typeof datatype !== typeof undefined && datatype.toLowerCase() !== 'get') {
-            datatype = 'html';
-        }
+                    if( typeof spinner === typeof undefined || typeof spinner !== typeof undefined && spinner === '' || typeof spinner !== typeof undefined && spinner === 'false' ){
 
-        var formData = new FormData($this[0]);
+                        j_spinner("on");
+                    }else{
+                        j_spinner("on",spinner);
+                    }
+                },
+                complete: function(){
+                    if( typeof spinner === typeof undefined || typeof spinner !== typeof undefined && spinner === '' || typeof spinner !== typeof undefined && spinner === 'false' ){
 
-        $.ajax({
-            url : $this.attr("action"),
-            type : method,
-            data : formData,
-            dataType : datatype,
-            cache: false,
-            async: true,
-            contentType: false,
-            processData: false,
-            beforeSend: function(){
-                // check if attr 'constructor-function' exist and not empty
-                // check if there is data-before-send, if there is then trigger that function first
-                if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
-                    var classList = before_send.split(/\s+/);
-                    $.each(classList, function(index, item) {
-                      window[item]();
-                    });
+                        j_spinner("off");
+                    }
+                },
+                success: function(e){
+                
+                    if ( typeof custom_on_success !== typeof undefined || typeof custom_on_success !== typeof undefined && custom_on_success !== '' || typeof custom_on_success !== typeof undefined && custom_on_success !== 'false' ){
+                        window[custom_on_success](e);
+                    }
+
+                    if ( typeof after_send !== typeof undefined || typeof after_send !== typeof undefined && after_send !== '' || typeof after_send !== typeof undefined && after_send !== 'false' ){
+                        var classList = after_send.split(/\s+/);
+                        $.each( classList, function(index, item) {
+                          window[item]();
+                        });
+                    }
+
                 }
 
-                if( typeof spinner === typeof undefined || typeof spinner !== typeof undefined && spinner === '' || typeof spinner !== typeof undefined && spinner === 'false' ){
-
-                    j_spinner("on");
-                }else{
-                    j_spinner("on",spinner);
-                }
-            },
-            complete: function(){
-                if( typeof spinner === typeof undefined || typeof spinner !== typeof undefined && spinner === '' || typeof spinner !== typeof undefined && spinner === 'false' ){
-
-                    j_spinner("off");
-                }
-            },
-            success: function(e){
+            });
             
-                if ( typeof custom_on_success !== typeof undefined || typeof custom_on_success !== typeof undefined && custom_on_success !== '' || typeof custom_on_success !== typeof undefined && custom_on_success !== 'false' ){
-                    window[custom_on_success](e);
-                }
-
-                if ( typeof after_send !== typeof undefined || typeof after_send !== typeof undefined && after_send !== '' || typeof after_send !== typeof undefined && after_send !== 'false' ){
-                    var classList = after_send.split(/\s+/);
-                    $.each( classList, function(index, item) {
-                      window[item]();
-                    });
-                }
-
-            }
-
+            
         });
-        
-        
-    });
-});
+}
+})(jQuery);
