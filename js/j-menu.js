@@ -26,7 +26,7 @@ if ('undefined' == typeof window.jQuery) {
 
     $.fn.j_menu = function ( options ) {
 
-        $(document).on("click", '.j-component[data-type*="menu"] .menu-holder > li > a', function(e) {
+        this.find('.j-component[data-type*="menu"] .menu-holder > li > a').on('click', function(e) {
             // variables
             var $this = $(this),
                 parent_el = $this.closest('.j-component'),
@@ -96,19 +96,17 @@ if ('undefined' == typeof window.jQuery) {
         });
 
         // on click on submenu
-        $(document).on("click", '.j-component[data-type*="menu"] .menu-holder > li > ul li a', function(e) {
+        this.find('.j-component[data-type*="menu"] .menu-holder > li > ul li a').on('click', function(e) {
             if( !$(this).hasClass('.reject') ){
                 $(this).closest('ul').prev('a').trigger('click');
             }
         });
 
         // on click on submenu
-        $(document).on("mouseOver", '.j-component[data-type*="menu"] .menu-holder > li > ul li a', function(e) {
-            if( !$(this).hasClass('.reject') ){
-                $(this).closest('ul').prev('a').trigger('click');
-            }
+        this.find('.j-component[data-type*="menu-hover"] .menu-holder > li > a').on('mouseOver', function(e) {
+            $(this).closest('ul').prev('a').trigger('click');
         },function(){
-            
+            $(this).closest('ul').prev('a').trigger('click');
         });
 
         //event click j menu listener

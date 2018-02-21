@@ -46,9 +46,11 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
                 days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
         });
         days+='</select>';
-        $(".j-datepicker").each(function(){
+        
+        return this.each(function(){
+
             // add readonly property
-            $(this).attr( 'readonly' , true);
+            $(this).attr( 'readonly' , true).addClass('j-datepicker');
 
             var cp = $(this).attr('data-placeholder');
             if(typeof cp !== typeof undefined && cp !== false && cp !== "") {
@@ -85,7 +87,7 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
 
         });
         
-        $(document).on("click",".j-datepicker",function(){
+        this.click('click',function(){
             if($(this).val()!==""){
                 var dates = $(this).val().replace(',','').split(' ');
                 $(this).next('.j-component[data-type*="datepicker"]').find('select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
@@ -97,7 +99,7 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
             $(this).next('.j-component[data-type*="datepicker"]').find("ul.menu-holder > li > a").trigger("click");
         });
 
-        $(document).on("click",".j-datepicker-ok",function(e){
+        this.next('.j-component[data-type*="datepicker"]').find('.j-datepicker-ok').on("click",function(e){
             e.preventDefault();
             var ff = typeof $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== typeof undefined && $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== false && $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== "" ? $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') : settings.format,
                 dd = $(this).closest('.j-component[data-type*="datepicker"]').find('select[name="months"]').val()+" "+$(this).closest('.j-component[data-type*="datepicker"]').find('select[name="days"]').val()+", "+$(this).closest('.j-component[data-type*="datepicker"]').find('select[name="years"]').val();
@@ -107,7 +109,7 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
                 .val(moment(dd).format(ff)).next('.j-component[data-type*="datepicker"]').find(".menu-holder > li > a").trigger('click');
         });
 
-        $(document).on("click",".j-datepicker-current",function(e){
+         this.next('.j-component[data-type*="datepicker"]').find('.j-datepicker-current').on("click",function(e){
             e.preventDefault();
             var ff = typeof $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== typeof undefined && $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== false && $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') !== "" ? $(this).closest('.j-component[data-type*="datepicker"]').prev('.j-datepicker').attr('data-format') : settings.format,
                 current_date = moment().format('MMMM')+" "+moment().format("D")+", "+moment().format('YYYY');
@@ -118,7 +120,7 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
                 .next('.j-component[data-type*="datepicker"]').find(".menu-holder > li > a").trigger('click');
         });
         
-        $(document).on("change",'select[name="months"],select[name="years"]',function(){
+         this.next('.j-component[data-type*="datepicker"]').find('select[name="months"],select[name="years"]').on("click",function(){
             if($(this).val()!==""){
                 var days='';
                 $.each(getDaysArray($(this).closest('.j-component[data-type*="datepicker"]').find('select[name="years"]').val(),$(this).closest('.j-component[data-type*="datepicker"]').find('select[name="months"] option:selected').attr("data-month")),function(index,value){

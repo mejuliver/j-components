@@ -6,6 +6,11 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
 
     $.fn.j_timepicker = function ( options ) {
 
+        var settings = $.extend({
+            format : 'hh:mm A',
+            placeholder : false
+            }, options ),
+
         var hours = '<select class="form-control j-timepicker-hrs" style="width:70px;" name="hours">';
         for(i=1;i<13;i++){
             var hrs = "0"+i.toString();
@@ -23,31 +28,39 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
         am_pm+='<option value="pm">PM</option>';
         am_pm+='</select>';
 
-        var cp = $(this).attr('data-placeholder');
-            if(typeof cp !== typeof undefined && cp !== false && cp !== "") {
-                $(this).attr('placeholder','Click to select date');
-            }else{
-                $(this).attr('placeholder',cp);
-            }
 
-        $('.j-timepicker').each(function(){
+        if( settings.placeholder !== false) {
+
+            this.attr('placeholder', settings.placeholder);
+        }else{
+            this.attr('placeholder','');
+        }
+
+         return this.each(function(){
             //convert the value to a valid time 
-            if($(this).val() != ''){
-                $(this).val(moment($(this).val(),'hh:mm').format('hh:mm A'));
+            if(this.val() != ''){
+                this.val(moment(this.val(),'hh:mm').format('hh:mm A'));
             }
             //init
-            $(this).attr( 'readonly' , false);
 
             var cp = $(this).attr('data-placeholder');
-            if(typeof cp !== typeof undefined && cp !== false && cp !== "") {
-                $(this).attr('placeholder','Click to select time');
-            }else{
-                $(this).attr('placeholder',cp);
+
+            this.attr( 'readonly' , false).addClass('j-timepicker');
+
+            if(typeof this.attr('data-placeholder') !== typeof undefined && this.attr('data-placeholder') !== '' && this.attr('data-placeholder') !== 'false' ){
+                this.attr( 'placeholder', this.attr('data-placeholder') )
             }
-            $(this).after('<div class="j-component" data-type="menu timepicker"> <ul class="menu-holder"> <li> <a href="#" style="display:none;">Time</a> <ul style="width:300px;;"> <li> <div class="display-table"> <div class="display-row"> <div class="display-cell pr7"> <span class="font10 font500">HOURS:</span> <br>'+hours+'</div><div class="display-cell pr7"> <span class="font10 font500">MINUTES:</span> <br>'+minutes+'</div><div class="display-cell"> <span class="font10 font500">AM/PM:</span> <br>'+am_pm+'</div></div></div><div class="display-table mt8"> <div class="display-row"> <div class="display-cell padding-right10px"> <a href="#" class="j-timepicker-current">CURRENT</a> </div><div class="display-cell"> <a href="#" class="j-timepicker-ok">OK</a> </div></div></div></li></ul> </li></ul></div>');
+
+            var cp = this.attr('data-placeholder');
+            if(typeof cp !== typeof undefined && cp !== false && cp !== "") {
+                this.attr('placeholder','Click to select time');
+            }else{
+                this.attr('placeholder',cp);
+            }
+            this.after('<div class="j-component" data-type="menu timepicker"> <ul class="menu-holder"> <li> <a href="#" style="display:none;">Time</a> <ul style="width:300px;;"> <li> <div class="display-table"> <div class="display-row"> <div class="display-cell pr7"> <span class="font10 font500">HOURS:</span> <br>'+hours+'</div><div class="display-cell pr7"> <span class="font10 font500">MINUTES:</span> <br>'+minutes+'</div><div class="display-cell"> <span class="font10 font500">AM/PM:</span> <br>'+am_pm+'</div></div></div><div class="display-table mt8"> <div class="display-row"> <div class="display-cell padding-right10px"> <a href="#" class="j-timepicker-current">CURRENT</a> </div><div class="display-cell"> <a href="#" class="j-timepicker-ok">OK</a> </div></div></div></li></ul> </li></ul></div>');
         });
 
-        $(document).on("click",".j-timepicker",function(){
+        this.next('.j-component[data-type*="timepicker"]').on("click",function(){
             if($(this).val()!==""){
                 var time = $(this).val().replace(':',' ').split(' ');
                 $(this).next('.j-component[data-type*="timepicker"]').find('select[name="hours"]').val(time[0]).trigger("change");
@@ -56,14 +69,14 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
             }
             $(this).next('.j-component[data-type*="timepicker"]').find(".menu-holder > li > a").trigger('click');
         });
-        $(document).on("click",".j-timepicker-ok",function(e){
+        this.next('.j-component[data-type*="timepicker"]').find('.j-timepicker-ok').on('click',function(e){
             e.preventDefault();
             $(this)
                 .closest('.j-component[data-type*="timepicker"]')
                 .prev(".j-timepicker")
                 .val($(this).closest('.j-component[data-type*="timepicker"]').find('select[name="hours"]').val()+":"+$(this).closest('.j-component[data-type*="timepicker"]').find('select[name="minutes"]').val()+" "+$(this).closest('.j-component[data-type*="timepicker"]').find('select[name="am_pm"]').val().toUpperCase()).next('.j-component[data-type*="timepicker"]').find(".menu-holder > li > a").trigger('click');
         });
-        $(document).on("click",".j-timepicker-current",function(e){
+        this.next('.j-component[data-type*="timepicker"]').find('.j-timepicker-current').on("click",function(e){
             e.preventDefault();
             $(this).closest('.j-component[data-type*="timepicker"]').prev(".j-timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).next('.j-component[data-type*="timepicker"]').find(".menu-holder > li > a").trigger('click');
         });
