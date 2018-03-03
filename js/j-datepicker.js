@@ -46,6 +46,11 @@ if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || 
                 days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
         });
         days+='</select>';
+
+        return this.each(function(){
+        	
+        	
+        });
         $(".j-datepicker").each(function(){
             // add readonly property
             $(this).attr( 'readonly' , true);

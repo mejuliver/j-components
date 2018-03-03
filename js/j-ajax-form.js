@@ -57,8 +57,10 @@ window.onbeforeunload = function() {
             });
         }
 
+        this.addClass( 'j-component' ).attr( 'data-type','ajax' );
+
         
-        $(document).on("submit", 'j-component[data-type*="ajax"]', function(e){
+        this.on("submit", function(e){
             abort();
             e.preventDefault();
 
@@ -101,21 +103,40 @@ window.onbeforeunload = function() {
                     if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
                         var classList = before_send.split(/\s+/);
                         $.each(classList, function(index, item) {
-                          window[item]();
+                          
+                            if( typeof item === 'function'){
+                                window[item]();   
+                            }else{
+                                console.log(item+' <-- is not a function');
+                            }
+
                         });
                     }
 
                     if( typeof spinner === typeof undefined || typeof spinner !== typeof undefined && spinner === '' || typeof spinner !== typeof undefined && spinner === 'false' ){
 
-                        j_spinner("on");
+                        if( typeof j_spinner === 'function' ){
+                            j_spinner("on");
+                        }else{
+                            console.log( 'j spinner component not found');
+                        }
+                        
                     }else{
-                        j_spinner("on",spinner);
+                        if( typeof j_spinner === 'function' ){
+                            j_spinner("on",spinner);
+                        }else{
+                            console.log( 'j spinner component not found');
+                        }
                     }
                 },
                 complete: function(){
                     if( typeof spinner === typeof undefined || typeof spinner !== typeof undefined && spinner === '' || typeof spinner !== typeof undefined && spinner === 'false' ){
 
-                        j_spinner("off");
+                        if( typeof j_spinner === 'function' ){
+                            j_spinner("off",spinner);
+                        }else{
+                            console.log( 'j spinner component not found');
+                        }
                     }
                 },
                 success: function(e){
