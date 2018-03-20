@@ -5,7 +5,7 @@ if ('undefined' == typeof window.jQuery) {
 
 (function($){
 
-    $.fn.j_datepicker = function ( options ) {
+    $.fn.j_validator = function ( options ) {
 
     	$(document).on("keypress keydown keyup",".reject",function(){return false;});
 

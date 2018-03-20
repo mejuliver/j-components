@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>test</title>
+<style>body{padding:30px}.j-box-slider{width:300px;height:300px;overflow:hidden;background:#555;padding:0;position:relative}.j-box-slider figure{overflow:hidden;margin:0;padding:0}.j-box-slider figure img{width:300px;height:300px;display:none;position:absolute}</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+<div class="j-box-slider">
+<figure>
+<img src="S1.jpg" data-animation-in="slideInLeft" data-animation-out="zoomOut">
+<img src="S2.jpg" data-animation-in="slideInDown" data-animation-out="slideOutUp">
+</figure>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>$(document).ready(function(){$(".j-box-slider").jboxslider()}),function(i){i.fn.jboxslider=function(a){var t=i.extend({duration:5e3},a),d=[],s=[];this.find("img").css("top","-"+i(".j-box-slider").position().top),this.find("img").each(function(a,t){d.push(i(this).attr("data-animation-in")),s.push(i(this).attr("data-animation-out"))}),this.find("img:first-child").addClass("active animated "+d[this.find("img:first-child").index()]).show();var n=this;return setInterval(function(){var i=n.find("img.active"),a=i.index();i.removeClass("animated "+d[a]).addClass("animated "+s[a]),i.is(":last-child")?(n.find("img:first-child").removeClass("animated "+s[n.find("img:first-child").index()]).addClass("animated "+d[n.find("img:first-child").index()]).show(),i.removeClass("active"),n.find("img:first-child").addClass("active")):(i.next("img").removeClass("animated "+s[i.next("img").index()]).addClass("animated "+d[i.next().index()]).show(),i.removeClass("active").hide(),i.next("img").addClass("active"))},t.duration),this}}(jQuery)</script>
+</body>
+</html>
