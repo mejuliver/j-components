@@ -1,6 +1,6 @@
 
 /* 
-    J - C O M P O N E N T S
+    J - C O M P O N E N T S  H E L P E R S
 --------------------------------------------------------------------    
 
 */
@@ -9,78 +9,7 @@ if ('undefined' == typeof window.jQuery) {
     return;
 }
 
-/* 
-    L I M I T  T E X T
-    ----------------------------------------------------
-    limit the text from the target element, to use limitText("[element class or ID]", [minimum text], [maximum text])
-*/
-function limitText(el, limit, crop){
-    $(el).each(function(){
-       if(crop !== 0){
-        var txt= $(this).text();
-        if(txt.length > limit){
-            $(this).text(txt.substring(0,crop) + '.....');
-        }
-        }else{
-            $(this).text($(this).text().substring(0,crop) + '.....');
-        } 
-    });
-}
-
-/* J  S H A D O W
-   ----------------------------------------------------
-   Create a dropshadow effect to an element, to use, j_shadow(el, shadow_color, shadow_length, shadow_position)
-*/
-function j_shadow(el, shadow_color, shadow_length, shadow_position){
-    //required longshadow js
-    $(el).longShadow({
-        colorShadow: shadow_color,
-        sizeShadow: shadow_length,
-        directionShadow: shadow_position
-    });
-}
-
-
-/* 
-    M O D A L 
-    ----------------------------------------------------
-    Uses twitter bootstrap modal component, to use, modal( [your modal title], [your modal content], [functions to be run when modal function is invoke, separate by space if multiple ] )
-
-    call : modal( title, contents, footer )
-*/
-
-function modal(title, content, dependencies,footer = false){
-    modal_open = true;
-    // check if modal elements was created, if not then create it
-    if( $('#modal-button').length === 0 && $('#modal-container').length === 0 ){
-        $(body).append( '<button id="modal-button" data-toggle="modal" data-target="#modal-container" style="display:none;">Launch modal</button><div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container-label" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content" style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);"> <div class="modal-header"> <h5 class="modal-title" id="modal-container-label"></h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div><div class="modal-body"> </div></div></div></div>');
-    }
-    //required materialize
-    $("#modal-container .modal-title").html(title);
-    $("#modal-container .modal-body").html(content);
-    if(footer !== false){
-        $('#modal-container .modal-body').after('<div class="modal-footer">'+footer+'</div>');
-    }
-    $("#modal-button").trigger("click");
-    _runner(dependencies);
-}
-// remove all created on show instances when modal is completely hidden
-$('#modal-container').on('hidden.bs.modal',function(e) {
-     //required materialize
-    $('#modal-container .modal-title').html('');
-    $('#modal-container .modal-body').html('');
-    $('#modal-container .modal-dialog')
-        .removeClass('modal-sm modal-lg')
-        .find('.modal-footer').remove();
-});
-/* 
-    F U N C T I O N (s)  R U N N E R 
-    ----------------------------------------------------
-    Run single/multiple functions
-
-    call : _runner(function1 function2 function3)
-    note : if multiple, separate with spaces
-*/
+//run those functions specified from the called functions argument. To use, get_dependencies(function1 function2 function3 function4)
 function _runner(dependencies){
     //check if attr 'success-function' exist and not empty
     if(typeof dependencies !== typeof undefined && dependencies !== false && dependencies !== "") {
@@ -174,7 +103,10 @@ function j_notification(data = false, auto_hide = false, mode){
     }
 }   
 $(document).ready(function(){
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c515d898cfedc26619903642eaa002a61773726
     //add animation to the element that has a class of .line-animation
     var this_previous_delay;
     $(".parent .line-animation").each(function(){
@@ -198,6 +130,7 @@ $(document).ready(function(){
 
     }); //end of looping unto the top_submenu li
     //end of .line-animation
+<<<<<<< HEAD
 
 });
     

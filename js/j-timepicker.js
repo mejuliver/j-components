@@ -1,7 +1,7 @@
-
 if ('undefined' == typeof window.jQuery || typeof $.fn.j_menu == 'undefined' || !window.moment) {
     return;
 }
+
 (function($){
 
     $.fn.j_timepicker = function ( options ) {

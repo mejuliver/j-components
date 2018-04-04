@@ -1,0 +1,16 @@
+.j-box-slider{
+	width:500px;
+	height:500px;
+	overflow:hidden;
+	background:#555555;
+	padding:0px;
+	position:relative;
+ 	li{
+	  overflow:hidden;
+	  margin:0px;
+	  padding:0px;
+	  display:none;
+	  position:absolute;
+	  list-style:none;
+	} 
+}
