@@ -9,7 +9,6 @@ if ('undefined' == typeof window.jQuery) {
     return;
 }
 
-
 //run those functions specified from the called functions argument. To use, get_dependencies(function1 function2 function3 function4)
 function _runner(dependencies){
     //check if attr 'success-function' exist and not empty
@@ -27,48 +26,87 @@ function _runner(dependencies){
     A J A X  P U L L
     ----------------------------------------------------
     Pull contents asynchronously
+
+    call : get_page(link, dependencies, container, spinner);
+
+    note : if no 'link' provided then assume uses the current link
+    note : if you want too invoke a function after ajax was successful then add function name which to be called later in the 2nd argument of the function
+    note : if no container then post some logs on the console
+    note : if no spinner supplied then default spinner will be use instead
+
+
 */
-function get_page(link = false,dependencies = false,container = false,spinner = false,data = false){
+function get_page(link = false,dependencies = false,container = false,spinner = false){
 
     $.ajax({
         url : app_url + '/ajax-page',
         type : 'get',
         context: this,
         dataType : 'html',
-        beforeSend: function(){j_spinner("on");},
+        beforeSend: function(){
+            if(!spinner){
+                j_spinner("on");
+            }else{
+                j_spinner("on",spinner);
+            }
+        },
         complete: function(){j_spinner("off");},
-        success : function(data) {
-            $(container).html(data);
+        success : function(e) {
+            if(!container){
+                console.log(e);
+            }else{
+                $(container).html(e);
+            }
             _runner(dependencies);
         }
     });
 }
-//create a notification. To use, j_notification("[specift the content]", "[specify if autohide]", "[specify if yes or no]")
-function j_notification(data, auto_hide, hide){
-    if(auto_hide !== "yes"){
+/* 
+    S L I D E  N O T I F I C A T I O N
+    ----------------------------------------------------
+    Material slide
+
+    call : j_notification( contents, auto_hide true|false, mode on|off)
+
+*/
+function j_notification(data = false, auto_hide = false, mode){
+    if(!auto_hide){
         if($("#j-notification-dialog").length){
-            $("#j-notification-dialog").html(data);
-            $("#j-notification-dialog").show();
+            
+            if(mode === 'on'){
+                $("#j-notification-dialog").html( !data ? 'Hello there' : data );
+                $("#j-notification-dialog").show();
+            }
+
         }else{
-            $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
-            $("#j-notification-dialog").show();
+            if(mode === 'on'){
+                $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
+                $("#j-notification-dialog").show();
+            }
         }
-        if(hide === "yes"){
+        if(mode === "off"){
             $("#j-notification-dialog").delay(3000).fadeOut(500);
         }
     }else{
         if($("#j-notification-dialog").length){
-            $("#j-notification-dialog").html(data);
-            $("#j-notification-dialog").show();
-            // $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog" style="display:table;top:'+$("#j-notification-dialog:first-child").offset().top+30+'px">' + data + '</div>'); 
+            if(mode === 'on'){
+                $("#j-notification-dialog").html(data);
+                $("#j-notification-dialog").show();
+            }
         }else{
-            $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
-            $("#j-notification-dialog").show();
+            if(mode === 'on'){
+                $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
+                $("#j-notification-dialog").show();
+            }
         }
         $("#j-notification-dialog").delay(5000).fadeOut(500);
     }
 }   
 $(document).ready(function(){
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3c515d898cfedc26619903642eaa002a61773726
     //add animation to the element that has a class of .line-animation
     var this_previous_delay;
     $(".parent .line-animation").each(function(){
@@ -92,8 +130,17 @@ $(document).ready(function(){
 
     }); //end of looping unto the top_submenu li
     //end of .line-animation
-});
+<<<<<<< HEAD
 
+});
+    
+
+$(window).load(function(){
+    $("body").fadeIn(200);
+    //run the checkwidth function
+    checkwidth();
+    //on window resize
+});
 $(window).resize(function(){
     //run the checkwidth function
     checkwidth();

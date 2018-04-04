@@ -6,7 +6,6 @@ if ('undefined' == typeof window.jQuery) {
 (function($){
 
     $.fn.j_validator = function ( options ) {
-
     	$(document).on("keypress keydown keyup",".reject",function(){return false;});
 
 
