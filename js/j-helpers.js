@@ -99,7 +99,7 @@ if ('undefined' != typeof window.jQuery ) {
         }
     }   
 
-    $(window).load(function(){
+    $(window).on('load', function(){
         $("body").fadeIn(200);
         //run the checkwidth function
         checkwidth();
