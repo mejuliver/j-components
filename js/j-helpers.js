@@ -98,38 +98,6 @@ if ('undefined' != typeof window.jQuery ) {
             $("#j-notification-dialog").delay(5000).fadeOut(500);
         }
     }   
-    $(document).ready(function(){
-    <<<<<<< HEAD
-
-    =======
-    >>>>>>> 3c515d898cfedc26619903642eaa002a61773726
-        //add animation to the element that has a class of .line-animation
-        var this_previous_delay;
-        $(".parent .line-animation").each(function(){
-            var this_delay;
-
-            if(!$(this).is(":first-child")){
-                    this_delay = this_previous_delay + 300;
-                    this_previous_delay = this_delay;
-                    this_delay = this_delay.toString() + "ms";
-            }else{
-                this_delay = $(this).index() + 300;
-                this_previous_delay = this_delay;
-                this_delay = this_delay.toString() + "ms";
-            } //end of checking if not first-child
-            
-            $(this).css('-webkit-transition-delay', this_delay )
-               .css('-moz-transition-delay', this_delay)
-               .css('-ms-transition-delay', this_delay)
-               .css('-o-transition-delay', this_delay)
-               .css('transition-delay', this_delay);
-
-        }); //end of looping unto the top_submenu li
-        //end of .line-animation
-    <<<<<<< HEAD
-
-    });
-        
 
     $(window).load(function(){
         $("body").fadeIn(200);
