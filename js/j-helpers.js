@@ -398,6 +398,10 @@ if ('undefined' != typeof window.jQuery ) {
             }else{
                 $(this).css( 'background', ' linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
             }
+
+            if( typeof $(this).attr('data-height') !== typeof undefined ){
+                $(this).css( 'height', $(this).attr('data-height') );
+            }
         });
 
         $('.box.image-box').hover(function(){
