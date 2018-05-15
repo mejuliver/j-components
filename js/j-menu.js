@@ -100,9 +100,9 @@ if ('undefined' != typeof window.jQuery ) {
 
             // on click on submenu
             this.find('.j-component[data-type*="menu-hover"] .menu-holder > li > a').on('mouseOver', function(e) {
-                $(this).closest('ul').prev('a').trigger('click');
+                $(this).trigger('click');
             },function(){
-                $(this).closest('ul').prev('a').trigger('click');
+                $(this).trigger('click');
             });
 
             //event click j menu listener
