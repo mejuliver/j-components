@@ -23,6 +23,7 @@ if ('undefined' != typeof window.jQuery ) {
         $.fn.j_menu = function ( options ) {
 
             this.find('.j-component[data-type*="menu"] .menu-holder > li > a').on('click', function(e) {
+                e.preventDefault(); 
                 // variables
                 var $this = $(this),
                     parent_el = $this.closest('.j-component'),
