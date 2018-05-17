@@ -22,95 +22,95 @@
 // R E S P O N S I V E  P R O P E R T I E S
 @media (max-width: 767px) { // XS
 	
-	.p-xs-00{margin:0px!important;}
+	.p-xs-00{padding:0px!important;}
 	@for $i from 0 through 100{
-		.p-xs-#{$i} { margin: #{$i}px;; }
+		.p-xs-#{$i} { padding: #{$i}px;; }
 	}
-	.pt-xs-00{margin-top:0px!important;}
+	.pt-xs-00{padding-top:0px!important;}
 	@for $i from 0 through 100{
-		.pt-xs-#{$i} { margin-top: #{$i}px;; }
+		.pt-xs-#{$i} { padding-top: #{$i}px;; }
 	}
-	.pl-xs-00{margin-left:0px!important;}
+	.pl-xs-00{padding-left:0px!important;}
 	@for $i from 0 through 100{
-		.pl-xs-#{$i} { margin-left: #{$i}px;; }
+		.pl-xs-#{$i} { padding-left: #{$i}px;; }
 	}
-	.pr-xs-00{margin-right:0px!important;}
+	.pr-xs-00{padding-right:0px!important;}
 	@for $i from 0 through 100{
-		.pr-xs-#{$i} { margin-right: #{$i}px;; }
+		.pr-xs-#{$i} { padding-right: #{$i}px;; }
 	}
-	.pb-xs-00{margin-bottom:0px!important;}
+	.pb-xs-00{padding-bottom:0px!important;}
 	@for $i from 0 through 100{
-		.pb-xs-#{$i} { margin-bottom: #{$i}px;; }
+		.pb-xs-#{$i} { padding-bottom: #{$i}px;; }
 	}
 
 }
 
 @media (min-width: 768px) and (max-width: 991px) { // SM
-	.p-sm-00{margin:0px!important;}
+	.p-sm-00{padding:0px!important;}
 	@for $i from 0 through 100{
-		.p-sm-#{$i} { margin: #{$i}px;; }
+		.p-sm-#{$i} { padding: #{$i}px;; }
 	}
-	.pt-sm-00{margin-top:0px!important;}
+	.pt-sm-00{padding-top:0px!important;}
 	@for $i from 0 through 100{
-		.pt-sm-#{$i} { margin-top: #{$i}px;; }
+		.pt-sm-#{$i} { padding-top: #{$i}px;; }
 	}
-	.pl-sm-00{margin-left:0px!important;}
+	.pl-sm-00{padding-left:0px!important;}
 	@for $i from 0 through 100{
-		.pl-sm-#{$i} { margin-left: #{$i}px;; }
+		.pl-sm-#{$i} { padding-left: #{$i}px;; }
 	}
-	.pr-sm-00{margin-right:0px!important;}
+	.pr-sm-00{padding-right:0px!important;}
 	@for $i from 0 through 100{
-		.pr-sm-#{$i} { margin-right: #{$i}px;; }
+		.pr-sm-#{$i} { padding-right: #{$i}px;; }
 	}
-	.pb-sm-00{margin-bottom:0px!important;}
+	.pb-sm-00{padding-bottom:0px!important;}
 	@for $i from 0 through 100{
-		.pb-sm-#{$i} { margin-bottom: #{$i}px;; }
+		.pb-sm-#{$i} { padding-bottom: #{$i}px;; }
 	}
 
 }
 
 @media (min-width: 992px) and (max-width: 1199px) { // MD
-	.p-md-00{margin:0px!important;}
+	.p-md-00{padding:0px!important;}
 	@for $i from 0 through 100{
-		.p-md-#{$i} { margin: #{$i}px;; }
+		.p-md-#{$i} { padding: #{$i}px;; }
 	}
-	.pt-md-00{margin-top:0px!important;}
+	.pt-md-00{padding-top:0px!important;}
 	@for $i from 0 through 100{
-		.pt-md-#{$i} { margin-top: #{$i}px;; }
+		.pt-md-#{$i} { padding-top: #{$i}px;; }
 	}
-	.pl-md-00{margin-left:0px!important;}
+	.pl-md-00{padding-left:0px!important;}
 	@for $i from 0 through 100{
-		.pl-md-#{$i} { margin-left: #{$i}px;; }
+		.pl-md-#{$i} { padding-left: #{$i}px;; }
 	}
-	.pr-md-00{margin-right:0px!important;}
+	.pr-md-00{padding-right:0px!important;}
 	@for $i from 0 through 100{
-		.pr-md-#{$i} { margin-right: #{$i}px;; }
+		.pr-md-#{$i} { padding-right: #{$i}px;; }
 	}
-	.pb-md-00{margin-bottom:0px!important;}
+	.pb-md-00{padding-bottom:0px!important;}
 	@for $i from 0 through 100{
-		.pb-md-#{$i} { margin-bottom: #{$i}px;; }
+		.pb-md-#{$i} { padding-bottom: #{$i}px;; }
 	}
 }
 
 @media (min-width: 1200px) { // LG
-	.p-lg-00{margin:0px!important;}
+	.p-lg-00{padding:0px!important;}
 	@for $i from 0 through 100{
-		.p-lg-#{$i} { margin: #{$i}px;; }
+		.p-lg-#{$i} { padding: #{$i}px;; }
 	}
-	.pt-lg-00{margin-top:0px!important;}
+	.pt-lg-00{padding-top:0px!important;}
 	@for $i from 0 through 100{
-		.pt-lg-#{$i} { margin-top: #{$i}px;; }
+		.pt-lg-#{$i} { padding-top: #{$i}px;; }
 	}
-	.pl-lg-00{margin-left:0px!important;}
+	.pl-lg-00{padding-left:0px!important;}
 	@for $i from 0 through 100{
-		.pl-lg-#{$i} { margin-left: #{$i}px;; }
+		.pl-lg-#{$i} { padding-left: #{$i}px;; }
 	}
-	.pr-lg-00{margin-right:0px!important;}
+	.pr-lg-00{padding-right:0px!important;}
 	@for $i from 0 through 100{
-		.pr-lg-#{$i} { margin-right: #{$i}px;; }
+		.pr-lg-#{$i} { padding-right: #{$i}px;; }
 	}
-	.pb-lg-00{margin-bottom:0px!important;}
+	.pb-lg-00{padding-bottom:0px!important;}
 	@for $i from 0 through 100{
-		.pb-lg-#{$i} { margin-bottom: #{$i}px;; }
+		.pb-lg-#{$i} { padding-bottom: #{$i}px;; }
 	}
 }
