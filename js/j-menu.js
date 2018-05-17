@@ -64,20 +64,20 @@ if ('undefined' != typeof window.jQuery ) {
                 if (parent_tab.length !== 0 && typeof $this.attr('data-tab') !== typeof undefined && $this.attr('data-tab') !== '' && $this.attr('data-tab') !== 'false' ) {
                     // ------- hide tab
                     // component does not consist of class custom then invoke the default tab event
-                    if ( parent_el.find('.tab-container .tab.active').attr('data-tab') !== $this.attr('data-tab') && !parent_el.find('.tab-container .tab.active').hasClass('custom')) {
-                       parent_el.find('.tab-container .tab.active').hide();
+                    if ( parent_el.find('.tab-contents .tab.active').attr('data-tab') !== $this.attr('data-tab') && !parent_el.find('.tab-contents .tab.active').hasClass('custom')) {
+                       parent_el.find('.tab-contents .tab.active').hide();
 
                     }
                     // remove the active class
-                    parent_el.find('.tab-container .tab.active').removeClass('active');
+                    parent_el.find('.tab-contents .tab.active').removeClass('active');
 
                     // ------- show tab
                     // component does not consist of class custom then invoke the default tab event
-                    if ( parent_el.find('.tab-container .tab.active').attr('data-tab') !== $this.attr('data-tab') && !parent_el.find('.tab-container .tab[data-tab="'+$this.attr('data-tab')+'"]').hasClass('custom')) {
-                        parent_el.find('.tab-container .tab[data-tab="'+$this.attr('data-tab')+'"]').fadeIn(400);
+                    if ( parent_el.find('.tab-contents .tab.active').attr('data-tab') !== $this.attr('data-tab') && !parent_el.find('.tab-contents .tab[data-tab="'+$this.attr('data-tab')+'"]').hasClass('custom')) {
+                        parent_el.find('.tab-contents .tab[data-tab="'+$this.attr('data-tab')+'"]').fadeIn(400);
                     }
                     
-                    parent_el.find('.tab-container .tab[data-tab="'+$this.attr('data-tab')+'"]').addClass('active');
+                    parent_el.find('.tab-contents .tab[data-tab="'+$this.attr('data-tab')+'"]').addClass('active');
 
 
                 }
