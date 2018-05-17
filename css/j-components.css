@@ -26472,100 +26472,110 @@
 }
 
 /* line 3, sass/components/_others.scss */
+.width-100 {
+  width: 100%;
+}
+
+/* line 4, sass/components/_others.scss */
+.height-100 {
+  height: 100%;
+}
+
+/* line 6, sass/components/_others.scss */
 .line-height-initial {
   line-height: initial;
 }
 
-/* line 4, sass/components/_others.scss */
+/* line 7, sass/components/_others.scss */
 .disabled {
   pointer-events: none;
 }
 
-/* line 6, sass/components/_others.scss */
+/* line 9, sass/components/_others.scss */
 .display-none {
   display: none;
 }
 
-/* line 7, sass/components/_others.scss */
+/* line 10, sass/components/_others.scss */
 .display-block, .zoom-hover-img a, .zoom-hover-img a figure img {
   display: block;
 }
 
-/* line 8, sass/components/_others.scss */
+/* line 11, sass/components/_others.scss */
 .extend {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 9, sass/components/_others.scss */
+/* line 12, sass/components/_others.scss */
 .clear {
   clear: both;
   float: none;
 }
 
-/* line 10, sass/components/_others.scss */
+/* line 13, sass/components/_others.scss */
 .inline-block {
   display: inline-block;
 }
 
-/* line 11, sass/components/_others.scss */
+/* line 14, sass/components/_others.scss */
 .display-inline-table {
   display: inline-table;
 }
 
-/* line 13, sass/components/_others.scss */
+/* line 16, sass/components/_others.scss */
 .overflow-hidden, .zoom-hover-img a {
   overflow: hidden;
 }
 
-/* line 14, sass/components/_others.scss */
+/* line 17, sass/components/_others.scss */
 .overflow-x {
   overflow-x: auto;
   overflow-y: hidden;
 }
 
-/* line 15, sass/components/_others.scss */
+/* line 18, sass/components/_others.scss */
 .overflow-y {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-/* line 16, sass/components/_others.scss */
+/* line 19, sass/components/_others.scss */
 .overflow-auto {
   overflow: auto;
 }
 
-/* line 18, sass/components/_others.scss */
+/* line 21, sass/components/_others.scss */
 .align-left {
   float: left;
 }
 
-/* line 19, sass/components/_others.scss */
+/* line 22, sass/components/_others.scss */
 .align-right {
   float: right;
 }
 
-/* line 21, sass/components/_others.scss */
+/* line 24, sass/components/_others.scss */
 .height-initial {
   height: initial;
 }
 
-/* line 22, sass/components/_others.scss */
+/* line 25, sass/components/_others.scss */
 .height-auto {
   height: auto;
 }
 
-/* line 23, sass/components/_others.scss */
+/* line 26, sass/components/_others.scss */
 .width-initial {
   width: initial;
 }
 
-/* line 24, sass/components/_others.scss */
+/* line 27, sass/components/_others.scss */
 .width-auto {
   width: auto;
 }
 
-/* line 25, sass/components/_others.scss */
+/* line 28, sass/components/_others.scss */
 a, .transation {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -26574,107 +26584,107 @@ a, .transation {
   transition: all 200ms ease-in-out;
 }
 
-/* line 26, sass/components/_others.scss */
+/* line 29, sass/components/_others.scss */
 .cursor-pointer {
   cursor: pointer;
 }
 
-/* line 27, sass/components/_others.scss */
+/* line 30, sass/components/_others.scss */
 .j-line {
   height: 1px;
   background: #ededed;
 }
 
-/* line 28, sass/components/_others.scss */
+/* line 31, sass/components/_others.scss */
 .j-border {
   border: 1px solid red;
 }
 
-/* line 29, sass/components/_others.scss */
+/* line 32, sass/components/_others.scss */
 .j-border-white {
   border: 1px solid #ffffff;
 }
 
-/* line 30, sass/components/_others.scss */
+/* line 33, sass/components/_others.scss */
 .border-dddddd {
   border: 1px solid #dddddd;
 }
 
-/* line 31, sass/components/_others.scss */
+/* line 34, sass/components/_others.scss */
 .border-cccccc {
   border: 1px solid #cccccc;
 }
 
-/* line 32, sass/components/_others.scss */
+/* line 35, sass/components/_others.scss */
 .border-cdcdcd {
   border: 1px solid #cdcdcd;
 }
 
-/* line 33, sass/components/_others.scss */
+/* line 36, sass/components/_others.scss */
 .border-none {
   border: none;
 }
 
-/* line 34, sass/components/_others.scss */
+/* line 37, sass/components/_others.scss */
 .list-style-none {
   list-style: none;
 }
 
-/* line 36, sass/components/_others.scss */
+/* line 39, sass/components/_others.scss */
 .relative, .center-content-child {
   position: relative;
 }
 
-/* line 37, sass/components/_others.scss */
+/* line 40, sass/components/_others.scss */
 .absolute {
   position: absolute;
 }
 
-/* line 38, sass/components/_others.scss */
+/* line 41, sass/components/_others.scss */
 .fixed, #j-notification-dialog {
   position: fixed;
 }
 
-/* line 39, sass/components/_others.scss */
+/* line 42, sass/components/_others.scss */
 .static {
   position: static;
 }
 
-/* line 42, sass/components/_others.scss */
+/* line 45, sass/components/_others.scss */
 .center {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 43, sass/components/_others.scss */
+/* line 46, sass/components/_others.scss */
 .center-content-parent {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-/* line 44, sass/components/_others.scss */
+/* line 47, sass/components/_others.scss */
 .center-content-child {
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 49, sass/components/_others.scss */
+/* line 52, sass/components/_others.scss */
 .hr {
   height: 5px;
 }
 
-/* line 52, sass/components/_others.scss */
+/* line 55, sass/components/_others.scss */
 .hr-half {
   width: 70px;
 }
 
-/* line 55, sass/components/_others.scss */
+/* line 58, sass/components/_others.scss */
 .opacity-half {
   opacity: .5;
 }
 
-/* line 58, sass/components/_others.scss */
+/* line 61, sass/components/_others.scss */
 .opacity-full {
   opacity: 1;
 }
