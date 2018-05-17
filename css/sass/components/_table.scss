@@ -29,7 +29,7 @@ T A B L E
 }
 .table-th-center th{@extend .text-center;}
 .table-td-center td{@extend .text-center;}
-.table-lines{@extend .full-width;}
+.table-lines{@extend .width-100;}
 .table-lines{
 	th,td{
 		border-bottom: 2px solid #ededed;

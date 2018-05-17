@@ -2,7 +2,7 @@
 	a{
 		@extend .overflow-hidden;
 	    @extend .display-block;
-	    @extend .full-width;
+	    @extend .width-100;
 	    box-sizing: border-box;
 	    -moz-box-sizing: border-box;
 	    -webkit-box-sizing: border-box;
@@ -16,7 +16,7 @@
 				max-width: 100%;
 				@extend .display-block;
 				transition: transform 300ms ease-in-out;
-				@extend .full-width;
+				@extend .width-100;
 				@extend .m00;
 			} 
 	    }
