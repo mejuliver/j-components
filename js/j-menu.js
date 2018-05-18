@@ -124,7 +124,7 @@ if ('undefined' != typeof window.jQuery ) {
                         });
                     }
 
-                    $('.j-component[data-type*="menu"] .menu-holder li.active').removeClass('active');
+                    $('.j-component[data-type*="menu"]:not(.tab) .menu-holder li.active').removeClass('active');
                 }
             });
 
