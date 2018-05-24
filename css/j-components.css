@@ -26462,23 +26462,23 @@
 }
 
 /* line 1, sass/components/_others.scss */
-.width-100, .table-lines, .zoom-hover-img a, .zoom-hover-img a figure img {
-  width: 100vw;
+.full-width, .table-lines, .zoom-hover-img a, .zoom-hover-img a figure img {
+  width: 100%;
 }
 
 /* line 2, sass/components/_others.scss */
 .full-height {
-  height: 100vh;
+  height: 100%;
 }
 
 /* line 3, sass/components/_others.scss */
-.width-100, .table-lines, .zoom-hover-img a, .zoom-hover-img a figure img {
-  width: 100%;
+.width-100 {
+  width: 100vw;
 }
 
 /* line 4, sass/components/_others.scss */
 .height-100 {
-  height: 100%;
+  height: 100vh;
 }
 
 /* line 6, sass/components/_others.scss */
