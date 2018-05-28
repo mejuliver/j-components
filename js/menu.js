@@ -97,14 +97,14 @@ if ('undefined' != typeof window.jQuery ) {
             });
 
             // on click on submenu
-            this.find('.j-component[data-type*="menu-hover"] .menu-holder > li').on('mouseover', function(e) {
+            this.find('.j-component[data-type*="menu"] .menu-holder > li.hover').on('mouseover', function(e) {
                 if(!$(this).find('.submenu').is(':visible') ){
                     $(this).find('a.trigger').trigger('click');
                 }
             });
             // on click on submenu
-            this.find('.j-component[data-type*="menu-hover"] .menu-holder > li').on('mouseleave', function(e) {
-                if(  $(this).find('.submenu').is(':visible') ){
+            this.find('.j-component[data-type*="menu"] .menu-holder > li.hover').on('mouseleave', function(e) {
+                if( $(this).find('.submenu').is(':visible') ){
                     $(this).find('a.trigger').trigger('click');
                 }
             });

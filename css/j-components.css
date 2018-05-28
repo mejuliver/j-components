@@ -28625,19 +28625,20 @@ spinner 11
   position: absolute;
   z-index: 2;
   display: none;
-  padding: 32px;
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 40px -6px #e0e0e0;
 }
-/* line 25, sass/components/menu.scss */
+/* line 26, sass/components/menu.scss */
 .j-component .tab-container {
   clear: both;
   float: none;
 }
-/* line 28, sass/components/menu.scss */
+/* line 29, sass/components/menu.scss */
 .j-component .tab-container .tab {
   display: none;
 }
-/* line 31, sass/components/menu.scss */
+/* line 32, sass/components/menu.scss */
 .j-component .tab-container .tab.active {
   display: block;
 }

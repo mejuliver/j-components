@@ -5,7 +5,18 @@
 	<title>Menu Component Sample</title>
 	<link rel="stylesheet" href="css/j-components.css">
 	<style>
-		
+		ul{
+			padding:0px;
+		}
+		ul.menu-holder li{
+			list-style:none;
+			float:left;
+		}
+		ul.menu-holder > li > a{
+			padding: 10px;
+			text-decoration:none;
+			border:1px solid #ccc;
+		}
 	</style>
 </head>
 <body>
@@ -13,10 +24,18 @@
 	<div class="j-component" data-type="menu">
 		<ul class="menu-holder">
 			<li>
-				<a href="#" class="trigger">test</a>
+				<a href="#" class="trigger">test 1</a>
 				<ul class="submenu">
 					<li>
-						<a href="#">test</a>
+						<a href="#">test 1 menu 1</a>
+					</li>
+				</ul>
+			</li>
+			<li class="hover">
+				<a href="#" class="trigger">test 2</a>
+				<ul class="submenu">
+					<li>
+						<a href="#">test 2 menu 1</a>
 					</li>
 				</ul>
 			</li>
