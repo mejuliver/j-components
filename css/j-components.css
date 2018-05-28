@@ -26472,12 +26472,12 @@
 }
 
 /* line 3, sass/components/_others.scss */
-.width-100 {
+.width-vw {
   width: 100vw;
 }
 
 /* line 4, sass/components/_others.scss */
-.height-100 {
+.height-vh {
   height: 100vh;
 }
 
@@ -26687,6 +26687,46 @@ a, .transation {
 /* line 61, sass/components/_others.scss */
 .opacity-full {
   opacity: 1;
+}
+
+/* line 65, sass/components/_others.scss */
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: .5;
+  }
+}
+/* line 74, sass/components/_others.scss */
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+/* line 78, sass/components/_others.scss */
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #000000 10%, rgba(0, 0, 0, 0) 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+/* line 94, sass/components/_others.scss */
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .2;
+  transition: 0s;
 }
 
 /* line 1, sass/components/_flex.scss */
