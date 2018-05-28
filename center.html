@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Center Component Sample</title>
 	<style>
-		#centerMe{
+		.center{
 			width:250px;
 			height:150px;
 			background:red;
@@ -15,8 +15,14 @@
 	</style>
 </head>
 <body>
-	<div id="centerMe">
-		Center element using 'center' component
+	<div id="centerAll" class="center">
+		Center all
+	</div>
+	<div id="centerHorizontal" class="center">
+		Center horizontal
+	</div>
+	<div id="centerVertical" class="center">
+		Center vertical
 	</div>
 
 	
@@ -26,7 +32,13 @@
 	<script>
 		$(function(){
 
-			$('#centerMe').center();
+			$('#centerAll').center();
+			$('#centerHorizontal').center({
+				direction : 'horizontal'
+			});
+			$('#centerVertical').center({
+				direction : 'vertical'
+			});
 
 		});
 		
