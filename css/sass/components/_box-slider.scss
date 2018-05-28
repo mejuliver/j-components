@@ -1,9 +1,14 @@
 .box-slider{
-  position:relative;
   height:300px;
   z-index:11;
-  .slide .item{
-    img{display:none!important;}
+  border:1px solid red;
+  padding:0px;
+  position:relative;
+  .slides .item{
+    list-style:none;
+    position:absolute;
+    top:0;
+    img.background-image{display:none!important;}
     height:300px;
     width:100%;
     background-size:cover;

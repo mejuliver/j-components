@@ -28268,22 +28268,27 @@ spinner 11
 
 /* line 1, sass/components/_box-slider.scss */
 .box-slider {
-  position: relative;
   height: 300px;
   z-index: 11;
+  border: 1px solid red;
+  padding: 0px;
+  position: relative;
 }
-/* line 5, sass/components/_box-slider.scss */
-.box-slider .slide .item {
+/* line 7, sass/components/_box-slider.scss */
+.box-slider .slides .item {
+  list-style: none;
+  position: absolute;
+  top: 0;
   height: 300px;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
-/* line 6, sass/components/_box-slider.scss */
-.box-slider .slide .item img {
+/* line 11, sass/components/_box-slider.scss */
+.box-slider .slides .item img.background-image {
   display: none !important;
 }
-/* line 12, sass/components/_box-slider.scss */
+/* line 17, sass/components/_box-slider.scss */
 .box-slider:hover .image-box-caption {
   background: #f1811d;
   -webkit-transition: all 200ms ease-in-out;
@@ -28292,7 +28297,7 @@ spinner 11
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-/* line 20, sass/components/_box-slider.scss */
+/* line 25, sass/components/_box-slider.scss */
 .box-slider .image-box-caption {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px 30px;
@@ -28301,11 +28306,11 @@ spinner 11
   width: 100%;
   position: absolute;
 }
-/* line 27, sass/components/_box-slider.scss */
+/* line 32, sass/components/_box-slider.scss */
 .box-slider .image-box-caption * {
   color: #FFF;
 }
-/* line 31, sass/components/_box-slider.scss */
+/* line 36, sass/components/_box-slider.scss */
 .box-slider .wide {
   position: absolute;
   top: 0px;
@@ -28313,59 +28318,59 @@ spinner 11
   z-index: 9;
   width: 100%;
 }
-/* line 38, sass/components/_box-slider.scss */
+/* line 43, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-aqua {
   background: rgba(12, 163, 186, 0.7) !important;
 }
-/* line 40, sass/components/_box-slider.scss */
+/* line 45, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-aqua:hover {
   background: rgba(12, 163, 186, 0.9) !important;
 }
-/* line 44, sass/components/_box-slider.scss */
+/* line 49, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-violet {
   background: rgba(80, 54, 185, 0.7) !important;
 }
-/* line 46, sass/components/_box-slider.scss */
+/* line 51, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-violet:hover {
   background: rgba(80, 54, 185, 0.9) !important;
 }
-/* line 50, sass/components/_box-slider.scss */
+/* line 55, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-orange {
   background: rgba(227, 84, 33, 0.7) !important;
 }
-/* line 52, sass/components/_box-slider.scss */
+/* line 57, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-orange:hover {
   background: rgba(227, 84, 33, 0.9) !important;
 }
-/* line 56, sass/components/_box-slider.scss */
+/* line 61, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-pink {
   background: rgba(231, 52, 142, 0.7) !important;
 }
-/* line 58, sass/components/_box-slider.scss */
+/* line 63, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-pink:hover {
   background: rgba(231, 52, 142, 0.9) !important;
 }
-/* line 62, sass/components/_box-slider.scss */
+/* line 67, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-blue {
   background: rgba(17, 89, 179, 0.7) !important;
 }
-/* line 64, sass/components/_box-slider.scss */
+/* line 69, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-blue:hover {
   background: rgba(17, 89, 179, 0.9) !important;
 }
-/* line 68, sass/components/_box-slider.scss */
+/* line 73, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-yellow {
   background: rgba(213, 166, 42, 0.7) !important;
 }
-/* line 70, sass/components/_box-slider.scss */
+/* line 75, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-yellow:hover {
   background: rgba(213, 166, 42, 0.9) !important;
 }
-/* line 74, sass/components/_box-slider.scss */
+/* line 79, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-green {
   background: rgba(32, 210, 94, 0.7) !important;
 }
-/* line 76, sass/components/_box-slider.scss */
+/* line 81, sass/components/_box-slider.scss */
 .box-slider .with-bg.bg-green:hover {
   background: rgba(32, 210, 94, 0.9) !important;
 }

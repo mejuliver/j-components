@@ -14,7 +14,7 @@ if ('undefined' != typeof window.jQuery ) {
 		}, options );
 
 		
-		return this.each(function() {
+		this.each(function() {
 			var $this = $(this);
 	   	$(this).css({
 	   		'position' : settings.position !== false ? settings.position : 'absolute',
@@ -33,6 +33,31 @@ if ('undefined' != typeof window.jQuery ) {
 				$this.css("top", ( $(window).height() - $this.height() ) / 2  + "px");
 			}
 
+		});
+
+		var $this_global = this;
+
+		$(window).resize(function(event) {
+			$this_global.each(function() {
+			var $this = $(this);
+			   	$(this).css({
+			   		'position' : settings.position !== false ? settings.position : 'absolute',
+			    	'index' : settings.index !== false ? settings.index : 'initial'
+			   	});
+				if( settings.direction === 'all' ){
+					$this.css("top", ( $(window).height() - $this.height() ) / 2  + "px");
+					$this.css("left", ( $(window).width() - $this.width() ) / 2 + "px");
+				}
+
+				if( settings.direction === 'horizontal' ){
+					$this.css("left", ( $(window).width() - $this.width() ) / 2 + "px");
+				}
+
+				if( settings.direction === 'vertical' ){
+					$this.css("top", ( $(window).height() - $this.height() ) / 2  + "px");
+				}
+
+			});
 		});
 	  
 		return this;

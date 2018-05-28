@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Ajax Component Sample</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="css/j-components.css">
+</head>
+<body>
+	<div id="boxslider">
+		<ul class="slides">
+			<li class="item active" data-animation-in="slideInUp" data-animation-out="slideOutDown">
+				<img src="https://picsum.photos/200/300/?random" alt="">
+			</li>
+			<li class="item" data-animation-in="slideInUp" data-animation-out="slideOutDown">
+				<img src="https://picsum.photos/200/300/?random" alt="">
+			</li>
+			<li class="item active" data-animation-in="slideInUp" data-animation-out="slideOutDown">
+				<img src="https://picsum.photos/200/300/?random" alt="">
+			</li>
+		</ul>
+	</div>
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/boxslider.js"></script>
+
+	<script>
+		
+		$(function(){
+
+			$('#boxslider').boxslider();
+
+		});
+
+		
+		
+	</script>
+</body>
+</html>

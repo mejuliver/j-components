@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Ajax Component Sample</title>
+</head>
+<body>
+	<form action="https://reqres.in/api/users?page=2x" data-onsuccess="on_success" data-before-send="before_send" data-after-send="after_send" data-complete="on_complete" data-error="on_error">
+		<button>submit</button>
+	</form>
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/ajax-form.js"></script>
+
+	<script>
+		
+		$(function(){
+
+			$('form').ajax_form();
+
+		});
+
+		function on_success(e){
+			console.log(e);
+		}
+
+		function before_send(){
+			alert('sending...');
+		}
+
+		function after_send(){
+			alert('after send function triggered, ajax request completed');
+		}
+
+		function on_complete(){
+			alert('ajax request completed');
+		}
+
+		function on_error(){
+			alert('Op\'s there\'s an error occured');
+		}
+		
+	</script>
+</body>
+</html>
