@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Menu Component Sample</title>
+	<link rel="stylesheet" href="css/j-components.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+
+	<div class="j-component" data-type="menu">
+		<ul class="menu-holder">
+			<li>
+				<a href="#" class="trigger">test</a>
+				<ul class="submenu">
+					<li>
+						<a href="#">test</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/menu.js"></script>
+
+	<script>
+		$(function(){
+
+			$('body').menu();
+
+		});
+		
+	</script>
+</body>
+</html>

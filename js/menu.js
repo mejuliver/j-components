@@ -20,7 +20,7 @@ if ('undefined' != typeof window.jQuery ) {
 
     (function($){
 
-        $.fn.j_menu = function ( options ) {
+        $.fn.menu = function ( options ) {
 
             this.find('.j-component[data-type*="menu"] .menu-holder > li > a').on('click', function(e) {
                 e.preventDefault(); 
@@ -46,19 +46,16 @@ if ('undefined' != typeof window.jQuery ) {
                         window[item]();
                     });
                 }
-                if ( $this.next('ul').length !== 0 && !$this.next('ul').hasClass('hover') ) {
-                    var dp = $this.next();
+                var dp = $this.next();
                             
-                    if (!parent_el.find('li > ul').is(':visible') && !parent_el.find('li > ul:visible').hasClass('custom')) {
-                    
-                        if (!dp.hasClass('custom')) {
-                          dp.fadeIn(400);
-                        }
-                    }else{
-                        parent_el.find('li > ul:visible').fadeOut(400);
-                    }        
-                } 
-
+                if (!parent_el.find('li > .submenu').is(':visible') && !parent_el.find('li > .submenu:visible').hasClass('custom')) {
+                
+                    if (!dp.hasClass('custom')) {
+                      dp.fadeIn(400);
+                    }
+                }else{
+                    parent_el.find('li > .submenu:visible').fadeOut(400);
+                }        
 
                 //if tabs
                 if (parent_tab.length !== 0 && typeof $this.attr('data-tab') !== typeof undefined && $this.attr('data-tab') !== '' && $this.attr('data-tab') !== 'false' ) {
@@ -93,25 +90,31 @@ if ('undefined' != typeof window.jQuery ) {
             });
 
             // on click on submenu
-            this.find('.j-component[data-type*="menu"] .menu-holder > li > ul li a').on('click', function(e) {
+            this.find('.j-component[data-type*="menu"] .menu-holder > li > .submenu li a').on('click', function(e) {
                 if( !$(this).hasClass('.reject') ){
-                    $(this).closest('ul').prev('a').trigger('click');
+                    $(this).closest('.submenu').prev('a').trigger('click');
                 }
             });
 
             // on click on submenu
-            this.find('.j-component[data-type*="menu-hover"] .menu-holder > li > a').on('mouseOver', function(e) {
-                $(this).trigger('click');
-            },function(){
-                $(this).trigger('click');
+            this.find('.j-component[data-type*="menu-hover"] .menu-holder > li').on('mouseover', function(e) {
+                if(!$(this).find('.submenu').is(':visible') ){
+                    $(this).find('a.trigger').trigger('click');
+                }
+            });
+            // on click on submenu
+            this.find('.j-component[data-type*="menu-hover"] .menu-holder > li').on('mouseleave', function(e) {
+                if(  $(this).find('.submenu').is(':visible') ){
+                    $(this).find('a.trigger').trigger('click');
+                }
             });
 
             //event click j menu listener
             $(document).on("mousedown touchstart", function(e) {
-                var dp = $('.j-component[data-type*="menu"] .menu-holder li > ul:visible');
+                var dp = $('.j-component[data-type*="menu"] .menu-holder li > .submenu:visible');
                 if (!dp.is(e.target) && dp.has(e.target).length === 0) {
-                    if (!$('.j-component[data-type*="menu"] .menu-holder li > ul:visible').hasClass('custom')) {
-                        $('.j-component[data-type*="menu"] .menu-holder li > ul:visible').fadeOut(400);
+                    if (!$('.j-component[data-type*="menu"] .menu-holder li > .submenu:visible').hasClass('custom')) {
+                        $('.j-component[data-type*="menu"] .menu-holder li > .submenu:visible').fadeOut(400);
                     }
 
                     var run_before = $('.j-component[data-type*="menu"] .menu-holder li.active a').attr('data-run-before')

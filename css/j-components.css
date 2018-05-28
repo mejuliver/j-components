@@ -13368,7 +13368,7 @@
 }
 
 /* line 7, sass/components/_padding.scss */
-.pt20, #j-notification-dialog {
+.pt20 {
   padding-top: 20px;
 }
 
@@ -13903,7 +13903,7 @@
 }
 
 /* line 11, sass/components/_padding.scss */
-.pl25, #j-notification-dialog {
+.pl25 {
   padding-left: 25px;
 }
 
@@ -14413,7 +14413,7 @@
 }
 
 /* line 15, sass/components/_padding.scss */
-.pr25, #j-notification-dialog {
+.pr25 {
   padding-right: 25px;
 }
 
@@ -14898,7 +14898,7 @@
 }
 
 /* line 19, sass/components/_padding.scss */
-.pb20, #j-notification-dialog {
+.pb20 {
   padding-bottom: 20px;
 }
 
@@ -25577,7 +25577,7 @@
 }
 
 /* line 2, sass/components/_font-size.scss */
-.font15, #j-notification-dialog {
+.font15 {
   font-size: 15px;
 }
 
@@ -26267,7 +26267,7 @@
 }
 
 /* line 6, sass/components/_font-size.scss */
-.font500, #j-notification-dialog {
+.font500 {
   font-weight: 500;
 }
 
@@ -26492,7 +26492,7 @@
 }
 
 /* line 9, sass/components/_others.scss */
-.display-none {
+.display-none, .error {
   display: none;
 }
 
@@ -26641,7 +26641,7 @@ a, .transation {
 }
 
 /* line 41, sass/components/_others.scss */
-.fixed, #j-notification-dialog {
+.fixed {
   position: fixed;
 }
 
@@ -26992,7 +26992,7 @@ T A B L E
 }
 
 /* line 64, sass/components/_table.scss */
-.display-table, #j-notification-dialog {
+.display-table {
   display: table;
 }
 
@@ -27158,7 +27158,7 @@ T A B L E
 }
 
 /* line 5, sass/components/_color.scss */
-.c-white, #j-notification-dialog {
+.c-white {
   color: #ffffff;
 }
 
@@ -28266,123 +28266,17 @@ spinner 11
   transition: transform 300ms ease-in-out;
 }
 
-/* line 1, sass/components/_box-slider.scss */
-.box-slider {
-  height: 300px;
-  z-index: 11;
-  border: 1px solid red;
-  padding: 0px;
-  position: relative;
-}
-/* line 7, sass/components/_box-slider.scss */
-.box-slider .slides .item {
-  list-style: none;
-  position: absolute;
-  top: 0;
-  height: 300px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-/* line 11, sass/components/_box-slider.scss */
-.box-slider .slides .item img.background-image {
-  display: none !important;
-}
-/* line 17, sass/components/_box-slider.scss */
-.box-slider:hover .image-box-caption {
-  background: #f1811d;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-/* line 25, sass/components/_box-slider.scss */
-.box-slider .image-box-caption {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px 30px;
-  z-index: 10;
-  bottom: 0px;
-  width: 100%;
-  position: absolute;
-}
-/* line 32, sass/components/_box-slider.scss */
-.box-slider .image-box-caption * {
+/* line 1, sass/components/_notification.scss */
+#toast-notif {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  width: 240px;
+  padding: 8px 15px;
+  position: fixed;
+  top: 50px;
   color: #FFF;
-}
-/* line 36, sass/components/_box-slider.scss */
-.box-slider .wide {
-  position: absolute;
-  top: 0px;
-  height: 300px;
-  z-index: 9;
-  width: 100%;
-}
-/* line 43, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-aqua {
-  background: rgba(12, 163, 186, 0.7) !important;
-}
-/* line 45, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-aqua:hover {
-  background: rgba(12, 163, 186, 0.9) !important;
-}
-/* line 49, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-violet {
-  background: rgba(80, 54, 185, 0.7) !important;
-}
-/* line 51, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-violet:hover {
-  background: rgba(80, 54, 185, 0.9) !important;
-}
-/* line 55, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-orange {
-  background: rgba(227, 84, 33, 0.7) !important;
-}
-/* line 57, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-orange:hover {
-  background: rgba(227, 84, 33, 0.9) !important;
-}
-/* line 61, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-pink {
-  background: rgba(231, 52, 142, 0.7) !important;
-}
-/* line 63, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-pink:hover {
-  background: rgba(231, 52, 142, 0.9) !important;
-}
-/* line 67, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-blue {
-  background: rgba(17, 89, 179, 0.7) !important;
-}
-/* line 69, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-blue:hover {
-  background: rgba(17, 89, 179, 0.9) !important;
-}
-/* line 73, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-yellow {
-  background: rgba(213, 166, 42, 0.7) !important;
-}
-/* line 75, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-yellow:hover {
-  background: rgba(213, 166, 42, 0.9) !important;
-}
-/* line 79, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-green {
-  background: rgba(32, 210, 94, 0.7) !important;
-}
-/* line 81, sass/components/_box-slider.scss */
-.box-slider .with-bg.bg-green:hover {
-  background: rgba(32, 210, 94, 0.9) !important;
-}
-
-/* line 1, sass/components/_j-notification.scss */
-#j-notification-dialog {
-  bottom: 30px;
-  left: 30px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 99;
-  -webkit-animation-duration: 500ms;
-  animation-duration: 500ms;
+  z-index: 9999;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* line 2, sass/components/_flip.scss */
@@ -28703,47 +28597,82 @@ spinner 11
     box-shadow: 0 0 0 2px #555555;
   }
 }
-/* line 1, sass/components/_j-menu.scss */
+/* line 1, sass/components/menu.scss */
 .j-component {
   display: table;
   width: 100%;
   clear: both;
   float: none;
 }
-/* line 6, sass/components/_j-menu.scss */
+/* line 6, sass/components/menu.scss */
 .j-component ul {
   padding: 0px;
 }
-/* line 9, sass/components/_j-menu.scss */
+/* line 9, sass/components/menu.scss */
 .j-component ul, .j-component li {
   list-style: none;
 }
-/* line 12, sass/components/_j-menu.scss */
+/* line 12, sass/components/menu.scss */
 .j-component a {
   display: block;
 }
-/* line 15, sass/components/_j-menu.scss */
+/* line 15, sass/components/menu.scss */
 .j-component .menu-holder > li {
   float: left;
 }
-/* line 18, sass/components/_j-menu.scss */
-.j-component .menu-holder li > ul {
+/* line 18, sass/components/menu.scss */
+.j-component .menu-holder li > .submenu {
   position: absolute;
   z-index: 2;
   display: none;
   padding: 32px;
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
-/* line 25, sass/components/_j-menu.scss */
+/* line 25, sass/components/menu.scss */
 .j-component .tab-container {
   clear: both;
   float: none;
 }
-/* line 28, sass/components/_j-menu.scss */
+/* line 28, sass/components/menu.scss */
 .j-component .tab-container .tab {
   display: none;
 }
-/* line 31, sass/components/_j-menu.scss */
+/* line 31, sass/components/menu.scss */
 .j-component .tab-container .tab.active {
   display: block;
+}
+
+/* line 2, sass/components/datetimepicker.scss */
+.j-component[data-type*="datepicker"] .sub, .j-component[data-type*="timepicker"] .sub {
+  position: absolute;
+  padding: 10px;
+  box-shadow: 0 10px 40px -6px #e0e0e0;
+  background: #FFF;
+  width: 350px;
+  border: 1px solid #e0e0e0;
+  display: none;
+}
+@media (max-width: 767px) {
+  /* line 2, sass/components/datetimepicker.scss */
+  .j-component[data-type*="datepicker"] .sub, .j-component[data-type*="timepicker"] .sub {
+    width: 280px;
+  }
+}
+/* line 14, sass/components/datetimepicker.scss */
+.j-component[data-type*="datepicker"] select, .j-component[data-type*="timepicker"] select {
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 100% !important;
+}
+/* line 19, sass/components/datetimepicker.scss */
+.j-component[data-type*="datepicker"] button, .j-component[data-type*="timepicker"] button {
+  border: none !important;
+  padding: 5px 8px;
+  width: 100% !important;
+  backgroud: #ccc;
+}
+/* line 24, sass/components/datetimepicker.scss */
+.j-component[data-type*="datepicker"] button.select, .j-component[data-type*="timepicker"] button.select {
+  background: none !important;
+  text-decoration: underline;
 }

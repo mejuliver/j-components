@@ -23,7 +23,7 @@ if ('undefined' != typeof window.jQuery ) {
         ----------------------------------------------------
         Pull contents asynchronously
 
-        call : get_page(link, dependencies, container, spinner);
+        call : get_page(url, before_send, after_send, complete, on_error);
 
         note : if no 'link' provided then assume uses the current link
         note : if you want too invoke a function after ajax was successful then add function name which to be called later in the 2nd argument of the function
@@ -32,7 +32,7 @@ if ('undefined' != typeof window.jQuery ) {
 
 
     */
-    function get_page(link = false,dependencies = false,container = false,spinner = false){
+    function get_page(url,before_send=false,after_send=false,onsuccess=false,on_error=false){
 
         $.ajax({
             url : app_url + '/ajax-page',
@@ -40,20 +40,30 @@ if ('undefined' != typeof window.jQuery ) {
             context: this,
             dataType : 'html',
             beforeSend: function(){
-                if(!spinner){
-                    j_spinner("on");
-                }else{
-                    j_spinner("on",spinner);
+                if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
+                    var classList = before_send.split(/\s+/);
+                    $.each(classList, function(index, item) {
+                        window[item]();   
+                    });
                 }
             },
-            complete: function(){j_spinner("off");},
-            success : function(e) {
-                if(!container){
-                    console.log(e);
-                }else{
-                    $(container).html(e);
+            complete: function(){
+                if(typeof after_send !== typeof undefined && after_send !== false && after_send !== "") {
+                    var classList = after_send.split(/\s+/);
+                    $.each(classList, function(index, item) {
+                        window[item]();   
+                    });
                 }
-                _runner(dependencies);
+            },
+            success : function(e) {
+                if(typeof onsuccess !== typeof undefined && onsuccess !== false && onsuccess !== "") {
+                    window[onsuccess](e);   
+                }
+            },
+            error: function(type,status,error){
+                if(typeof on_error !== typeof undefined && on_error !== false && on_error !== "") {
+                   window[on_error](type,status,error);
+                }
             }
         });
     }
@@ -65,38 +75,19 @@ if ('undefined' != typeof window.jQuery ) {
         call : j_notification( contents, auto_hide true|false, mode on|off)
 
     */
-    function j_notification(data = false, auto_hide = false, mode){
-        if(!auto_hide){
-            if($("#j-notification-dialog").length){
-                
-                if(mode === 'on'){
-                    $("#j-notification-dialog").html( !data ? 'Hello there' : data );
-                    $("#j-notification-dialog").show();
-                }
+    function toast_notif(data){
+        $('#toast-notif').html(msg);
 
-            }else{
-                if(mode === 'on'){
-                    $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
-                    $("#j-notification-dialog").show();
-                }
-            }
-            if(mode === "off"){
-                $("#j-notification-dialog").delay(3000).fadeOut(500);
-            }
-        }else{
-            if($("#j-notification-dialog").length){
-                if(mode === 'on'){
-                    $("#j-notification-dialog").html(data);
-                    $("#j-notification-dialog").show();
-                }
-            }else{
-                if(mode === 'on'){
-                    $("body").append('<div class="animated slideInRight shadow-z-1" id="j-notification-dialog">' + data + '</div>'); 
-                    $("#j-notification-dialog").show();
-                }
-            }
-            $("#j-notification-dialog").delay(5000).fadeOut(500);
+        if( !$('#toast-notif').is(':visible') ){
+            $('#toast-notif').show();
         }
+        // center taost
+        $('#toast-notif').css("left", ( $(window).width() - $('#toast-notif').width() ) / 2 + "px");
+
+
+        setTimeout(function(){
+            $('#toast-notif').hide();
+        }, 5000);
     }   
 
     $(window).on('load', function(){
@@ -111,9 +102,6 @@ if ('undefined' != typeof window.jQuery ) {
     });
 
     function checkwidth(){
-        //$(".overflow_x:visible table").hide();
-        //give a full height to those element that has a class of "full height"
-        $(".full-height").css({ 'height' : $(window).height() + 'px' });
         //give width to elements that has a class of ".fixed-child" equals to the parent reference element width that has a class of ".fixed-parent"
         $(".fixed-child").each(function(){
             $(this).css({ 'width' : $(this).closest(".fixed-parent").width() + 'px' });
@@ -138,6 +126,84 @@ if ('undefined' != typeof window.jQuery ) {
       return text;
     }
 
+     function modal(title, content, dependencies,footer = false){
+        if( typeof $.fn.j_modal != 'undefined' ){
+            console.log('Ohoo! not too fast cowbody! j_modal is not initialize yet!');
+            return;
+        }
+
+        // check if already theres a modal wrapper
+        if( $('#modal-container').length == 0 ){
+            $('body').append( '<button id="modal-button" data-toggle="modal" data-target="#modal-container" style="display:none;">Launch modal</button><div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container-label" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content" style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);"> <div class="modal-header"> <h5 class="modal-title" id="modal-container-label"></h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div><div class="modal-body"> </div></div></div></div>');
+        }
+        modal_open = true;
+        // check if modal elements was created, if not then create it
+        
+        //required materialize
+        $("#modal-container .modal-title").html(title);
+        $("#modal-container .modal-body").html(content);
+        if(footer !== false){
+            $('#modal-container .modal-body').after('<div class="modal-footer">'+footer+'</div>');
+        }
+        $("#modal-button").trigger("click");
+        _runner(dependencies);
+    }
+    // remove all created on show instances when modal is completely hidden
+    $('#modal-container').on('hidden.bs.modal',function(e) {
+         //required materialize
+        $('#modal-container .modal-title').html('');
+        $('#modal-container .modal-body').html('');
+        $('#modal-container .modal-dialog')
+            .removeClass('modal-sm modal-lg')
+            .find('.modal-footer').remove();
+    });
+
+    function j_spinner(status,spinner){
+       if(status==="on"){
+            switch(spinner){
+                case '1' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner1"></div></div>');
+                    break;
+                case '2' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner2"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>');
+                    break;
+                case '3' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner4"><div class="cube1"></div><div class="cube2"></div></div></div>');
+                    break;
+                case '4' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner5"></div></div>');
+                    break;
+                case '5' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner6"><div class="dot1"></div><div class="dot2"></div></div></div>');
+                    break;
+                case '6' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner7"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>');
+                    break;
+                case '7' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner8"><div class="sk-circle1 sk-child"></div><div class="sk-circle2 sk-child"></div><div class="sk-circle3 sk-child"></div><div class="sk-circle4 sk-child"></div><div class="sk-circle5 sk-child"></div><div class="sk-circle6 sk-child"></div><div class="sk-circle7 sk-child"></div><div class="sk-circle8 sk-child"></div><div class="sk-circle9 sk-child"></div><div class="sk-circle10 sk-child"></div><div class="sk-circle11 sk-child"></div><div class="sk-circle12 sk-child"></div></div></div>');
+                    break;
+                case '8' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner9"><div class="sk-cube sk-cube1"></div><div class="sk-cube sk-cube2"></div><div class="sk-cube sk-cube3"></div><div class="sk-cube sk-cube4"></div><div class="sk-cube sk-cube5"></div><div class="sk-cube sk-cube6"></div><div class="sk-cube sk-cube7"></div><div class="sk-cube sk-cube8"></div><div class="sk-cube sk-cube9"></div></div></div>');
+                    break;
+                case '9' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner10"><div class="sk-circle1 sk-circle"></div><div class="sk-circle2 sk-circle"></div><div class="sk-circle3 sk-circle"></div><div class="sk-circle4 sk-circle"></div><div class="sk-circle5 sk-circle"></div><div class="sk-circle6 sk-circle"></div><div class="sk-circle7 sk-circle"></div><div class="sk-circle8 sk-circle"></div><div class="sk-circle9 sk-circle"></div><div class="sk-circle10 sk-circle"></div><div class="sk-circle11 sk-circle"></div><div class="sk-circle12 sk-circle"></div></div></div>');
+                    break;
+                case '10' :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner11"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div></div>');
+                    break;
+                default :
+                    $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner3"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div></div>');
+            }
+            $('#spinner').center().show();
+            $('body').addClass('disabled');
+       }else{
+            $('#spinner').fadeOut(400,function(){
+                $('#spinner').center().remove();
+            });
+            $('#spinner-wrapper').remove();
+            $('body').removeClass('disabled');
+       }
+    }
 
     // J - E Q U A L  C O M P O N E N T
     function m_size(){
@@ -388,9 +454,6 @@ if ('undefined' != typeof window.jQuery ) {
 
     // B O X  S L I D E R
     $(function(){
-        $('.box-slider .slide .item').each(function(){
-            $(this).css('background-image','url('+$(this).find('img').attr('src')+')');
-        });
         $('.box.image-box').each(function(){
 
             if( typeof $(this).attr('data-overlay') != typeof undefined && $(this).attr('data-overlay') != '' ){

@@ -1,0 +1,44 @@
+/* line 1, ../sass/components/menu.scss */
+.j-component {
+  display: table;
+  width: 100%;
+  clear: both;
+  float: none;
+}
+/* line 6, ../sass/components/menu.scss */
+.j-component ul {
+  padding: 0px;
+}
+/* line 9, ../sass/components/menu.scss */
+.j-component ul, .j-component li {
+  list-style: none;
+}
+/* line 12, ../sass/components/menu.scss */
+.j-component a {
+  display: block;
+}
+/* line 15, ../sass/components/menu.scss */
+.j-component .menu-holder > li {
+  float: left;
+}
+/* line 18, ../sass/components/menu.scss */
+.j-component .menu-holder li > .submenu {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  padding: 32px;
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+/* line 25, ../sass/components/menu.scss */
+.j-component .tab-container {
+  clear: both;
+  float: none;
+}
+/* line 28, ../sass/components/menu.scss */
+.j-component .tab-container .tab {
+  display: none;
+}
+/* line 31, ../sass/components/menu.scss */
+.j-component .tab-container .tab.active {
+  display: block;
+}

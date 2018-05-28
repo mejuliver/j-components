@@ -6,7 +6,7 @@
 .line-height-initial{line-height:initial;}
 .disabled{pointer-events:none;}
 
-.display-none{display: none;}
+.display-none,.error{display: none;}
 .display-block{display: block;}
 .extend{max-width: 100%;max-height: 100%;}
 .clear{clear: both; float: none;}

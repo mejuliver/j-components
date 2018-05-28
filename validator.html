@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Validator Component Sample</title>
+	<link rel="stylesheet" href="css/j-components.css">
+</head>
+<body>
+	<form action="">
+		<input type="text" data-type="required">
+		<div class="error" data-type="required">Required</div>
+		<br>
+		<input type="text" data-type="email">
+		<div class="error" data-type="email">Must be an email</div>
+		<br>
+		<input type="text" data-type="numbersonly">
+		<div class="error" data-type="numbersonly">Must be number only</div>
+		<br>
+	</form>
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/validator.js"></script>
+
+	<script>
+		
+		$(function(){
+
+			$('form').validator();
+
+		});
+
+
+		
+	</script>
+</body>
+</html>

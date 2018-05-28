@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Datetimepicker Component Sample</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/j-components.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<br>
+	<br>
+	<input type="text" class="datepicker" placeholder="Select date now...">
+	<br>
+	<strong>With Format</strong>
+	<input type="text" class="datepicker" placeholder="Select date now..." data-format="d-m-Y">
+	<br>
+	<strong>With Future Date where date-future="10" is the number of interation onwards</strong>
+	<input type="text" class="datepicker future" placeholder="Select date now..." data-future="10">
+	<br>
+	<br>
+	<strong>Timepicker</strong>
+	<input type="text" class="timepicker" placeholder="Select time now...">
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/timepicker.js"></script>
+
+	<script>
+		$(function(){
+
+			$('.datepicker').datepicker();
+			$('.timepicker').timepicker();
+
+		});
+		
+	</script>
+</body>
+</html>

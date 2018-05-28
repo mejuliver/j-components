@@ -15,7 +15,7 @@
   .menu-holder > li{
     float:left
   }
-  .menu-holder li > ul{
+  .menu-holder li > .submenu{
     position:absolute;
     z-index:2;
     display:none;

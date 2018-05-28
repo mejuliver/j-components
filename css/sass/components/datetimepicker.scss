@@ -1,0 +1,29 @@
+.j-component[data-type*="datepicker"],.j-component[data-type*="timepicker"]{
+  .sub{
+    position:absolute;
+    padding:10px;
+    box-shadow: 0 10px 40px -6px #e0e0e0;
+    background:#FFF;
+    width:350px;
+    border:1px solid #e0e0e0;
+    display:none;
+    @include media($xs){
+      width:280px;
+    }
+  }
+  select{
+    border:1px solid #ccc;
+    padding:5px;
+    width:100%!important;
+  }
+  button{
+    border:none!important;
+    padding:5px 8px;
+    width:100% !important;
+    backgroud:#ccc;
+    &.select{
+      background:none!important;
+      text-decoration:underline;
+    }
+  }
+}

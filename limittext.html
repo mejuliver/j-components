@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Limittext Component Sample</title>
+</head>
+<body>
+	<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat mi eget mi malesuada, sed lacinia lorem aliquam. Donec ligula orci, tempus consequat ante sed, pulvinar vestibulum nisi. Donec imperdiet blandit sapien a lobortis. Proin ac porta quam. Sed magna libero, dignissim ut ultrices eu, suscipit vitae nisl. Phasellus placerat semper auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus arcu at neque pharetra varius. Pellentesque a purus non augue commodo facilisis.</div>
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/limittext.js"></script>
+
+	<script>
+		
+		$(function(){
+
+			$('div').limittext({
+				crop : 100 
+			});
+
+		});
+
+
+		
+	</script>
+</body>
+</html>

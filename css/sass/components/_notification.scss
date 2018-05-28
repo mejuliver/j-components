@@ -1,0 +1,11 @@
+#toast-notif {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  width: 240px;
+  padding: 8px 15px;
+  position: fixed;
+  top: 50px;
+  color: #FFF;
+  z-index: 9999;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
