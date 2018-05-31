@@ -7,7 +7,7 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
             }, options );
 
 
-        function sendFileToServer(formData,status,upload_url,onsuccess=false)
+        function sendFileToServer(formData,status,upload_url,onsuccess)
         {
             var uploadURL =upload_url; //Upload URL
             var extraData ={}; //Extra Data.

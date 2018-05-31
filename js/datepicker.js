@@ -82,54 +82,54 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
                 years+='</select>';
 
             }
-            $(this).after('<div class="sub"><div class="col-xs-4 mt8 p3">'+months+'</div><div class="col-xs-4 mt8 p3">'+days+'</div><div class="col-xs-4 mt8 p3">'+years+'</div><div class="clear"><div class="col-xs-3 mt8 p3"><button class="current">Today</button></div><div class="col-xs-3 mt8 p3"><button class="select">Select</button></div></div></div>');
+            $(this).after('<div class="datepicker-sub"><div class="col-xs-4 mt8 p3">'+months+'</div><div class="col-xs-4 mt8 p3">'+days+'</div><div class="col-xs-4 mt8 p3">'+years+'</div><div class="clear"><div class="col-xs-3 mt8 p3"><button class="current">Today</button></div><div class="col-xs-3 mt8 p3"><button class="select">Select</button></div></div></div>');
 
 
             $this.on('click',function(){
                 if($(this).val()!==''){
                     var dates = $(this).val().replace(',','').split(' ');
-                    $(this).next('.sub').find('select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
+                    $(this).next('.datepicker-sub').find('select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
                     days_change=dates[1];
-                    $(this).next('.sub').find('select[name="years"] option[value="'+dates[2]+'"]').prop("selected",true).closest("select").trigger("change");
+                    $(this).next('.datepicker-sub').find('select[name="years"] option[value="'+dates[2]+'"]').prop("selected",true).closest("select").trigger("change");
                 }else{
                     days_change=false;
                 }
-                $(this).next('.sub').show();
+                $(this).next('.datepicker-sub').toggle();
             });
 
-            $this.next('.sub').find('.select').on("click",function(e){
+            $this.next('.datepicker-sub').find('.select').on("click",function(e){
                 e.preventDefault();
-                var ff = typeof $(this).closest('.sub').prev('.datepicker').attr('data-format') !== typeof undefined && $(this).closest('.sub').prev('.datepicker').attr('data-format') !== false && $(this).closest('.sub').prev('.datepicker').attr('data-format') !== "" ? $(this).closest('.sub').prev('.datepicker').attr('data-format') : settings.format,
-                    dd = $(this).closest('.sub').find('select[name="months"]').val()+" "+$(this).closest('.sub').find('select[name="days"]').val()+", "+$(this).closest('.sub').find('select[name="years"]').val();
+                var ff = typeof $(this).closest('.datepicker-sub').prev('.datepicker').attr('data-format') !== typeof undefined && $(this).closest('.datepicker-sub').prev('.datepicker').attr('data-format') !== false && $(this).closest('.datepicker-sub').prev('.datepicker').attr('data-format') !== "" ? $(this).closest('.datepicker-sub').prev('.datepicker').attr('data-format') : settings.format,
+                    dd = $(this).closest('.datepicker-sub').find('select[name="months"]').val()+" "+$(this).closest('.datepicker-sub').find('select[name="days"]').val()+", "+$(this).closest('.datepicker-sub').find('select[name="years"]').val();
 
-                $(this).closest('.sub')
+                $(this).closest('.datepicker-sub')
                     .prev(".datepicker")
-                    .val(moment(dd).format(ff)).next('.sub').hide();
+                    .val(moment(dd).format(ff)).next('.datepicker-sub').hide();
             });
 
-            $this.next('.sub').find('.current').on("click",function(e){
+            $this.next('.datepicker-sub').find('.current').on("click",function(e){
                 e.preventDefault();
-                var ff = typeof $(this).closest('.sub').prev('.datepicker').attr('data-format') !== typeof undefined && $(this).closest('.sub').prev('.datepicker').attr('data-format') !== false && $(this).closest('.sub').prev('.datepicker').attr('data-format') !== "" ? $(this).closest('.sub').prev('.datepicker').attr('data-format') : settings.format,
+                var ff = typeof $(this).closest('.datepicker-sub').prev('.datepicker').attr('data-format') !== typeof undefined && $(this).closest('.datepicker-sub').prev('.datepicker').attr('data-format') !== false && $(this).closest('.datepicker-sub').prev('.datepicker').attr('data-format') !== "" ? $(this).closest('.datepicker-sub').prev('.datepicker').attr('data-format') : settings.format,
                     current_date = moment().format('MMMM')+" "+moment().format("D")+", "+moment().format('YYYY');
                 
-                $(this).closest('.sub')
+                $(this).closest('.datepicker-sub')
                     .prev(".datepicker")
                     .val(moment(current_date).format(ff))
-                    .next('.sub').hide();
+                    .next('.datepicker-sub').hide();
             });
             
-            $this.next('.sub').find('select[name="months"],select[name="years"]').on("click",function(){
+            $this.next('.datepicker-sub').find('select[name="months"],select[name="years"]').on("click",function(){
                 if($(this).val()!==""){
                     var days='';
-                    $.each(getDaysArray($(this).closest('.sub').find('select[name="years"]').val(),$(this).closest('.sub').find('select[name="months"] option:selected').attr("data-month")),function(index,value){
+                    $.each(getDaysArray($(this).closest('.datepicker-sub').find('select[name="years"]').val(),$(this).closest('.datepicker-sub').find('select[name="months"] option:selected').attr("data-month")),function(index,value){
                         var dd = "0"+value.toString();
                         days+='<option value="'+dd.slice(-2)+'">'+dd.slice(-2)+'</option>';
                     });
-                    $(this).closest('.sub').find('select[name="days"]').html(days);
+                    $(this).closest('.datepicker-sub').find('select[name="days"]').html(days);
                     if(days_change!==false){
-                        $(this).closest('.sub').find('select[name="days"] option[value="'+days_change+'"]').prop("selected",true).closest("select").trigger("change");
+                        $(this).closest('.datepicker-sub').find('select[name="days"] option[value="'+days_change+'"]').prop("selected",true).closest("select").trigger("change");
                     }else{
-                        $(this).closest('.sub').find('select[name="days"] option:first-child').prop("selected",true).closest("select").trigger("change");
+                        $(this).closest('.datepicker-sub').find('select[name="days"] option:first-child').prop("selected",true).closest("select").trigger("change");
                     }
                 }
             });
@@ -140,12 +140,11 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
     }
 
     $(document).on("mousedown touchstart", function(e) {
-            
-        var dp = $('.sub:visible');
+        var dp = $('.datepicker-datepicker-sub:visible');
         if (!dp.is(e.target) && dp.has(e.target).length === 0) {
-            $('.sub').hide();
+            $('.datepicker-sub').hide();
         }
-    })
+    });
 
 
 }else{

@@ -32,7 +32,7 @@ if ('undefined' != typeof window.jQuery ) {
 
 
     */
-    function get_page(url,before_send=false,after_send=false,onsuccess=false,on_error=false){
+    function get_page(url,before_send,after_send,onsuccess,on_error){
 
         $.ajax({
             url : app_url + '/ajax-page',
@@ -72,7 +72,7 @@ if ('undefined' != typeof window.jQuery ) {
         ----------------------------------------------------
         Material slide
 
-        call : j_notification( contents, auto_hide true|false, mode on|off)
+        call : notification( contents, auto_hide true|false, mode on|off)
 
     */
     function toast_notif(data){
@@ -96,6 +96,7 @@ if ('undefined' != typeof window.jQuery ) {
         checkwidth();
         //on window resize
     });
+
     $(window).resize(function(){
         //run the checkwidth function
         checkwidth();
@@ -114,23 +115,19 @@ if ('undefined' != typeof window.jQuery ) {
     }
 
 
-
     // R A N D O M  S T R I N G
     function random_str() {
       var text = "";
       var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-      for (var i = 0; i < 5; i++)
+      for (var i = 0; i < 5; i++){
         text += possible.charAt(Math.floor(Math.random() * possible.length));
+      }
 
       return text;
     }
 
-     function modal(title, content, dependencies,footer = false){
-        if( typeof $.fn.j_modal != 'undefined' ){
-            console.log('Ohoo! not too fast cowbody! j_modal is not initialize yet!');
-            return;
-        }
+     function modal(title, content, dependencies,footer){
 
         // check if already theres a modal wrapper
         if( $('#modal-container').length == 0 ){
@@ -142,7 +139,7 @@ if ('undefined' != typeof window.jQuery ) {
         //required materialize
         $("#modal-container .modal-title").html(title);
         $("#modal-container .modal-body").html(content);
-        if(footer !== false){
+        if(typeof footer !== typeof undefined && footer !== '' && footer !== false){
             $('#modal-container .modal-body').after('<div class="modal-footer">'+footer+'</div>');
         }
         $("#modal-button").trigger("click");
@@ -158,7 +155,7 @@ if ('undefined' != typeof window.jQuery ) {
             .find('.modal-footer').remove();
     });
 
-    function j_spinner(status,spinner){
+    function spinner(status,spinner){
        if(status==="on"){
             switch(spinner){
                 case '1' :
