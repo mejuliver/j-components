@@ -1,118 +1,160 @@
-if ('undefined' != typeof window.jQuery ) {
-    
-    /* 
-        L O N G  S H A D O W
-    --------------------------------------------------------------------    
-        O P T I O N S
+/* ===========================================================
+ * jquery-flatshadow.js v1
+ * ===========================================================
+ * Copyright 2013 Pete Rojwongsuriya.
+ * http://www.thepetedesign.com
+ *
+ * A small jQuery plugin that will automatically
+ * cast a shadow creating depth for your flat UI elements
+ * https://github.com/peachananr/flat-shadow
+ *
+ *  $('.box.standard').shadow();
+ *  $('.box.lifted').shadow('lifted');
+ *  $('.box.perspective').shadow('perspective');
+ *  $('.box.raised').shadow('raised');
+ *  $('.box.sides-vt-1').shadow({type:'sides',sides:'vt-1'});
+ *  $('.box.sides-vt-2').shadow({type:'sides',sides:'vt-2'});
+ *  $('.box.sides-hz-1').shadow({type:'sides',sides:'hz-1'});
+ *  $('.box.sides-hz-2').shadow({type:'sides',sides:'hz-2'});
+ *  $('.box.rotated').shadow({type:'rotated',rotate:'-5deg'});
+ * ========================================================== */
 
-        1. colorShadow
+!function($){
+  var colors = new Array("#1ABC9C","#2ecc71","#3498db","#9b59b6","#34495e","#f1c40f","#e67e22", "#e74c3c");
+  var angles = new Array("NE","SE","SW", "NW");
 
-            - Type: string
-            - Default: #ccc
-            - Description: Color of text-shadow (HEX, RGB, RGBA)
+  var defaults = {
+    fade: false,
+    color: "random",
+    boxShadow: false,
+    angle: "random"
+  };
 
-        2. sizeShadow
+  function convertHex(hex,opacity){
+      hex = hex.replace('#','');
+      r = parseInt(hex.substring(0,2), 16);
+      g = parseInt(hex.substring(2,4), 16);
+      b = parseInt(hex.substring(4,6), 16);
 
-            - Type: integer
-            - Default: 50
-            - Description: Numbers value of text-shadow
+      result = 'rgba('+r+','+g+','+b+','+opacity/100+')';
+      return result;
+  }
 
-        3. sizeShadow
-
-            - Type: string
-            - Default: bottom-right
-            - Description: Direction of text-shadow. Currently, have 8 direction: top, right, bottom, left, top-right, top-left, bottom-right, bottom-left
-
-
-    */
-
-    (function ($) {
-      'use strict'
-
-      // Name long shadow query plugin and parameters
-      var pluginName = 'longShadow'
-      var defaults = {
-        colorShadow: '#ccc',
-        sizeShadow: 50,
-        directionShadow: '' // Default bottom-right
-      }
-
-      // Long Shadow Plugin
-      function Plugin (element, options) {
-        this.element = element
-
-        this.options = $.extend({}, defaults, options)
-
-        this._defaults = defaults
-        this._name = pluginName
-
-        this._shadow = ''
-
-        this.init()
-      }
-
-      Plugin.prototype = {
-        init: function () {
-          var textshadow = ''
-          var color = this.options.colorShadow
-
-          for (var i = 0, len = this.options.sizeShadow; i < len; i++) {
-            switch (this.options.directionShadow) {
-              case 'top':
-                textshadow += `0 -${i}px 0 ${color},`
-                break
-              case 'right':
-                textshadow += `${i}px 0 0 ${color},`
-                break
-              case 'bottom':
-                textshadow += `0 ${i}px 0 ${color},`
-                break
-              case 'left':
-                textshadow += `-${i}px 0 0 ${color},`
-                break
-              case 'top-left':
-                textshadow += `-${i}px -${i}px 0 ${color},`
-                break
-              case 'top-right':
-                textshadow += `${i}px -${i}px 0 ${color},`
-                break
-              case 'bottom-left':
-                textshadow += `-${i}px ${i}px 0 ${color},`
-                break
-              case 'bottom-right':
-                textshadow += `${i}px ${i}px 0 ${color},`
-                break
-              default:
-                textshadow += `${i}px ${i}px 0 ${color},`
-                break
-            }
-          }
-
-          this._shadow = textshadow.slice(0, -1)
-
-          this.element.style.textShadow = this._shadow
-        }
-      }
-
-      $.fn[pluginName] = function (options) {
-        return this.each(function () {
-          if (!$.data(this, 'plugin_' + pluginName)) {
-            $.data(this, 'plugin_' + pluginName, new Plugin(this, options))
-          }
-        })
-      }
-    })(jQuery);
-
-    function j_shadow(el, shadow_color, shadow_length, shadow_position){
-        //required longshadow js
-        $(el).longShadow({
-            colorShadow: shadow_color,
-            sizeShadow: shadow_length,
-            directionShadow: shadow_position
-        });
+  function colorLuminance(hex, lum) {
+    // validate hex string
+    hex = String(hex).replace(/[^0-9a-f]/gi, '');
+    if (hex.length < 6) {
+      hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
     }
-}else{
+    lum = lum || 0;
+    // convert to decimal and change luminosity
+    var rgb = "#", c, i;
+    for (i = 0; i < 3; i++) {
+      c = parseInt(hex.substr(i*2,2), 16);
+      c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+      rgb += ("00"+c).substr(c.length);
+    }
+    return rgb;
+  }
 
-    console.log('jQuery is required');
+  $.fn.flatshadow = function(options){
+    var settings = $.extend({}, defaults, options);
 
-}
+    return this.each(function(){
+      el = $(this);
+      if (settings.fade == true) {
+        width = Math.round(el.outerWidth() / 3);
+        height = Math.round(el.outerHeight() / 3);
+      } else {
+        width = Math.round(el.outerWidth());
+        height = Math.round(el.outerHeight());
+      }
+
+      if (settings.boxShadow != false) {
+        var bg_color = settings.boxShadow;
+      }
+
+      if (el.attr('data-color')) {
+        var color = el.attr('data-color');
+      } else {
+        var color = settings.color;
+      }
+      if (color == "random") {
+        color = colors[Math.floor(Math.random() * colors.length)];
+
+      }
+
+      if (el.attr('data-angle')) {
+        var angle = el.attr('data-angle');
+      } else {
+        var angle = settings.angle;
+      }
+      if (angle == "random") {
+        angle = angles[Math.floor(Math.random() * angles.length)];
+      }
+
+      var darkercolor = colorLuminance(color, -0.3);
+      var text_shadow = "";
+
+      if (settings.boxShadow != false) {
+        var box_shadow = "";
+      } else {
+        var box_shadow = "none";
+      }
+
+      var iLimit = angle == 'E' ? width : height;
+      var text_color = darkercolor;
+      for( var i=1; i <= iLimit; i++ ) {
+        if (settings.fade != false) {
+          text_color = convertHex( darkercolor, 100 - i/iLimit * 100 );
+        }
+        switch (angle) {
+          case 'N':
+            if (settings.boxShadow != false) box_shadow += "0px " + (i * 2) * -1 + "px 0px " + convertHex( bg_color, (50 - i/ height * 100)  );
+            text_shadow += "0px " + i * -1 + "px 0px " + text_color;
+            break;
+          case 'NE':
+            if (settings.boxShadow != false) box_shadow += i * 2 + "px " + (i * 2) * -1 + "px 0px " + convertHex( bg_color, (50 - i/ height * 100)  );
+            text_shadow += i + "px " + i * -1 + "px 0px " + text_color;
+            break;
+          case 'E':
+            if (settings.boxShadow != false) box_shadow += i * 2 + "px " + "0px 0px " + convertHex( bg_color, (50 - i/ width * 100)  );
+            text_shadow += i + "px " + "0px 0px " + text_color;
+            break;
+          case 'SE':
+            if (settings.boxShadow != false) box_shadow += i * 2 + "px " + i * 2 + "px 0px " + convertHex( bg_color, (50 - i/ height * 100)  );
+            text_shadow += i + "px " + i + "px 0px " + text_color;
+            break;
+          case 'S':
+            if (settings.boxShadow != false) box_shadow += "0px " + i * 2 + "px 0px " + convertHex( bg_color, (50 - i/ height * 100)  );
+            text_shadow += "0px " + i + "px 0px " + text_color;
+            break;
+          case 'SW':
+            if (settings.boxShadow != false) box_shadow += (i * 2) * -1 + "px " + i * 2 + "px 0px " + convertHex( bg_color, (50 - i/ height * 100)  );
+            text_shadow += i * -1 + "px " + i + "px 0px " + text_color;
+            break;
+          case 'W':
+            if (settings.boxShadow != false) box_shadow += (i * 2) * -1 + "px " + "0px 0px " + convertHex( bg_color, (50 - i/ height * 100)  );
+            text_shadow += i * -1 + "px " + "0px 0px " + text_color;
+            break;
+          case 'NW':
+            if (settings.boxShadow != false) box_shadow += (i * 2) * -1 + "px " + (i * 2) * -1 + "px 0px " + convertHex( bg_color, (50 - i/ height * 100)  );
+            text_shadow += i * -1 + "px " + i * -1 + "px 0px " + text_color;
+            break;
+        }
+        if (i != iLimit) {
+           text_shadow += ", ";
+           box_shadow += ", ";
+         }
+      }
+      el.css({
+        "background": color,
+        "color": colorLuminance(color, 1),
+        "text-shadow": text_shadow,
+        "box-shadow": box_shadow
+      });
+    });
+  }
+
+}(window.jQuery);
+

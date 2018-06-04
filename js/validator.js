@@ -18,6 +18,7 @@ if ('undefined' != typeof window.jQuery) {
                 if(!validateEmail($(this).val())){
                     $(this).closest('ui').find('.error[data-type*="email"]').fadeIn();
                     $(this).next('.error[data-type*="email"]').fadeIn();
+                    $(this).closest('.ui').find('.error[data-type*="email"]').fadeIn();
                     $(this).addClass('with-error');
                 }else{
                     $(this).removeClass('with-error');

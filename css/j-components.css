@@ -28645,7 +28645,7 @@ spinner 11
 }
 
 /* line 2, sass/components/_datetimepicker.scss */
-.j-component[data-type*="datepicker"] .datepicker-datepicker-sub, .j-component[data-type*="timepicker"] .datepicker-datepicker-sub {
+.j-component[data-type*="datepicker"] .component-sub, .j-component[data-type*="timepicker"] .component-sub {
   position: absolute;
   padding: 10px;
   box-shadow: 0 10px 40px -6px #e0e0e0;
@@ -28657,7 +28657,7 @@ spinner 11
 }
 @media (max-width: 767px) {
   /* line 2, sass/components/_datetimepicker.scss */
-  .j-component[data-type*="datepicker"] .datepicker-datepicker-sub, .j-component[data-type*="timepicker"] .datepicker-datepicker-sub {
+  .j-component[data-type*="datepicker"] .component-sub, .j-component[data-type*="timepicker"] .component-sub {
     width: 280px;
   }
 }
