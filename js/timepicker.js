@@ -58,33 +58,40 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
             }else{
                 $(this).attr('placeholder',cp);
             }
-            $(this).after('<div class="sub"><div class="col-xs-4 mt8 p3">'+hours+'</div><div class="col-xs-4 mt8 p3">'+minutes+'</div><div class="col-xs-4 mt8 p3">'+am_pm+'</div><div class="clear"><div class="col-xs-3 mt8 p3"><button class="current">Current</button></div><div class="col-xs-3 mt8 p3"><button class="select">Select</button></div></div></div>');
+            $(this).after('<div class="component-sub"><div class="col-xs-4 mt8 p3">'+hours+'</div><div class="col-xs-4 mt8 p3">'+minutes+'</div><div class="col-xs-4 mt8 p3">'+am_pm+'</div><div class="clear"><div class="col-xs-3 mt8 p3"><button class="current">Current</button></div><div class="col-xs-3 mt8 p3"><button class="select">Select</button></div></div></div>');
 
             $(this).on("click",function(){
                 if($(this).val()!==""){
                     var time = $(this).val().replace(':',' ').split(' ');
-                    $(this).next('.sub').find('select[name="hours"]').val(time[0]).trigger("change");
-                    $(this).next('.sub').find('select[name="minutes"]').val(time[1]).trigger("change");
-                    $(this).next('.sub').find('select[name="am_pm"]').val(time[2].toLowerCase()).trigger("change");
+                    $(this).next('.component-sub').find('select[name="hours"]').val(time[0]).trigger("change");
+                    $(this).next('.component-sub').find('select[name="minutes"]').val(time[1]).trigger("change");
+                    $(this).next('.component-sub').find('select[name="am_pm"]').val(time[2].toLowerCase()).trigger("change");
                 }
-                $(this).next('.sub').show();
+                $(this).next('.component-sub').show();
             });
-            $(this).next('.sub').find('.select').on('click',function(e){
+            $(this).next('.component-sub').find('.select').on('click',function(e){
                 e.preventDefault();
                 $(this)
-                    .closest('.sub')
+                    .closest('.component-sub')
                     .prev(".timepicker")
-                    .val($(this).closest('.sub').find('select[name="hours"]').val()+":"+$(this).closest('.sub').find('select[name="minutes"]').val()+" "+$(this).closest('.sub').find('select[name="am_pm"]').val().toUpperCase()).next('.sub').hide();
+                    .val($(this).closest('.component-sub').find('select[name="hours"]').val()+":"+$(this).closest('.component-sub').find('select[name="minutes"]').val()+" "+$(this).closest('.component-sub').find('select[name="am_pm"]').val().toUpperCase()).next('.component-sub').hide();
             });
-            $(this).next('.sub').find('.current').on("click",function(e){
+            $(this).next('.component-sub').find('.current').on("click",function(e){
                 e.preventDefault();
-                $(this).closest('.sub').prev(".timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).next('.sub').hide();
+                $(this).closest('.component-sub').prev(".timepicker").val(moment().format('hh')+":"+moment().format("mm")+" "+moment().format('A')).next('.component-sub').hide();
             });
 
         });
 
 
     }
+
+    $(document).on("mousedown touchstart", function(e) {
+        var dp = $('.component-sub:visible');
+        if (!dp.is(e.target) && dp.has(e.target).length === 0) {
+            $('.component-sub').hide();
+        }
+    });
 
 }else{
 
