@@ -28630,16 +28630,16 @@ spinner 11
   box-shadow: 0 10px 40px -6px #e0e0e0;
 }
 /* line 26, sass/components/_menu.scss */
-.j-component .tab-container {
+.j-component .tab-contents {
   clear: both;
   float: none;
 }
 /* line 29, sass/components/_menu.scss */
-.j-component .tab-container .tab {
+.j-component .tab-contents .tab {
   display: none;
 }
 /* line 32, sass/components/_menu.scss */
-.j-component .tab-container .tab.active {
+.j-component .tab-contents .tab.active {
   display: block;
 }
 
