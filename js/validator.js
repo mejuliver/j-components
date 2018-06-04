@@ -17,10 +17,12 @@ if ('undefined' != typeof window.jQuery) {
 
                 if(!validateEmail($(this).val())){
                     $(this).next('.error[data-type*="email"]').fadeIn();
+                    $(this).closest('.ui').find('.error[data-type*="email"]').fadeIn();
                     $(this).addClass('with-error');
                 }else{
                     $(this).removeClass('with-error');
                     $(this).next('.error[data-type*="email"]').hide();
+                   $(this).closest('.ui').find('.error[data-type*="email"]').hide();
                 }
 
             });
@@ -39,6 +41,7 @@ if ('undefined' != typeof window.jQuery) {
                 // Ensure that it is a number and stop the keypress
                 if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
                     $(this).next('.error[data-type*="numbersonly"]').fadeIn();
+                    $(this).closest('.ui').find('.error[data-type*="numbersonly"]').fadeIn();
                     $(this).addClass('with-error');
                     return false;
                 }else{
@@ -52,10 +55,12 @@ if ('undefined' != typeof window.jQuery) {
            $(this).find('[data-type*="required"]').on('focusout',function (e) {
                 if($(this).val() === ''){
                     $(this).next('.error[data-type*="required"]').fadeIn();
+                   $(this).closest('.ui').find('.error[data-type*="required"]').fadeIn();
                     $(this).addClass('with-error');
                 }else{
                     $(this).removeClass('with-error');
                     $(this).next('.error[data-type*="required"]').hide();
+                    $(this).closest('.ui').find('.error[data-type*="required"]').hide();
                 }
            });
 
