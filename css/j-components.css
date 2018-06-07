@@ -28628,17 +28628,18 @@ spinner 11
   padding: 10px;
   border: 1px solid #e0e0e0;
   box-shadow: 0 10px 40px -6px #e0e0e0;
+  background: #FFF;
 }
-/* line 26, sass/components/_menu.scss */
+/* line 27, sass/components/_menu.scss */
 .j-component .tab-contents {
   clear: both;
   float: none;
 }
-/* line 29, sass/components/_menu.scss */
+/* line 30, sass/components/_menu.scss */
 .j-component .tab-contents .tab {
   display: none;
 }
-/* line 32, sass/components/_menu.scss */
+/* line 33, sass/components/_menu.scss */
 .j-component .tab-contents .tab.active {
   display: block;
 }
