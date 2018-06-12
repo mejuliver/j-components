@@ -25506,3904 +25506,3904 @@
     padding-bottom: 100px;
   }
 }
-/* line 2, sass/components/_font-size.scss */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-1 {
+    font-size: 1px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-1 {
+    font-size: 1px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-1 {
+    font-size: 1px !important;
+  }
+}
+
+/* line 17, sass/components/_font-size.scss */
 .font1 {
   font-size: 1px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-1 {
-    font-size: 1px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-2 {
+    font-size: 2px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-1 {
-    font-size: 1px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-2 {
+    font-size: 2px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-1 {
-    font-size: 1px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-2 {
+    font-size: 2px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font2 {
   font-size: 2px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-2 {
-    font-size: 2px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-3 {
+    font-size: 3px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-2 {
-    font-size: 2px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-3 {
+    font-size: 3px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-2 {
-    font-size: 2px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-3 {
+    font-size: 3px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font3 {
   font-size: 3px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-3 {
-    font-size: 3px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-4 {
+    font-size: 4px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-3 {
-    font-size: 3px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-4 {
+    font-size: 4px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-3 {
-    font-size: 3px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-4 {
+    font-size: 4px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font4 {
   font-size: 4px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-4 {
-    font-size: 4px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-5 {
+    font-size: 5px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-4 {
-    font-size: 4px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-5 {
+    font-size: 5px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-4 {
-    font-size: 4px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-5 {
+    font-size: 5px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font5 {
   font-size: 5px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-5 {
-    font-size: 5px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-6 {
+    font-size: 6px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-5 {
-    font-size: 5px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-6 {
+    font-size: 6px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-5 {
-    font-size: 5px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-6 {
+    font-size: 6px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font6 {
   font-size: 6px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-6 {
-    font-size: 6px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-7 {
+    font-size: 7px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-6 {
-    font-size: 6px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-7 {
+    font-size: 7px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-6 {
-    font-size: 6px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-7 {
+    font-size: 7px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font7 {
   font-size: 7px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-7 {
-    font-size: 7px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-8 {
+    font-size: 8px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-7 {
-    font-size: 7px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-8 {
+    font-size: 8px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-7 {
-    font-size: 7px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-8 {
+    font-size: 8px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font8 {
   font-size: 8px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-8 {
-    font-size: 8px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-9 {
+    font-size: 9px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-8 {
-    font-size: 8px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-9 {
+    font-size: 9px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-8 {
-    font-size: 8px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-9 {
+    font-size: 9px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font9 {
   font-size: 9px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-9 {
-    font-size: 9px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-10 {
+    font-size: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-9 {
-    font-size: 9px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-10 {
+    font-size: 10px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-9 {
-    font-size: 9px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-10 {
+    font-size: 10px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font10 {
   font-size: 10px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-10 {
-    font-size: 10px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-11 {
+    font-size: 11px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-10 {
-    font-size: 10px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-11 {
+    font-size: 11px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-10 {
-    font-size: 10px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-11 {
+    font-size: 11px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font11 {
   font-size: 11px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-11 {
-    font-size: 11px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-12 {
+    font-size: 12px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-11 {
-    font-size: 11px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-12 {
+    font-size: 12px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-11 {
-    font-size: 11px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-12 {
+    font-size: 12px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font12 {
   font-size: 12px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-12 {
-    font-size: 12px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-13 {
+    font-size: 13px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-12 {
-    font-size: 12px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-13 {
+    font-size: 13px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-12 {
-    font-size: 12px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-13 {
+    font-size: 13px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font13, .table-lines th, .table-lines td {
   font-size: 13px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-13 {
-    font-size: 13px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-14 {
+    font-size: 14px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-13 {
-    font-size: 13px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-14 {
+    font-size: 14px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-13 {
-    font-size: 13px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-14 {
+    font-size: 14px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font14 {
   font-size: 14px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-14 {
-    font-size: 14px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-15 {
+    font-size: 15px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-14 {
-    font-size: 14px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-15 {
+    font-size: 15px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-14 {
-    font-size: 14px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-15 {
+    font-size: 15px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font15 {
   font-size: 15px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-15 {
-    font-size: 15px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-16 {
+    font-size: 16px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-15 {
-    font-size: 15px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-16 {
+    font-size: 16px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-15 {
-    font-size: 15px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-16 {
+    font-size: 16px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font16 {
   font-size: 16px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-16 {
-    font-size: 16px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-17 {
+    font-size: 17px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-16 {
-    font-size: 16px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-17 {
+    font-size: 17px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-16 {
-    font-size: 16px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-17 {
+    font-size: 17px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font17 {
   font-size: 17px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-17 {
-    font-size: 17px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-18 {
+    font-size: 18px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-17 {
-    font-size: 17px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-18 {
+    font-size: 18px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-17 {
-    font-size: 17px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-18 {
+    font-size: 18px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font18 {
   font-size: 18px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-18 {
-    font-size: 18px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-19 {
+    font-size: 19px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-18 {
-    font-size: 18px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-19 {
+    font-size: 19px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-18 {
-    font-size: 18px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-19 {
+    font-size: 19px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font19 {
   font-size: 19px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-19 {
-    font-size: 19px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-20 {
+    font-size: 20px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-19 {
-    font-size: 19px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-20 {
+    font-size: 20px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-19 {
-    font-size: 19px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-20 {
+    font-size: 20px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font20 {
   font-size: 20px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-20 {
-    font-size: 20px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-21 {
+    font-size: 21px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-20 {
-    font-size: 20px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-21 {
+    font-size: 21px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-20 {
-    font-size: 20px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-21 {
+    font-size: 21px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font21 {
   font-size: 21px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-21 {
-    font-size: 21px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-22 {
+    font-size: 22px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-21 {
-    font-size: 21px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-22 {
+    font-size: 22px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-21 {
-    font-size: 21px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-22 {
+    font-size: 22px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font22 {
   font-size: 22px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-22 {
-    font-size: 22px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-23 {
+    font-size: 23px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-22 {
-    font-size: 22px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-23 {
+    font-size: 23px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-22 {
-    font-size: 22px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-23 {
+    font-size: 23px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font23 {
   font-size: 23px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-23 {
-    font-size: 23px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-24 {
+    font-size: 24px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-23 {
-    font-size: 23px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-24 {
+    font-size: 24px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-23 {
-    font-size: 23px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-24 {
+    font-size: 24px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font24 {
   font-size: 24px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-24 {
-    font-size: 24px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-25 {
+    font-size: 25px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-24 {
-    font-size: 24px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-25 {
+    font-size: 25px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-24 {
-    font-size: 24px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-25 {
+    font-size: 25px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font25 {
   font-size: 25px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-25 {
-    font-size: 25px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-26 {
+    font-size: 26px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-25 {
-    font-size: 25px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-26 {
+    font-size: 26px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-25 {
-    font-size: 25px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-26 {
+    font-size: 26px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font26 {
   font-size: 26px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-26 {
-    font-size: 26px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-27 {
+    font-size: 27px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-26 {
-    font-size: 26px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-27 {
+    font-size: 27px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-26 {
-    font-size: 26px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-27 {
+    font-size: 27px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font27 {
   font-size: 27px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-27 {
-    font-size: 27px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-28 {
+    font-size: 28px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-27 {
-    font-size: 27px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-28 {
+    font-size: 28px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-27 {
-    font-size: 27px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-28 {
+    font-size: 28px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font28 {
   font-size: 28px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-28 {
-    font-size: 28px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-29 {
+    font-size: 29px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-28 {
-    font-size: 28px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-29 {
+    font-size: 29px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-28 {
-    font-size: 28px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-29 {
+    font-size: 29px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font29 {
   font-size: 29px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-29 {
-    font-size: 29px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-30 {
+    font-size: 30px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-29 {
-    font-size: 29px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-30 {
+    font-size: 30px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-29 {
-    font-size: 29px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-30 {
+    font-size: 30px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font30 {
   font-size: 30px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-30 {
-    font-size: 30px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-31 {
+    font-size: 31px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-30 {
-    font-size: 30px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-31 {
+    font-size: 31px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-30 {
-    font-size: 30px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-31 {
+    font-size: 31px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font31 {
   font-size: 31px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-31 {
-    font-size: 31px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-32 {
+    font-size: 32px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-31 {
-    font-size: 31px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-32 {
+    font-size: 32px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-31 {
-    font-size: 31px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-32 {
+    font-size: 32px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font32 {
   font-size: 32px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-32 {
-    font-size: 32px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-33 {
+    font-size: 33px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-32 {
-    font-size: 32px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-33 {
+    font-size: 33px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-32 {
-    font-size: 32px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-33 {
+    font-size: 33px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font33 {
   font-size: 33px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-33 {
-    font-size: 33px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-34 {
+    font-size: 34px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-33 {
-    font-size: 33px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-34 {
+    font-size: 34px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-33 {
-    font-size: 33px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-34 {
+    font-size: 34px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font34 {
   font-size: 34px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-34 {
-    font-size: 34px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-35 {
+    font-size: 35px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-34 {
-    font-size: 34px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-35 {
+    font-size: 35px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-34 {
-    font-size: 34px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-35 {
+    font-size: 35px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font35 {
   font-size: 35px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-35 {
-    font-size: 35px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-36 {
+    font-size: 36px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-35 {
-    font-size: 35px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-36 {
+    font-size: 36px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-35 {
-    font-size: 35px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-36 {
+    font-size: 36px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font36 {
   font-size: 36px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-36 {
-    font-size: 36px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-37 {
+    font-size: 37px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-36 {
-    font-size: 36px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-37 {
+    font-size: 37px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-36 {
-    font-size: 36px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-37 {
+    font-size: 37px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font37 {
   font-size: 37px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-37 {
-    font-size: 37px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-38 {
+    font-size: 38px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-37 {
-    font-size: 37px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-38 {
+    font-size: 38px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-37 {
-    font-size: 37px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-38 {
+    font-size: 38px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font38 {
   font-size: 38px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-38 {
-    font-size: 38px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-39 {
+    font-size: 39px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-38 {
-    font-size: 38px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-39 {
+    font-size: 39px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-38 {
-    font-size: 38px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-39 {
+    font-size: 39px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font39 {
   font-size: 39px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-39 {
-    font-size: 39px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-40 {
+    font-size: 40px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-39 {
-    font-size: 39px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-40 {
+    font-size: 40px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-39 {
-    font-size: 39px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-40 {
+    font-size: 40px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font40 {
   font-size: 40px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-40 {
-    font-size: 40px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-41 {
+    font-size: 41px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-40 {
-    font-size: 40px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-41 {
+    font-size: 41px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-40 {
-    font-size: 40px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-41 {
+    font-size: 41px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font41 {
   font-size: 41px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-41 {
-    font-size: 41px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-42 {
+    font-size: 42px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-41 {
-    font-size: 41px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-42 {
+    font-size: 42px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-41 {
-    font-size: 41px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-42 {
+    font-size: 42px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font42 {
   font-size: 42px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-42 {
-    font-size: 42px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-43 {
+    font-size: 43px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-42 {
-    font-size: 42px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-43 {
+    font-size: 43px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-42 {
-    font-size: 42px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-43 {
+    font-size: 43px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font43 {
   font-size: 43px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-43 {
-    font-size: 43px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-44 {
+    font-size: 44px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-43 {
-    font-size: 43px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-44 {
+    font-size: 44px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-43 {
-    font-size: 43px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-44 {
+    font-size: 44px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font44 {
   font-size: 44px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-44 {
-    font-size: 44px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-45 {
+    font-size: 45px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-44 {
-    font-size: 44px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-45 {
+    font-size: 45px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-44 {
-    font-size: 44px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-45 {
+    font-size: 45px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font45 {
   font-size: 45px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-45 {
-    font-size: 45px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-46 {
+    font-size: 46px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-45 {
-    font-size: 45px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-46 {
+    font-size: 46px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-45 {
-    font-size: 45px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-46 {
+    font-size: 46px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font46 {
   font-size: 46px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-46 {
-    font-size: 46px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-47 {
+    font-size: 47px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-46 {
-    font-size: 46px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-47 {
+    font-size: 47px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-46 {
-    font-size: 46px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-47 {
+    font-size: 47px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font47 {
   font-size: 47px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-47 {
-    font-size: 47px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-48 {
+    font-size: 48px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-47 {
-    font-size: 47px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-48 {
+    font-size: 48px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-47 {
-    font-size: 47px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-48 {
+    font-size: 48px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font48 {
   font-size: 48px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-48 {
-    font-size: 48px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-49 {
+    font-size: 49px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-48 {
-    font-size: 48px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-49 {
+    font-size: 49px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-48 {
-    font-size: 48px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-49 {
+    font-size: 49px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font49 {
   font-size: 49px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-49 {
-    font-size: 49px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-50 {
+    font-size: 50px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-49 {
-    font-size: 49px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-50 {
+    font-size: 50px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-49 {
-    font-size: 49px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-50 {
+    font-size: 50px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font50 {
   font-size: 50px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-50 {
-    font-size: 50px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-51 {
+    font-size: 51px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-50 {
-    font-size: 50px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-51 {
+    font-size: 51px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-50 {
-    font-size: 50px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-51 {
+    font-size: 51px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font51 {
   font-size: 51px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-51 {
-    font-size: 51px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-52 {
+    font-size: 52px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-51 {
-    font-size: 51px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-52 {
+    font-size: 52px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-51 {
-    font-size: 51px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-52 {
+    font-size: 52px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font52 {
   font-size: 52px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-52 {
-    font-size: 52px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-53 {
+    font-size: 53px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-52 {
-    font-size: 52px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-53 {
+    font-size: 53px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-52 {
-    font-size: 52px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-53 {
+    font-size: 53px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font53 {
   font-size: 53px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-53 {
-    font-size: 53px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-54 {
+    font-size: 54px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-53 {
-    font-size: 53px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-54 {
+    font-size: 54px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-53 {
-    font-size: 53px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-54 {
+    font-size: 54px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font54 {
   font-size: 54px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-54 {
-    font-size: 54px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-55 {
+    font-size: 55px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-54 {
-    font-size: 54px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-55 {
+    font-size: 55px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-54 {
-    font-size: 54px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-55 {
+    font-size: 55px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font55 {
   font-size: 55px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-55 {
-    font-size: 55px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-56 {
+    font-size: 56px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-55 {
-    font-size: 55px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-56 {
+    font-size: 56px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-55 {
-    font-size: 55px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-56 {
+    font-size: 56px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font56 {
   font-size: 56px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-56 {
-    font-size: 56px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-57 {
+    font-size: 57px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-56 {
-    font-size: 56px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-57 {
+    font-size: 57px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-56 {
-    font-size: 56px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-57 {
+    font-size: 57px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font57 {
   font-size: 57px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-57 {
-    font-size: 57px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-58 {
+    font-size: 58px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-57 {
-    font-size: 57px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-58 {
+    font-size: 58px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-57 {
-    font-size: 57px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-58 {
+    font-size: 58px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font58 {
   font-size: 58px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-58 {
-    font-size: 58px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-59 {
+    font-size: 59px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-58 {
-    font-size: 58px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-59 {
+    font-size: 59px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-58 {
-    font-size: 58px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-59 {
+    font-size: 59px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font59 {
   font-size: 59px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-59 {
-    font-size: 59px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-60 {
+    font-size: 60px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-59 {
-    font-size: 59px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-60 {
+    font-size: 60px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-59 {
-    font-size: 59px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-60 {
+    font-size: 60px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font60 {
   font-size: 60px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-60 {
-    font-size: 60px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-61 {
+    font-size: 61px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-60 {
-    font-size: 60px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-61 {
+    font-size: 61px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-60 {
-    font-size: 60px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-61 {
+    font-size: 61px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font61 {
   font-size: 61px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-61 {
-    font-size: 61px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-62 {
+    font-size: 62px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-61 {
-    font-size: 61px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-62 {
+    font-size: 62px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-61 {
-    font-size: 61px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-62 {
+    font-size: 62px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font62 {
   font-size: 62px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-62 {
-    font-size: 62px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-63 {
+    font-size: 63px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-62 {
-    font-size: 62px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-63 {
+    font-size: 63px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-62 {
-    font-size: 62px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-63 {
+    font-size: 63px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font63 {
   font-size: 63px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-63 {
-    font-size: 63px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-64 {
+    font-size: 64px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-63 {
-    font-size: 63px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-64 {
+    font-size: 64px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-63 {
-    font-size: 63px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-64 {
+    font-size: 64px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font64 {
   font-size: 64px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-64 {
-    font-size: 64px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-65 {
+    font-size: 65px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-64 {
-    font-size: 64px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-65 {
+    font-size: 65px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-64 {
-    font-size: 64px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-65 {
+    font-size: 65px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font65 {
   font-size: 65px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-65 {
-    font-size: 65px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-66 {
+    font-size: 66px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-65 {
-    font-size: 65px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-66 {
+    font-size: 66px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-65 {
-    font-size: 65px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-66 {
+    font-size: 66px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font66 {
   font-size: 66px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-66 {
-    font-size: 66px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-67 {
+    font-size: 67px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-66 {
-    font-size: 66px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-67 {
+    font-size: 67px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-66 {
-    font-size: 66px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-67 {
+    font-size: 67px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font67 {
   font-size: 67px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-67 {
-    font-size: 67px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-68 {
+    font-size: 68px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-67 {
-    font-size: 67px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-68 {
+    font-size: 68px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-67 {
-    font-size: 67px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-68 {
+    font-size: 68px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font68 {
   font-size: 68px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-68 {
-    font-size: 68px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-69 {
+    font-size: 69px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-68 {
-    font-size: 68px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-69 {
+    font-size: 69px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-68 {
-    font-size: 68px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-69 {
+    font-size: 69px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font69 {
   font-size: 69px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-69 {
-    font-size: 69px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-70 {
+    font-size: 70px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-69 {
-    font-size: 69px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-70 {
+    font-size: 70px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-69 {
-    font-size: 69px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-70 {
+    font-size: 70px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font70 {
   font-size: 70px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-70 {
-    font-size: 70px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-71 {
+    font-size: 71px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-70 {
-    font-size: 70px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-71 {
+    font-size: 71px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-70 {
-    font-size: 70px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-71 {
+    font-size: 71px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font71 {
   font-size: 71px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-71 {
-    font-size: 71px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-72 {
+    font-size: 72px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-71 {
-    font-size: 71px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-72 {
+    font-size: 72px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-71 {
-    font-size: 71px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-72 {
+    font-size: 72px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font72 {
   font-size: 72px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-72 {
-    font-size: 72px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-73 {
+    font-size: 73px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-72 {
-    font-size: 72px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-73 {
+    font-size: 73px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-72 {
-    font-size: 72px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-73 {
+    font-size: 73px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font73 {
   font-size: 73px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-73 {
-    font-size: 73px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-74 {
+    font-size: 74px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-73 {
-    font-size: 73px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-74 {
+    font-size: 74px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-73 {
-    font-size: 73px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-74 {
+    font-size: 74px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font74 {
   font-size: 74px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-74 {
-    font-size: 74px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-75 {
+    font-size: 75px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-74 {
-    font-size: 74px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-75 {
+    font-size: 75px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-74 {
-    font-size: 74px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-75 {
+    font-size: 75px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font75 {
   font-size: 75px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-75 {
-    font-size: 75px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-76 {
+    font-size: 76px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-75 {
-    font-size: 75px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-76 {
+    font-size: 76px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-75 {
-    font-size: 75px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-76 {
+    font-size: 76px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font76 {
   font-size: 76px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-76 {
-    font-size: 76px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-77 {
+    font-size: 77px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-76 {
-    font-size: 76px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-77 {
+    font-size: 77px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-76 {
-    font-size: 76px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-77 {
+    font-size: 77px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font77 {
   font-size: 77px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-77 {
-    font-size: 77px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-78 {
+    font-size: 78px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-77 {
-    font-size: 77px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-78 {
+    font-size: 78px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-77 {
-    font-size: 77px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-78 {
+    font-size: 78px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font78 {
   font-size: 78px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-78 {
-    font-size: 78px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-79 {
+    font-size: 79px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-78 {
-    font-size: 78px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-79 {
+    font-size: 79px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-78 {
-    font-size: 78px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-79 {
+    font-size: 79px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font79 {
   font-size: 79px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-79 {
-    font-size: 79px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-80 {
+    font-size: 80px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-79 {
-    font-size: 79px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-80 {
+    font-size: 80px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-79 {
-    font-size: 79px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-80 {
+    font-size: 80px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font80 {
   font-size: 80px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-80 {
-    font-size: 80px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-81 {
+    font-size: 81px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-80 {
-    font-size: 80px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-81 {
+    font-size: 81px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-80 {
-    font-size: 80px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-81 {
+    font-size: 81px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font81 {
   font-size: 81px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-81 {
-    font-size: 81px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-82 {
+    font-size: 82px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-81 {
-    font-size: 81px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-82 {
+    font-size: 82px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-81 {
-    font-size: 81px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-82 {
+    font-size: 82px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font82 {
   font-size: 82px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-82 {
-    font-size: 82px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-83 {
+    font-size: 83px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-82 {
-    font-size: 82px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-83 {
+    font-size: 83px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-82 {
-    font-size: 82px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-83 {
+    font-size: 83px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font83 {
   font-size: 83px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-83 {
-    font-size: 83px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-84 {
+    font-size: 84px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-83 {
-    font-size: 83px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-84 {
+    font-size: 84px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-83 {
-    font-size: 83px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-84 {
+    font-size: 84px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font84 {
   font-size: 84px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-84 {
-    font-size: 84px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-85 {
+    font-size: 85px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-84 {
-    font-size: 84px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-85 {
+    font-size: 85px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-84 {
-    font-size: 84px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-85 {
+    font-size: 85px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font85 {
   font-size: 85px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-85 {
-    font-size: 85px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-86 {
+    font-size: 86px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-85 {
-    font-size: 85px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-86 {
+    font-size: 86px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-85 {
-    font-size: 85px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-86 {
+    font-size: 86px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font86 {
   font-size: 86px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-86 {
-    font-size: 86px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-87 {
+    font-size: 87px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-86 {
-    font-size: 86px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-87 {
+    font-size: 87px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-86 {
-    font-size: 86px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-87 {
+    font-size: 87px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font87 {
   font-size: 87px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-87 {
-    font-size: 87px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-88 {
+    font-size: 88px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-87 {
-    font-size: 87px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-88 {
+    font-size: 88px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-87 {
-    font-size: 87px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-88 {
+    font-size: 88px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font88 {
   font-size: 88px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-88 {
-    font-size: 88px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-89 {
+    font-size: 89px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-88 {
-    font-size: 88px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-89 {
+    font-size: 89px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-88 {
-    font-size: 88px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-89 {
+    font-size: 89px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font89 {
   font-size: 89px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-89 {
-    font-size: 89px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-90 {
+    font-size: 90px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-89 {
-    font-size: 89px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-90 {
+    font-size: 90px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-89 {
-    font-size: 89px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-90 {
+    font-size: 90px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font90 {
   font-size: 90px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-90 {
-    font-size: 90px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-91 {
+    font-size: 91px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-90 {
-    font-size: 90px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-91 {
+    font-size: 91px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-90 {
-    font-size: 90px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-91 {
+    font-size: 91px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font91 {
   font-size: 91px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-91 {
-    font-size: 91px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-92 {
+    font-size: 92px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-91 {
-    font-size: 91px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-92 {
+    font-size: 92px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-91 {
-    font-size: 91px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-92 {
+    font-size: 92px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font92 {
   font-size: 92px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-92 {
-    font-size: 92px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-93 {
+    font-size: 93px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-92 {
-    font-size: 92px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-93 {
+    font-size: 93px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-92 {
-    font-size: 92px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-93 {
+    font-size: 93px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font93 {
   font-size: 93px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-93 {
-    font-size: 93px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-94 {
+    font-size: 94px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-93 {
-    font-size: 93px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-94 {
+    font-size: 94px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-93 {
-    font-size: 93px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-94 {
+    font-size: 94px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font94 {
   font-size: 94px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-94 {
-    font-size: 94px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-95 {
+    font-size: 95px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-94 {
-    font-size: 94px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-95 {
+    font-size: 95px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-94 {
-    font-size: 94px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-95 {
+    font-size: 95px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font95 {
   font-size: 95px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-95 {
-    font-size: 95px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-96 {
+    font-size: 96px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-95 {
-    font-size: 95px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-96 {
+    font-size: 96px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-95 {
-    font-size: 95px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-96 {
+    font-size: 96px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font96 {
   font-size: 96px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-96 {
-    font-size: 96px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-97 {
+    font-size: 97px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-96 {
-    font-size: 96px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-97 {
+    font-size: 97px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-96 {
-    font-size: 96px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-97 {
+    font-size: 97px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font97 {
   font-size: 97px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-97 {
-    font-size: 97px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-98 {
+    font-size: 98px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-97 {
-    font-size: 97px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-98 {
+    font-size: 98px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-97 {
-    font-size: 97px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-98 {
+    font-size: 98px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font98 {
   font-size: 98px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-98 {
-    font-size: 98px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-99 {
+    font-size: 99px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-98 {
-    font-size: 98px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-99 {
+    font-size: 99px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-98 {
-    font-size: 98px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-99 {
+    font-size: 99px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font99 {
   font-size: 99px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-99 {
-    font-size: 99px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-100 {
+    font-size: 100px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-99 {
-    font-size: 99px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-100 {
+    font-size: 100px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-99 {
-    font-size: 99px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-100 {
+    font-size: 100px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font100 {
   font-size: 100px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-100 {
-    font-size: 100px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-101 {
+    font-size: 101px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-100 {
-    font-size: 100px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-101 {
+    font-size: 101px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-100 {
-    font-size: 100px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-101 {
+    font-size: 101px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font101 {
   font-size: 101px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-101 {
-    font-size: 101px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-102 {
+    font-size: 102px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-101 {
-    font-size: 101px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-102 {
+    font-size: 102px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-101 {
-    font-size: 101px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-102 {
+    font-size: 102px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font102 {
   font-size: 102px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-102 {
-    font-size: 102px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-103 {
+    font-size: 103px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-102 {
-    font-size: 102px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-103 {
+    font-size: 103px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-102 {
-    font-size: 102px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-103 {
+    font-size: 103px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font103 {
   font-size: 103px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-103 {
-    font-size: 103px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-104 {
+    font-size: 104px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-103 {
-    font-size: 103px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-104 {
+    font-size: 104px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-103 {
-    font-size: 103px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-104 {
+    font-size: 104px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font104 {
   font-size: 104px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-104 {
-    font-size: 104px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-105 {
+    font-size: 105px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-104 {
-    font-size: 104px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-105 {
+    font-size: 105px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-104 {
-    font-size: 104px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-105 {
+    font-size: 105px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font105 {
   font-size: 105px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-105 {
-    font-size: 105px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-106 {
+    font-size: 106px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-105 {
-    font-size: 105px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-106 {
+    font-size: 106px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-105 {
-    font-size: 105px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-106 {
+    font-size: 106px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font106 {
   font-size: 106px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-106 {
-    font-size: 106px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-107 {
+    font-size: 107px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-106 {
-    font-size: 106px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-107 {
+    font-size: 107px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-106 {
-    font-size: 106px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-107 {
+    font-size: 107px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font107 {
   font-size: 107px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-107 {
-    font-size: 107px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-108 {
+    font-size: 108px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-107 {
-    font-size: 107px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-108 {
+    font-size: 108px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-107 {
-    font-size: 107px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-108 {
+    font-size: 108px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font108 {
   font-size: 108px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-108 {
-    font-size: 108px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-109 {
+    font-size: 109px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-108 {
-    font-size: 108px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-109 {
+    font-size: 109px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-108 {
-    font-size: 108px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-109 {
+    font-size: 109px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font109 {
   font-size: 109px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-109 {
-    font-size: 109px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-110 {
+    font-size: 110px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-109 {
-    font-size: 109px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-110 {
+    font-size: 110px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-109 {
-    font-size: 109px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-110 {
+    font-size: 110px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font110 {
   font-size: 110px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-110 {
-    font-size: 110px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-111 {
+    font-size: 111px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-110 {
-    font-size: 110px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-111 {
+    font-size: 111px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-110 {
-    font-size: 110px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-111 {
+    font-size: 111px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font111 {
   font-size: 111px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-111 {
-    font-size: 111px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-112 {
+    font-size: 112px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-111 {
-    font-size: 111px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-112 {
+    font-size: 112px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-111 {
-    font-size: 111px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-112 {
+    font-size: 112px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font112 {
   font-size: 112px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-112 {
-    font-size: 112px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-113 {
+    font-size: 113px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-112 {
-    font-size: 112px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-113 {
+    font-size: 113px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-112 {
-    font-size: 112px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-113 {
+    font-size: 113px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font113 {
   font-size: 113px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-113 {
-    font-size: 113px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-114 {
+    font-size: 114px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-113 {
-    font-size: 113px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-114 {
+    font-size: 114px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-113 {
-    font-size: 113px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-114 {
+    font-size: 114px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font114 {
   font-size: 114px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-114 {
-    font-size: 114px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-115 {
+    font-size: 115px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-114 {
-    font-size: 114px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-115 {
+    font-size: 115px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-114 {
-    font-size: 114px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-115 {
+    font-size: 115px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font115 {
   font-size: 115px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-115 {
-    font-size: 115px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-116 {
+    font-size: 116px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-115 {
-    font-size: 115px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-116 {
+    font-size: 116px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-115 {
-    font-size: 115px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-116 {
+    font-size: 116px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font116 {
   font-size: 116px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-116 {
-    font-size: 116px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-117 {
+    font-size: 117px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-116 {
-    font-size: 116px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-117 {
+    font-size: 117px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-116 {
-    font-size: 116px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-117 {
+    font-size: 117px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font117 {
   font-size: 117px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-117 {
-    font-size: 117px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-118 {
+    font-size: 118px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-117 {
-    font-size: 117px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-118 {
+    font-size: 118px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-117 {
-    font-size: 117px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-118 {
+    font-size: 118px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font118 {
   font-size: 118px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-118 {
-    font-size: 118px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-119 {
+    font-size: 119px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-118 {
-    font-size: 118px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-119 {
+    font-size: 119px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-118 {
-    font-size: 118px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-119 {
+    font-size: 119px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font119 {
   font-size: 119px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-119 {
-    font-size: 119px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-120 {
+    font-size: 120px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-119 {
-    font-size: 119px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-120 {
+    font-size: 120px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-119 {
-    font-size: 119px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-120 {
+    font-size: 120px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font120 {
   font-size: 120px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-120 {
-    font-size: 120px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-121 {
+    font-size: 121px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-120 {
-    font-size: 120px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-121 {
+    font-size: 121px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-120 {
-    font-size: 120px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-121 {
+    font-size: 121px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font121 {
   font-size: 121px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-121 {
-    font-size: 121px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-122 {
+    font-size: 122px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-121 {
-    font-size: 121px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-122 {
+    font-size: 122px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-121 {
-    font-size: 121px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-122 {
+    font-size: 122px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font122 {
   font-size: 122px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-122 {
-    font-size: 122px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-123 {
+    font-size: 123px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-122 {
-    font-size: 122px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-123 {
+    font-size: 123px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-122 {
-    font-size: 122px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-123 {
+    font-size: 123px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font123 {
   font-size: 123px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-123 {
-    font-size: 123px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-124 {
+    font-size: 124px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-123 {
-    font-size: 123px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-124 {
+    font-size: 124px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-123 {
-    font-size: 123px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-124 {
+    font-size: 124px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font124 {
   font-size: 124px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-124 {
-    font-size: 124px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-125 {
+    font-size: 125px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-124 {
-    font-size: 124px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-125 {
+    font-size: 125px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-124 {
-    font-size: 124px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-125 {
+    font-size: 125px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font125 {
   font-size: 125px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-125 {
-    font-size: 125px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-126 {
+    font-size: 126px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-125 {
-    font-size: 125px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-126 {
+    font-size: 126px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-125 {
-    font-size: 125px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-126 {
+    font-size: 126px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font126 {
   font-size: 126px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-126 {
-    font-size: 126px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-127 {
+    font-size: 127px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-126 {
-    font-size: 126px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-127 {
+    font-size: 127px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-126 {
-    font-size: 126px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-127 {
+    font-size: 127px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font127 {
   font-size: 127px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-127 {
-    font-size: 127px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-128 {
+    font-size: 128px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-127 {
-    font-size: 127px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-128 {
+    font-size: 128px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-127 {
-    font-size: 127px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-128 {
+    font-size: 128px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font128 {
   font-size: 128px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-128 {
-    font-size: 128px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-129 {
+    font-size: 129px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-128 {
-    font-size: 128px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-129 {
+    font-size: 129px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-128 {
-    font-size: 128px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-129 {
+    font-size: 129px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font129 {
   font-size: 129px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-129 {
-    font-size: 129px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-130 {
+    font-size: 130px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-129 {
-    font-size: 129px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-130 {
+    font-size: 130px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-129 {
-    font-size: 129px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-130 {
+    font-size: 130px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font130 {
   font-size: 130px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-130 {
-    font-size: 130px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-131 {
+    font-size: 131px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-130 {
-    font-size: 130px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-131 {
+    font-size: 131px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-130 {
-    font-size: 130px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-131 {
+    font-size: 131px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font131 {
   font-size: 131px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-131 {
-    font-size: 131px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-132 {
+    font-size: 132px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-131 {
-    font-size: 131px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-132 {
+    font-size: 132px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-131 {
-    font-size: 131px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-132 {
+    font-size: 132px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font132 {
   font-size: 132px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-132 {
-    font-size: 132px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-133 {
+    font-size: 133px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-132 {
-    font-size: 132px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-133 {
+    font-size: 133px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-132 {
-    font-size: 132px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-133 {
+    font-size: 133px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font133 {
   font-size: 133px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-133 {
-    font-size: 133px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-134 {
+    font-size: 134px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-133 {
-    font-size: 133px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-134 {
+    font-size: 134px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-133 {
-    font-size: 133px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-134 {
+    font-size: 134px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font134 {
   font-size: 134px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-134 {
-    font-size: 134px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-135 {
+    font-size: 135px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-134 {
-    font-size: 134px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-135 {
+    font-size: 135px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-134 {
-    font-size: 134px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-135 {
+    font-size: 135px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font135 {
   font-size: 135px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-135 {
-    font-size: 135px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-136 {
+    font-size: 136px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-135 {
-    font-size: 135px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-136 {
+    font-size: 136px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-135 {
-    font-size: 135px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-136 {
+    font-size: 136px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font136 {
   font-size: 136px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-136 {
-    font-size: 136px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-137 {
+    font-size: 137px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-136 {
-    font-size: 136px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-137 {
+    font-size: 137px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-136 {
-    font-size: 136px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-137 {
+    font-size: 137px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font137 {
   font-size: 137px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-137 {
-    font-size: 137px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-138 {
+    font-size: 138px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-137 {
-    font-size: 137px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-138 {
+    font-size: 138px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-137 {
-    font-size: 137px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-138 {
+    font-size: 138px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font138 {
   font-size: 138px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-138 {
-    font-size: 138px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-139 {
+    font-size: 139px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-138 {
-    font-size: 138px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-139 {
+    font-size: 139px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-138 {
-    font-size: 138px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-139 {
+    font-size: 139px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font139 {
   font-size: 139px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-139 {
-    font-size: 139px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-140 {
+    font-size: 140px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-139 {
-    font-size: 139px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-140 {
+    font-size: 140px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-139 {
-    font-size: 139px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-140 {
+    font-size: 140px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font140 {
   font-size: 140px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-140 {
-    font-size: 140px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-141 {
+    font-size: 141px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-140 {
-    font-size: 140px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-141 {
+    font-size: 141px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-140 {
-    font-size: 140px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-141 {
+    font-size: 141px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font141 {
   font-size: 141px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-141 {
-    font-size: 141px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-142 {
+    font-size: 142px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-141 {
-    font-size: 141px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-142 {
+    font-size: 142px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-141 {
-    font-size: 141px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-142 {
+    font-size: 142px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font142 {
   font-size: 142px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-142 {
-    font-size: 142px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-143 {
+    font-size: 143px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-142 {
-    font-size: 142px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-143 {
+    font-size: 143px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-142 {
-    font-size: 142px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-143 {
+    font-size: 143px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font143 {
   font-size: 143px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-143 {
-    font-size: 143px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-144 {
+    font-size: 144px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-143 {
-    font-size: 143px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-144 {
+    font-size: 144px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-143 {
-    font-size: 143px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-144 {
+    font-size: 144px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font144 {
   font-size: 144px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-144 {
-    font-size: 144px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-145 {
+    font-size: 145px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-144 {
-    font-size: 144px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-145 {
+    font-size: 145px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-144 {
-    font-size: 144px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-145 {
+    font-size: 145px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font145 {
   font-size: 145px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-145 {
-    font-size: 145px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-146 {
+    font-size: 146px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-145 {
-    font-size: 145px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-146 {
+    font-size: 146px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-145 {
-    font-size: 145px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-146 {
+    font-size: 146px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font146 {
   font-size: 146px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-146 {
-    font-size: 146px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-147 {
+    font-size: 147px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-146 {
-    font-size: 146px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-147 {
+    font-size: 147px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-146 {
-    font-size: 146px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-147 {
+    font-size: 147px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font147 {
   font-size: 147px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-147 {
-    font-size: 147px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-148 {
+    font-size: 148px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-147 {
-    font-size: 147px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-148 {
+    font-size: 148px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-147 {
-    font-size: 147px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-148 {
+    font-size: 148px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font148 {
   font-size: 148px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-148 {
-    font-size: 148px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-149 {
+    font-size: 149px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-148 {
-    font-size: 148px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-149 {
+    font-size: 149px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-148 {
-    font-size: 148px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-149 {
+    font-size: 149px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font149 {
   font-size: 149px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-149 {
-    font-size: 149px;
+  /* line 2, sass/components/_font-size.scss */
+  .font-md-150 {
+    font-size: 150px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-149 {
-    font-size: 149px;
+  /* line 7, sass/components/_font-size.scss */
+  .font-sm-150 {
+    font-size: 150px !important;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-149 {
-    font-size: 149px;
+  /* line 12, sass/components/_font-size.scss */
+  .font-xs-150 {
+    font-size: 150px !important;
   }
 }
 
-/* line 2, sass/components/_font-size.scss */
+/* line 17, sass/components/_font-size.scss */
 .font150 {
   font-size: 150px;
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 3, sass/components/_font-size.scss */
-  .font-md-150 {
-    font-size: 150px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 8, sass/components/_font-size.scss */
-  .font-sm-150 {
-    font-size: 150px;
-  }
-}
-
-@media (max-width: 767px) {
-  /* line 13, sass/components/_font-size.scss */
-  .font-xs-150 {
-    font-size: 150px;
-  }
 }
 
 /* line 21, sass/components/_font-size.scss */
@@ -31455,7 +31455,6 @@ spinner 11
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover !important;
   width: 100%;
   background-position: center center !important;
   -webkit-transition: all 200ms ease-in-out;
@@ -31464,11 +31463,11 @@ spinner 11
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-/* line 14, sass/components/_box-img.scss */
+/* line 13, sass/components/_box-img.scss */
 .box.image-box * {
   color: #FFF;
 }
-/* line 17, sass/components/_box-img.scss */
+/* line 16, sass/components/_box-img.scss */
 .box.image-box img.background-image {
   display: none;
 }

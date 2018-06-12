@@ -1,20 +1,20 @@
 @for $i from 1 through 150{
-	.font#{$i} { font-size: #{$i}px;}
 	.font-md-#{$i} {
 		@include media($md...){
-			font-size: #{$i}px;
+			font-size: #{$i}px !important;
 		}
 	}
 	.font-sm-#{$i} {
 		@include media($sm...){
-			font-size: #{$i}px;
+			font-size: #{$i}px !important;
 		}
 	}
 	.font-xs-#{$i} {
 		@include media($xs){
-			font-size: #{$i}px;
+			font-size: #{$i}px !important;
 		}
 	}
+	.font#{$i} { font-size: #{$i}px;}
 }
 $font_weight : (300,400,500,600,700,800,900);
 @each $fw in $font-weight{
