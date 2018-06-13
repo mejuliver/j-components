@@ -143,7 +143,9 @@ if ('undefined' != typeof window.jQuery ) {
             $('#modal-container .modal-body').after('<div class="modal-footer">'+footer+'</div>');
         }
         $("#modal-button").trigger("click");
-        _runner(dependencies);
+        if(typeof dependencies !== typeof undefined && dependencies !== '' && dependencies !== false){
+            _runner(dependencies);
+        }
     }
     // remove all created on show instances when modal is completely hidden
     $('#modal-container').on('hidden.bs.modal',function(e) {
