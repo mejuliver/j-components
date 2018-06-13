@@ -193,11 +193,10 @@ if ('undefined' != typeof window.jQuery ) {
                 default :
                     $("body").append('<div style="position:fixed;z-index:9998;background:rgba(255,255,255,0.5);width:100%;height:100vh;top:0px;right:0px;" id="spinner-wrapper"></div><div class=" display-table animated zoomIn" style="position:fixed;z-index:9999;-webkit-animation-duration: 450ms;animation-duration: 450ms;" id="spinner"><div class="spinner3"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div></div>');
             }
-            $('#spinner').center().show();
             $('#spinner').css({
                 "top" : ( $(window).height() - $('#spinner').height() ) / 2  + "px",
                 "left" : ( $(window).width() - $('#spinner').width() ) / 2 + "px"
-            });
+            }).show();
             $('body').addClass('disabled');
        }else{
             $('#spinner').fadeOut(400,function(){
