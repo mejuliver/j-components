@@ -75,8 +75,8 @@ if ('undefined' != typeof window.jQuery ) {
         call : notification( contents, auto_hide true|false, mode on|off)
 
     */
-    function toast_notif(data){
-        $('#toast-notif').html(msg);
+    function toast_notif(e){
+        $('#toast-notif').html(e);
 
         if( !$('#toast-notif').is(':visible') ){
             $('#toast-notif').show();
