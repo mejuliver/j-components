@@ -30474,7 +30474,7 @@ T A B L E
 }
 
 /* line 1, sass/components/_spinner.scss */
-.spinner3 {
+.spinner {
   margin: 0px auto;
   width: 50px;
   height: 40px;
@@ -30483,8 +30483,8 @@ T A B L E
 }
 
 /* line 9, sass/components/_spinner.scss */
-.spinner3 > div {
-  background-color: #0099FF;
+.spinner > div {
+  background-color: #FFF;
   height: 40px;
   margin: 0px 1px;
   width: 6px;
@@ -30494,25 +30494,25 @@ T A B L E
 }
 
 /* line 20, sass/components/_spinner.scss */
-.spinner3 .rect2 {
+.spinner .rect2 {
   -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
 }
 
 /* line 25, sass/components/_spinner.scss */
-.spinner3 .rect3 {
+.spinner .rect3 {
   -webkit-animation-delay: -1.0s;
   animation-delay: -1.0s;
 }
 
 /* line 30, sass/components/_spinner.scss */
-.spinner3 .rect4 {
+.spinner .rect4 {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
 
 /* line 35, sass/components/_spinner.scss */
-.spinner3 .rect5 {
+.spinner .rect5 {
   -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
 }
@@ -30535,17 +30535,94 @@ T A B L E
     -webkit-transform: scaleY(1);
   }
 }
-/* line 55, sass/components/_spinner.scss */
-.spinner4 {
+/* line 57, sass/components/_spinner.scss */
+.spinner1 {
+  width: 40px;
+  height: 40px;
+  background-color: #FFF;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/* line 86, sass/components/_spinner.scss */
+.spinner2 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+/* line 90, sass/components/_spinner.scss */
+.spinner2 .double-bounce1, .spinner2 .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #FFF;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+/* line 103, sass/components/_spinner.scss */
+.spinner2 .double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* line 128, sass/components/_spinner.scss */
+.spinner3 {
   margin: 0px auto;
   width: 40px;
   height: 40px;
   position: relative;
 }
 
-/* line 62, sass/components/_spinner.scss */
-.spinner4 .cube1, .spinner4 .cube2 {
-  background-color: #0099FF;
+/* line 136, sass/components/_spinner.scss */
+.spinner3 .cube1, .spinner3 .cube2 {
+  background-color: #FFF;
   width: 15px;
   height: 15px;
   position: absolute;
@@ -30554,9 +30631,8 @@ T A B L E
   -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
   animation: sk-cubemove 1.8s infinite ease-in-out;
 }
-
-/* line 74, sass/components/_spinner.scss */
-.spinner4 .cube2 {
+/* line 147, sass/components/_spinner.scss */
+.spinner3 .cube2 {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
@@ -30598,16 +30674,16 @@ T A B L E
   }
 }
 /*
-spinner 5
+spinner 4
 
-<div class="spinner5"></div>
+<div class="spinner4"></div>
 */
-/* line 110, sass/components/_spinner.scss */
-.spinner5 {
+/* line 185, sass/components/_spinner.scss */
+.spinner4 {
   width: 40px;
   height: 40px;
   margin: 0px auto;
-  background-color: #0099FF;
+  background-color: #FFF;
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
   animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -30634,15 +30710,15 @@ spinner 5
   }
 }
 /*
-spinner 6
+spinner 5
 
-<div class="spinner6">
+<div class="spinner5">
   <div class="dot1"></div>
   <div class="dot2"></div>
 </div>
 */
-/* line 148, sass/components/_spinner.scss */
-.spinner6 {
+/* line 223, sass/components/_spinner.scss */
+.spinner5 {
   margin: 0px auto;
   width: 40px;
   height: 40px;
@@ -30651,22 +30727,20 @@ spinner 6
   -webkit-animation: sk-rotate 2.0s infinite linear;
   animation: sk-rotate 2.0s infinite linear;
 }
-
-/* line 159, sass/components/_spinner.scss */
-.spinner6 .dot1, .spinner6 .dot2 {
+/* line 233, sass/components/_spinner.scss */
+.spinner5 .dot1, .spinner5 .dot2 {
   width: 60%;
   height: 60%;
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #0099FF;
+  background-color: #FFF;
   border-radius: 100%;
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
   animation: sk-bounce 2.0s infinite ease-in-out;
 }
-
-/* line 172, sass/components/_spinner.scss */
-.spinner6 .dot2 {
+/* line 245, sass/components/_spinner.scss */
+.spinner5 .dot2 {
   top: auto;
   bottom: 0;
   -webkit-animation-delay: -1.0s;
@@ -30703,40 +30777,37 @@ spinner 6
   }
 }
 /*
-spinner 7
+spinner 6
 
-<div class="spinner7">
+<div class="spinner6">
   <div class="bounce1"></div>
   <div class="bounce2"></div>
   <div class="bounce3"></div>
 </div>
 */
-/* line 206, sass/components/_spinner.scss */
-.spinner7 {
+/* line 282, sass/components/_spinner.scss */
+.spinner6 {
   margin: 0px auto 0;
   width: 70px;
   text-align: center;
 }
-
-/* line 212, sass/components/_spinner.scss */
-.spinner7 > div {
+/* line 286, sass/components/_spinner.scss */
+.spinner6 > div {
   width: 18px;
   height: 18px;
-  background-color: #0099FF;
+  background-color: #FFF;
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
-
-/* line 223, sass/components/_spinner.scss */
-.spinner7 .bounce1 {
+/* line 296, sass/components/_spinner.scss */
+.spinner6 .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-
-/* line 228, sass/components/_spinner.scss */
-.spinner7 .bounce2 {
+/* line 300, sass/components/_spinner.scss */
+.spinner6 .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
@@ -30760,9 +30831,9 @@ spinner 7
   }
 }
 /*
-spinner 8
+spinner 7
 
-<div class="spinner8">
+<div class="spinner7">
   <div class="sk-circle1 sk-child"></div>
   <div class="sk-circle2 sk-child"></div>
   <div class="sk-circle3 sk-child"></div>
@@ -30777,175 +30848,151 @@ spinner 8
   <div class="sk-circle12 sk-child"></div>
 </div>
 */
-/* line 266, sass/components/_spinner.scss */
-.spinner8 {
+/* line 340, sass/components/_spinner.scss */
+.spinner7 {
   margin: 0px auto;
   width: 40px;
   height: 40px;
   position: relative;
 }
-
-/* line 272, sass/components/_spinner.scss */
-.spinner8 .sk-child {
+/* line 345, sass/components/_spinner.scss */
+.spinner7 .sk-child {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
-
-/* line 279, sass/components/_spinner.scss */
-.spinner8 .sk-child:before {
+/* line 351, sass/components/_spinner.scss */
+.spinner7 .sk-child:before {
   content: '';
   display: block;
   margin: 0 auto;
   width: 15%;
   height: 15%;
-  background-color: #0099FF;
+  background-color: #FFF;
   border-radius: 100%;
   -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
   animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
 }
-
-/* line 290, sass/components/_spinner.scss */
-.spinner8 .sk-circle2 {
+/* line 363, sass/components/_spinner.scss */
+.spinner7 .sk-circle2 {
   -webkit-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-
-/* line 294, sass/components/_spinner.scss */
-.spinner8 .sk-circle3 {
+/* line 367, sass/components/_spinner.scss */
+.spinner7 .sk-circle2:before {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+/* line 372, sass/components/_spinner.scss */
+.spinner7 .sk-circle3 {
   -webkit-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   transform: rotate(60deg);
 }
-
-/* line 298, sass/components/_spinner.scss */
-.spinner8 .sk-circle4 {
+/* line 376, sass/components/_spinner.scss */
+.spinner7 .sk-circle3:before {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+/* line 381, sass/components/_spinner.scss */
+.spinner7 .sk-circle4 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-
-/* line 302, sass/components/_spinner.scss */
-.spinner8 .sk-circle5 {
+/* line 385, sass/components/_spinner.scss */
+.spinner7 .sk-circle4:before {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+/* line 390, sass/components/_spinner.scss */
+.spinner7 .sk-circle5 {
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   transform: rotate(120deg);
 }
-
-/* line 306, sass/components/_spinner.scss */
-.spinner8 .sk-circle6 {
+/* line 394, sass/components/_spinner.scss */
+.spinner7 .sk-circle5:before {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+/* line 399, sass/components/_spinner.scss */
+.spinner7 .sk-circle6 {
   -webkit-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   transform: rotate(150deg);
 }
-
-/* line 310, sass/components/_spinner.scss */
-.spinner8 .sk-circle7 {
+/* line 403, sass/components/_spinner.scss */
+.spinner7 .sk-circle6:before {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+/* line 408, sass/components/_spinner.scss */
+.spinner7 .sk-circle7 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
-/* line 314, sass/components/_spinner.scss */
-.spinner8 .sk-circle8 {
+/* line 412, sass/components/_spinner.scss */
+.spinner7 .sk-circle7:before {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+/* line 417, sass/components/_spinner.scss */
+.spinner7 .sk-circle8 {
   -webkit-transform: rotate(210deg);
   -ms-transform: rotate(210deg);
   transform: rotate(210deg);
 }
-
-/* line 318, sass/components/_spinner.scss */
-.spinner8 .sk-circle9 {
+/* line 421, sass/components/_spinner.scss */
+.spinner7 .sk-circle8:before {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+/* line 426, sass/components/_spinner.scss */
+.spinner7 .sk-circle9 {
   -webkit-transform: rotate(240deg);
   -ms-transform: rotate(240deg);
   transform: rotate(240deg);
 }
-
-/* line 322, sass/components/_spinner.scss */
-.spinner8 .sk-circle10 {
+/* line 430, sass/components/_spinner.scss */
+.spinner7 .sk-circle9:before {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+/* line 435, sass/components/_spinner.scss */
+.spinner7 .sk-circle10 {
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-
-/* line 326, sass/components/_spinner.scss */
-.spinner8 .sk-circle11 {
+/* line 439, sass/components/_spinner.scss */
+.spinner7 .sk-circle10:before {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+/* line 444, sass/components/_spinner.scss */
+.spinner7 .sk-circle11 {
   -webkit-transform: rotate(300deg);
   -ms-transform: rotate(300deg);
   transform: rotate(300deg);
 }
-
-/* line 330, sass/components/_spinner.scss */
-.spinner8 .sk-circle12 {
+/* line 448, sass/components/_spinner.scss */
+.spinner7 .sk-circle11:before {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+/* line 453, sass/components/_spinner.scss */
+.spinner7 .sk-circle12 {
   -webkit-transform: rotate(330deg);
   -ms-transform: rotate(330deg);
   transform: rotate(330deg);
 }
-
-/* line 334, sass/components/_spinner.scss */
-.spinner8 .sk-circle2:before {
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
-}
-
-/* line 337, sass/components/_spinner.scss */
-.spinner8 .sk-circle3:before {
-  -webkit-animation-delay: -1s;
-  animation-delay: -1s;
-}
-
-/* line 340, sass/components/_spinner.scss */
-.spinner8 .sk-circle4:before {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
-
-/* line 343, sass/components/_spinner.scss */
-.spinner8 .sk-circle5:before {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-}
-
-/* line 346, sass/components/_spinner.scss */
-.spinner8 .sk-circle6:before {
-  -webkit-animation-delay: -0.7s;
-  animation-delay: -0.7s;
-}
-
-/* line 349, sass/components/_spinner.scss */
-.spinner8 .sk-circle7:before {
-  -webkit-animation-delay: -0.6s;
-  animation-delay: -0.6s;
-}
-
-/* line 352, sass/components/_spinner.scss */
-.spinner8 .sk-circle8:before {
-  -webkit-animation-delay: -0.5s;
-  animation-delay: -0.5s;
-}
-
-/* line 355, sass/components/_spinner.scss */
-.spinner8 .sk-circle9:before {
-  -webkit-animation-delay: -0.4s;
-  animation-delay: -0.4s;
-}
-
-/* line 358, sass/components/_spinner.scss */
-.spinner8 .sk-circle10:before {
-  -webkit-animation-delay: -0.3s;
-  animation-delay: -0.3s;
-}
-
-/* line 361, sass/components/_spinner.scss */
-.spinner8 .sk-circle11:before {
-  -webkit-animation-delay: -0.2s;
-  animation-delay: -0.2s;
-}
-
-/* line 364, sass/components/_spinner.scss */
-.spinner8 .sk-circle12:before {
+/* line 457, sass/components/_spinner.scss */
+.spinner7 .sk-circle12:before {
   -webkit-animation-delay: -0.1s;
   animation-delay: -0.1s;
 }
@@ -30971,9 +31018,9 @@ spinner 8
   }
 }
 /*
-spinner 9
+spinner 8
 
-<div class="spinner9">
+<div class="spinner8">
   <div class="sk-cube sk-cube1"></div>
   <div class="sk-cube sk-cube2"></div>
   <div class="sk-cube sk-cube3"></div>
@@ -30985,73 +31032,63 @@ spinner 9
   <div class="sk-cube sk-cube9"></div>
 </div>
 */
-/* line 403, sass/components/_spinner.scss */
-.spinner9 {
+/* line 500, sass/components/_spinner.scss */
+.spinner8 {
   width: 40px;
   height: 40px;
   margin: 0px auto;
 }
-
-/* line 409, sass/components/_spinner.scss */
-.spinner9 .sk-cube {
+/* line 504, sass/components/_spinner.scss */
+.spinner8 .sk-cube {
   width: 33%;
   height: 33%;
-  background-color: #0099FF;
+  background-color: #FFF;
   float: left;
   -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
   animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
 }
-
-/* line 417, sass/components/_spinner.scss */
-.spinner9 .sk-cube1 {
+/* line 512, sass/components/_spinner.scss */
+.spinner8 .sk-cube1 {
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-
-/* line 420, sass/components/_spinner.scss */
-.spinner9 .sk-cube2 {
+/* line 516, sass/components/_spinner.scss */
+.spinner8 .sk-cube2 {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-
-/* line 423, sass/components/_spinner.scss */
-.spinner9 .sk-cube3 {
+/* line 520, sass/components/_spinner.scss */
+.spinner8 .sk-cube3 {
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-
-/* line 426, sass/components/_spinner.scss */
-.spinner9 .sk-cube4 {
+/* line 524, sass/components/_spinner.scss */
+.spinner8 .sk-cube4 {
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
-
-/* line 429, sass/components/_spinner.scss */
-.spinner9 .sk-cube5 {
+/* line 528, sass/components/_spinner.scss */
+.spinner8 .sk-cube5 {
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-
-/* line 432, sass/components/_spinner.scss */
-.spinner9 .sk-cube6 {
+/* line 532, sass/components/_spinner.scss */
+.spinner8 .sk-cube6 {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-
-/* line 435, sass/components/_spinner.scss */
-.spinner9 .sk-cube7 {
+/* line 536, sass/components/_spinner.scss */
+.spinner8 .sk-cube7 {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
-
-/* line 438, sass/components/_spinner.scss */
-.spinner9 .sk-cube8 {
+/* line 540, sass/components/_spinner.scss */
+.spinner8 .sk-cube8 {
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
-
-/* line 441, sass/components/_spinner.scss */
-.spinner9 .sk-cube9 {
+/* line 544, sass/components/_spinner.scss */
+.spinner8 .sk-cube9 {
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
@@ -31077,9 +31114,9 @@ spinner 9
   }
 }
 /*
-spinner 10
+spinner 9
 
-<div class="spinner10">
+<div class="spinner9">
   <div class="sk-circle1 sk-circle"></div>
   <div class="sk-circle2 sk-circle"></div>
   <div class="sk-circle3 sk-circle"></div>
@@ -31094,175 +31131,151 @@ spinner 10
   <div class="sk-circle12 sk-circle"></div>
 </div>
 */
-/* line 483, sass/components/_spinner.scss */
-.spinner10 {
+/* line 590, sass/components/_spinner.scss */
+.spinner9 {
   margin: 0px auto;
   width: 40px;
   height: 40px;
   position: relative;
 }
-
-/* line 490, sass/components/_spinner.scss */
-.spinner10 .sk-circle {
+/* line 595, sass/components/_spinner.scss */
+.spinner9 .sk-circle {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
-
-/* line 498, sass/components/_spinner.scss */
-.spinner10 .sk-circle:before {
+/* line 602, sass/components/_spinner.scss */
+.spinner9 .sk-circle:before {
   content: '';
   display: block;
   margin: 0 auto;
   width: 15%;
   height: 15%;
-  background-color: #0099FF;
+  background-color: #FFF;
   border-radius: 100%;
   -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
   animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
 }
-
-/* line 509, sass/components/_spinner.scss */
-.spinner10 .sk-circle2 {
+/* line 613, sass/components/_spinner.scss */
+.spinner9 .sk-circle2 {
   -webkit-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-
-/* line 514, sass/components/_spinner.scss */
-.spinner10 .sk-circle3 {
+/* line 618, sass/components/_spinner.scss */
+.spinner9 .sk-circle3 {
   -webkit-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   transform: rotate(60deg);
 }
-
-/* line 519, sass/components/_spinner.scss */
-.spinner10 .sk-circle4 {
+/* line 623, sass/components/_spinner.scss */
+.spinner9 .sk-circle4 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-
-/* line 524, sass/components/_spinner.scss */
-.spinner10 .sk-circle5 {
+/* line 628, sass/components/_spinner.scss */
+.spinner9 .sk-circle5 {
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   transform: rotate(120deg);
 }
-
-/* line 529, sass/components/_spinner.scss */
-.spinner10 .sk-circle6 {
+/* line 633, sass/components/_spinner.scss */
+.spinner9 .sk-circle6 {
   -webkit-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   transform: rotate(150deg);
 }
-
-/* line 534, sass/components/_spinner.scss */
-.spinner10 .sk-circle7 {
+/* line 638, sass/components/_spinner.scss */
+.spinner9 .sk-circle7 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
-/* line 539, sass/components/_spinner.scss */
-.spinner10 .sk-circle8 {
+/* line 643, sass/components/_spinner.scss */
+.spinner9 .sk-circle8 {
   -webkit-transform: rotate(210deg);
   -ms-transform: rotate(210deg);
   transform: rotate(210deg);
 }
-
-/* line 544, sass/components/_spinner.scss */
-.spinner10 .sk-circle9 {
+/* line 648, sass/components/_spinner.scss */
+.spinner9 .sk-circle9 {
   -webkit-transform: rotate(240deg);
   -ms-transform: rotate(240deg);
   transform: rotate(240deg);
 }
-
-/* line 549, sass/components/_spinner.scss */
-.spinner10 .sk-circle10 {
+/* line 653, sass/components/_spinner.scss */
+.spinner9 .sk-circle10 {
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-
-/* line 554, sass/components/_spinner.scss */
-.spinner10 .sk-circle11 {
+/* line 658, sass/components/_spinner.scss */
+.spinner9 .sk-circle11 {
   -webkit-transform: rotate(300deg);
   -ms-transform: rotate(300deg);
   transform: rotate(300deg);
 }
-
-/* line 559, sass/components/_spinner.scss */
-.spinner10 .sk-circle12 {
+/* line 663, sass/components/_spinner.scss */
+.spinner9 .sk-circle12 {
   -webkit-transform: rotate(330deg);
   -ms-transform: rotate(330deg);
   transform: rotate(330deg);
 }
-
-/* line 564, sass/components/_spinner.scss */
-.spinner10 .sk-circle2:before {
+/* line 668, sass/components/_spinner.scss */
+.spinner9 .sk-circle2:before {
   -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
 }
-
-/* line 568, sass/components/_spinner.scss */
-.spinner10 .sk-circle3:before {
+/* line 672, sass/components/_spinner.scss */
+.spinner9 .sk-circle3:before {
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
 }
-
-/* line 572, sass/components/_spinner.scss */
-.spinner10 .sk-circle4:before {
+/* line 676, sass/components/_spinner.scss */
+.spinner9 .sk-circle4:before {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
 }
-
-/* line 576, sass/components/_spinner.scss */
-.spinner10 .sk-circle5:before {
+/* line 680, sass/components/_spinner.scss */
+.spinner9 .sk-circle5:before {
   -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
 }
-
-/* line 580, sass/components/_spinner.scss */
-.spinner10 .sk-circle6:before {
+/* line 684, sass/components/_spinner.scss */
+.spinner9 .sk-circle6:before {
   -webkit-animation-delay: -0.7s;
   animation-delay: -0.7s;
 }
-
-/* line 584, sass/components/_spinner.scss */
-.spinner10 .sk-circle7:before {
+/* line 688, sass/components/_spinner.scss */
+.spinner9 .sk-circle7:before {
   -webkit-animation-delay: -0.6s;
   animation-delay: -0.6s;
 }
-
-/* line 588, sass/components/_spinner.scss */
-.spinner10 .sk-circle8:before {
+/* line 692, sass/components/_spinner.scss */
+.spinner9 .sk-circle8:before {
   -webkit-animation-delay: -0.5s;
   animation-delay: -0.5s;
 }
-
-/* line 592, sass/components/_spinner.scss */
-.spinner10 .sk-circle9:before {
+/* line 696, sass/components/_spinner.scss */
+.spinner9 .sk-circle9:before {
   -webkit-animation-delay: -0.4s;
   animation-delay: -0.4s;
 }
-
-/* line 596, sass/components/_spinner.scss */
-.spinner10 .sk-circle10:before {
+/* line 700, sass/components/_spinner.scss */
+.spinner9 .sk-circle10:before {
   -webkit-animation-delay: -0.3s;
   animation-delay: -0.3s;
 }
-
-/* line 600, sass/components/_spinner.scss */
-.spinner10 .sk-circle11:before {
+/* line 704, sass/components/_spinner.scss */
+.spinner9 .sk-circle11:before {
   -webkit-animation-delay: -0.2s;
   animation-delay: -0.2s;
 }
-
-/* line 604, sass/components/_spinner.scss */
-.spinner10 .sk-circle12:before {
+/* line 708, sass/components/_spinner.scss */
+.spinner9 .sk-circle12:before {
   -webkit-animation-delay: -0.1s;
   animation-delay: -0.1s;
 }
@@ -31284,7 +31297,7 @@ spinner 10
   }
 }
 /*
-spinner 11
+spinner 10
 
 <div class="spinner11">
   <div class="sk-cube1 sk-cube"></div>
@@ -31293,8 +31306,8 @@ spinner 11
   <div class="sk-cube3 sk-cube"></div>
 </div>
 */
-/* line 629, sass/components/_spinner.scss */
-.spinner11 {
+/* line 734, sass/components/_spinner.scss */
+.spinner10 {
   margin: 0px auto;
   width: 40px;
   height: 40px;
@@ -31302,9 +31315,8 @@ spinner 11
   -webkit-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
 }
-
-/* line 638, sass/components/_spinner.scss */
-.spinner11 .sk-cube {
+/* line 742, sass/components/_spinner.scss */
+.spinner10 .sk-cube {
   float: left;
   width: 50%;
   height: 50%;
@@ -31313,55 +31325,48 @@ spinner 11
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-
-/* line 647, sass/components/_spinner.scss */
-.spinner11 .sk-cube:before {
+/* line 751, sass/components/_spinner.scss */
+.spinner10 .sk-cube:before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0099FF;
+  background-color: #FFF;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
   animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
-
-/* line 661, sass/components/_spinner.scss */
-.spinner11 .sk-cube2 {
+/* line 765, sass/components/_spinner.scss */
+.spinner10 .sk-cube2 {
   -webkit-transform: scale(1.1) rotateZ(90deg);
   transform: scale(1.1) rotateZ(90deg);
 }
-
-/* line 665, sass/components/_spinner.scss */
-.spinner11 .sk-cube3 {
+/* line 769, sass/components/_spinner.scss */
+.spinner10 .sk-cube3 {
   -webkit-transform: scale(1.1) rotateZ(180deg);
   transform: scale(1.1) rotateZ(180deg);
 }
-
-/* line 669, sass/components/_spinner.scss */
-.spinner11 .sk-cube4 {
+/* line 773, sass/components/_spinner.scss */
+.spinner10 .sk-cube4 {
   -webkit-transform: scale(1.1) rotateZ(270deg);
   transform: scale(1.1) rotateZ(270deg);
 }
-
-/* line 673, sass/components/_spinner.scss */
-.spinner11 .sk-cube2:before {
+/* line 777, sass/components/_spinner.scss */
+.spinner10 .sk-cube2:before {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-
-/* line 677, sass/components/_spinner.scss */
-.spinner11 .sk-cube3:before {
+/* line 781, sass/components/_spinner.scss */
+.spinner10 .sk-cube3:before {
   -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-
-/* line 681, sass/components/_spinner.scss */
-.spinner11 .sk-cube4:before {
+/* line 785, sass/components/_spinner.scss */
+.spinner10 .sk-cube4:before {
   -webkit-animation-delay: 0.9s;
   animation-delay: 0.9s;
 }
