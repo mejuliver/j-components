@@ -7,7 +7,7 @@
 }
 
 .spinner > div {
-  background-color: #FFF;
+  background-color: #0099FF;
   height: 40px;
   margin: 0px 1px;
   width: 6px;
@@ -57,7 +57,7 @@
 .spinner1 {
   width: 40px;
   height: 40px;
-  background-color: #FFF;
+  background-color: #0099FF;
 
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
@@ -91,7 +91,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #FFF;
+    background-color: #0099FF;
     opacity: 0.6;
     position: absolute;
     top: 0;
@@ -134,7 +134,7 @@
 
 .spinner3{
   .cube1, .cube2 {
-    background-color: #FFF;
+    background-color: #0099FF;
     width: 15px;
     height: 15px;
     position: absolute;
@@ -186,7 +186,7 @@ spinner 4
   width: 40px;
   height: 40px;
   margin: 0px auto;
-  background-color: #FFF;
+  background-color: #0099FF;
 
   border-radius: 100%;  
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -236,7 +236,7 @@ spinner 5
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: #FFF;
+    background-color: #0099FF;
     border-radius: 100%;
     
     -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
@@ -286,7 +286,7 @@ spinner 6
   > div {
     width: 18px;
     height: 18px;
-    background-color: #FFF;
+    background-color: #0099FF;
 
     border-radius: 100%;
     display: inline-block;
@@ -354,7 +354,7 @@ spinner 7
       margin: 0 auto;
       width: 15%;
       height: 15%;
-      background-color: #FFF;
+      background-color: #0099FF;
       border-radius: 100%;
       -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
               animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
@@ -504,7 +504,7 @@ spinner 8
   .sk-cube {
     width: 33%;
     height: 33%;
-    background-color: #FFF;
+    background-color: #0099FF;
     float: left;
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
             animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
@@ -605,7 +605,7 @@ spinner 9
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: #FFF;
+    background-color: #0099FF;
     border-radius: 100%;
     -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
             animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
@@ -755,7 +755,7 @@ spinner 10
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFF;
+    background-color: #0099FF;
     -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
             animation: sk-foldCubeAngle 2.4s infinite linear both;
     -webkit-transform-origin: 100% 100%;

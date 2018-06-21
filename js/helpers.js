@@ -76,6 +76,10 @@ if ('undefined' != typeof window.jQuery ) {
 
     */
     function toast_notif(e){
+
+        if( $('#toast-notif').length == 0 ){
+            $('body').append('<div id="toast-notif"></div>');
+        }
         $('#toast-notif').html(e);
 
         if( !$('#toast-notif').is(':visible') ){
