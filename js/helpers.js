@@ -76,22 +76,27 @@ if ('undefined' != typeof window.jQuery ) {
 
     */
     function toast_notif(e){
-
         if( $('#toast-notif').length == 0 ){
             $('body').append('<div id="toast-notif"></div>');
         }
         $('#toast-notif').html(e);
 
-        if( !$('#toast-notif').is(':visible') ){
-            $('#toast-notif').show();
-        }
         // center taost
         $('#toast-notif').css("left", ( $(window).width() - $('#toast-notif').width() ) / 2 + "px");
 
-
-        setTimeout(function(){
-            $('#toast-notif').hide();
+        var $timer = setTimeout(function(){
+            if( !$('#toast-notif').hasClass('.active')){
+                $('#toast-notif').removeClass('active').hide();
+            }
+            
         }, 5000);
+
+        if( !$('#toast-notif').is(':visible') ){
+            $('#toast-notif').show();
+        }else{
+            $('#toast-notif').addClass('active');
+            clearTimeout($timer);
+        }
     }   
 
     $(window).on('load', function(){
@@ -115,7 +120,7 @@ if ('undefined' != typeof window.jQuery ) {
         $(".fixed-parent").each(function(){
              $(this).css({ 'height' : $(this).find(".fixed-child:first-child").innerHeight() + 'px' });
         });
-        m_size();
+        j_equal();
     }
 
 
@@ -212,7 +217,7 @@ if ('undefined' != typeof window.jQuery ) {
     }
 
     // J - E Q U A L  C O M P O N E N T
-    function m_size(){
+    function j_equal(){
 
         $('.j-equal').css( 'height' , 'auto' );
         
