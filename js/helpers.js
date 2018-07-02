@@ -501,7 +501,7 @@ if ('undefined' != typeof window.jQuery ) {
     $(function(){
         $('.content-loader').each(function(){
             $(this).css('height',$(this).attr('data-height')+'px');
-            $(this).html('<div class="spinner3"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
+            $(this).html('<div class="spinner11"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
         });
 
     });
