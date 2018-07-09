@@ -2,13 +2,100 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/j-components.min.css">
 	<title>Helper Component Sample</title>
+	
 </head>
 <body>
-
+	<div class="container">	
+		<div class="row">	
+			<div class="col-sm-12 p1">
+				<div class="box image-box auto-height cover no-hover">	
+					<img src="https://picsum.photos/400/400/?random" class="background-image">
+					<div class="content">
+						<h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+						<p class="text-center">consectetur adipiscing elit. Vivamus sollicitudin erat</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-5 p1">
+				<div class="box image-box auto-height cover no-hover" data-on-hover="test_in" data-off-hover="test_out">	
+					<img src="https://picsum.photos/400/400/?random" class="background-image">
+					<div class="content" style="display:none;">
+						<h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+						<p class="text-center">consectetur adipiscing elit. Vivamus sollicitudin erat</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-7 p1">
+				<div class="box image-box auto-height cover" data-on-hover="test_in" data-off-hover="test_out">	
+					<img src="https://picsum.photos/400/400/?random" class="background-image">
+					<div class="content" style="display:none;">
+						<h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+						<p class="text-center">consectetur adipiscing elit. Vivamus sollicitudin erat</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8 p1">
+				<div class="box image-box auto-height cover no-hover" data-on-hover="test_in" data-off-hover="test_out">	
+					<img src="https://picsum.photos/400/400/?random" class="background-image">
+					<div class="content" style="display:none;">
+						<h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+						<p class="text-center">consectetur adipiscing elit. Vivamus sollicitudin erat</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 p1">
+				<div class="box image-box auto-height cover no-hover" data-on-hover="test_in" data-off-hover="test_out">	
+					<img src="https://picsum.photos/400/400/?random" class="background-image">
+					<div class="content" style="display:none;">
+						<h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+						<p class="text-center">consectetur adipiscing elit. Vivamus sollicitudin erat</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 p1">
+				<div class="box image-box auto-height cover" data-on-hover="test_in" data-off-hover="test_out">	
+					<img src="https://picsum.photos/400/400/?random" class="background-image">
+					<div class="content" style="display:none;">
+						<h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+						<p class="text-center">consectetur adipiscing elit. Vivamus sollicitudin erat</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 p1">
+				<div class="box image-box auto-height cover no-hover" data-on-hover="test_in" data-off-hover="test_out">	
+					<img src="https://picsum.photos/400/400/?random" class="background-image">
+					<div class="content" style="display:none;">
+						<h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+						<p class="text-center">consectetur adipiscing elit. Vivamus sollicitudin erat</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-5 p1">
+				<div class="box image-box auto-height cover no-hover" data-on-hover="test_in" data-off-hover="test_out">	
+					<img src="https://picsum.photos/400/400/?random" class="background-image">
+					<div class="content" style="display:none;">
+						<h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+						<p class="text-center">consectetur adipiscing elit. Vivamus sollicitudin erat</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/helpers.js"></script>
+	<script src="js/helpers.min.js"></script>
+	<script>	
+		function test_in(e){
+
+			e.find('.content').fadeIn(200);
+
+		}
+		function test_out(e){
+			e.find('.content').fadeOut(200);
+		}
+	</script>
 </body>
 </html>

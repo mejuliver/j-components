@@ -31500,7 +31500,8 @@ spinner 11
 }
 /* line 16, sass/components/_box-img.scss */
 .box.image-box img.background-image {
-  display: none;
+  visibility: hidden;
+  position: absolute;
 }
 
 /* line 2, sass/components/_pattern.scss */
