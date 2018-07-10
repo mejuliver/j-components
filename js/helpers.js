@@ -468,9 +468,17 @@ if ('undefined' != typeof window.jQuery ) {
         $('.box.image-box').each(function(){
 
             if( typeof $(this).attr('data-overlay') != typeof undefined && $(this).attr('data-overlay') != '' ){
-                $(this).css( 'background', ' linear-gradient('+$(this).attr('data-overlay')+', '+$(this).attr('data-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')'); 
+                if( $(this).hasClass('img-gradient') ){
+                    $(this).css( 'background', 'linear-gradient('+$(this).attr('data-overlay')+', '+$(this).attr('data-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')'); 
+                }else{
+                    $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')'); 
+                }
             }else{
-                $(this).css( 'background', ' linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
+                if( $(this).hasClass('img-gradient') ){
+                    $(this).css( 'background', 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
+                } else {
+                    $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')');
+                }
             }
 
             if( typeof $(this).attr('data-height') !== typeof undefined ){
@@ -512,9 +520,9 @@ if ('undefined' != typeof window.jQuery ) {
                 }
             }else{
                 if( typeof $(this).attr('data-overlay') != typeof undefined && $(this).attr('data-overlay') != '' ){
-                    $(this).css( 'background', ' linear-gradient('+$(this).attr('data-overlay')+', '+$(this).attr('data-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')'); 
+                    $(this).css( 'background', 'linear-gradient('+$(this).attr('data-overlay')+', '+$(this).attr('data-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')'); 
                 }else{
-                    $(this).css( 'background', ' linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
+                    $(this).css( 'background', 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
                 }
             }
             if( $(this).hasClass('cover') ){
