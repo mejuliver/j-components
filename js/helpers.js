@@ -490,7 +490,11 @@ if ('undefined' != typeof window.jQuery ) {
                         $(this).css( 'background-image', 'url('+$(this).find('img.background-image').attr('src')+')');
                     }
                 }else{
-                    $(this).css( 'background', ' linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),url('+$(this).find('img.background-image').attr('src')+')'); 
+                    if( $(this).hasClass('img-gradient') ){
+                        $(this).css( 'background', 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),url('+$(this).find('img.background-image').attr('src')+')'); 
+                    }else{
+                        $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')'); 
+                    }
                 }
             }
             if( $(this).hasClass('cover') ){
