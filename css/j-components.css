@@ -31812,16 +31812,24 @@ spinner 11
   box-shadow: 0 10px 40px -6px #e0e0e0;
   background: #FFF;
 }
-/* line 27, sass/components/_menu.scss */
+/* line 26, sass/components/_menu.scss */
+.j-component .menu-holder li > .submenu.right {
+  right: 0px;
+}
+/* line 29, sass/components/_menu.scss */
+.j-component .menu-holder li > .submenu.left {
+  left: 0px;
+}
+/* line 33, sass/components/_menu.scss */
 .j-component .tab-contents {
   clear: both;
   float: none;
 }
-/* line 30, sass/components/_menu.scss */
+/* line 36, sass/components/_menu.scss */
 .j-component .tab-contents .tab {
   display: none;
 }
-/* line 33, sass/components/_menu.scss */
+/* line 39, sass/components/_menu.scss */
 .j-component .tab-contents .tab.active {
   display: block;
 }
