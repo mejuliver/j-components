@@ -8,8 +8,15 @@
 	
 </head>
 <body>
-	<div style="height:100vh;background:red;"></div>
 	<div class="container">	
+		<div class="row mb32 switch-contents-xs">
+			<div class="col-sm-6 switch order-first">
+				first col
+			</div>
+			<div class="col-sm-6 switch order-second">
+				second col
+			</div>
+		</div>
 		<div class="row">	
 			<div class="col-sm-12 p1">
 				<div class="box image-box auto-height no-hover">	
@@ -88,7 +95,10 @@
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/helpers.js"></script>
-	<script>	
+	<script>
+		$(function(){
+
+		});
 		function test_in(e){
 
 			e.find('.content').fadeIn(200);
