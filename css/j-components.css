@@ -31869,3 +31869,24 @@ spinner 11
   background: none !important;
   text-decoration: underline;
 }
+
+/* line 1, sass/components/_modal.scss */
+.modal-content {
+  border-radius: 0px !important;
+}
+
+/* line 4, sass/components/_modal.scss */
+.modal-header {
+  border-color: #ededed !important;
+}
+
+/* line 7, sass/components/_modal.scss */
+.modal-header, .modal-body {
+  padding: 25px !important;
+}
+
+/* line 10, sass/components/_modal.scss */
+.modal-title {
+  display: table;
+  float: left;
+}
