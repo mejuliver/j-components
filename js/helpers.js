@@ -136,11 +136,11 @@ if ('undefined' != typeof window.jQuery ) {
       return text;
     }
 
-     function modal(title, content, dependencies,footer){
+    function modal(title, content, dependencies,footer){
 
         // check if already theres a modal wrapper
         if( $('#modal-container').length == 0 ){
-            $('body').append( '<button id="modal-button" data-toggle="modal" data-target="#modal-container" style="display:none;">Launch modal</button><div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container-label" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content" style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);"> <div class="modal-header"> <h5 class="modal-title" id="modal-container-label"></h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div><div class="modal-body"> </div></div></div></div>');
+            $('body').append( '<button id="modal-button" data-toggle="modal" data-target="#modal-container" style="display:none;">Launch modal</button><div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container-label" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content" style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);"> <div class="modal-header"> <h5 class="modal-title" id="modal-container-label"></h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="ti-close"></i></span> </button> </div><div class="modal-body"> </div></div></div></div>');
         }
         modal_open = true;
         // check if modal elements was created, if not then create it
@@ -156,16 +156,21 @@ if ('undefined' != typeof window.jQuery ) {
             _runner(dependencies);
         }
     }
-    // remove all created on show instances when modal is completely hidden
-    $('#modal-container').on('hidden.bs.modal',function(e) {
-         //required materialize
-        $('#modal-container .modal-title').html('');
-        $('#modal-container .modal-body').html('');
-        $('#modal-container .modal-dialog')
-            .removeClass('modal-sm modal-lg')
-            .find('.modal-footer').remove();
+    $(function(){
+        // check if already theres a modal wrapper
+        if( $('#modal-container').length == 0 ){
+            $('body').append( '<button id="modal-button" data-toggle="modal" data-target="#modal-container" style="display:none;">Launch modal</button><div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container-label" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content" style="box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);"> <div class="modal-header"> <h5 class="modal-title" id="modal-container-label"></h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="ti-close"></i></span> </button> </div><div class="modal-body"> </div></div></div></div>');
+        }
+        // remove all created on show instances when modal is completely hidden
+        $('#modal-container').on('hidden.bs.modal',function(e) {
+             //required materialize
+            $('#modal-container .modal-title').html('');
+            $('#modal-container .modal-body').html('');
+            $('#modal-container .modal-dialog')
+                .removeClass('modal-sm modal-lg')
+                .find('.modal-footer').remove();
+        });
     });
-
     function spinner(status,spinner){
        if(status==="on"){
             switch(spinner){
@@ -439,23 +444,23 @@ if ('undefined' != typeof window.jQuery ) {
     function switch_contents(){
         if($(window).width() >= 768 && $(window).width() <= 991){
             $('.switch-contents-xs').each(function(){
-                $(this).find('.switch[data-order="first"]').insertBefore($(this).find('.switch[data-order="second"]'));
+                $(this).find('.switch.order-first').insertBefore($(this).find('.switch.order-second'));
             });
             $('.switch-contents-sm').each(function(){
-                $(this).find('.switch[data-order="first"]').insertAfter($(this).find('.switch[data-order="second"]'));
+                $(this).find('.switch.order-first').insertAfter($(this).find('.switch.order-second'));
             });
         }
         if($(window).width() <= 767){
             $('.switch-contents-sm').each(function(){
-                $(this).find('.switch[data-order="first"]').insertBefore($(this).find('.switch[data-order="second"]'));
+                $(this).find('.switch.order-first').insertBefore($(this).find('.switch.order-second'));
             });
             $('.switch-contents-xs').each(function(){
-                $(this).find('.switch[data-order="first"]').insertAfter($(this).find('.switch[data-order="second"]'));
+                $(this).find('.switch.order-first').insertAfter($(this).find('.switch.order-second'));
             });
         }
         if($(window).width() >= 992){
             $('.switch-contents-sm,.switch-contents-xs').each(function(){
-                $(this).find('.switch[data-order="first"]').insertBefore($(this).find('.switch[data-order="second"]'));
+                $(this).find('.switch.order-first').insertBefore($(this).find('.switch.order-second'));
             });
         }
     }
