@@ -82,7 +82,11 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
                 years+='</select>';
 
             }
-            $(this).after('<div class="component-sub"><div class="col-xs-4 mt8 p3">'+months+'</div><div class="col-xs-4 mt8 p3">'+days+'</div><div class="col-xs-4 mt8 p3">'+years+'</div><div class="clear"><div class="col-xs-3 mt8 p3"><button class="current">Today</button></div><div class="col-xs-3 mt8 p3"><button class="select">Select</button></div></div></div>');
+            $pos = '';
+            if( typeof $(this).attr('data-placement') != typeof undefined && $(this).attr('data-placement') != '' ){
+                $pos = ' '+$(this).attr('data-placement');
+            }
+            $(this).after('<div class="component-sub'+$pos+'"><div class="col-xs-4 mt8 p3">'+months+'</div><div class="col-xs-4 mt8 p3">'+days+'</div><div class="col-xs-4 mt8 p3">'+years+'</div><div class="clear"><div class="col-xs-3 mt8 p3"><button class="current">Today</button></div><div class="col-xs-3 mt8 p3"><button class="select">Select</button></div></div></div>');
 
 
             $this.on('click',function(){
