@@ -29880,7 +29880,7 @@ a, .transation {
 }
 
 /* line 1, sass/components/_flex.scss */
-.flex, .flex-center, .zoom-hover-img a figure, .flex-h-center {
+.flex, .flex-center, .zoom-hover-img a figure, .flex-v-center, .flex-h-center {
   display: flex;
 }
 
@@ -29895,7 +29895,7 @@ a, .transation {
   align-items: center;
 }
 
-/* line 12, sass/components/_flex.scss */
+/* line 13, sass/components/_flex.scss */
 .flex-h-center {
   justify-content: center;
 }
