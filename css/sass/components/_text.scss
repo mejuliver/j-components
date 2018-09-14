@@ -1,11 +1,131 @@
 .text-italic{font-style: italic;}
+.text-italic-xs{
+	@include media($xs){
+		font-style: italic;
+	}
+}
+.text-italic-sm{
+	@include media($sm...){
+		font-style: italic;
+	}
+}
+.text-italic-md{
+	@include media($md...){
+		font-style: italic;
+	}
+}
 .text-normal{text-transform: normal;}
+.text-normal-xs{
+	@include media($xs){
+		text-transform: normal;
+	}
+}
+.text-normal-sm{
+	@include media($sm...){
+		text-transform: normal;
+	}
+}
+.text-normal-md{
+	@include media($md...){
+		text-transform: normal;
+	}
+}
 .text-uppercase{text-transform: uppercase;}
+.text-uppercase-xs{
+	@include media($xs){
+		text-transform: uppercase;
+	}
+}
+.text-uppercase-sm{
+	@include media($sm...){
+		text-transform: uppercase;
+	}
+}
+.text-uppercase-md{
+	@include media($md...){
+		text-transform: uppercase;
+	}
+}
 .text-lowercase{text-transform: lowercase;}
+.text-lowercase-xs{
+	@include media($xs){
+		text-transform: lowercase;
+	}
+}
+.text-lowercase-sm{
+	@include media($sm...){
+		text-transform: lowercase;
+	}
+}
+.text-lowercase-md{
+	@include media($md...){
+		text-transform: lowercase;
+	}
+}
 .text-capitalize{text-transform: capitalize;}
+.text-capitalize-xs{
+	@include media($xs){
+		text-transform: capitalize;
+	}
+}
+.text-capitalize-sm{
+	@include media($sm...){
+		text-transform: capitalize;
+	}
+}
+.text-capitalize-md{
+	@include media($md...){
+		text-transform: capitalize;
+	}
+}
 .text-center{text-align: center;}
+.text-center-xs{
+	@include media($xs){
+		text-align: center;
+	}
+}
+.text-center-sm{
+	@include media($sm...){
+		text-align: center;
+	}
+}
+.text-center-md{
+	@include media($md...){
+		text-align: center;
+	}
+}
 .text-left{text-align: left;}
+.text-left-xs{
+	@include media($xs){
+		text-align: left;
+	}
+}
+.text-left-sm{
+	@include media($sm...){
+		text-align: left;
+	}
+}
+.text-left-md{
+	@include media($md...){
+		text-align: left;
+	}
+}
 .text-right{text-align: right;}
+.text-right-xs{
+	@include media($xs){
+		text-align: right;
+	}
+}
+.text-right-sm{
+	@include media($sm...){
+		text-align: right;
+	}
+}
+.text-right-md{
+	@include media($md...){
+		text-align: right;
+	}
+}
 .text-shadow-1{text-shadow: 1px 1px 1px rgba(0,0,0,0.7);}
 .text-decoration-underline{text-decoration:underline;}
 .letter-spacing-initial{letter-spacing:initial;}

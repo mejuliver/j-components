@@ -62,5 +62,28 @@ T A B L E
 .table-td-lowercase td{@extend .text-lowercase;}
 
 .display-table{display:table;}
+.display-table-xs{
+    @include media($xs){
+    	display:table;
+    }
+}
+.display-table-sm{
+    @include media($sm...){
+    	display:table;
+    }
+}
+.display-table-md{
+    @include media($md...){
+    	display:table;
+    }
+}
+
 .display-row{display:table-row;}
 .display-cell{display:table-cell;}
+
+// datatables
+.dataTables_info{
+    @include media($xs){
+    	text-align:center;
+    }
+}
