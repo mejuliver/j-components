@@ -30061,7 +30061,7 @@ a, .transation {
   /* line 129, sass/components/_others.scss */
   .right-xs {
     left: initial !important;
-    right: 0px;
+    right: 0px !important;
   }
 }
 
@@ -30069,7 +30069,7 @@ a, .transation {
   /* line 135, sass/components/_others.scss */
   .right-sm {
     left: initial !important;
-    right: 0px;
+    right: 0px !important;
   }
 }
 
@@ -30077,7 +30077,7 @@ a, .transation {
   /* line 141, sass/components/_others.scss */
   .right-md {
     left: initial !important;
-    right: 0px;
+    right: 0px !important;
   }
 }
 
@@ -30091,7 +30091,7 @@ a, .transation {
   /* line 151, sass/components/_others.scss */
   .left-xs {
     right: initial !important;
-    left: 0px;
+    left: 0px !important;
   }
 }
 
@@ -30099,7 +30099,7 @@ a, .transation {
   /* line 157, sass/components/_others.scss */
   .left-sm {
     right: initial !important;
-    left: 0px;
+    left: 0px !important;
   }
 }
 
@@ -30107,7 +30107,7 @@ a, .transation {
   /* line 163, sass/components/_others.scss */
   .left-md {
     right: initial !important;
-    left: 0px;
+    left: 0px !important;
   }
 }
 

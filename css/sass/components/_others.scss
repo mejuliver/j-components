@@ -129,19 +129,19 @@ a,.transation{-webkit-transition: all 200ms ease-in-out;-moz-transition: all 200
 .right-xs{
   @include media($xs){
     left: initial !important;
-    right: 0px;
+    right: 0px !important;
   }
 }
 .right-sm{
   @include media($sm...){
     left: initial !important;
-    right: 0px;
+    right: 0px !important;
   }
 }
 .right-md{
   @include media($md...){
     left: initial !important;
-    right: 0px;
+    right: 0px !important;
   }
 }
 .left{
@@ -151,19 +151,19 @@ a,.transation{-webkit-transition: all 200ms ease-in-out;-moz-transition: all 200
 .left-xs{
   @include media($xs){
     right: initial !important;
-    left: 0px;
+    left: 0px !important;
   }  
 }
 .left-sm{
   @include media($sm...){
     right: initial !important;
-    left: 0px;
+    left: 0px !important;
   }  
 }
 .left-md{
   @include media($md...){
     right: initial !important;
-    left: 0px;
+    left: 0px !important;
   }  
 }
 
