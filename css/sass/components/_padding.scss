@@ -1,116 +1,96 @@
 .p00{padding:0px!important;}
 @for $i from 0 through 100{
-	.p#{$i} { padding: #{$i}px;; }
+	.p#{$i} { padding: #{$i}px; }
 }
 .pt00{padding-top:0px!important;}
 @for $i from 0 through 100{
-	.pt#{$i} { padding-top: #{$i}px;; }
+	.pt#{$i} { padding-top: #{$i}px; }
 }
 .pl00{padding-left:0px!important;}
 @for $i from 0 through 100{
-	.pl#{$i} { padding-left: #{$i}px;; }
+	.pl#{$i} { padding-left: #{$i}px; }
 }
 .pr00{padding-right:0px!important;}
 @for $i from 0 through 100{
-	.pr#{$i} { padding-right: #{$i}px;; }
+	.pr#{$i} { padding-right: #{$i}px; }
 }
 .pb00{padding-bottom:0px!important;}
 @for $i from 0 through 100{
-	.pb#{$i} { padding-bottom: #{$i}px;; }
+	.pb#{$i} { padding-bottom: #{$i}px; }
 }
 
 // R E S P O N S I V E  P R O P E R T I E S
 @media (max-width: 767px) { // XS
 	
-	.p-xs-00{padding:0px!important;}
 	@for $i from 0 through 100{
-		.p-xs-#{$i} { padding: #{$i}px;; }
+		.p-xs-#{$i} { padding: #{$i}px !important;}
 	}
-	.pt-xs-00{padding-top:0px!important;}
 	@for $i from 0 through 100{
-		.pt-xs-#{$i} { padding-top: #{$i}px;; }
+		.pt-xs-#{$i} { padding-top: #{$i}px !important; }
 	}
-	.pl-xs-00{padding-left:0px!important;}
 	@for $i from 0 through 100{
-		.pl-xs-#{$i} { padding-left: #{$i}px;; }
+		.pl-xs-#{$i} { padding-left: #{$i}px !important; }
+	}	
+	@for $i from 0 through 100{
+		.pr-xs-#{$i} { padding-right: #{$i}px !important; }
 	}
-	.pr-xs-00{padding-right:0px!important;}
 	@for $i from 0 through 100{
-		.pr-xs-#{$i} { padding-right: #{$i}px;; }
-	}
-	.pb-xs-00{padding-bottom:0px!important;}
-	@for $i from 0 through 100{
-		.pb-xs-#{$i} { padding-bottom: #{$i}px;; }
+		.pb-xs-#{$i} { padding-bottom: #{$i}px !important; }
 	}
 
 }
 
 @media (min-width: 768px) and (max-width: 991px) { // SM
-	.p-sm-00{padding:0px!important;}
 	@for $i from 0 through 100{
-		.p-sm-#{$i} { padding: #{$i}px;; }
+		.p-sm-#{$i} { padding: #{$i}px !important; }
 	}
-	.pt-sm-00{padding-top:0px!important;}
 	@for $i from 0 through 100{
-		.pt-sm-#{$i} { padding-top: #{$i}px;; }
+		.pt-sm-#{$i} { padding-top: #{$i}px !important; }
 	}
-	.pl-sm-00{padding-left:0px!important;}
 	@for $i from 0 through 100{
-		.pl-sm-#{$i} { padding-left: #{$i}px;; }
+		.pl-sm-#{$i} { padding-left: #{$i}px !important; }
 	}
-	.pr-sm-00{padding-right:0px!important;}
 	@for $i from 0 through 100{
-		.pr-sm-#{$i} { padding-right: #{$i}px;; }
-	}
-	.pb-sm-00{padding-bottom:0px!important;}
+		.pr-sm-#{$i} { padding-right: #{$i}px !important; }
+	}	
 	@for $i from 0 through 100{
-		.pb-sm-#{$i} { padding-bottom: #{$i}px;; }
+		.pb-sm-#{$i} { padding-bottom: #{$i}px !important; }
 	}
 
 }
 
 @media (min-width: 992px) and (max-width: 1199px) { // MD
-	.p-md-00{padding:0px!important;}
 	@for $i from 0 through 100{
-		.p-md-#{$i} { padding: #{$i}px;; }
+		.p-md-#{$i} { padding: #{$i}px !important; }
 	}
-	.pt-md-00{padding-top:0px!important;}
 	@for $i from 0 through 100{
-		.pt-md-#{$i} { padding-top: #{$i}px;; }
+		.pt-md-#{$i} { padding-top: #{$i}px !important; }
 	}
-	.pl-md-00{padding-left:0px!important;}
 	@for $i from 0 through 100{
-		.pl-md-#{$i} { padding-left: #{$i}px;; }
+		.pl-md-#{$i} { padding-left: #{$i}px !important; }
 	}
-	.pr-md-00{padding-right:0px!important;}
 	@for $i from 0 through 100{
-		.pr-md-#{$i} { padding-right: #{$i}px;; }
+		.pr-md-#{$i} { padding-right: #{$i}px !important; }
 	}
-	.pb-md-00{padding-bottom:0px!important;}
 	@for $i from 0 through 100{
-		.pb-md-#{$i} { padding-bottom: #{$i}px;; }
+		.pb-md-#{$i} { padding-bottom: #{$i}px !important; }
 	}
 }
 
 @media (min-width: 1200px) { // LG
-	.p-lg-00{padding:0px!important;}
 	@for $i from 0 through 100{
-		.p-lg-#{$i} { padding: #{$i}px;; }
+		.p-lg-#{$i} { padding: #{$i}px !important; }
 	}
-	.pt-lg-00{padding-top:0px!important;}
 	@for $i from 0 through 100{
-		.pt-lg-#{$i} { padding-top: #{$i}px;; }
+		.pt-lg-#{$i} { padding-top: #{$i}px !important; }
 	}
-	.pl-lg-00{padding-left:0px!important;}
 	@for $i from 0 through 100{
-		.pl-lg-#{$i} { padding-left: #{$i}px;; }
+		.pl-lg-#{$i} { padding-left: #{$i}px !important; }
 	}
-	.pr-lg-00{padding-right:0px!important;}
 	@for $i from 0 through 100{
-		.pr-lg-#{$i} { padding-right: #{$i}px;; }
+		.pr-lg-#{$i} { padding-right: #{$i}px !important; }
 	}
-	.pb-lg-00{padding-bottom:0px!important;}
 	@for $i from 0 through 100{
-		.pb-lg-#{$i} { padding-bottom: #{$i}px;; }
+		.pb-lg-#{$i} { padding-bottom: #{$i}px !important; }
 	}
 }
