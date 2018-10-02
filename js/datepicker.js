@@ -90,6 +90,7 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
 
 
             $this.on('click',function(){
+                alert();
                 if($(this).val()!==''){
                     var dates = $(this).val().replace(',','').split(' ');
                     $(this).next('.component-sub').find('select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
