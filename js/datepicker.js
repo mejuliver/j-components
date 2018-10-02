@@ -90,7 +90,7 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
 
 
             $this.on('click',function(){
-                alert();
+
                 if($(this).val()!==''){
                     var dates = $(this).val().replace(',','').split(' ');
                     $(this).next('.component-sub').find('select[name="months"] option[value="'+dates[0]+'"]').prop("selected",true).closest("select").trigger("change");
@@ -99,7 +99,7 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
                 }else{
                     days_change=false;
                 }
-                $(this).next('.component-sub').toggle();
+                $(this).next('.component-sub').show();
             });
 
             $this.next('.component-sub').find('.select').on("click",function(e){

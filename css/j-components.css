@@ -30019,6 +30019,15 @@ a, .transation {
   transition: 0s;
 }
 
+/* line 250, sass/components/_others.scss */
+.box {
+  padding: 24px;
+}
+/* line 252, sass/components/_others.scss */
+.box.bordered {
+  border: 1px solid #ededed;
+}
+
 /* line 1, sass/components/_flex.scss */
 .flex, .flex-center, .zoom-hover-img a figure, .flex-v-center, .flex-h-center {
   display: flex;
@@ -30553,6 +30562,11 @@ T A B L E
 /* line 20, sass/components/_color.scss */
 .c-taint {
   color: #f6e8d9;
+}
+
+/* line 2, sass/components/_box-shadow.scss */
+.shadow {
+  box-shadow: 0 10px 40px -6px rgba(0, 0, 0, 0.1);
 }
 
 /* line 3, sass/components/_box-shadow.scss */
@@ -31921,7 +31935,7 @@ spinner 11
   display: none;
   padding: 10px;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 10px 40px -6px #e0e0e0;
+  box-shadow: 0 10px 40px -6px rgba(0, 0, 0, 0.1);
   background: #FFF;
 }
 /* line 27, sass/components/_menu.scss */
@@ -31946,7 +31960,7 @@ spinner 11
 .j-component[data-type*="datepicker"] .component-sub, .j-component[data-type*="timepicker"] .component-sub {
   position: absolute;
   padding: 10px;
-  box-shadow: 0 10px 40px -6px #e0e0e0;
+  box-shadow: 0 10px 40px -6px rgba(0, 0, 0, 0.1);
   background: #FFF;
   width: 350px;
   border: 1px solid #e0e0e0;

@@ -247,3 +247,9 @@ a,.transation{-webkit-transition: all 200ms ease-in-out;-moz-transition: all 200
         transition: 0s;
     }
 }
+.box{
+  padding: 24px;
+  &.bordered{
+    border: 1px solid #ededed;
+  }
+}
