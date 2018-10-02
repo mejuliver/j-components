@@ -9,6 +9,14 @@
     border:1px solid #e0e0e0;
     display:none;
     z-index:10;
+    select{
+      height:initial!important;
+      margin-bottom:5px!important;
+      -webkit-appearance:menulist!important;
+      -moz-appearance:menulist!important;
+      -o-appearance:menulist!important;
+      appearance:menulist!important;
+    }
     @include media($xs){
       width:280px;
     }
