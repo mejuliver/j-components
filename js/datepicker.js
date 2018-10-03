@@ -58,9 +58,11 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
                 $(this).attr('placeholder','Click to select date');
             }
 
+            years='<select name="years">';
+
             if($(this).hasClass('future') && typeof $(this).attr('data-future') !== typeof undefined && $(this).attr('data-future') !== '' && $(this).attr('data-future') !== 'false' ){
 
-                var start_year = new Date().getFullYear(),end_year = new moment().add(parseInt($(this).attr('data-future')), 'year').format('YYYY'),years='<select name="years">';
+                var start_year = new Date().getFullYear(),end_year = new moment().add(parseInt($(this).attr('data-future')), 'year').format('YYYY');
                 for (var i = start_year; i <= parseInt(end_year); i++) {
                     if(i===parseInt(moment().format('YYYY')))
                         years+='<option value="'+i+'" selected>'+i+'</option>';
@@ -68,20 +70,40 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
                         years+='<option value="'+i+'">'+i+'</option>';
                 }
 
-                years+='</select>';
-            }else{
+            }else if( $(this).hasClass('past') ){
 
                 //years
-                var start_year = 1930,current_year = new Date().getFullYear(),years='<select name="years">';
+                var start_year = 1930,current_year = new Date().getFullYear();
                 for (var i = start_year; i <= current_year; i++) {
                     if(i===parseInt(moment().format('YYYY')))
                         years+='<option value="'+i+'" selected>'+i+'</option>';
                     else
                         years+='<option value="'+i+'">'+i+'</option>';
                 }
-                years+='</select>';
+
+            }else{
+                //years
+                var start_year = 1930,current_year = new Date().getFullYear();
+                for (var i = start_year; i <= current_year; i++) {
+                    if(i===parseInt(moment().format('YYYY')))
+                        years+='<option value="'+i+'" selected>'+i+'</option>';
+                    else
+                        years+='<option value="'+i+'">'+i+'</option>';
+                }
+
+
+                var start_year = new Date().getFullYear(),end_year = new moment().add(15, 'year').format('YYYY');
+                for (var i = start_year; i <= parseInt(end_year); i++) {
+                    if(i!=parseInt(moment().format('YYYY')))
+                        years+='<option value="'+i+'">'+i+'</option>';
+                        
+                }
+
+
 
             }
+            years+='</select>';
+
             $pos = '';
             if( typeof $(this).attr('data-placement') != typeof undefined && $(this).attr('data-placement') != '' ){
                 $pos = ' '+$(this).attr('data-placement');

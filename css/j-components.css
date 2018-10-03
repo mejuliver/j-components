@@ -31993,7 +31993,7 @@ spinner 11
   border: none !important;
   padding: 5px 8px;
   width: 100% !important;
-  backgroud: #ccc;
+  background: #ccc;
 }
 /* line 34, sass/components/_datetimepicker.scss */
 .j-component[data-type*="datepicker"] button.select, .j-component[data-type*="timepicker"] button.select {

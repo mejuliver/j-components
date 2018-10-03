@@ -3,6 +3,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Datetimepicker Component Sample</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/j-components.css">
 	<style>
@@ -16,22 +17,48 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="bordered box shadow display-table full-width">
+					<strong>Default</strong>
 					<input type="text" class="datepicker" placeholder="Select date now...">
 				</div>
-			</div>	
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="bordered box shadow display-table full-width">
+					<strong>With Format</strong>
+					<input type="text" class="datepicker" placeholder="Select date now..." data-format="YYYY/MM/DD">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="bordered box shadow display-table full-width">
+					<strong>With Past Years</strong>
+					<input type="text" class="datepicker" placeholder="Select date now..." data-format="DD-MM-YYYY">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="bordered box shadow display-table full-width">
+					<strong>With Future Date where date-future="10" is the number of interation onwards</strong>
+					<input type="text" class="datepicker future" placeholder="Select date now..." data-future="10">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="bordered box shadow display-table full-width">
+					<strong>Timepicker</strong>
+					<input type="text" class="timepicker" placeholder="Select time now...">
+				</div>
+			</div>
 		</div>
 	</div>
-	<br>
-	<br>
-	<strong>With Format</strong>
-	<input type="text" class="datepicker" placeholder="Select date now..." data-format="d-m-Y">
-	<br>
-	<strong>With Future Date where date-future="10" is the number of interation onwards</strong>
-	<input type="text" class="datepicker future" placeholder="Select date now..." data-future="10">
-	<br>
-	<br>
-	<strong>Timepicker</strong>
-	<input type="text" class="timepicker" placeholder="Select time now...">
 	
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
