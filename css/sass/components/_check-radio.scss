@@ -27,8 +27,8 @@
     &:focus,&:hover{
       + label{
         &:before{
-          border-color: #555555;
-          background-color: #f2f2f2;
+          border-color: $ck-border;
+          background-color: $ck-active-bg;
         }
       }
     }
@@ -48,21 +48,21 @@
       &:before{
         box-sizing: content-box;
         content: '';
-        color: #555555;
+        color: $ck-border;
         position: absolute;
         top: 50%;
         left: 0;
         width: 14px;
         height: 14px;
         margin-top: -9px;
-        border: 2px solid #555555;
+        border: 2px solid $ck-border;
         text-align: center;
         transition: all 0.4s ease;
       }
       &:after{
         box-sizing: content-box;
         content: '';
-        background-color: #555555;
+        background-color: $ck-border;
         position: absolute;
         top: 50%;
         left: 4px;
@@ -80,7 +80,7 @@
         margin-top: -4px;
         border-style: solid;
         //border-color: #ffffff;*/
-        border-color: #555555;
+        border-color: $ck-border;
         //border-width: 0 0 3px 3px;*/
         border-width: 0 0 2px 2px;
         border-image: none;
@@ -90,7 +90,7 @@
     &:disabled{
       + label{
         &:before{
-          border-color: #cccccc;
+          border-color: $ck-disabled-border;
         }
       }
       &:focus{
@@ -103,7 +103,7 @@
       &:checked{
         + label{
           &:before{
-            background-color: #cccccc;
+            background-color: $ck-disabled-border;
           }
           &:after{
             content: '';
@@ -117,7 +117,7 @@
       + label{
         &:before{
           animation: borderscale 200ms ease-in;
-          //background: #555555;
+          //background: $ck-border;
         }
         &:after{
           transform: rotate(-45deg) scale(1);
@@ -140,8 +140,8 @@
     &:focus,&:hover{
       + label{
         &:before{
-          border-color: #555555;
-          background-color: #f2f2f2;
+          border-color: $ck-border;
+          background-color: $ck-active-bg;
         }
       }
     }
@@ -162,14 +162,14 @@
       &:before{
         box-sizing: content-box;
         content: '';
-        color: #555555;
+        color: $ck-border;
         position: absolute;
         top: 50%;
         left: 0;
         width: 14px;
         height: 14px;
         margin-top: -9px;
-        border: 2px solid #555555;
+        border: 2px solid $ck-border;
         text-align: center;
         transition: all 0.4s ease;
         border-radius: 50%;
@@ -177,7 +177,7 @@
       &:after{
         box-sizing: content-box;
         content: '';
-        background-color: #555555;
+        background-color: $ck-border;
         position: absolute;
         top: 50%;
         left: 4px;
@@ -193,7 +193,7 @@
     &:disabled{
       + label{
         &:before{
-          border-color: #cccccc;
+          border-color: $ck-disabled-border;
         }
       }
       &:focus{
@@ -206,7 +206,7 @@
       &:checked{
         + label{
           &:before{
-            background-color: #cccccc;
+            background-color: $ck-disabled-border;
           }
         }
       }
@@ -228,6 +228,6 @@
 
 @keyframes 
   borderscale {  50% {
-   box-shadow: 0 0 0 2px #555555;
+   box-shadow: 0 0 0 2px $ck-border;
   }
 }

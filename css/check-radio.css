@@ -1,0 +1,198 @@
+/*
+
+  S T R U C T U R E
+
+  <div class="j-checkbox">
+    <input type="checkbox">
+    <label><span>Sample checkbox</span></label>
+  </div>
+
+  <div class="j-radio">
+    <input type="radio">
+    <label><span>Sample radio</span></label>
+  </div>
+
+*/
+/* line 18, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 29, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"]:focus + label:before, .j-checkbox input[type="checkbox"]:hover + label:before {
+  border-color: #555555;
+  background-color: #f2f2f2;
+}
+/* line 37, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"]:active + label:before {
+  transition-duration: 0s;
+}
+/* line 42, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 2em;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+}
+/* line 48, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"] + label:before {
+  box-sizing: content-box;
+  content: '';
+  color: #555555;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -9px;
+  border: 2px solid #555555;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+/* line 62, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"] + label:after {
+  box-sizing: content-box;
+  content: '';
+  background-color: #555555;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  transform: scale(0);
+  transform-origin: 50%;
+  transition: transform 200ms ease-out;
+  background-color: transparent;
+  top: 50%;
+  left: 4px;
+  width: 8px;
+  height: 3px;
+  margin-top: -4px;
+  border-style: solid;
+  border-color: #555555;
+  border-width: 0 0 2px 2px;
+  border-image: none;
+  transform: rotate(-45deg) scale(0);
+}
+/* line 92, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"]:disabled + label:before {
+  border-color: #cccccc;
+}
+/* line 98, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"]:disabled:focus + label:before {
+  background-color: inherit;
+}
+/* line 105, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"]:disabled:checked + label:before {
+  background-color: #cccccc;
+}
+/* line 108, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"]:disabled:checked + label:after {
+  content: '';
+  transform: rotate(-45deg) scale(1);
+  transition: transform 200ms ease-out;
+}
+/* line 118, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"]:checked + label:before {
+  animation: borderscale 200ms ease-in;
+}
+/* line 122, sass/components/_check-radio.scss */
+.j-checkbox input[type="checkbox"]:checked + label:after {
+  transform: rotate(-45deg) scale(1);
+}
+
+/* line 131, sass/components/_check-radio.scss */
+.j-radio input[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 142, sass/components/_check-radio.scss */
+.j-radio input[type="radio"]:focus + label:before, .j-radio input[type="radio"]:hover + label:before {
+  border-color: #555555;
+  background-color: #f2f2f2;
+}
+/* line 150, sass/components/_check-radio.scss */
+.j-radio input[type="radio"]:active + label:before {
+  transition-duration: 0s;
+}
+/* line 156, sass/components/_check-radio.scss */
+.j-radio input[type="radio"] + label {
+  position: relative;
+  padding-left: 2em;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+}
+/* line 162, sass/components/_check-radio.scss */
+.j-radio input[type="radio"] + label:before {
+  box-sizing: content-box;
+  content: '';
+  color: #555555;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -9px;
+  border: 2px solid #555555;
+  text-align: center;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+}
+/* line 177, sass/components/_check-radio.scss */
+.j-radio input[type="radio"] + label:after {
+  box-sizing: content-box;
+  content: '';
+  background-color: #555555;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  transform: scale(0);
+  transform-origin: 50%;
+  transition: transform 200ms ease-out;
+  border-radius: 50%;
+}
+/* line 195, sass/components/_check-radio.scss */
+.j-radio input[type="radio"]:disabled + label:before {
+  border-color: #cccccc;
+}
+/* line 201, sass/components/_check-radio.scss */
+.j-radio input[type="radio"]:disabled:focus + label:before {
+  background-color: inherit;
+}
+/* line 208, sass/components/_check-radio.scss */
+.j-radio input[type="radio"]:disabled:checked + label:before {
+  background-color: #cccccc;
+}
+/* line 216, sass/components/_check-radio.scss */
+.j-radio input[type="radio"]:checked + label:before {
+  animation: borderscale 300ms ease-in;
+  background-color: white;
+}
+/* line 220, sass/components/_check-radio.scss */
+.j-radio input[type="radio"]:checked + label:after {
+  transform: scale(1);
+}
+
+@keyframes borderscale {
+  50% {
+    box-shadow: 0 0 0 2px #555555;
+  }
+}

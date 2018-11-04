@@ -3,68 +3,69 @@
 T A B L E
 
 */
+
 .table-v-middle{
 	th,td{
-		@extend .v-align-middle;
+		vertical-align: middle;
 	}
 }
 .table-align-left{
-	th:first-child,.td:first-child{@extend .text-left;}
+	th:first-child,.td:first-child{text-align:left;}
 }
-.table-th-td-align-left th:not(:first-child),.table-th-td-align-left td:not(:first-child){@extend .text-center;}
+.table-th-td-align-left th:not(:first-child),.table-th-td-align-left td:not(:first-child){text-align:center;}
 .table2-align-left{
 	th:nth-child(2),td:nth-child(2){
-		@extend .text-left;
+		text-align:left;
 	}
 }
 .table2-align-left{
 	th:not(:nth-child(2)),td:not(:nth-child(2)){
-		@extend .text-center;
+		text-align:center;
 	}
 }
 .table-center{
 	th,td{
-		@extend .text-center;
+		text-align:center;
 	}
 }
-.table-th-center th{@extend .text-center;}
-.table-td-center td{@extend .text-center;}
-.table-lines{@extend .full-width;}
+.table-th-center th{text-align:center;}
+.table-td-center td{text-align:center;}
+.table-lines{width:100%;}
 .table-lines{
 	th,td{
 		border-bottom: 2px solid #ededed;
-		@extend .p5;
-		@extend .font13;
+		padding:5px;
+		font-size:13px;
 	}
 	tr:last-child td{border-bottom: none;}
 }
 
 .table-uppercase{
 	th,td{
-		@extend .text-uppercase;
+		text-transform: uppercase;
 	}
 }
 .table-capitalize{
 	th,td{
-		@extend .text-capitalize;
+		text-transform: capitalize;
 	}
 }
 .table-lowercase{
 	th,td{
-		@extend .text-lowercase;
+		text-transform:lowercase;
 	}
 }
-.table-th-uppercase th{@extend .text-uppercase;}
-.table-td-uppercase td{@extend .text-uppercase;}
-.table-th-capitalize th{@extend .text-capitalize;}
-.table-td-capitalize th{@extend .text-capitalize;}
-.table-th-lowercase th{@extend .text-lowercase;}
-.table-td-lowercase td{@extend .text-lowercase;}
+.table-th-uppercase th{text-transform: uppercase;}
+.table-td-uppercase td{text-transform: uppercase;}
+.table-th-capitalize th{text-transform: capitalize;}
+.table-td-capitalize th{text-transform: capitalize;}
+.table-th-lowercase th{text-transform: lowercase;}
+.table-td-lowercase td{text-transform: lowercase;}
 
 .display-table{display:table;}
 .display-table-xs{
     @include media($xs){
-    	display:table;
+    	display:table!important;
     }
 }
 .display-table-sm{
@@ -80,10 +81,3 @@ T A B L E
 
 .display-row{display:table-row;}
 .display-cell{display:table-cell;}
-
-// datatables
-.dataTables_info{
-    @include media($xs){
-    	text-align:center;
-    }
-}

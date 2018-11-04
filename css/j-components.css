@@ -1,5 +1,474 @@
+/* line 1, sass/components/_utilities.scss */
+.v-align-top {
+  vertical-align: top;
+}
+
+/* line 4, sass/components/_utilities.scss */
+.v-align-middle {
+  vertical-align: middle;
+}
+
+/* line 7, sass/components/_utilities.scss */
+.v-align-bottom {
+  vertical-align: bottom;
+}
+
+/* line 10, sass/components/_utilities.scss */
+.flex, .flex-center, .flex-v-center, .flex-h-center {
+  display: flex;
+}
+
+/* line 13, sass/components/_utilities.scss */
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 18, sass/components/_utilities.scss */
+.flex-v-center {
+  align-items: center;
+}
+
+/* line 22, sass/components/_utilities.scss */
+.flex-h-center {
+  justify-content: center;
+}
+
+/* line 26, sass/components/_utilities.scss */
+.modal-content {
+  border-radius: 0px !important;
+}
+
+/* line 29, sass/components/_utilities.scss */
+.modal-header {
+  border-color: #ededed !important;
+}
+
+/* line 32, sass/components/_utilities.scss */
+.modal-header, .modal-body {
+  padding: 25px !important;
+}
+
+/* line 35, sass/components/_utilities.scss */
+.modal-title {
+  display: table;
+  float: left;
+}
+
+/* line 39, sass/components/_utilities.scss */
+.full-width {
+  width: 100%;
+}
+
+/* line 40, sass/components/_utilities.scss */
+.full-height {
+  height: 100%;
+}
+
+/* line 41, sass/components/_utilities.scss */
+.width-vw {
+  width: 100vw;
+}
+
+/* line 42, sass/components/_utilities.scss */
+.height-vh {
+  height: 100vh;
+}
+
+/* line 44, sass/components/_utilities.scss */
+.line-height-initial {
+  line-height: initial;
+}
+
+/* line 45, sass/components/_utilities.scss */
+.disabled {
+  pointer-events: none;
+}
+
+/* line 47, sass/components/_utilities.scss */
+.d-none, .error {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* line 48, sass/components/_utilities.scss */
+  .d-none-xs, .hide-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 53, sass/components/_utilities.scss */
+  .d-none-sm, .hide-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 58, sass/components/_utilities.scss */
+  .d-none-md, .hide-md {
+    display: none;
+  }
+}
+
+/* line 64, sass/components/_utilities.scss */
+.d-block {
+  display: block;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 67, sass/components/_utilities.scss */
+  .d-block-md {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 72, sass/components/_utilities.scss */
+  .d-block-sm {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 77, sass/components/_utilities.scss */
+  .d-block-xs {
+    display: block !important;
+  }
+}
+
+/* line 82, sass/components/_utilities.scss */
+.max {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 83, sass/components/_utilities.scss */
+.clear {
+  clear: both;
+  float: none;
+}
+
+@media (max-width: 767px) {
+  /* line 84, sass/components/_utilities.scss */
+  .clear-xs {
+    clear: both !important;
+    float: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 90, sass/components/_utilities.scss */
+  .clear-sm {
+    clear: both !important;
+    float: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 96, sass/components/_utilities.scss */
+  .clear-md {
+    clear: both !important;
+    float: none !important;
+  }
+}
+
+/* line 103, sass/components/_utilities.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 104, sass/components/_utilities.scss */
+.d-inline-table {
+  display: inline-table;
+}
+
+/* line 106, sass/components/_utilities.scss */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* line 107, sass/components/_utilities.scss */
+.overflow-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* line 108, sass/components/_utilities.scss */
+.overflow-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* line 109, sass/components/_utilities.scss */
+.overflow-auto {
+  overflow: auto;
+}
+
+/* line 111, sass/components/_utilities.scss */
+.align-left {
+  float: left;
+}
+
+@media (max-width: 767px) {
+  /* line 114, sass/components/_utilities.scss */
+  .align-left-xs {
+    float: left !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 119, sass/components/_utilities.scss */
+  .align-left-sm {
+    float: left !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 124, sass/components/_utilities.scss */
+  .align-left-md {
+    float: left !important;
+  }
+}
+
+/* line 130, sass/components/_utilities.scss */
+.align-right {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  /* line 133, sass/components/_utilities.scss */
+  .align-right-xs {
+    float: right !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 138, sass/components/_utilities.scss */
+  .align-right-sm {
+    float: right !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 143, sass/components/_utilities.scss */
+  .align-right-md {
+    float: right !important;
+  }
+}
+
+/* line 149, sass/components/_utilities.scss */
+.height-initial {
+  height: initial;
+}
+
+/* line 150, sass/components/_utilities.scss */
+.height-auto {
+  height: auto;
+}
+
+/* line 151, sass/components/_utilities.scss */
+.width-initial {
+  width: initial;
+}
+
+/* line 152, sass/components/_utilities.scss */
+.width-auto {
+  width: auto;
+}
+
+/* line 153, sass/components/_utilities.scss */
+a, .transation {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+/* line 154, sass/components/_utilities.scss */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* line 155, sass/components/_utilities.scss */
+.hr {
+  height: 1px;
+  background: #ededed;
+}
+
+/* line 156, sass/components/_utilities.scss */
+.border-none {
+  border: none;
+}
+
+/* line 157, sass/components/_utilities.scss */
+.list-style-none {
+  list-style: none;
+}
+
+/* line 158, sass/components/_utilities.scss */
+.relative {
+  position: relative;
+}
+
+/* line 159, sass/components/_utilities.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 160, sass/components/_utilities.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 161, sass/components/_utilities.scss */
+.static {
+  position: static;
+}
+
+/* line 162, sass/components/_utilities.scss */
+.right {
+  left: initial;
+  right: 0px;
+}
+
+@media (max-width: 767px) {
+  /* line 166, sass/components/_utilities.scss */
+  .right-xs {
+    left: initial !important;
+    right: 0px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 172, sass/components/_utilities.scss */
+  .right-sm {
+    left: initial !important;
+    right: 0px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 178, sass/components/_utilities.scss */
+  .right-md {
+    left: initial !important;
+    right: 0px !important;
+  }
+}
+
+/* line 184, sass/components/_utilities.scss */
+.left {
+  right: initial;
+  left: 0px;
+}
+
+@media (max-width: 767px) {
+  /* line 188, sass/components/_utilities.scss */
+  .left-xs {
+    right: initial !important;
+    left: 0px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 194, sass/components/_utilities.scss */
+  .left-sm {
+    right: initial !important;
+    left: 0px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 200, sass/components/_utilities.scss */
+  .left-md {
+    right: initial !important;
+    left: 0px !important;
+  }
+}
+
+/* line 208, sass/components/_utilities.scss */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  /* line 209, sass/components/_utilities.scss */
+  .center-xs {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 215, sass/components/_utilities.scss */
+  .center-sm {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 221, sass/components/_utilities.scss */
+  .center-md {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* line 227, sass/components/_utilities.scss */
+.opacity-half {
+  opacity: .5;
+}
+
+/* line 230, sass/components/_utilities.scss */
+.opacity-full {
+  opacity: 1;
+}
+
+/* line 234, sass/components/_utilities.scss */
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: .5;
+  }
+}
+/* line 243, sass/components/_utilities.scss */
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+/* line 247, sass/components/_utilities.scss */
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #000000 10%, rgba(0, 0, 0, 0) 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+/* line 263, sass/components/_utilities.scss */
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .2;
+  transition: 0s;
+}
+
 /* line 1, sass/components/_margin.scss */
-.m00, .zoom-hover-img a figure, .zoom-hover-img a figure img {
+.m00 {
   margin: 0px !important;
 }
 
@@ -12683,7 +13152,7 @@
 }
 
 /* line 3, sass/components/_padding.scss */
-.p5, .table-lines th, .table-lines td {
+.p5 {
   padding: 5px;
 }
 
@@ -25640,7 +26109,7 @@
 }
 
 /* line 17, sass/components/_font-size.scss */
-.font13, .table-lines th, .table-lines td {
+.font13 {
   font-size: 13px;
 }
 
@@ -29241,21 +29710,6 @@
   font-weight: 900;
 }
 
-/* line 1, sass/components/_alignment.scss */
-.v-align-top {
-  vertical-align: top;
-}
-
-/* line 4, sass/components/_alignment.scss */
-.v-align-middle, .table-v-middle th, .table-v-middle td {
-  vertical-align: middle;
-}
-
-/* line 7, sass/components/_alignment.scss */
-.v-align-bottom {
-  vertical-align: bottom;
-}
-
 /* line 1, sass/components/_text.scss */
 .text-italic {
   font-style: italic;
@@ -29264,21 +29718,21 @@
 @media (max-width: 767px) {
   /* line 2, sass/components/_text.scss */
   .text-italic-xs {
-    font-style: italic;
+    font-style: italic !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 7, sass/components/_text.scss */
   .text-italic-sm {
-    font-style: italic;
+    font-style: italic !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 12, sass/components/_text.scss */
   .text-italic-md {
-    font-style: italic;
+    font-style: italic !important;
   }
 }
 
@@ -29290,151 +29744,151 @@
 @media (max-width: 767px) {
   /* line 18, sass/components/_text.scss */
   .text-normal-xs {
-    text-transform: normal;
+    text-transform: normal !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 23, sass/components/_text.scss */
   .text-normal-sm {
-    text-transform: normal;
+    text-transform: normal !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 28, sass/components/_text.scss */
   .text-normal-md {
-    text-transform: normal;
+    text-transform: normal !important;
   }
 }
 
 /* line 33, sass/components/_text.scss */
-.text-uppercase, .table-uppercase th, .table-uppercase td, .table-th-uppercase th, .table-td-uppercase td {
+.text-uppercase {
   text-transform: uppercase;
 }
 
 @media (max-width: 767px) {
   /* line 34, sass/components/_text.scss */
   .text-uppercase-xs {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 39, sass/components/_text.scss */
   .text-uppercase-sm {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 44, sass/components/_text.scss */
   .text-uppercase-md {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
   }
 }
 
 /* line 49, sass/components/_text.scss */
-.text-lowercase, .table-lowercase th, .table-lowercase td, .table-th-lowercase th, .table-td-lowercase td {
+.text-lowercase {
   text-transform: lowercase;
 }
 
 @media (max-width: 767px) {
   /* line 50, sass/components/_text.scss */
   .text-lowercase-xs {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 55, sass/components/_text.scss */
   .text-lowercase-sm {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 60, sass/components/_text.scss */
   .text-lowercase-md {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
   }
 }
 
 /* line 65, sass/components/_text.scss */
-.text-capitalize, .table-capitalize th, .table-capitalize td, .table-th-capitalize th, .table-td-capitalize th {
+.text-capitalize {
   text-transform: capitalize;
 }
 
 @media (max-width: 767px) {
   /* line 66, sass/components/_text.scss */
   .text-capitalize-xs {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 71, sass/components/_text.scss */
   .text-capitalize-sm {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 76, sass/components/_text.scss */
   .text-capitalize-md {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
   }
 }
 
 /* line 81, sass/components/_text.scss */
-.text-center, .table-th-td-align-left th:not(:first-child), .table-th-td-align-left td:not(:first-child), .table2-align-left th:not(:nth-child(2)), .table2-align-left td:not(:nth-child(2)), .table-center th, .table-center td, .table-th-center th, .table-td-center td {
+.text-center {
   text-align: center;
 }
 
 @media (max-width: 767px) {
   /* line 82, sass/components/_text.scss */
   .text-center-xs {
-    text-align: center;
+    text-align: center !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 87, sass/components/_text.scss */
   .text-center-sm {
-    text-align: center;
+    text-align: center !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 92, sass/components/_text.scss */
   .text-center-md {
-    text-align: center;
+    text-align: center !important;
   }
 }
 
 /* line 97, sass/components/_text.scss */
-.text-left, .table-align-left th:first-child, .table-align-left .td:first-child, .table2-align-left th:nth-child(2), .table2-align-left td:nth-child(2) {
+.text-left {
   text-align: left;
 }
 
 @media (max-width: 767px) {
   /* line 98, sass/components/_text.scss */
   .text-left-xs {
-    text-align: left;
+    text-align: left !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 103, sass/components/_text.scss */
   .text-left-sm {
-    text-align: left;
+    text-align: left !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 108, sass/components/_text.scss */
   .text-left-md {
-    text-align: left;
+    text-align: left !important;
   }
 }
 
@@ -29446,21 +29900,21 @@
 @media (max-width: 767px) {
   /* line 114, sass/components/_text.scss */
   .text-right-xs {
-    text-align: right;
+    text-align: right !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 119, sass/components/_text.scss */
   .text-right-sm {
-    text-align: right;
+    text-align: right !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 124, sass/components/_text.scss */
   .text-right-md {
-    text-align: right;
+    text-align: right !important;
   }
 }
 
@@ -29470,7 +29924,7 @@
 }
 
 /* line 130, sass/components/_text.scss */
-.text-decoration-underline {
+.text-underline {
   text-decoration: underline;
 }
 
@@ -29579,697 +30033,147 @@
   letter-spacing: 20px;
 }
 
-/* line 1, sass/components/_others.scss */
-.full-width, .table-lines, .zoom-hover-img a, .zoom-hover-img a figure img {
-  width: 100%;
-}
-
-/* line 2, sass/components/_others.scss */
-.full-height {
-  height: 100%;
-}
-
-/* line 3, sass/components/_others.scss */
-.width-vw {
-  width: 100vw;
-}
-
-/* line 4, sass/components/_others.scss */
-.height-vh {
-  height: 100vh;
-}
-
-/* line 6, sass/components/_others.scss */
-.line-height-initial {
-  line-height: initial;
-}
-
-/* line 7, sass/components/_others.scss */
-.disabled {
-  pointer-events: none;
-}
-
-/* line 9, sass/components/_others.scss */
-.display-none, .error {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  /* line 10, sass/components/_others.scss */
-  .display-none-xs, .hide-xs {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 15, sass/components/_others.scss */
-  .display-none-sm, .hide-sm {
-    display: none;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 20, sass/components/_others.scss */
-  .display-none-md, .hide-md {
-    display: none;
-  }
-}
-
-/* line 26, sass/components/_others.scss */
-.display-block, .zoom-hover-img a {
-  display: block;
-}
-
-/* line 27, sass/components/_others.scss */
-.extend {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* line 28, sass/components/_others.scss */
-.clear {
-  clear: both;
-  float: none;
-}
-
-@media (max-width: 767px) {
-  /* line 29, sass/components/_others.scss */
-  .clear-xs {
-    clear: both;
-    float: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 35, sass/components/_others.scss */
-  .clear-sm {
-    clear: both;
-    float: none;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 41, sass/components/_others.scss */
-  .clear-md {
-    clear: both;
-    float: none;
-  }
-}
-
-/* line 48, sass/components/_others.scss */
-.inline-block {
-  display: inline-block;
-}
-
-/* line 49, sass/components/_others.scss */
-.display-inline-table {
-  display: inline-table;
-}
-
-/* line 51, sass/components/_others.scss */
-.overflow-hidden, .zoom-hover-img a {
-  overflow: hidden;
-}
-
-/* line 52, sass/components/_others.scss */
-.overflow-x {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-/* line 53, sass/components/_others.scss */
-.overflow-y {
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* line 54, sass/components/_others.scss */
-.overflow-auto {
-  overflow: auto;
-}
-
-/* line 56, sass/components/_others.scss */
-.align-left {
-  float: left;
-}
-
-@media (max-width: 767px) {
-  /* line 59, sass/components/_others.scss */
-  .align-left-xs {
-    float: left;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 64, sass/components/_others.scss */
-  .align-left-sm {
-    float: left;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 69, sass/components/_others.scss */
-  .align-left-md {
-    float: left;
-  }
-}
-
-/* line 75, sass/components/_others.scss */
-.align-right {
-  float: right;
-}
-
-@media (max-width: 767px) {
-  /* line 78, sass/components/_others.scss */
-  .align-right-xs {
-    float: right;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 83, sass/components/_others.scss */
-  .align-right-sm {
-    float: right;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 88, sass/components/_others.scss */
-  .align-right-md {
-    float: right;
-  }
-}
-
-/* line 95, sass/components/_others.scss */
-.height-initial {
-  height: initial;
-}
-
-/* line 96, sass/components/_others.scss */
-.height-auto {
-  height: auto;
-}
-
-@media (max-width: 767px) {
-  /* line 97, sass/components/_others.scss */
-  .height-auto-xs {
-    height: auto;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 102, sass/components/_others.scss */
-  .height-auto-sm {
-    height: auto;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 107, sass/components/_others.scss */
-  .height-auto-md {
-    height: auto;
-  }
-}
-
-/* line 112, sass/components/_others.scss */
-.width-initial {
-  width: initial;
-}
-
-/* line 113, sass/components/_others.scss */
-.width-auto {
-  width: auto;
-}
-
-/* line 114, sass/components/_others.scss */
-a, .transation {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-/* line 115, sass/components/_others.scss */
-.cursor-pointer {
-  cursor: pointer;
-}
-
-/* line 116, sass/components/_others.scss */
-.hr {
-  height: 1px;
-  background: #ededed;
-}
-
-/* line 117, sass/components/_others.scss */
-.border-none {
-  border: none;
-}
-
-/* line 118, sass/components/_others.scss */
-.list-style-none {
-  list-style: none;
-}
-
-/* line 120, sass/components/_others.scss */
-.relative, .center-content-child {
-  position: relative;
-}
-
-/* line 121, sass/components/_others.scss */
-.absolute {
-  position: absolute;
-}
-
-/* line 122, sass/components/_others.scss */
-.fixed {
-  position: fixed;
-}
-
-/* line 123, sass/components/_others.scss */
-.static {
-  position: static;
-}
-
-/* line 125, sass/components/_others.scss */
-.right {
-  left: initial;
-  right: 0px;
-}
-
-@media (max-width: 767px) {
-  /* line 129, sass/components/_others.scss */
-  .right-xs {
-    left: initial !important;
-    right: 0px !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 135, sass/components/_others.scss */
-  .right-sm {
-    left: initial !important;
-    right: 0px !important;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 141, sass/components/_others.scss */
-  .right-md {
-    left: initial !important;
-    right: 0px !important;
-  }
-}
-
-/* line 147, sass/components/_others.scss */
-.left {
-  right: initial;
-  left: 0px;
-}
-
-@media (max-width: 767px) {
-  /* line 151, sass/components/_others.scss */
-  .left-xs {
-    right: initial !important;
-    left: 0px !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 157, sass/components/_others.scss */
-  .left-sm {
-    right: initial !important;
-    left: 0px !important;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 163, sass/components/_others.scss */
-  .left-md {
-    right: initial !important;
-    left: 0px !important;
-  }
-}
-
-/* line 171, sass/components/_others.scss */
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 767px) {
-  /* line 172, sass/components/_others.scss */
-  .center-xs {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 178, sass/components/_others.scss */
-  .center-sm {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 184, sass/components/_others.scss */
-  .center-md {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* line 190, sass/components/_others.scss */
-.center-content-parent {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-/* line 193, sass/components/_others.scss */
-.center-content-child.v {
-  top: 50%;
-  transform: translateY(-50%);
-}
-/* line 197, sass/components/_others.scss */
-.center-content-child.h {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* line 202, sass/components/_others.scss */
-.hr-big {
-  height: 5px;
-}
-
-/* line 205, sass/components/_others.scss */
-.hr-half {
-  width: 70px;
-}
-
-/* line 208, sass/components/_others.scss */
-.opacity-half {
-  opacity: .5;
-}
-
-/* line 211, sass/components/_others.scss */
-.opacity-full {
-  opacity: 1;
-}
-
-/* line 215, sass/components/_others.scss */
-.blink_me {
-  animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: .5;
-  }
-}
-/* line 224, sass/components/_others.scss */
-.ripple {
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-/* line 228, sass/components/_others.scss */
-.ripple:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #000000 10%, rgba(0, 0, 0, 0) 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10, 10);
-  opacity: 0;
-  transition: transform .5s, opacity 1s;
-}
-/* line 244, sass/components/_others.scss */
-.ripple:active:after {
-  transform: scale(0, 0);
-  opacity: .2;
-  transition: 0s;
-}
-
-/* line 250, sass/components/_others.scss */
-.box {
-  padding: 24px;
-}
-/* line 252, sass/components/_others.scss */
-.box.bordered {
-  border: 1px solid #ededed;
-}
-
-/* line 1, sass/components/_flex.scss */
-.flex, .flex-center, .zoom-hover-img a figure, .flex-v-center, .flex-h-center {
-  display: flex;
-}
-
-/* line 4, sass/components/_flex.scss */
-.flex-center, .zoom-hover-img a figure {
-  align-items: center;
-  justify-content: center;
-}
-
-/* line 9, sass/components/_flex.scss */
-.flex-v-center {
-  align-items: center;
-}
-
-/* line 13, sass/components/_flex.scss */
-.flex-h-center {
-  justify-content: center;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider20 {
-  height: 20px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider30 {
-  height: 30px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider40 {
-  height: 40px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider50 {
-  height: 50px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider60 {
-  height: 60px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider70 {
-  height: 70px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider80 {
-  height: 80px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider90 {
-  height: 90px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider100 {
-  height: 100px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
-/* line 4, sass/components/_divider.scss */
-.divider110 {
-  height: 110px;
-  clear: both;
-  float: none;
-  width: 100%;
-}
-
 /* line 1, sass/components/_radius.scss */
 .radius-0 {
-  -webkit-border-radius: none;
-  -moz-border-radius: none;
-  border-radius: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-2 {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-3 {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-4 {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-5 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-6 {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-7 {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-8 {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-9 {
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-10 {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-11 {
   -webkit-border-radius: 11px;
   -moz-border-radius: 11px;
   border-radius: 11px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-12 {
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-13 {
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   border-radius: 13px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-14 {
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
   border-radius: 14px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-15 {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-16 {
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   border-radius: 16px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-17 {
   -webkit-border-radius: 17px;
   -moz-border-radius: 17px;
   border-radius: 17px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-18 {
   -webkit-border-radius: 18px;
   -moz-border-radius: 18px;
   border-radius: 18px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-19 {
   -webkit-border-radius: 19px;
   -moz-border-radius: 19px;
   border-radius: 19px;
 }
 
-/* line 7, sass/components/_radius.scss */
+/* line 5, sass/components/_radius.scss */
 .radius-20 {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
 
-/* line 13, sass/components/_radius.scss */
+/* line 9, sass/components/_radius.scss */
 .radius-circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -30281,321 +30185,175 @@ a, .transation {
 T A B L E
 
 */
-/* line 34, sass/components/_table.scss */
+/* line 8, sass/components/_table.scss */
+.table-v-middle th, .table-v-middle td {
+  vertical-align: middle;
+}
+
+/* line 13, sass/components/_table.scss */
+.table-align-left th:first-child, .table-align-left .td:first-child {
+  text-align: left;
+}
+
+/* line 15, sass/components/_table.scss */
+.table-th-td-align-left th:not(:first-child), .table-th-td-align-left td:not(:first-child) {
+  text-align: center;
+}
+
+/* line 17, sass/components/_table.scss */
+.table2-align-left th:nth-child(2), .table2-align-left td:nth-child(2) {
+  text-align: left;
+}
+
+/* line 22, sass/components/_table.scss */
+.table2-align-left th:not(:nth-child(2)), .table2-align-left td:not(:nth-child(2)) {
+  text-align: center;
+}
+
+/* line 27, sass/components/_table.scss */
+.table-center th, .table-center td {
+  text-align: center;
+}
+
+/* line 31, sass/components/_table.scss */
+.table-th-center th {
+  text-align: center;
+}
+
+/* line 32, sass/components/_table.scss */
+.table-td-center td {
+  text-align: center;
+}
+
+/* line 33, sass/components/_table.scss */
+.table-lines {
+  width: 100%;
+}
+
+/* line 35, sass/components/_table.scss */
 .table-lines th, .table-lines td {
   border-bottom: 2px solid #ededed;
+  padding: 5px;
+  font-size: 13px;
 }
-/* line 39, sass/components/_table.scss */
+/* line 40, sass/components/_table.scss */
 .table-lines tr:last-child td {
   border-bottom: none;
 }
 
-/* line 64, sass/components/_table.scss */
+/* line 44, sass/components/_table.scss */
+.table-uppercase th, .table-uppercase td {
+  text-transform: uppercase;
+}
+
+/* line 49, sass/components/_table.scss */
+.table-capitalize th, .table-capitalize td {
+  text-transform: capitalize;
+}
+
+/* line 54, sass/components/_table.scss */
+.table-lowercase th, .table-lowercase td {
+  text-transform: lowercase;
+}
+
+/* line 58, sass/components/_table.scss */
+.table-th-uppercase th {
+  text-transform: uppercase;
+}
+
+/* line 59, sass/components/_table.scss */
+.table-td-uppercase td {
+  text-transform: uppercase;
+}
+
+/* line 60, sass/components/_table.scss */
+.table-th-capitalize th {
+  text-transform: capitalize;
+}
+
+/* line 61, sass/components/_table.scss */
+.table-td-capitalize th {
+  text-transform: capitalize;
+}
+
+/* line 62, sass/components/_table.scss */
+.table-th-lowercase th {
+  text-transform: lowercase;
+}
+
+/* line 63, sass/components/_table.scss */
+.table-td-lowercase td {
+  text-transform: lowercase;
+}
+
+/* line 65, sass/components/_table.scss */
 .display-table {
   display: table;
 }
 
 @media (max-width: 767px) {
-  /* line 65, sass/components/_table.scss */
+  /* line 66, sass/components/_table.scss */
   .display-table-xs {
-    display: table;
+    display: table !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 70, sass/components/_table.scss */
+  /* line 71, sass/components/_table.scss */
   .display-table-sm {
     display: table;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 75, sass/components/_table.scss */
+  /* line 76, sass/components/_table.scss */
   .display-table-md {
     display: table;
   }
 }
 
-/* line 81, sass/components/_table.scss */
+/* line 82, sass/components/_table.scss */
 .display-row {
   display: table-row;
 }
 
-/* line 82, sass/components/_table.scss */
+/* line 83, sass/components/_table.scss */
 .display-cell {
   display: table-cell;
 }
 
-@media (max-width: 767px) {
-  /* line 85, sass/components/_table.scss */
-  .dataTables_info {
-    text-align: center;
-  }
-}
-
-/* line 1, sass/components/_background.scss */
-.bg-light {
-  background-color: #f5f5f5;
-}
-
-/* line 2, sass/components/_background.scss */
-.bg-light2 {
-  background-color: #eeeeee;
-}
-
-/* line 3, sass/components/_background.scss */
-.bg-light3 {
-  background-color: #e2e2e2;
-}
-
-/* line 4, sass/components/_background.scss */
-.bg-white {
-  background-color: #ffffff;
-}
-
-/* line 5, sass/components/_background.scss */
-.bg-lime {
-  background-color: #76b729;
-  color: #ffffff;
-}
-
-/* line 6, sass/components/_background.scss */
-.bg-green {
-  background-color: #40b649;
-  color: #ffffff;
-}
-
-/* line 7, sass/components/_background.scss */
-.bg-green2 {
-  background-color: #8ed493;
-  color: #555555;
-}
-
-/* line 8, sass/components/_background.scss */
-.bg-yellow {
-  background-color: #c0c753;
-  color: #ffffff;
-}
-
-/* line 9, sass/components/_background.scss */
-.bg-yellow2 {
-  background-color: #adb447;
-  color: #ffffff;
-}
-
-/* line 10, sass/components/_background.scss */
-.bg-orange {
-  background-color: #FFA500;
-  color: #ffffff;
-}
-
-/* line 11, sass/components/_background.scss */
-.bg-dark {
-  background-color: #555555;
-  color: #ffffff;
-}
-
-/* line 12, sass/components/_background.scss */
-.bg-blue {
-  background-color: #0099ff;
-  color: #ffffff;
-}
-
-/* line 13, sass/components/_background.scss */
-.bg-blue2 {
-  background: #0384da;
-  color: #ffffff;
-}
-
-/* line 14, sass/components/_background.scss */
-.bg-blue3 {
-  background-color: #00c0ef;
-  color: #ffffff;
-}
-
-/* line 15, sass/components/_background.scss */
-.bg-gray {
-  background: #ebebeb;
-  color: #000000;
-}
-
-/* line 16, sass/components/_background.scss */
-.bg-gray2 {
-  background-color: #d6d6d6;
-  color: #ffffff;
-}
-
-/* line 17, sass/components/_background.scss */
-.bg-red {
-  background-color: #f56954;
-  color: #ffffff;
-}
-
-/* line 18, sass/components/_background.scss */
-.bg-red2 {
-  background-color: #ff7d7d;
-  color: #ffffff;
-}
-
-/* line 19, sass/components/_background.scss */
-.bg-black {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-/* line 20, sass/components/_background.scss */
-.bg-black2 {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* line 21, sass/components/_background.scss */
-.bg-torquise {
-  background-color: #0bd3c5;
-  color: #ffffff;
-}
-
-/* line 22, sass/components/_background.scss */
-.bg-taint {
-  background-color: #f9f1e8;
-}
-
-/* line 23, sass/components/_background.scss */
-.bg-none {
-  background: none;
-}
-
-/* line 1, sass/components/_color.scss */
-.c-torquise {
-  color: #0bd3c5;
-}
-
-/* line 2, sass/components/_color.scss */
-.c-torquise2 {
-  color: #08867d;
-}
-
-/* line 3, sass/components/_color.scss */
-.c-gray {
-  color: #d6d6d6;
-}
-
-/* line 4, sass/components/_color.scss */
-.c-gray2 {
-  color: #ebebeb;
-}
-
-/* line 5, sass/components/_color.scss */
-.c-white {
-  color: #ffffff;
-}
-
-/* line 6, sass/components/_color.scss */
-.c-green {
-  color: #40b649;
-}
-
-/* line 7, sass/components/_color.scss */
-.c-lime {
-  color: #76b729;
-}
-
-/* line 8, sass/components/_color.scss */
-.c-yellow {
-  color: #c0c753;
-}
-
-/* line 9, sass/components/_color.scss */
-.c-yellow2 {
-  color: #adb447;
-}
-
-/* line 10, sass/components/_color.scss */
-.c-orange {
-  color: #FFA500;
-}
-
-/* line 11, sass/components/_color.scss */
-.c-blue {
-  color: #0099ff;
-}
-
-/* line 12, sass/components/_color.scss */
-.c-blue2 {
-  color: #0384da;
-}
-
-/* line 13, sass/components/_color.scss */
-.c-blue3 {
-  color: #00c0ef;
-}
-
-/* line 14, sass/components/_color.scss */
-.c-black {
-  color: #000000;
-}
-
-/* line 15, sass/components/_color.scss */
-.c-black2 {
-  color: rgba(0, 0, 0, 0.1);
-}
-
-/* line 16, sass/components/_color.scss */
-.c-dark {
-  color: #555555;
-}
-
-/* line 17, sass/components/_color.scss */
-.c-red {
-  color: #f56954;
-}
-
-/* line 18, sass/components/_color.scss */
-.c-red2 {
-  color: #ff7d7d;
-}
-
-/* line 19, sass/components/_color.scss */
-.c-red3 {
-  color: #ff0000;
-}
-
-/* line 20, sass/components/_color.scss */
-.c-taint {
-  color: #f6e8d9;
-}
-
-/* line 2, sass/components/_box-shadow.scss */
-.shadow {
+/* line 1, sass/components/_box-shadow.scss */
+.box-shadow {
   box-shadow: 0 10px 40px -6px rgba(0, 0, 0, 0.1);
 }
 
-/* line 3, sass/components/_box-shadow.scss */
-.shadow-z-1 {
+/* line 2, sass/components/_box-shadow.scss */
+.box-shadow1 {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* line 4, sass/components/_box-shadow.scss */
-.shadow-z-1-hover {
+/* line 3, sass/components/_box-shadow.scss */
+.box-shadow2 {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 5, sass/components/_box-shadow.scss */
-.shadow-z-2 {
+/* line 4, sass/components/_box-shadow.scss */
+.box-shadow3 {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* line 6, sass/components/_box-shadow.scss */
-.shadow-z-3 {
+/* line 5, sass/components/_box-shadow.scss */
+.box-shadow4 {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* line 7, sass/components/_box-shadow.scss */
-.shadow-z-4 {
+/* line 6, sass/components/_box-shadow.scss */
+.box-shadow5 {
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 
-/* line 8, sass/components/_box-shadow.scss */
-.shadow-z-5 {
+/* line 7, sass/components/_box-shadow.scss */
+.box-shadow6 {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
@@ -31559,6 +31317,9 @@ spinner 11
 }
 /* line 2, sass/components/_zoom-hover-img.scss */
 .zoom-hover-img a {
+  overflow: hidden;
+  display: block;
+  width: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -31567,10 +31328,19 @@ spinner 11
 .zoom-hover-img a:hover img {
   transform: scale(1.15);
 }
+/* line 12, sass/components/_zoom-hover-img.scss */
+.zoom-hover-img a figure {
+  margin: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* line 15, sass/components/_zoom-hover-img.scss */
 .zoom-hover-img a figure img {
   max-width: 100%;
   transition: transform 300ms ease-in-out;
+  width: 100%;
+  margin: 0px !important;
 }
 
 /* line 1, sass/components/_notification.scss */
@@ -31584,26 +31354,6 @@ spinner 11
   color: #FFF;
   z-index: 9999;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-/* line 2, sass/components/_flip.scss */
-.flipV {
-  -moz-transform: scaleY(-1);
-  -o-transform: scaleY(-1);
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
-  filter: FlipV;
-  -ms-filter: "FlipV";
-}
-
-/* line 11, sass/components/_flip.scss */
-.flipH {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
 }
 
 /* line 1, sass/components/_box-img.scss */
@@ -31722,7 +31472,7 @@ spinner 11
   </div>
 
 */
-/* line 18, sass/components/_checkRadio.scss */
+/* line 18, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"] {
   border: 0;
   clip: rect(0 0 0 0);
@@ -31733,16 +31483,16 @@ spinner 11
   position: absolute;
   width: 1px;
 }
-/* line 29, sass/components/_checkRadio.scss */
+/* line 29, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"]:focus + label:before, .j-checkbox input[type="checkbox"]:hover + label:before {
   border-color: #555555;
   background-color: #f2f2f2;
 }
-/* line 37, sass/components/_checkRadio.scss */
+/* line 37, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"]:active + label:before {
   transition-duration: 0s;
 }
-/* line 42, sass/components/_checkRadio.scss */
+/* line 42, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"] + label {
   position: relative;
   padding-left: 2em;
@@ -31750,7 +31500,7 @@ spinner 11
   user-select: none;
   cursor: pointer;
 }
-/* line 48, sass/components/_checkRadio.scss */
+/* line 48, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"] + label:before {
   box-sizing: content-box;
   content: '';
@@ -31765,7 +31515,7 @@ spinner 11
   text-align: center;
   transition: all 0.4s ease;
 }
-/* line 62, sass/components/_checkRadio.scss */
+/* line 62, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"] + label:after {
   box-sizing: content-box;
   content: '';
@@ -31791,34 +31541,34 @@ spinner 11
   border-image: none;
   transform: rotate(-45deg) scale(0);
 }
-/* line 92, sass/components/_checkRadio.scss */
+/* line 92, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"]:disabled + label:before {
   border-color: #cccccc;
 }
-/* line 98, sass/components/_checkRadio.scss */
+/* line 98, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"]:disabled:focus + label:before {
   background-color: inherit;
 }
-/* line 105, sass/components/_checkRadio.scss */
+/* line 105, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"]:disabled:checked + label:before {
   background-color: #cccccc;
 }
-/* line 108, sass/components/_checkRadio.scss */
+/* line 108, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"]:disabled:checked + label:after {
   content: '';
   transform: rotate(-45deg) scale(1);
   transition: transform 200ms ease-out;
 }
-/* line 118, sass/components/_checkRadio.scss */
+/* line 118, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"]:checked + label:before {
   animation: borderscale 200ms ease-in;
 }
-/* line 122, sass/components/_checkRadio.scss */
+/* line 122, sass/components/_check-radio.scss */
 .j-checkbox input[type="checkbox"]:checked + label:after {
   transform: rotate(-45deg) scale(1);
 }
 
-/* line 131, sass/components/_checkRadio.scss */
+/* line 131, sass/components/_check-radio.scss */
 .j-radio input[type="radio"] {
   border: 0;
   clip: rect(0 0 0 0);
@@ -31829,16 +31579,16 @@ spinner 11
   position: absolute;
   width: 1px;
 }
-/* line 142, sass/components/_checkRadio.scss */
+/* line 142, sass/components/_check-radio.scss */
 .j-radio input[type="radio"]:focus + label:before, .j-radio input[type="radio"]:hover + label:before {
   border-color: #555555;
   background-color: #f2f2f2;
 }
-/* line 150, sass/components/_checkRadio.scss */
+/* line 150, sass/components/_check-radio.scss */
 .j-radio input[type="radio"]:active + label:before {
   transition-duration: 0s;
 }
-/* line 156, sass/components/_checkRadio.scss */
+/* line 156, sass/components/_check-radio.scss */
 .j-radio input[type="radio"] + label {
   position: relative;
   padding-left: 2em;
@@ -31846,7 +31596,7 @@ spinner 11
   user-select: none;
   cursor: pointer;
 }
-/* line 162, sass/components/_checkRadio.scss */
+/* line 162, sass/components/_check-radio.scss */
 .j-radio input[type="radio"] + label:before {
   box-sizing: content-box;
   content: '';
@@ -31862,7 +31612,7 @@ spinner 11
   transition: all 0.4s ease;
   border-radius: 50%;
 }
-/* line 177, sass/components/_checkRadio.scss */
+/* line 177, sass/components/_check-radio.scss */
 .j-radio input[type="radio"] + label:after {
   box-sizing: content-box;
   content: '';
@@ -31878,24 +31628,24 @@ spinner 11
   transition: transform 200ms ease-out;
   border-radius: 50%;
 }
-/* line 195, sass/components/_checkRadio.scss */
+/* line 195, sass/components/_check-radio.scss */
 .j-radio input[type="radio"]:disabled + label:before {
   border-color: #cccccc;
 }
-/* line 201, sass/components/_checkRadio.scss */
+/* line 201, sass/components/_check-radio.scss */
 .j-radio input[type="radio"]:disabled:focus + label:before {
   background-color: inherit;
 }
-/* line 208, sass/components/_checkRadio.scss */
+/* line 208, sass/components/_check-radio.scss */
 .j-radio input[type="radio"]:disabled:checked + label:before {
   background-color: #cccccc;
 }
-/* line 216, sass/components/_checkRadio.scss */
+/* line 216, sass/components/_check-radio.scss */
 .j-radio input[type="radio"]:checked + label:before {
   animation: borderscale 300ms ease-in;
   background-color: white;
 }
-/* line 220, sass/components/_checkRadio.scss */
+/* line 220, sass/components/_check-radio.scss */
 .j-radio input[type="radio"]:checked + label:after {
   transform: scale(1);
 }
@@ -31999,25 +31749,4 @@ spinner 11
 .j-component[data-type*="datepicker"] button.select, .j-component[data-type*="timepicker"] button.select {
   background: none !important;
   text-decoration: underline;
-}
-
-/* line 1, sass/components/_modal.scss */
-.modal-content {
-  border-radius: 0px !important;
-}
-
-/* line 4, sass/components/_modal.scss */
-.modal-header {
-  border-color: #ededed !important;
-}
-
-/* line 7, sass/components/_modal.scss */
-.modal-header, .modal-body {
-  padding: 25px !important;
-}
-
-/* line 10, sass/components/_modal.scss */
-.modal-title {
-  display: table;
-  float: left;
 }

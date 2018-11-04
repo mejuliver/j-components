@@ -1,5 +1,5 @@
-@mixin animation( $type : '', $val : '' ){
-	@if $type == '' {
+@mixin animation( $type, $val : '' ){
+	@if $type == 'duration' {
 		-webkit-animation : $val;
 		-moz-animation : $val;
 		-o-animation : $val;

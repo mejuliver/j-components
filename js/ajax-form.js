@@ -123,7 +123,7 @@ if ('undefined' != typeof window.jQuery ) {
                 },
                 error: function (request, status, error) {
                     if ( typeof on_error !== typeof undefined || typeof on_error !== typeof undefined && on_error !== '' || typeof on_error !== typeof undefined && on_error !== 'false' ){
-                        window[on_error]();
+                        window[on_error](request, status, error);
                     }else{
                         console.log('AJAX request could not be submitted, seem\'s there\'s an error occured.');
                     }

@@ -1,0 +1,141 @@
+/* 
+
+T A B L E
+
+*/
+/* line 8, sass/components/_table.scss */
+.table-v-middle th, .table-v-middle td {
+  vertical-align: middle;
+}
+
+/* line 13, sass/components/_table.scss */
+.table-align-left th:first-child, .table-align-left .td:first-child {
+  text-align: left;
+}
+
+/* line 15, sass/components/_table.scss */
+.table-th-td-align-left th:not(:first-child), .table-th-td-align-left td:not(:first-child) {
+  text-align: center;
+}
+
+/* line 17, sass/components/_table.scss */
+.table2-align-left th:nth-child(2), .table2-align-left td:nth-child(2) {
+  text-align: left;
+}
+
+/* line 22, sass/components/_table.scss */
+.table2-align-left th:not(:nth-child(2)), .table2-align-left td:not(:nth-child(2)) {
+  text-align: center;
+}
+
+/* line 27, sass/components/_table.scss */
+.table-center th, .table-center td {
+  text-align: center;
+}
+
+/* line 31, sass/components/_table.scss */
+.table-th-center th {
+  text-align: center;
+}
+
+/* line 32, sass/components/_table.scss */
+.table-td-center td {
+  text-align: center;
+}
+
+/* line 33, sass/components/_table.scss */
+.table-lines {
+  width: 100%;
+}
+
+/* line 35, sass/components/_table.scss */
+.table-lines th, .table-lines td {
+  border-bottom: 2px solid #ededed;
+  padding: 5px;
+  font-size: 13px;
+}
+/* line 40, sass/components/_table.scss */
+.table-lines tr:last-child td {
+  border-bottom: none;
+}
+
+/* line 44, sass/components/_table.scss */
+.table-uppercase th, .table-uppercase td {
+  text-transform: uppercase;
+}
+
+/* line 49, sass/components/_table.scss */
+.table-capitalize th, .table-capitalize td {
+  text-transform: capitalize;
+}
+
+/* line 54, sass/components/_table.scss */
+.table-lowercase th, .table-lowercase td {
+  text-transform: lowercase;
+}
+
+/* line 58, sass/components/_table.scss */
+.table-th-uppercase th {
+  text-transform: uppercase;
+}
+
+/* line 59, sass/components/_table.scss */
+.table-td-uppercase td {
+  text-transform: uppercase;
+}
+
+/* line 60, sass/components/_table.scss */
+.table-th-capitalize th {
+  text-transform: capitalize;
+}
+
+/* line 61, sass/components/_table.scss */
+.table-td-capitalize th {
+  text-transform: capitalize;
+}
+
+/* line 62, sass/components/_table.scss */
+.table-th-lowercase th {
+  text-transform: lowercase;
+}
+
+/* line 63, sass/components/_table.scss */
+.table-td-lowercase td {
+  text-transform: lowercase;
+}
+
+/* line 65, sass/components/_table.scss */
+.display-table {
+  display: table;
+}
+
+@media (max-width: 767px) {
+  /* line 66, sass/components/_table.scss */
+  .display-table-xs {
+    display: table !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 71, sass/components/_table.scss */
+  .display-table-sm {
+    display: table;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 76, sass/components/_table.scss */
+  .display-table-md {
+    display: table;
+  }
+}
+
+/* line 82, sass/components/_table.scss */
+.display-row {
+  display: table-row;
+}
+
+/* line 83, sass/components/_table.scss */
+.display-cell {
+  display: table-cell;
+}

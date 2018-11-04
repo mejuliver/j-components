@@ -1,0 +1,59 @@
+/* line 1, sass/components/_color.scss */
+.c-torquise {
+  color: #0bd3c5;
+}
+
+/* line 2, sass/components/_color.scss */
+.c-gray {
+  color: #d6d6d6;
+}
+
+/* line 3, sass/components/_color.scss */
+.c-white {
+  color: #ffffff;
+}
+
+/* line 4, sass/components/_color.scss */
+.c-green {
+  color: #40b649;
+}
+
+/* line 5, sass/components/_color.scss */
+.c-lime {
+  color: #76b729;
+}
+
+/* line 6, sass/components/_color.scss */
+.c-yellow {
+  color: #c0c753;
+}
+
+/* line 7, sass/components/_color.scss */
+.c-orange {
+  color: #FFA500;
+}
+
+/* line 8, sass/components/_color.scss */
+.c-blue {
+  color: #0099ff;
+}
+
+/* line 9, sass/components/_color.scss */
+.c-black {
+  color: #000000;
+}
+
+/* line 10, sass/components/_color.scss */
+.c-dark {
+  color: #555555;
+}
+
+/* line 11, sass/components/_color.scss */
+.c-red {
+  color: #f56954;
+}
+
+/* line 12, sass/components/_color.scss */
+.c-taint {
+  color: #f6e8d9;
+}

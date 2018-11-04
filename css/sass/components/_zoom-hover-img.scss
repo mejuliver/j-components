@@ -1,8 +1,8 @@
 .zoom-hover-img{
 	a{
-		@extend .overflow-hidden;
-	    @extend .display-block;
-	    @extend .full-width;
+		overflow:hidden;
+	    display:block;
+	    width:100%;
 	    box-sizing: border-box;
 	    -moz-box-sizing: border-box;
 	    -webkit-box-sizing: border-box;
@@ -10,13 +10,13 @@
 	    	transform: scale(1.15);
 	    }
 	    figure{
-	    	@extend .m00;
-	    	@extend .flex-center;
+	    	margin:0px!important;
+	    	@include flex('flex-center');
 	    	img {
 				max-width: 100%;
 				transition: transform 300ms ease-in-out;
-				@extend .full-width;
-				@extend .m00;
+				width:100%;
+				margin:0px!important;
 			} 
 	    }
 	}

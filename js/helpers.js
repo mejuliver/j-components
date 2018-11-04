@@ -19,55 +19,6 @@ if ('undefined' != typeof window.jQuery ) {
 
     }
     /* 
-        A J A X  P U L L
-        ----------------------------------------------------
-        Pull contents asynchronously
-
-        call : get_page(url, before_send, after_send, complete, on_error);
-
-        note : if no 'link' provided then assume uses the current link
-        note : if you want too invoke a function after ajax was successful then add function name which to be called later in the 2nd argument of the function
-        note : if no container then post some logs on the console
-        note : if no spinner supplied then default spinner will be use instead
-
-
-    */
-    function get_page(url,before_send,after_send,onsuccess,on_error){
-
-        $.ajax({
-            url : app_url + '/ajax-page',
-            type : 'get',
-            context: this,
-            dataType : 'html',
-            beforeSend: function(){
-                if(typeof before_send !== typeof undefined && before_send !== false && before_send !== "") {
-                    var classList = before_send.split(/\s+/);
-                    $.each(classList, function(index, item) {
-                        window[item]();   
-                    });
-                }
-            },
-            complete: function(){
-                if(typeof after_send !== typeof undefined && after_send !== false && after_send !== "") {
-                    var classList = after_send.split(/\s+/);
-                    $.each(classList, function(index, item) {
-                        window[item]();   
-                    });
-                }
-            },
-            success : function(e) {
-                if(typeof onsuccess !== typeof undefined && onsuccess !== false && onsuccess !== "") {
-                    window[onsuccess](e);   
-                }
-            },
-            error: function(type,status,error){
-                if(typeof on_error !== typeof undefined && on_error !== false && on_error !== "") {
-                   window[on_error](type,status,error);
-                }
-            }
-        });
-    }
-    /* 
         S L I D E  N O T I F I C A T I O N
         ----------------------------------------------------
         Material slide
@@ -98,31 +49,6 @@ if ('undefined' != typeof window.jQuery ) {
             clearTimeout($timer);
         }
     }   
-
-    $(window).on('load', function(){
-        $("body").fadeIn(200);
-        //run the checkwidth function
-        checkwidth();
-        //on window resize
-    });
-
-    $(window).resize(function(){
-        //run the checkwidth function
-        checkwidth();
-    });
-
-    function checkwidth(){
-        //give width to elements that has a class of ".fixed-child" equals to the parent reference element width that has a class of ".fixed-parent"
-        $(".fixed-child").each(function(){
-            $(this).css({ 'width' : $(this).closest(".fixed-parent").width() + 'px' });
-        });
-        //give height to the elements that has a class of ".fixed-parent" equals to its first child element height that has a class of ".fixed-child"
-        $(".fixed-parent").each(function(){
-             $(this).css({ 'height' : $(this).find(".fixed-child:first-child").innerHeight() + 'px' });
-        });
-        j_equal();
-    }
-
 
     // R A N D O M  S T R I N G
     function random_str() {

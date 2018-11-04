@@ -1,0 +1,79 @@
+/* line 1, sass/components/_background.scss */
+.bg-light {
+  background-color: #f5f5f5;
+}
+
+/* line 2, sass/components/_background.scss */
+.bg-white {
+  background-color: #ffffff;
+}
+
+/* line 3, sass/components/_background.scss */
+.bg-lime {
+  background-color: #76b729;
+  color: #ffffff;
+}
+
+/* line 4, sass/components/_background.scss */
+.bg-green {
+  background-color: #40b649;
+  color: #ffffff;
+}
+
+/* line 5, sass/components/_background.scss */
+.bg-yellow {
+  background-color: #c0c753;
+  color: #ffffff;
+}
+
+/* line 6, sass/components/_background.scss */
+.bg-orange {
+  background-color: #FFA500;
+  color: #ffffff;
+}
+
+/* line 7, sass/components/_background.scss */
+.bg-dark {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+/* line 8, sass/components/_background.scss */
+.bg-blue {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+
+/* line 9, sass/components/_background.scss */
+.bg-gray {
+  background: #ebebeb;
+  color: #000000;
+}
+
+/* line 10, sass/components/_background.scss */
+.bg-red {
+  background-color: #f56954;
+  color: #ffffff;
+}
+
+/* line 11, sass/components/_background.scss */
+.bg-black {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* line 12, sass/components/_background.scss */
+.bg-torquise {
+  background-color: #0bd3c5;
+  color: #ffffff;
+}
+
+/* line 13, sass/components/_background.scss */
+.bg-taint {
+  background-color: #f9f1e8;
+}
+
+/* line 14, sass/components/_background.scss */
+.bg-none {
+  background: none;
+}

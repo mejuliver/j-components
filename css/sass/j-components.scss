@@ -1,19 +1,8 @@
-@import 'components/mixins/responsive';
-@import 'components/mixins/background';
-@import 'components/mixins/box_shadow';
-@import 'components/mixins/color';
-@import 'components/mixins/divider';
-@import 'components/mixins/flex';
-@import 'components/mixins/gradient';
-@import 'components/mixins/radius';
-@import 'components/mixins/animation';
-
-$xs : '<=767px';
-$sm : '>=768px','<=991px';
-$md : '>=992px','<=1199px';
-$lg : '>=1200px';
-
+@import 'components/app';
 //------------------------------------------------------------------------------
+
+// U T I L I T I E S
+@import 'components/utilities';
 
 // M A R G I N S
 @import 'components/margin';
@@ -24,32 +13,14 @@ $lg : '>=1200px';
 // F O N T  S I Z E
 @import 'components/font-size';
 
-// A L I G N M E N T
-@import 'components/alignment';
-
 // T E X T
 @import 'components/text';
-
-// O T H E R S
-@import 'components/others';
-
-// F L E X
-@import 'components/flex';
-
-// D I V I D E R S
-@import 'components/divider';
 
 // R A D I U S
 @import 'components/radius';
 
 // T A B L E S
 @import 'components/table';
-
-// B A C K G R O U N D S
-@import 'components/background';
-
-// C O L O R S
-@import 'components/color';
 
 // S H A D O W
 @import 'components/box-shadow';
@@ -63,24 +34,18 @@ $lg : '>=1200px';
 // J - N O T I F I C A T I O N
 @import 'components/notification';
 
-// F L I P
-@import 'components/flip';
-
 // B O X  I M A G E
 @import 'components/box-img';
 
-// P A T T E R N
+	// P A T T E R N
 @import 'components/pattern';
 
 // R A D I O  O P T I O N S
-@import 'components/checkRadio';
+@import 'components/check-radio';
 
 // J - M E N U
 @import 'components/menu';
 
 // D A T E P I C K E R
 @import 'components/datetimepicker';
-
-// M O D A L
-@import 'components/modal';
 

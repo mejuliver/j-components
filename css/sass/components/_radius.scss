@@ -1,13 +1,9 @@
 .radius-0{
-	-webkit-border-radius:none;
-	-moz-border-radius:none;
-	border-radius:none;
+	@include radius(0);
 }
 @for $i from 2 through 20{
 	.radius-#{$i} {
-		-webkit-border-radius:#{$i}px;
-		-moz-border-radius:#{$i}px;
-		border-radius:#{$i}px;
+		@include radius(#{$i});
 	}
 }
-.radius-circle{-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;}
+.radius-circle{@include radius('circle');}
