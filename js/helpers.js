@@ -471,6 +471,10 @@ if ('undefined' != typeof window.jQuery ) {
         $('.box.image-box.auto-height').each(function(){
             $(this).css('height',$(this).find('img.background-image').height()+'px');
         });
+        j_equal();
+    });
+    $(window).on('resize',function(e){
+        j_equal();
     });
 
     /* ------------------------------------------------------------ */
