@@ -61,20 +61,20 @@
   }
 }
 
-.d-block{
+.display-block{
   display: block;
 }
-.d-block-md{
+.display-block-md{
   @include media($md...){
     display: block !important;
   }
 }
-.d-block-sm{
+.display-block-sm{
   @include media($sm...){
     display: block !important;
   }
 }
-.d-block-xs{
+.display-block-xs{
   @include media($xs){
     display: block !important;
   }

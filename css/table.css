@@ -119,14 +119,14 @@ T A B L E
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 71, sass/components/_table.scss */
   .display-table-sm {
-    display: table;
+    display: table !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 76, sass/components/_table.scss */
   .display-table-md {
-    display: table;
+    display: table !important;
   }
 }
 

@@ -70,12 +70,12 @@ T A B L E
 }
 .display-table-sm{
     @include media($sm...){
-    	display:table;
+    	display:table !important;
     }
 }
 .display-table-md{
     @include media($md...){
-    	display:table;
+    	display:table !important;
     }
 }
 

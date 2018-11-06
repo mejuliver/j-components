@@ -112,27 +112,27 @@
 }
 
 /* line 64, sass/components/_utilities.scss */
-.d-block {
+.display-block {
   display: block;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 67, sass/components/_utilities.scss */
-  .d-block-md {
+  .display-block-md {
     display: block !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 72, sass/components/_utilities.scss */
-  .d-block-sm {
+  .display-block-sm {
     display: block !important;
   }
 }
 
 @media (max-width: 767px) {
   /* line 77, sass/components/_utilities.scss */
-  .d-block-xs {
+  .display-block-xs {
     display: block !important;
   }
 }
@@ -30341,14 +30341,14 @@ T A B L E
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 71, sass/components/_table.scss */
   .display-table-sm {
-    display: table;
+    display: table !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 76, sass/components/_table.scss */
   .display-table-md {
-    display: table;
+    display: table !important;
   }
 }
 
