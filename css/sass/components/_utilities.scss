@@ -266,3 +266,42 @@ a,.transation{-webkit-transition: all 200ms ease-in-out;-moz-transition: all 200
         transition: 0s;
     }
 }
+.pulse {
+  cursor: pointer;
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 transparent;
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px transparent;
+    box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
