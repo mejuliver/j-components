@@ -1,3 +1,4 @@
+
 if ('undefined' != typeof window.jQuery ) {
     /* 
         J - C O M P O N E N T S  H E L P E R S
@@ -395,17 +396,9 @@ if ('undefined' != typeof window.jQuery ) {
     $(function(){
         $('.box.image-box').each(function(){
             if( typeof $(this).attr('data-overlay') != typeof undefined && $(this).attr('data-overlay') != '' ){
-                if( $(this).hasClass('img-gradient') ){
-                    $(this).css( 'background', 'linear-gradient('+$(this).attr('data-overlay')+', '+$(this).attr('data-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')'); 
-                }else{
-                    $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')'); 
-                }
+                $(this).css( 'background', 'linear-gradient('+$(this).attr('data-overlay')+', '+$(this).attr('data-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')'); 
             }else{
-                if( $(this).hasClass('img-gradient') ){
-                    $(this).css( 'background', 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
-                } else {
-                    $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')');
-                }
+                $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')');
             }
 
             if( typeof $(this).attr('data-height') !== typeof undefined ){
@@ -419,17 +412,9 @@ if ('undefined' != typeof window.jQuery ) {
         $('.box.image-box').hover(function(){
             if( !$(this).hasClass('no-hover') ){
                 if( typeof $(this).attr('data-hover-overlay') != typeof undefined && $(this).attr('data-hover-overlay') != '' ){
-                    if( $(this).hasClass('img-gradient') ){
-                        $(this).css( 'background', 'linear-gradient('+$(this).attr('data-hover-overlay')+', '+$(this).attr('data-hover-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')');
-                    }else{
-                        $(this).css( 'background-image', 'url('+$(this).find('img.background-image').attr('src')+')');
-                    }
+                    $(this).css( 'background', 'linear-gradient('+$(this).attr('data-hover-overlay')+', '+$(this).attr('data-hover-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')');
                 }else{
-                    if( $(this).hasClass('img-gradient') ){
-                        $(this).css( 'background', 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),url('+$(this).find('img.background-image').attr('src')+')'); 
-                    }else{
-                        $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')'); 
-                    }
+                    $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')'); 
                 }
             }
             if( $(this).hasClass('cover') ){
@@ -440,19 +425,7 @@ if ('undefined' != typeof window.jQuery ) {
             }
         },function(){
            
-            if( typeof $(this).attr('data-overlay') != typeof undefined && $(this).attr('data-overlay') != '' ){
-                if( $(this).hasClass('img-gradient') ){
-                    $(this).css( 'background', 'linear-gradient('+$(this).attr('data-overlay')+', '+$(this).attr('data-overlay')+' ),url('+$(this).find('img.background-image').attr('src')+')'); 
-                }else{
-                    $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')'); 
-                }
-            }else{
-                if( $(this).hasClass('img-gradient') ){
-                    $(this).css( 'background', 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ),url('+$(this).find('img.background-image').attr('src')+')');
-                } else {
-                    $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')');
-                }
-            }
+            $(this).css( 'background', 'url('+$(this).find('img.background-image').attr('src')+')'); 
 
             if( typeof $(this).attr('data-height') !== typeof undefined ){
                 $(this).css( 'height', $(this).attr('data-height') );
