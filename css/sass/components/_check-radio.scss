@@ -24,6 +24,7 @@
     padding: 0;
     position: absolute;
     width: 1px;
+    display:none;
     &:focus,&:hover{
       + label{
         &:before{
@@ -137,6 +138,7 @@
     padding: 0;
     position: absolute;
     width: 1px;
+    display:none;
     &:focus,&:hover{
       + label{
         &:before{
