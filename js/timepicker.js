@@ -62,7 +62,7 @@ if ('undefined' != typeof window.jQuery ||  window.moment) {
             if( typeof $(this).attr('data-placement') != typeof undefined && $(this).attr('data-placement') != '' ){
                 $pos = ' '+$(this).attr('data-placement');
             }
-            $(this).after('<div class="component-sub'+$pos+'"><div class="col-xs-4 mt8 p3">'+hours+'</div><div class="col-xs-4 mt8 p3">'+minutes+'</div><div class="col-xs-4 mt8 p3">'+am_pm+'</div><div class="clear"><div class="col-xs-3 mt8 p3"><button class="current">Current</button></div><div class="col-xs-3 mt8 p3"><button class="select">Select</button></div></div></div>');
+            $(this).after('<div class="component-sub'+$pos+'"><div class="col-xs-4 mt8 p3">'+hours+'</div><div class="col-xs-4 mt8 p3">'+minutes+'</div><div class="col-xs-4 mt8 p3">'+am_pm+'</div><div class="clear"><div class="col-xs-4 mt8 p3"><button class="current">Current</button></div><div class="col-xs-4 mt8 p3"><button class="select">Select</button></div></div></div>');
 
             $(this).on("click",function(){
                 if($(this).val()!==""){
