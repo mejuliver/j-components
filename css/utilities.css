@@ -146,16 +146,14 @@
 /* line 83, sass/components/_utilities.scss */
 .clear {
   clear: both;
-  float-left: none;
-    float-right: none;
+  float: none;
 }
 
 @media (max-width: 767px) {
   /* line 84, sass/components/_utilities.scss */
   .clear-xs {
     clear: both !important;
-    float-left: none !important;
-    float-right: none !important;
+    float: none !important;
   }
 }
 
@@ -164,8 +162,6 @@
   .clear-sm {
     clear: both !important;
     float: none !important;
-    float-left: none !important;
-    float-right: none !important;
   }
 }
 
@@ -174,8 +170,6 @@
   .clear-md {
     clear: both !important;
     float: none !important;
-    float-left: none !important;
-    float-right: none !important;
   }
 }
 

@@ -82,28 +82,24 @@
 .max{max-width: 100%;max-height: 100%;}
 .clear{
   clear: both;
-  float-left: none;
-  float-right: none;
+  float: none;
 }
 .clear-xs{
   @include media($xs){
     clear: both !important;
-    float-left: none !important;
-    float-right: none !important;
+    float:none!important;
   }
 }
 .clear-sm{
   @include media($sm...){
     clear: both !important;
-    float-left: none !important;
-    float-right: none !important;
+    float:none!important;
   }
 }
 .clear-md{
   @include media($md...){
     clear: both !important;
-    float-left: none !important;
-    float-right: none !important;
+    float:none!important;
   }
 }
 
