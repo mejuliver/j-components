@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/j-components.min.css">
+	<title>Helper Switcher Component Sample</title>
+	
+</head>
+<body>
+	<div class="container">	
+		<div class="row mb32 switch-contents-xs switch-contents-sm">
+			<div class="col-sm-6 switch order-first">
+				first col
+			</div>
+			<div class="col-sm-6 switch order-second">
+				second col
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/helpers.js"></script>
+	<script>
+		$(function(){
+
+		});
+		function test_in(e){
+
+			e.find('.content').fadeIn(200);
+
+		}
+		function test_out(e){
+			e.find('.content').fadeOut(200);
+		}
+	</script>
+</body>
+</html>
