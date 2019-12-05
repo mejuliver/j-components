@@ -1,4 +1,3 @@
-/* line 1, sass/components/_box-img.scss */
 .box.image-box {
   padding: 30px;
   display: flex;
@@ -10,14 +9,11 @@
   -moz-transition: all 200ms ease-in-out;
   -ms-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-/* line 13, sass/components/_box-img.scss */
-.box.image-box * {
-  color: #FFF;
-}
-/* line 16, sass/components/_box-img.scss */
-.box.image-box img.background-image {
-  visibility: hidden;
-  position: absolute;
-}
+  transition: all 200ms ease-in-out; }
+  .box.image-box * {
+    color: #FFF; }
+  .box.image-box img.background-image {
+    visibility: hidden;
+    position: absolute; }
+
+/*# sourceMappingURL=box-img.css.map */

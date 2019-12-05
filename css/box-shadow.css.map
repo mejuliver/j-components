@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAW;ECET,UAAU,EAAE,mCACb;;ADFD,YAAY;ECGV,UAAU,EAAE,gEACb;;ADHD,YAAY;ECIV,UAAU,EAAE,kEACb;;ADJD,YAAY;ECKV,UAAU,EAAE,iEACb;;ADLD,YAAY;ECMV,UAAU,EAAE,oEACb;;ADND,YAAY;ECOV,UAAU,EAAE,oEACb;;ADPD,YAAY;ECQV,UAAU,EAAE,mEACb",
+"sources": ["sass/components/_box-shadow.scss","sass/components/mixins/_box_shadow.scss"],
+"names": [],
+"file": "box-shadow.css"
+}
